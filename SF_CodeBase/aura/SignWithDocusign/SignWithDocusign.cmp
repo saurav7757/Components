@@ -1,0 +1,6 @@
+<aura:component controller="SignWithDocusignController" implements="force:hasRecordId,flexipage:availableForAllPageTypes">
+    <aura:attribute name="recordId" type="Id"/>    
+
+    <lightning:button label="Sign with Docusign"
+                      onclick="{! c.handleSigning}"/>
+</aura:component>

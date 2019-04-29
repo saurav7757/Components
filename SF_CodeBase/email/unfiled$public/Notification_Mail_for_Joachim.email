@@ -1,0 +1,5 @@
+Hello there,
+
+{!Opportunity.OwnerFullName} won a new Customer from a Partner Programm ({!Opportunity.LeadSource}). It´s {!Contact.Name} from {!Opportunity.Name}.
+
+Many greetings from The Sales Ops Team

@@ -1,0 +1,325 @@
+<apex:component >
+    <apex:attribute name="cn" description="This is the contact" type="Contact" required="true"/>
+    <apex:attribute name="ac" description="This is the account" type="Account" required="true"/>
+    <apex:attribute name="op" description="This is the opportunity" type="Opportunity" required="true"/>
+    <apex:attribute name="accountStart" description="" type="string" required="true"/>
+    <apex:attribute name="payrollStart" description="" type="string" required="true"/>
+    <apex:attribute name="offerExpiration" description="" type="string" required="true"/>
+    <apex:attribute name="legalType" description="" type="string" required="true"/>
+    <apex:attribute name="annualRevenue" description="" type="string" required="true"/>
+    <apex:attribute name="basisPauschale" description="" type="string" required="true"/>
+    <apex:attribute name="lohnbuchhaltung" description="" type="string" required="true"/>
+    <apex:attribute name="monatlichePauschale" description="" type="string" required="true"/>
+    <apex:attribute name="jahrlichePauschale" description="" type="string" required="true"/>
+    
+    <div>
+    <div style="page-break-after:always;">   
+        <h3>VERTRAGSÜBERSICHT</h3>
+        
+        <p class="bold">
+            Lieber Kunde,
+        </p>
+        <p>
+            Ein Vertrag ist notwendiger Bestandteil einer guten Zusammenarbeit. Wir bei Zeitgold sind davon überzeugt, dass es für Dich so einfach wie möglich sein sollte zu verstehen, was Du unterschreibst und vor allem auch warum wir deine Unterschrift benötigen.
+        </p>
+        <p>
+            Die Zeitgold und Pioneer Dienstleistungen sind komplex und wir versuchen die Anzahl der Bestandteile so gering zu halten wie möglich.
+        </p>
+        <p>
+            Daher hier eine Übersicht über die Bestandteile der Vertragsvereinbarungen mit Zeitgold und Pioneer sowie das Angebot.
+        </p>
+        
+        <!-- COMMENTED-OUT
+        <ol class="boldlist">  
+            <li>
+                Annahmen, auf Basis dessen wir das Angebot berechnet haben <span class="dull">(Seite 1)</span>
+            </li>
+            
+            <li>
+                Zeitgold Angebot und Leistungen <span class="dull">(Seite 2)</span>
+            </li>
+            
+            <li>
+                Pioneer Angebot und Leistungen <span class="dull">(Seite 2)</span>
+            </li>
+            
+            <li>
+                Zeitgold Vertragsbestandteile <span class="dull">(Seite 3)</span>
+            </li>
+            
+            <li>
+                Pioneer Vertragsbestandteile <span class="dull">(Seite 3)</span>
+            </li>
+        </ol>
+        --> 
+        
+        <h5>ANNAHMEN</h5>
+        <ul>
+            <!--
+            <li>
+                Du bist als Inhaber unser Hauptansprechpartner
+            </li>
+            -->
+            <li>
+                Die Rechtsform des Unternehmens ist eine {!ac.Legal_Form__c}
+            </li>
+            <li>
+                Du erwartest aktuell einen Jahresumsatz von ca. € {! annualRevenue}                 
+            </li>
+            <li>
+                Du hast ca. {!ac.No_of_incoming_invoices_per_month__c} Ein- und {!ac.No_of_outgoing_invoices_per_month__c} Ausgangsrechnungen im Monat, Quittungen und Belege aus Reisekosten eingeschlossen
+            </li>
+            <li>
+                Du hast aktuell {!ac.NumberOfEmployees} Angestellte und eine normale Fluktuation (+/- 1  Mitarbeiter/in pro Monat)
+            </li>
+            <li>
+                Der Startzeitpunkt für die Buchhaltung ist der {!accountStart}
+            </li>
+            <li>
+                Der Startzeitpunkt für die Lohnbuchhaltung ist der {!payrollStart}
+            </li>
+            <li>
+                Die Geschäftsanschrift lautet:
+            </li>
+        </ul>
+        <div style="margin-left:60px;margin-top:-6px;">
+            {! ac.Company_Legal_Name__c}<br/>
+            <!--{! }<br/-->
+            {! ac.BillingStreet}<br/>
+            {! ac.BillingPostalCode} {! ac.BillingCity}<br/><br/>
+        </div>        
+        <p>
+            Die auf Seite 2 präsentierten Angebote sind mit den obigen Annahmen errechnet. Sollten sich diese Annahmen in Zukunft ändern, so passen wir - immer in Absprache mit Dir - gegebenenfalls den vereinbarten Preis an. Wenn die Annahmen sich nicht ändern, garantieren wir die Konditionen für zwei Jahre.
+        </p>
+        </div>
+        <div class="pb"></div>
+        <h5><span class="bold">ZEITGOLD</span> ANGEBOT</h5>
+        <p>Dieses Angebot enthält die Pauschale für alle Zeitgold Leistungen. Es ist
+            nur gültig, wenn Du mit einem von Zeitgold akkreditierten Steuerberater
+            zusammenarbeitest.</p>
+        
+        <div class="fifty">
+            <div class="left">Basis Pauschale:</div>
+            <div class="right"><span class="blue">€ {!basisPauschale}</span> pro Monat</div>
+        </div>
+        <div class="fifty">
+            <div class="left">
+                Lohnbuchhaltung:
+            </div>
+            <div class="right">
+                <span class="blue">€ {!lohnbuchhaltung}</span> pro Monat (<span class="blue">€
+                15</span> pro Mitarbeiter)
+            </div>
+        </div>
+        <div class="fifty">
+            <div class="left">
+                Zahlungsintervall:
+            </div>
+            <div class="right">
+                monatlich
+            </div>
+        </div>
+        <div class="fifty">
+            <div class="left">
+                Laufzeit und Kündigungsfrist:
+            </div>
+            <div class="right">
+                unbefristet und mit 1-monatiger Kündigungsfrist
+            </div>
+        </div>
+        <div class="fifty">
+            <div class="left">
+                Das Angebot ist gültig bis:
+            </div>
+            <div class="right">
+                <span class="blue">{!offerExpiration}</span>
+            </div>
+        </div>
+        <br/>
+        <div class="fifty">
+            <div class="left">
+                <div class="bold">
+                    Buchhaltungsvorbereitung
+                    <div class="check"></div>
+                </div>
+                <div class="indent">
+                    Rechnungsprüfung
+                    <div class="check"></div>
+                </div>
+                <div class="indent">
+                    Reisekostenabrechnungen
+                    <div class="check"></div>
+                </div>
+                <div class="indent">
+                    Vervollständigung aller Dokumente
+                    <div class="check"></div>
+                </div>
+                <br/>
+                <div class="bold">
+                    Kassenbuchführung
+                    <div class="check"></div>
+                </div>
+                <br/>
+                <div class="bold">
+                    Lohnbuchhaltung
+                    <div class="check"></div>
+                </div>
+                <br/>
+                <div class="bold">
+                    Abschlussvorbereitung mit StB
+                    <div class="check"></div>
+                </div>
+                <div class="indent">
+                    Konsolidierung Kassenbuch
+                    <div class="check"></div>
+                </div>
+                <div class="indent">
+                    Konsolidierung Zahlungsdienstleister
+                    <div class="check"></div>
+                </div>
+                <div class="indent">
+                    Konsolidierung sonstiger Umsätze
+                    <div class="check"></div>
+                </div>
+            </div>
+            <div class="right">
+                <div class="bold">
+                    Rechnungszahlung direkt in der Zeitgold App
+                    <div class="check"></div>
+                </div>
+                <br/>
+                <div class="bold">
+                    Liquiditätsmanagement
+                    <div class="check"></div>
+                </div>
+                <br/>
+                <div class="bold">
+                    Archiv
+                    <div class="check"></div>
+                </div>
+                <br/>
+                <div class="bold">
+                    Auto-Fristen
+                    <div class="check"></div>
+                </div>
+                <br/>
+                <div class="bold">
+                    Zusätzliche Services
+                    <div class="check"></div>
+                </div>
+                <div>
+                    Wöchentliche Abholung physischer Dokumente
+                    <div class="check"></div>
+                </div>
+                <div>
+                    Digitale Belegdokumentation in Echtzeit
+                    <div class="check"></div>
+                </div>
+                <div>
+                    Koordination mit dem Steuerberater
+                    <div class="check"></div>
+                </div>
+                <div>
+                    Zeitgold Zahlungskonto
+                    <div class="check"></div>
+                </div>
+                <div>
+                    Koordination mit dem Steuerberater
+                    <div class="check"></div>
+                </div>
+            </div>
+        </div>
+        <div class="pb"></div>
+        <h5><span class="bold">PIONEER</span> ANGEBOT</h5>
+        <p>
+            Dieses Angebot enthält die Pauschale für alle Leistungen der Pioneer Steuerberatungsgesellschaft. Es ist nur gültig, wenn Du die Dienstleistungen von Zeitgold nutzt.
+        </p>               
+        <div class="fifty">
+            <div class="left">Monatliche Pauschale:</div>
+            <div class="right"><span class="blue">€ {!monatlichePauschale}</span></div>
+        </div>
+        <div class="fifty">
+            <div class="left">
+                Jährliche Pauschale:
+            </div>
+            <div class="right">
+                <span class="blue">€ {!jahrlichePauschale}</span> (per monatlicher Vorauszahlung berechnet)
+            </div>
+        </div>
+        <div class="fifty">
+            <div class="left">
+                Zusätzliche Beratung:
+            </div>
+            <div class="right">
+                nach Aufwand, € 150 pro Stunde durch den StB, € 80 durch StFa
+            </div>
+        </div>
+        <div class="fifty">
+            <div class="left">
+                Kündigungsfrist:
+            </div>
+            <div class="right">
+                unbefristet und mit 1-monatiger Kündigungsfrist
+            </div>
+        </div>
+        <div class="fifty">
+            <div class="left">
+                Das Angebot ist gültig bis:
+            </div>
+            <div class="right">
+                <span class="blue">{!offerExpiration}</span>
+            </div>
+        </div>
+        <br/>
+        
+        <c:PersG rendered="{!IF(legalType='PersG', true, false)}"/>
+        <c:EU rendered="{!IF(legalType='EU', true, false)}"/>
+        <c:KapG rendered="{!IF(legalType='KapG', true, false)}"/>
+        
+        <div class="pb"></div>
+        
+        <h5><span class="bold">VERTRAGSBESTANDTEILE</span></h5>
+        
+        <div class="bold">Zeitgold - Dienstleistungsvertrag</div>
+        <p>
+            Der Dienstleistungsvertrag regelt die Zusammenarbeit zwischen Dir als
+            Kunden und Zeitgold. Wir regeln beispielsweise welche Rechte und Pflichten
+            Du und Zeitgold haben. Außerdem werden hier die Leistungen von Zeitgold
+            und die damit verbundene Vergütung entsprechend des Angebotes geregelt.
+        </p>
+        <div class="bold">Zeitgold - Handlungsvollmacht</div>
+        <p>
+            Mit der Unterschrift der Handlungsvollmacht ernennst Du Zeitgold zum
+            Bevollmächtigten. So ermöglichst Du zum Beispiel die Funktion des Bezahlens per
+            App oder die Bereitstellung der Unterlagen für den Steuerberatungspartner.
+        </p>
+        
+        <div class="bold">
+            Vereinbarung mit Zeitgold zur Auftragsdatenverarbeitung
+        </div>
+        <p>
+            Gemäß der kürzlich in Kraft getretenen Datenschutzgrundverordnung (DSGVO) ist
+            die Verarbeitung von personenbezogenen Daten in einer gesonderten Verarbeitung
+            vertraglich zu regeln. Diese Vereinbarung konkretisiert die
+            datenschutzrechtlichen Verpflichtungen, die wir für Dich erfüllen. Außerdem
+            verpflichten wir uns, mit Deinen Daten datensparsam zu handeln.
+        </p>
+        <hr/>
+        <br/>
+        <div class="bold">Pioneer - Auftragsbestätigung</div>
+        <p>
+            Der Dienstleistungsvertrag regelt die Zusammenarbeit zwischen Dir als Kunden und Pioneer.
+        </p>
+        
+        <div class="bold">Pioneer - Vergütungsvereinbarung</div>
+        <p>
+            Die Vergütungsvereinbarung klärt Dich darüber auf, für welche Leistungen Pioneer welche Gebühren berechnet. Außerdem erteilt Pioneer das Recht per SEPA-Lastschriftmandat die Gebühren für Pioneer einzuziehen.
+        </p>
+        
+        <div class="bold">Pioneer - Allgemeine Auftragsbedingungen</div>
+        <p>
+            Die Auftragsbedingungen regeln die Zusammenarbeit mit dem Steuerberater im erweiterten Sinne, zum Beispiel in welchen Fällen der Steuerberater zum Stillschweigen über Deine Geschäftstätigkeit verpflichtet ist und in welchen Fällen nicht.
+        </p>
+    </div>
+    <div class="pb"></div>
+</apex:component>

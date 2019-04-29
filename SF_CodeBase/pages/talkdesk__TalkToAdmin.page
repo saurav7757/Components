@@ -1,0 +1,61 @@
+<apex:page id="TalkToAdmin">
+    <apex:slds />
+
+    <style>
+        .feature-error-maincontainer {
+            width:100%;
+            height: 100%;
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+
+        .feature-error-maincontainer span {
+            display: inline-block;
+            vertical-align: bottom;
+        }
+
+        .feature-error-leftcolumn {
+            float:left;
+            display:inline-block;
+            width: 120px;
+            margin-left: 24px;
+            margin-right: 24px;
+        }
+
+        .feature-error-contentwrapper {
+            vertical-align: bottom;
+            float:center;
+            display:inline-block;
+            width: calc(100% - 192px);
+            margin-right: 24px;
+        }
+
+        .talkdesklogo {
+            height: 24px;
+        }
+
+        .feature-message-body {
+            color: #a8b7c7;
+            padding-top: 16px;
+            font-size: 14px;
+            line-height: 18px;
+        }
+    </style>
+
+    <div class="slds-scope">
+        <div class="feature-error-maincontainer">
+            <span class="feature-error-leftcolumn">
+                <img src="{! $Resource.assets + '/sms-placeholder-images/SF_hat.png' }" />
+            </span>
+            <span class="feature-error-contentwrapper">
+                <div class="talkdesklogo">
+                    <img src="{! $Resource.assets + '/sms-placeholder-images/TD_LOGO_RGB_DARK_BLUE.png' }"
+                         style="height: 100%" />
+                </div>
+                <div class="slds-text-color_weak feature-message-body">No integration previously setup.<br />
+                    Please contact your administrator in order to use Talkdesk features.
+                </div>
+            </span>
+        </div>
+    </div>
+</apex:page>

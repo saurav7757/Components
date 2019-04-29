@@ -1,0 +1,564 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <validationRules>
+        <fullName>IsAnnualRevenueEmpty</fullName>
+        <active>false</active>
+        <errorConditionFormula>and( 
+   OR( 
+     ispickval(Status , &apos;SQL&apos;), 
+     ispickval(Status, &apos;SQL and Demo scheduled&apos;) 
+     ),
+   OR(
+     ISNULL( AnnualRevenue ),
+     AnnualRevenue &lt; 0
+     ),
+   AND(
+     NOT(
+      ispickval(LeadSource,&apos;Calendly&apos;)
+         ),
+     NOT(
+      FirstName = &apos;Aircall new lead&apos;
+         )
+     )
+)</errorConditionFormula>
+        <errorMessage>Please fill out the annual revenue.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>IsAnnualRevenueTooSmall</fullName>
+        <active>true</active>
+        <errorConditionFormula>and( 
+     INCLUDES(Zeitgold_Rejection_Reasons__c , &apos;Business is too small (employees or revenue)&apos;),
+
+   OR(
+     ISNULL( AnnualRevenue ),
+     AnnualRevenue &lt; 0
+     ),
+   AND(
+     NOT(
+      ispickval(LeadSource,&apos;Calendly&apos;)
+         ),
+     NOT(
+      FirstName = &apos;Aircall new lead&apos;
+         )
+     )
+)</errorConditionFormula>
+        <errorMessage>If you reject a prospect because of too less revenue, we need to know how much revenue they make.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>IsCitySet</fullName>
+        <active>true</active>
+        <errorConditionFormula>and( 
+OR( 
+ispickval(Status , &apos;SQL&apos;), 
+ispickval(Status, &apos;SQL and Demo scheduled&apos;) 
+), 
+ISBLANK( City ), 
+AND( 
+NOT( 
+ispickval(LeadSource,&apos;Calendly&apos;) 
+), 
+NOT( 
+FirstName = &apos;Aircall new lead&apos; 
+) 
+) 
+)</errorConditionFormula>
+        <errorMessage>Please fill out the city of the lead.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>IsClosingPathUnknown</fullName>
+        <active>true</active>
+        <errorConditionFormula>and( 
+    OR( 
+       ispickval(Status , &apos;SQL&apos;), 
+       ispickval(Status, &apos;SQL and Demo scheduled&apos;) 
+       ), 
+    OR(
+       ISBLANK(TEXT(Personalitiy__c)), 
+       ISBLANK(What_are_they_looking_for__c), 
+       ISBLANK(Key_pain_point__c)
+      ),
+AND(
+       NOT(ISPICKVAL(LeadSource, &apos;Partner - Metro&apos;)),       
+       NOT(ISPICKVAL(LeadSource, &apos;Partner - orderbird&apos;)),       
+       NOT(ISPICKVAL(LeadSource, &apos;Partner - Deutsche Bank - Internal&apos;)),       
+       NOT(ISPICKVAL(LeadSource, &apos;Partner - Deutsche Bank - External&apos;)),       
+       NOT(ISPICKVAL(LeadSource, &apos;Partner - Pioneer&apos;)),       
+       NOT(ISPICKVAL(LeadSource, &apos;Cold Call - manual research&apos;)), 
+       NOT(ISPICKVAL(LeadSource, &apos;Cold Call - facebook comment&apos;)),
+       NOT(ISPICKVAL(LeadSource, &apos;Cold Call - DeliveryHero&apos;)),
+       NOT(ISPICKVAL(LeadSource, &apos;Cold Call - Other&apos;)),
+       NOT(ISPICKVAL(LeadSource, &apos;Mailing - manual research&apos;)),      
+       NOT(ISPICKVAL(LeadSource, &apos;DL1 Foodora&apos;)),
+       NOT(ISPICKVAL(LeadSource, &apos;DL2 Deliveroo&apos;)),
+       NOT(ISPICKVAL(LeadSource, &apos;DL3 Lieferheld&apos;)),
+       NOT(ISPICKVAL(LeadSource, &apos;Outbound Walk In&apos;)),
+       NOT(ISPICKVAL(LeadSource, &apos;Calendly&apos;))
+), 
+NOT( 
+FirstName = &apos;Aircall new lead&apos; 
+) 
+)</errorConditionFormula>
+        <errorMessage>Please fill out all fields in the closing path</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>IsConstraintsUnknown</fullName>
+        <active>true</active>
+        <errorConditionFormula>and(
+    OR(ispickval(Status , &apos;SQL&apos;), ispickval(Status, &apos;SQL and Demo scheduled&apos;)),
+      ISBLANK(Name_cash_register__c),
+       ISBLANK(TEXT(VAT_declaration_extension_DFV__c)),
+       NOT(ISPICKVAL(LeadSource, &apos;Partner - Metro&apos;)),       
+       NOT(ISPICKVAL(LeadSource, &apos;Partner - orderbird&apos;)),       
+       NOT(ISPICKVAL(LeadSource, &apos;Partner - Deutsche Bank - Internal&apos;)),       
+       NOT(ISPICKVAL(LeadSource, &apos;Partner - Deutsche Bank - External&apos;)),       
+       NOT(ISPICKVAL(LeadSource, &apos;Partner - Pioneer&apos;)),       
+       NOT(ISPICKVAL(LeadSource, &apos;Cold Call - manual research&apos;)), 
+       NOT(ISPICKVAL(LeadSource, &apos;Cold Call - facebook comment&apos;)),
+       NOT(ISPICKVAL(LeadSource, &apos;Cold Call - DeliveryHero&apos;)),
+       NOT(ISPICKVAL(LeadSource, &apos;Cold Call - Other&apos;)),
+       NOT(ISPICKVAL(LeadSource, &apos;Mailing - manual research&apos;)),      
+       NOT(ISPICKVAL(LeadSource, &apos;DL1 Foodora&apos;)),
+       NOT(ISPICKVAL(LeadSource, &apos;DL2 Deliveroo&apos;)),
+       NOT(ISPICKVAL(LeadSource, &apos;DL3 Lieferheld&apos;)),
+       NOT(ISPICKVAL(LeadSource, &apos;Outbound Walk In&apos;)),
+       NOT(ISPICKVAL(LeadSource, &apos;Calendly&apos;))
+, 
+       NOT(FirstName = &apos;Aircall new lead&apos;))</errorConditionFormula>
+        <errorMessage>Please fill out all info in the Constraints &amp; Indicators section</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>IsCountrySet</fullName>
+        <active>true</active>
+        <errorConditionFormula>and( 
+OR( 
+ispickval(Status , &apos;SQL&apos;), 
+ispickval(Status, &apos;SQL and Demo scheduled&apos;) 
+), 
+ISBLANK(Country), 
+AND( 
+NOT( 
+ispickval(LeadSource,&apos;Calendly&apos;) 
+), 
+NOT( 
+FirstName = &apos;Aircall new lead&apos; 
+) 
+) 
+)</errorConditionFormula>
+        <errorMessage>Please fill out the country of the lead.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>IsDemoDateUnknown</fullName>
+        <active>true</active>
+        <errorConditionFormula>and( 
+OR( 
+ispickval(Status , &apos;SQL&apos;), 
+ispickval(Status, &apos;SQL and Demo scheduled&apos;) 
+), 
+ISNULL(Demo_date__c),
+NOT( 
+ispickval(LeadSource, &apos;Calendly&apos;) 
+), 
+NOT( 
+FirstName = &apos;Aircall new lead&apos; 
+) 
+)</errorConditionFormula>
+        <errorMessage>Please fill out the date of the demo.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>IsIndustryEmpty</fullName>
+        <active>true</active>
+        <errorConditionFormula>and( 
+OR( 
+ispickval(Status , &apos;SQL&apos;), 
+ispickval(Status, &apos;SQL and Demo scheduled&apos;) 
+),
+ISBLANK(TEXT( Industry )
+),
+AND(
+NOT(
+ispickval(LeadSource,&apos;Calendly&apos;)
+),
+NOT(
+FirstName = &apos;Aircall new lead&apos;
+)
+)
+)</errorConditionFormula>
+        <errorMessage>Please fill out the industry.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>IsLeadSourceEmpty</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND( 
+   OR( 
+     ispickval(Status , &apos;SQL&apos;), 
+     ispickval(Status, &apos;SQL and Demo scheduled&apos;) 
+     ),
+   ISBLANK(
+     TEXT( LeadSource )
+     ),
+NOT( 
+FirstName = &apos;Aircall new lead&apos; 
+) 
+)</errorConditionFormula>
+        <errorMessage>Please fill out the lead source.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>IsLegalFormSet</fullName>
+        <active>false</active>
+        <errorConditionFormula>AND( 
+OR( 
+ispickval(Status , &apos;SQL&apos;), 
+ispickval(Status, &apos;SQL and Demo scheduled&apos;) 
+), 
+OR( 
+ISBLANK(TEXT(Legal_Form__c)) 
+), 
+AND(
+       NOT(ISPICKVAL(LeadSource, &apos;Partner - Metro&apos;)),       
+       NOT(ISPICKVAL(LeadSource, &apos;Partner - orderbird&apos;)),       
+       NOT(ISPICKVAL(LeadSource, &apos;Partner - Deutsche Bank - Internal&apos;)),       
+       NOT(ISPICKVAL(LeadSource, &apos;Partner - Deutsche Bank - External&apos;)),       
+       NOT(ISPICKVAL(LeadSource, &apos;Partner - Pioneer&apos;)),       
+       NOT(ISPICKVAL(LeadSource, &apos;Cold Call - manual research&apos;)), 
+       NOT(ISPICKVAL(LeadSource, &apos;Cold Call - facebook comment&apos;)),
+       NOT(ISPICKVAL(LeadSource, &apos;Cold Call - DeliveryHero&apos;)),
+       NOT(ISPICKVAL(LeadSource, &apos;Cold Call - Other&apos;)),
+       NOT(ISPICKVAL(LeadSource, &apos;Mailing - manual research&apos;)),      
+       NOT(ISPICKVAL(LeadSource, &apos;DL1 Foodora&apos;)),
+       NOT(ISPICKVAL(LeadSource, &apos;DL2 Deliveroo&apos;)),
+       NOT(ISPICKVAL(LeadSource, &apos;DL3 Lieferheld&apos;)),
+       NOT(ISPICKVAL(LeadSource, &apos;Outbound Walk In&apos;)),
+       NOT(ISPICKVAL(LeadSource, &apos;Calendly&apos;))
+), 
+NOT( 
+FirstName = &apos;Aircall new lead&apos; 
+) 
+)</errorConditionFormula>
+        <errorMessage>Please fill out the legal form field.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>IsLostorRejectedDetailedEmpty</fullName>
+        <active>false</active>
+        <errorConditionFormula>and(
+OR(
+ispickval(Status , &apos;Closed Lost&apos;), 
+ispickval(Status, &apos;Rejected&apos;)), 
+isblank( Detailed_Lost_or_Rejection_Reason__c 
+)
+)</errorConditionFormula>
+        <errorDisplayField>Detailed_Lost_or_Rejection_Reason__c</errorDisplayField>
+        <errorMessage>Please submit a detailed Lost or Rejection reason</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>IsNameAndCompanyUnknown</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND( 
+OR( 
+ispickval(Status , &apos;SQL&apos;), 
+ispickval(Status, &apos;SQL and Demo scheduled&apos;) 
+),
+OR(
+FirstName = &apos;Zeitgold&apos;,
+LastName = &apos;Interessent&apos;,
+Company = &apos;[not provided]&apos;,
+LastName = &apos;[not provided]&apos;
+),
+AND( 
+NOT( 
+ispickval(LeadSource,&apos;Calendly&apos;) 
+), 
+NOT( 
+FirstName = &apos;Aircall new lead&apos; 
+)
+)
+)</errorConditionFormula>
+        <errorMessage>Please put in a correct First &amp; Last Name and the Name of the Company.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>IsNrOfEmployeesEmpty</fullName>
+        <active>false</active>
+        <errorConditionFormula>and( 
+OR( 
+ispickval(Status , &apos;SQL&apos;), 
+ispickval(Status, &apos;SQL and Demo scheduled&apos;) 
+),
+OR(
+ISNULL(  NumberOfEmployees  ),
+NumberOfEmployees &lt; 0
+),
+AND(
+NOT(
+ispickval(LeadSource,&apos;Calendly&apos;)
+),
+NOT(
+FirstName = &apos;Aircall new lead&apos;
+)
+)
+)</errorConditionFormula>
+        <errorMessage>Please fill out No of employees</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>IsNurturingfilled</fullName>
+        <active>true</active>
+        <description>Check if Field &quot;Nurturing&quot; is filled when a Lead is marked as Closed Lost.</description>
+        <errorConditionFormula>ispickval(Status , &apos;Closed Lost&apos;) &amp;&amp;  ISBLANK(TEXT(Nurturing__c))</errorConditionFormula>
+        <errorMessage>Please say if the Lead is nurturing or not.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>IsPersonalInfoUnknown</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(
+    OR( 
+       ispickval(Status , &apos;SQL&apos;), 
+       ispickval(Status, &apos;SQL and Demo scheduled&apos;) 
+       ),
+    OR(
+       ISBLANK(TEXT(Salutation)),
+       ISBLANK(FirstName),
+       ISBLANK(LastName),
+       ISBLANK(TEXT( Tone_of_address__c )),
+       ISBLANK(TEXT( Gender__c )),
+       ISBLANK(TEXT( Language__c ))
+       ),
+    AND(
+       NOT(
+           ispickval(LeadSource,&apos;Calendly&apos;)
+          ),
+       NOT(
+           FirstName = &apos;Aircall new lead&apos;
+          )
+       )
+)</errorConditionFormula>
+        <errorMessage>Please fill out the personal infos like name, gender, salutation, tone of address.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>IsPostalcodeSet</fullName>
+        <active>true</active>
+        <errorConditionFormula>and( 
+OR( 
+ispickval(Status , &apos;SQL&apos;), 
+ispickval(Status, &apos;SQL and Demo scheduled&apos;) 
+), 
+ISBLANK( PostalCode ), 
+AND( 
+NOT( 
+ispickval(LeadSource,&apos;Calendly&apos;) 
+), 
+NOT( 
+FirstName = &apos;Aircall new lead&apos; 
+) 
+) 
+)</errorConditionFormula>
+        <errorMessage>Please fill out the postalcode of the lead.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>IsQualificationTypeKnown</fullName>
+        <active>false</active>
+        <errorConditionFormula>AND(
+   OR( 
+      ispickval(Status , &apos;SQL&apos;), 
+      ispickval(Status, &apos;SQL and Demo scheduled&apos;) 
+      ),
+   OR(
+      ISBLANK(TEXT( Qualification_type__c )) 
+      ),
+   AND(
+      NOT( 
+        ispickval(LeadSource,&apos;Calendly&apos;) 
+         ),
+      NOT(
+        FirstName = &apos;Aircall new lead&apos;
+         )
+      )
+)</errorConditionFormula>
+        <errorMessage>Please select how you qualified and pitched Zeitgold to the lead</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>IsStreetSet</fullName>
+        <active>true</active>
+        <errorConditionFormula>and( 
+OR( 
+ispickval(Status , &apos;SQL&apos;), 
+ispickval(Status, &apos;SQL and Demo scheduled&apos;) 
+), 
+ISBLANK( Street), 
+AND( 
+NOT( 
+ispickval(LeadSource,&apos;Calendly&apos;) 
+), 
+NOT( 
+FirstName = &apos;Aircall new lead&apos; 
+) 
+) 
+)</errorConditionFormula>
+        <errorMessage>Please fill out the street of the lead.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>IsYearEstablishedNumber</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND( 
+    (ISBLANK( Year_business_established__c )), 
+     NOT(ISNUMBER( Year_business_established__c )), 
+     $Profile.Name = &apos;Standard User 2.0&apos;,
+
+  (OR((ISPICKVAL(Status,&apos;SQL&apos;)),(ISPICKVAL(Status,&apos;SQL and Demo scheduled&apos;)))
+),
+       NOT(ISPICKVAL(LeadSource, &apos;Partner - Metro&apos;)),       
+       NOT(ISPICKVAL(LeadSource, &apos;Partner - orderbird&apos;)),       
+       NOT(ISPICKVAL(LeadSource, &apos;Partner - Deutsche Bank - Internal&apos;)),       
+       NOT(ISPICKVAL(LeadSource, &apos;Partner - Deutsche Bank - External&apos;)),       
+       NOT(ISPICKVAL(LeadSource, &apos;Partner - Pioneer&apos;)),       
+       NOT(ISPICKVAL(LeadSource, &apos;Cold Call - manual research&apos;)), 
+       NOT(ISPICKVAL(LeadSource, &apos;Cold Call - facebook comment&apos;)),
+       NOT(ISPICKVAL(LeadSource, &apos;Cold Call - DeliveryHero&apos;)),
+       NOT(ISPICKVAL(LeadSource, &apos;Cold Call - Other&apos;)),
+       NOT(ISPICKVAL(LeadSource, &apos;Mailing - manual research&apos;)),      
+       NOT(ISPICKVAL(LeadSource, &apos;DL1 Foodora&apos;)),
+       NOT(ISPICKVAL(LeadSource, &apos;DL2 Deliveroo&apos;)),
+       NOT(ISPICKVAL(LeadSource, &apos;DL3 Lieferheld&apos;)),
+       NOT(ISPICKVAL(LeadSource, &apos;Outbound Walk In&apos;)),
+       NOT(ISPICKVAL(LeadSource, &apos;Calendly&apos;))
+, 
+NOT(
+FirstName = &apos;Aircall new lead&apos;
+)
+)</errorConditionFormula>
+        <errorDisplayField>Year_business_established__c</errorDisplayField>
+        <errorMessage>Fill in the Field &quot;Year business established&quot; and remember that there are only numbers allowed.</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>GoogleMaps</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Google Maps</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>http://maps.google.com/maps?f=q&amp;hl=en&amp;q={!Lead_Street}+{!Lead_City}+{!Lead_State}&amp;om=1</url>
+    </webLinks>
+    <webLinks>
+        <fullName>GoogleNews</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Google News</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>http://www.google.com/news?&amp;q={!Lead_Company}&amp;btnG=Search+News</url>
+    </webLinks>
+    <webLinks>
+        <fullName>GoogleSearch</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Google Search</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>http://www.google.com/search?q={!Lead_Company}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Schedule_Calendly</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Schedule Calendly</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>https://calendly.com/zeitgold-{!$User.FirstName}/info?first_name={!Lead.FirstName}&amp;last_name={!Lead.LastName}&amp;email={!Lead.Email}&amp;phone={!Lead.MobilePhone}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>dsfs__Send_with_DocuSign</fullName>
+        <availability>online</availability>
+        <description>This button will initiate a DocuSign Envelope that is linked to the Lead</description>
+        <displayType>button</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Send with DocuSign</masterLabel>
+        <openType>noSidebar</openType>
+        <page>dsfs__CreateEnvelopeFromLead</page>
+        <protected>false</protected>
+    </webLinks>
+    <webLinks>
+        <fullName>pi__Send_Pardot_Email</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Send Pardot Email</masterLabel>
+        <openType>sidebar</openType>
+        <page>pi__SendPardotEmailLead</page>
+        <protected>false</protected>
+    </webLinks>
+    <webLinks>
+        <fullName>pi__Send_Pardot_Emails</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Send Engage Email</masterLabel>
+        <openType>sidebar</openType>
+        <page>pi__MicroCampaignLead</page>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+    </webLinks>
+    <webLinks>
+        <fullName>pi__Send_Single_Pardot_Email</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Send Engage Email</masterLabel>
+        <openType>sidebar</openType>
+        <page>pi__MicroCampaignSingleLead</page>
+        <protected>false</protected>
+    </webLinks>
+    <webLinks>
+        <fullName>pi__Send_to_Prospect_Insight</fullName>
+        <availability>online</availability>
+        <description>Send this Lead to Pardot</description>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>Send to Pardot</masterLabel>
+        <openType>sidebar</openType>
+        <protected>false</protected>
+        <url>/apex/pi__SendToPardot?leadEmail={!URLENCODE(Lead.Email)}&amp;leadId={!Lead.Id}&amp;serverUrl={!$Api.Partner_Server_URL_90}</url>
+    </webLinks>
+</CustomObject>

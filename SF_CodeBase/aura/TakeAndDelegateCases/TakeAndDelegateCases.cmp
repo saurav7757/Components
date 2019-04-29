@@ -1,0 +1,106 @@
+<aura:component implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" controller = "UpdateCaseOwnership">
+	 <!--use boolean attribute for Store true/false value,
+    make default to "false" so modal box are not display on the load of component. 
+    --> 
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:attribute name="isOpen" type="boolean" default="false"/>
+	<aura:attribute name="isUser" type="boolean" default="true"/>
+	<aura:attribute name="isQueue" type="boolean" default="false"/>
+	<aura:attribute name="recordId" type="String"/>
+	<aura:attribute name="selectedLookUpRecord" type="sObject" default="{}"/>
+	<aura:attribute name="IsSpinner" type="Boolean" default="false"/>
+	<aura:attribute name="options" type="List" default="[
+    {'label': 'User', 'value': 'User'},
+    {'label': 'Queue', 'value': 'Queue'}
+    ]"/>
+    <aura:attribute name="value" type="String" default="User"/>
+	
+    
+    <aura:handler event="c:ClearLookupComponent" action="{!c.clearLookupVals}" />
+    <aura:handler event="c:ConnectLookupComponent" action="{!c.getUserRecordDetails}"/>
+    
+    <!--Use "slds-m-around_xx-large" class to add standard X-Large padding to the component--> 
+    <div class="slds-m-around_xx-small">
+        <lightning:button variant="brand"
+                          label="Take Case"
+                          title="Click here to Take Case"
+                          class="img"
+                          onclick="{!c.takeOwnership}" />
+		
+		
+        <lightning:button variant="brand"
+                          label="Delegate Case"
+                          title="Click here to Delegate Case"
+                          class="img"
+                          onclick="{!c.openModel}" />
+        
+        <aura:if isTrue="{!v.IsSpinner}">
+					<lightning:spinner variant="brand"  size="large" />
+				</aura:if>
+        
+        <!--Use aura:if tag to display Model Box, on the bese of conditions. [isOpen boolean attribute] -->   
+        <aura:if isTrue="{!v.isOpen}">
+            
+            <!--###### MODAL BOX Start######--> 
+            <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+                <aura:if isTrue="{!v.IsSpinner}">
+					<lightning:spinner variant="brand"  size="large" />
+				</aura:if>
+                <div class="slds-modal__container">
+                    <!-- ###### MODAL BOX HEADER Start ######-->
+                    <header class="slds-modal__header">
+                        <lightning:buttonIcon iconName="utility:close"
+                                              onclick="{! c.closeModel }"
+                                              alternativeText="close"
+                                              variant="bare-inverse"
+                                              class="slds-modal__close"/>
+                        <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Delegate Case</h2>
+                    </header>
+                    <!--###### MODAL BOX BODY Part Start######-->
+                    <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                        
+						
+						
+						<div class="slds-form--stacked slds-p-around--medium slds-m-bottom--x-small">
+                        <div class="form-group">
+                            <lightning:radioGroup name="radioGroup"
+                          label="Delegate Case to : "
+                          options="{!v.options}"
+                          value="{! v.value }"
+                          type="radio"
+                          onchange = "{!c.getoptionsValue}"/>
+							<br/>
+							<aura:if isTrue="{!v.isUser}">
+							<label class="bold-group">User</label>
+							<c:customLookup objectAPIName="User" IconName="standard:user" selectedRecord="{!v.selectedLookUpRecord}" />
+							</aura:if>
+							
+							<aura:if isTrue="{!v.isQueue}">
+							<label class="bold-group">Queue</label>
+							<c:customLookup objectAPIName="Group" IconName="standard:queue" selectedRecord="{!v.selectedLookUpRecord}" />
+							</aura:if>
+						</div><br/>
+						</div><br/>
+                       
+					</div>	
+                    <!--###### MODAL BOX FOOTER Part Start ######-->
+                    <footer class="slds-modal__footer">
+                        <lightning:button variant="neutral" 
+                                          label="Cancel"
+                                          title="Cancel"
+                                          onclick="{! c.closeModel }"/>
+						<lightning:button variant="brand" 
+                                          label="OK"
+                                          title="OK"
+                                          onclick="{!c.saveQueueOrUser}"/>
+                    </footer>
+                </div>
+            </section>
+            <div class="slds-backdrop slds-backdrop_open"></div>
+            <!--###### MODAL BOX Part END Here ######-->
+            
+        </aura:if>
+		
+		
+    </div>
+</aura:component>

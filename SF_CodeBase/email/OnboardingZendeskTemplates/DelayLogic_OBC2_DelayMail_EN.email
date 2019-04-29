@@ -1,0 +1,4 @@
+Hello again {{{Recipient.FirstName}}},</p>
+<p><br />I see that your remaining Onboarding&nbsp;<strong>[task/-s was/were]</strong>&nbsp;unfortunately were not completed by today.<br /><br />Due to this, we regret to inform you that we will be postponing our cooperation until the&nbsp;<strong>[01.DELAY MONTH.YEAR].</strong><br /><br />We will get in touch with you accordingly to resume Onboarding for the new start dates.</p>
+<p><br />If you have any questions, we are available at any time at&nbsp;<a href="http://service@zeitgold.com/" target="_blank" rel="noopener noreferrer">service@zeitgold.com</a>&nbsp;or 030/30808111.<br /><br />Regards,</p>
+<p>{{{Sender.FirstName}}} at Zeitgold</p>

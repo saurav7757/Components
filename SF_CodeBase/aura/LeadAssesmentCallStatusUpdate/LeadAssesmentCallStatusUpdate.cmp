@@ -1,0 +1,244 @@
+<aura:component implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" controller="UpdateLeadsRecordForAssesment">
+	 <!--use boolean attribute for Store true/false value,
+    make default to "false" so modal box are not display on the load of component. 
+    --> 
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:attribute name="isOpen" type="boolean" default="false"/>
+	<aura:attribute name="isRender" type="boolean" default="false"/>
+	<aura:attribute name="myNotes" type="String" />
+	<aura:attribute name="myNotesTitle" type="String" />
+	<aura:attribute name="leadName" type="String"/>
+    <aura:attribute name="objInfo" type="lead" default="{sobjectType : 'Lead'}" />
+	<aura:attribute name="employeeNumber" type="Integer"/>
+	<aura:attribute name="LeadDetails" type="Lead" default="{'sobjectType': 'Lead',
+                         'FirstName ': '',
+						 'LastName': '',
+						 'Gender__c': '',
+						 'Tone_of_address__c': '',
+						 'Language__c': '',
+						 'Demo_date__c': '',
+						 'Potential_dealbreaker__c': '',
+						 'Personalitiy__c': '',
+						 'LeadSource': '',                                   
+						 'What_are_they_looking_for__c': '',
+                         'Key_pain_point__c': '',
+						 'Weekly_hours_spent_on_bookkeeping__c': 0,
+						 'Cash_journal_needed__c': '',
+						 'Cash_journal_kept_in_compliant_way__c': '',
+						 'Year_business_established__c': '',
+						 'Legal_Form__c': '',
+						 'Street': '',
+						 'City': '',
+						 'PostalCode': '',
+						 'Country': '',
+						 'Name_cash_register__c': '',
+						 'Source_Revenues__c': '',
+						 'VAT_declaration_extension_DFV__c': '',
+						 'Separate_private_business_bank_account__c': '',
+						 'Name_Bank_business_bank_account__c': '',
+						 'AnnualRevenue': 0,
+						 'Qualification_type__c': '',
+						 'Status': '',
+						 'Lost_Reason_Lead__c': '',
+						 'Zeitgold_Rejection_Reasons__c': '',
+						 'Next_Step__c': '',
+						 'FS_Next_Step_date__c': '',
+						 'Detailed_Lost_or_Rejection_Reason__c': ''
+                       }"/>
+    <aura:attribute name="recordId" type="String"/>
+    <!--Use "slds-m-around_xx-large" class to add standard X-Large padding to the component--> 
+    <div class="slds-m-around_xx-small">
+        
+        <lightning:button variant="brand"
+                          label="Enter Assesment Call details"
+                          title="Click here to enter Assesment Call details"
+                          class="img"
+                          onclick="{!c.openModel}" />
+        <!--Use aura:if tag to display Model Box, on the bese of conditions. [isOpen boolean attribute] -->   
+        <aura:if isTrue="{!v.isOpen}">
+            
+            <!--###### MODAL BOX Start######--> 
+            <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+                <div class="slds-modal__container">
+                    <!-- ###### MODAL BOX HEADER Start ######-->
+                    <header class="slds-modal__header">
+                        <lightning:buttonIcon iconName="utility:close"
+                                              onclick="{! c.closeModel }"
+                                              alternativeText="close"
+                                              variant="bare-inverse"
+                                              class="slds-modal__close"/>
+                        <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Lead Assesment Call details</h2>
+                    </header>
+                    <!--###### MODAL BOX BODY Part Start######-->
+                    <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                        <div class="form-group">
+							<label class="bold-group">Lead Name</label><br/>
+							<ui:outputText aura:id="recName" class="form-control" value="{!v.leadName}"/>
+						</div><br/>
+						<div class="form-group">
+							<label class="bold-group">First Name</label><br/>
+							<ui:inputText aura:id="frstName" class="form-control" value="{!v.LeadDetails.FirstName}"/>
+						</div><br/>
+						<div class="form-group">
+							<label class="bold-group">Last Name</label><br/>
+							<ui:inputText aura:id="LastName" class="form-control" value="{!v.LeadDetails.LastName}"/>
+						</div><br/>
+						<div class="form-group">
+							<label class="bold-group">Gender</label><br/>
+							<ui:inputSelect aura:id="gender" class="slds-input" labelClass="slds-form-element__label"  value="{!v.LeadDetails.Gender__c}"/>
+						</div><br/>
+						<div class="form-group">
+							<label class="bold-group">Tone of address</label><br/>
+							<ui:inputSelect aura:id="toneAddr" class="slds-input" labelClass="slds-form-element__label" value="{!v.LeadDetails.Tone_of_address__c}"/>
+						</div><br/>
+						<div class="form-group">
+							<label class="bold-group">Language</label><br/>
+							<ui:inputSelect aura:id="langSel" class="slds-input" labelClass="slds-form-element__label" value="{!v.LeadDetails.Language__c}"/>
+						</div><br/>
+                        <div class="form-group">
+							<label class="bold-group">Lead Source</label>
+							<ui:inputSelect  aura:id="leadSource" class="slds-input" labelClass="slds-form-element__label" value="{!v.LeadDetails.LeadSource}"/>
+						</div><br/>
+                        <div class="form-group">
+							<label class="bold-group">What are they looking for</label>
+							<ui:inputTextArea rows="3" aura:id="lookingFor" class="form-control" value="{!v.LeadDetails.What_are_they_looking_for__c}"/>
+						</div><br/>
+						<div class="form-group">
+							<label class="bold-group">Key Main Point</label>
+							<ui:inputSelect multiple="true" class="multiple" aura:id="InputSelectMultiple" value="{!v.LeadDetails.Key_pain_point__c}"/>
+						</div><br/>
+						<div class="form-group">
+							<label class="bold-group">Weekly hours spent on bookkeeping</label>
+							<ui:inputNumber  aura:id="inpNumber" class="form-control" value="{!v.LeadDetails.Weekly_hours_spent_on_bookkeeping__c}"/>
+						</div><br/>
+						<div class="form-group">
+							<label class="bold-group">Cash journal needed?</label>
+							<ui:inputSelect  aura:id="cashJnr" class="slds-input" labelClass="slds-form-element__label" value="{!v.LeadDetails.Cash_journal_needed__c}"/>
+						</div><br/>
+						<div class="form-group">
+							<label class="bold-group">Cash journal kept in compliant way?</label>
+							<ui:inputSelect  aura:id="cashJnrComp" class="slds-input" labelClass="slds-form-element__label" value="{!v.LeadDetails.Cash_journal_kept_in_compliant_way__c}"/>
+						</div><br/>
+						<div class="form-group">
+							<label class="bold-group">Year business established</label>
+							<ui:inputText aura:id="yrId" class="form-control" value="{!v.LeadDetails.Year_business_established__c}"/>
+						</div><br/>
+						<div class="form-group">
+							<label class="bold-group">Legal form</label>
+							<ui:inputSelect  aura:id="legalFrm" class="slds-input" labelClass="slds-form-element__label" value="{!v.LeadDetails.Legal_Form__c}"/>
+						</div><br/>
+						<div class="form-group">
+							<label class="bold-group">Street</label>
+							<ui:inputText aura:id="street" class="form-control" value="{!v.LeadDetails.Street}"/>
+						</div><br/>
+						<div class="form-group">
+							<label class="bold-group">City</label>
+							<ui:inputText aura:id="city" class="form-control" value="{!v.LeadDetails.City}"/>
+						</div><br/>
+						<div class="form-group">
+							<label class="bold-group">Zip/Postal code</label>
+							<ui:inputText aura:id="zipcode" class="form-control" value="{!v.LeadDetails.PostalCode}"/>
+						</div><br/>
+						<div class="form-group">
+							<label class="bold-group">Country</label>
+							<ui:inputText aura:id="country" class="form-control" value="{!v.LeadDetails.Country}"/>
+						</div><br/>
+						<div class="form-group">
+							<label class="bold-group">Name cash register</label>
+							<ui:inputText aura:id="cashrgr" class="form-control" value="{!v.LeadDetails.Name_cash_register__c}"/>
+						</div><br/>
+						<div class="form-group">
+							<label class="bold-group">Source Revenues</label>
+							<ui:inputSelect multiple="true" class="multiple" aura:id="InputSelectMultipleSrcRevs" value="{!v.LeadDetails.Source_Revenues__c}"/>
+						</div><br/>
+						<div class="form-group">
+							<label class="bold-group">VAT declaration extension (DFV)</label>
+							<ui:inputSelect  aura:id="vatDet" class="slds-input" labelClass="slds-form-element__label" value="{!v.LeadDetails.VAT_declaration_extension_DFV__c}"/>
+						</div><br/>
+						<div class="form-group">
+							<label class="bold-group">Separate private and business bank account</label>
+							<ui:inputSelect  aura:id="sprBank" class="slds-input" labelClass="slds-form-element__label" value="{!v.LeadDetails.Separate_private_business_bank_account__c}"/>
+						</div><br/>
+						<div class="form-group">
+							<label class="bold-group">Name Bank (business bank account)</label>
+							<ui:inputText aura:id="nameBkAcc" class="form-control" value="{!v.LeadDetails.Name_Bank_business_bank_account__c}"/>
+						</div><br/>
+						<div class="form-group">
+							<label class="bold-group">Annual Revenue</label>
+							<ui:inputNumber aura:id="annRev" class="form-control" value="{!v.LeadDetails.AnnualRevenue}"/>
+						</div><br/>
+						<div class="form-group">
+							<label class="bold-group">No of Employees</label>
+							<ui:inputNumber aura:id="noEmp" class="form-control" value="{!v.employeeNumber}"/>
+						</div><br/>
+						<div class="form-group">
+							<label class="bold-group">Qualification type</label>
+							<ui:inputSelect  aura:id="qualType" class="slds-input" labelClass="slds-form-element__label" value="{!v.LeadDetails.Qualification_type__c}"/>
+						</div><br/>
+						<div class="form-group">
+							<label class="bold-group">Lead Status</label>
+							<ui:inputSelect  aura:id="ldStatus" class="slds-input" labelClass="slds-form-element__label" value="{!v.LeadDetails.Status}" change="{!c.renderOtherLeadDetails}"/>
+						</div><br/>
+						<div class="form-group">
+							<label class="bold-group">Demo date</label>
+							<ui:inputDate aura:id="demDate" displayDatePicker="true" class="form-control" value="{!v.LeadDetails.Demo_date__c}"/>
+						</div><br/>
+						<div class="form-group">
+							<label class="bold-group">Potential dealbreaker</label>
+							<ui:inputTextArea rows="2" aura:id="potDelBrk" class="form-control" value="{!v.LeadDetails.Potential_dealbreaker__c}"/>
+						</div><br/>
+						<div class="form-group">
+							<label class="bold-group">Personality</label>
+							<ui:inputSelect  aura:id="perType" class="slds-input" labelClass="slds-form-element__label" value="{!v.LeadDetails.Personalitiy__c}"/>
+						</div><br/>
+						<aura:if isTrue="{!and(v.LeadDetails.Status == 'Closed Lost', v.isRender == true)}">
+						<div class="form-group">
+							<label class="bold-group">Lost Reason</label>
+							<ui:inputSelect  aura:id="lostRsn" class="slds-input" labelClass="slds-form-element__label" value="{!v.LeadDetails.Lost_Reason_Lead__c}"/>
+						</div><br/>
+						</aura:if>
+						<aura:if isTrue="{!and(v.LeadDetails.Status == 'Rejected', v.isRender == true)}">
+							<div class="form-group">
+							<label class="bold-group">Zeitgold Rejection Reasons</label>
+							<ui:inputSelect multiple="true" class="multiple" aura:id="InputSelectMultiplerejRsns" value="{!v.LeadDetails.Zeitgold_Rejection_Reasons__c}"/>
+						</div><br/>
+						</aura:if>
+						<aura:if isTrue="{!and(or(v.LeadDetails.Status == 'Rejected', v.LeadDetails.Status == 'Closed Lost'), v.isRender == true)}">
+						<div class="form-group">
+							<label class="bold-group">Detailed Lost or Rejection Reason</label>
+							<ui:inputTextArea rows="1" aura:id="dtlLostRsns" class="form-control" value="{!v.LeadDetails.Detailed_Lost_or_Rejection_Reason__c}"/>
+						</div><br/>
+						</aura:if>
+						<div class="form-group">
+							<label class="bold-group">Notes</label>
+							<ui:inputText aura:id="titleNote" class="form-control" value="{!v.myNotesTitle}" required = "true" placeholder = "Please enter Title"/>
+							<lightning:inputRichText value="{!v.myNotes}" placeholder="Please enter..."/>
+						</div><br/>
+						<div class="form-group">
+							<label class="bold-group">FS - Next Step</label>
+							<ui:inputTextArea rows="1" aura:id="FSNextStp" class="form-control" value="{!v.LeadDetails.Next_Step__c}"/>
+						</div><br/>
+						<div class="form-group">
+							<label class="bold-group">FS - Next Step date</label>
+							<ui:inputDate aura:id="FSNextStpDate" displayDatePicker="true" class="form-control" value="{!v.LeadDetails.FS_Next_Step_date__c}"/>
+						</div><br/>
+                    </div>
+                    <!--###### MODAL BOX FOOTER Part Start ######-->
+                    <footer class="slds-modal__footer">
+                        <lightning:button variant="neutral" 
+                                          label="Cancel"
+                                          title="Cancel"
+                                          onclick="{! c.closeModel }"/>
+                        <lightning:button variant="brand" 
+                                          label="Save"
+                                          title="Save"
+                                          onclick="{!c.updateLead }"/>
+                    </footer>
+                </div>
+            </section>
+            <div class="slds-backdrop slds-backdrop_open"></div>
+            <!--###### MODAL BOX Part END Here ######-->
+            
+        </aura:if>
+    </div>
+</aura:component>

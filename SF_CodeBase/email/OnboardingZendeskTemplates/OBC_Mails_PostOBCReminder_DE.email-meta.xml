@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>OBC Mails - Post-OBC Reminder - DE</name>
+    <style>none</style>
+    <subject>[TO DO]: Erinnerung: Deine nächsten Schritte mit Zeitgold</subject>
+    <textOnly>Hallo {{{Recipient.FirstName}}},
+
+ich hoffe, Dir geht es gut und möchte Dich einmal an die nächsten Onboarding-Schritte erinnern. Bitte erledige die unten aufgeführten Punkte spätestens bis [zum 20. des Monats vor Zeitgold / Ende der Woche], damit wir Dich rechtzeitig in unsere Systeme integrieren und gegebenenfalls offene Fragen frühzeitig klären können.
+
+[INSERT Steps from Status Overview for Customer (or last mail)]
+
+Bei Fragen kannst Du uns jederzeit unter service@zeitgold.com oder 030/30808111 kontaktieren.
+
+Viele Grüße
+
+{{{Sender.FirstName}}} von Zeitgold</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

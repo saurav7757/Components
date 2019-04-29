@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- AlternatedWorkingFor --></label>
+        <name>AlternatedWorkingFor__c</name>
+    </fields>
+    <fields>
+        <help><!-- Can this user be assigned records in the Assignment Group process.  Uncheck to mark this use as inactive on all assignment groups --></help>
+        <label><!-- Assignment Group Active --></label>
+        <name>Assignment_Group_Active__c</name>
+    </fields>
+    <fields>
+        <label><!-- Email Signature --></label>
+        <name>Email_Signature__c</name>
+    </fields>
+    <fields>
+        <label><!-- OBC1 Calendly Link --></label>
+        <name>OBC1_Calendly_Link__c</name>
+    </fields>
+    <fields>
+        <help><!-- Used for the alternating Onboarding Manager Logic --></help>
+        <label><!-- ONB Manager --></label>
+        <name>ONB_Manager__c</name>
+    </fields>
+    <fields>
+        <label><!-- DSProSFMembershipStatus --></label>
+        <name>dsfs__DSProSFMembershipStatus__c</name>
+    </fields>
+    <fields>
+        <label><!-- DSProSFPassword --></label>
+        <name>dsfs__DSProSFPassword__c</name>
+    </fields>
+    <fields>
+        <label><!-- DSProSFUsername --></label>
+        <name>dsfs__DSProSFUsername__c</name>
+    </fields>
+    <fields>
+        <label><!-- Can View Not Assigned Prospects --></label>
+        <name>pi__Can_View_Not_Assigned_Prospects__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot Api Key --></label>
+        <name>pi__Pardot_Api_Key__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot Api Version --></label>
+        <name>pi__Pardot_Api_Version__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot User Id --></label>
+        <name>pi__Pardot_User_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot User Key --></label>
+        <name>pi__Pardot_User_Key__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot User Role --></label>
+        <name>pi__Pardot_User_Role__c</name>
+    </fields>
+    <fields>
+        <label><!-- Talkdesk User --></label>
+        <name>talkdesk__IsLicensed__c</name>
+    </fields>
+</CustomObjectTranslation>

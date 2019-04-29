@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>picklist</bucketType>
+        <developerName>BucketField_95475</developerName>
+        <masterLabel>Industry</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>INDUSTRY</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>I: Gastgewerbe - Gastronomie - Restaurants, Gaststätten, Imbissstuben, Cafés, Eissalons u. Ä. - Restaurant mit herkömmlicher Bedienung</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>I: Gastgewerbe - Gastronomie - Restaurant mit Selbstbedienung</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>I: Gastgewerbe - Gastronomie - Imbissstuben u. Ä.</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>I: Gastgewerbe - Gastronomie - Cafés</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>I: Gastgewerbe - Gastronomie - Eissalons</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>I: Gastgewerbe - Gastronomie - Caterer und Erbringung sonstiger Verpflegungsdienstleistunge</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>I: Gastgewerbe - Gastronomie - Ausschank von Getränken - Schankwirtschaft</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>I: Gastgewerbe - Gastronomie - Diskotheken und Tanzlokale</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>I: Gastgewerbe - Gastronomie - Bars</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>I: Gastgewerbe - Gastronomie - Vergnügungslokale</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>I: Gastgewerbe - Gastronomie - Sonstige getränkegeprägte Gastronomie</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>I: Gastgewerbe - Beherbergung - Hotels, Gasthöfe und Pensionen</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>I: Gastgewerbe - Beherbergung - Ferienunterkünfte und ähnliche Beherbergungsstätten</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>I: Gastgewerbe - Beherbergung - Campingplätze</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>I: Gastgewerbe - Beherbergung - Sonstige Beherbergungsstätten</sourceValue>
+            </sourceValues>
+            <value>Gastro</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>M: Erbringung von freiberuflichen, wissenschaftlichen und technischen Dienstleistungen - Verwaltung und Führung von Unternehmen und Betrieben, Unternehmensberatung - Verwaltung und Führung von Unternehmen und Betrieben</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>M: Erbringung von freiberuflichen, wissenschaftlichen und technischen Dienstleistungen - Verwaltung und Führung von Unternehmen und Betrieben, Unternehmensberatung - Public-Relations- und Unternehmensberatung - Public-Relations-Beratung</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>M: Erbringung von freiberuflichen, wissenschaftlichen und technischen Dienstleistungen - Verwaltung und Führung von Unternehmen und Betrieben, Unternehmensberatung - Public-Relations- und Unternehmensberatung - Unternehmensberatung</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>M: Erbringung von freiberuflichen, wissenschaftlichen und technischen Dienstleistungen - Verwaltung und Führung von Unternehmen und Betrieben, Unternehmensberatung - Architektur- und Ingenieurbüros - Architektur- und Ingenieurbüros</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>M: Erbringung von freiberuflichen, wissenschaftlichen und technischen Dienstleistungen - Verwaltung und Führung von Unternehmen und Betrieben, Unternehmensberatung - Architektur- und Ingenieurbüros - Technische, physikalische und chemische Untersuchung</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>M: Erbringung von freiberuflichen, wissenschaftlichen und technischen Dienstleistungen - Verwaltung und Führung von Unternehmen und Betrieben, Unternehmensberatung - Forschung und Entwicklung</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>M: Erbringung von freiberuflichen, wissenschaftlichen und technischen Dienstleistungen - Verwaltung und Führung von Unternehmen und Betrieben, Unternehmensberatung - Werbung und Marktforschung - Werbung</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>M: Erbringung von freiberuflichen, wissenschaftlichen und technischen Dienstleistungen - Verwaltung und Führung von Unternehmen und Betrieben, Unternehmensberatung - Werbung und Marktforschung - Markt- und Meinungsforschung</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>M: Erbringung von freiberuflichen, wissenschaftlichen und technischen Dienstleistungen - Verwaltung und Führung von Unternehmen und Betrieben, Unternehmensberatung - Ateliers für Textil-, Schmuck-, Grafik- u. ä. Design</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>M: Erbringung von freiberuflichen, wissenschaftlichen und technischen Dienstleistungen - Verwaltung und Führung von Unternehmen und Betrieben, Unternehmensberatung - Fotografie und Fotolabors</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>M: Erbringung von freiberuflichen, wissenschaftlichen und technischen Dienstleistungen - Verwaltung und Führung von Unternehmen und Betrieben, Unternehmensberatung - Übersetzen und Dolmetschen</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>M: Erbringung von freiberuflichen, wissenschaftlichen und technischen Dienstleistungen - Verwaltung und Führung von Unternehmen und Betrieben, Unternehmensberatung - Sonstige freiberufliche, wissenschaftliche und technische Tätigkeiten</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>M: Erbringung von freiberuflichen, wissenschaftlichen und technischen Dienstleistungen - Verwaltung und Führung von Unternehmen und Betrieben, Unternehmensberatung - Veterinärwesen</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>M: Erbringung von freiberuflichen, wissenschaftlichen und technischen Dienstleistungen - Rechts- und Steuerberatung, Wirtschaftsprüfung</sourceValue>
+            </sourceValues>
+            <value>Agency</value>
+        </values>
+    </buckets>
+    <columns>
+        <field>ACCOUNT_NAME</field>
+    </columns>
+    <columns>
+        <field>OPPORTUNITY_NAME</field>
+    </columns>
+    <columns>
+        <field>AMOUNT</field>
+    </columns>
+    <columns>
+        <field>AGE</field>
+    </columns>
+    <columns>
+        <field>BucketField_95475</field>
+    </columns>
+    <currency>EUR</currency>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>CREATED</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <field>CREATED_DATE</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Month</dateGranularity>
+        <field>Opportunity.Demo_date__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>All Closed Won - by SDR &amp; Demo</name>
+    <params>
+        <name>open</name>
+        <value>closedwon</value>
+    </params>
+    <params>
+        <name>probability</name>
+        <value>&gt;0</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Opportunity</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>CLOSE_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

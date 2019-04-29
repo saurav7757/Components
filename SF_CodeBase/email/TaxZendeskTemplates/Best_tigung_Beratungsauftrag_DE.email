@@ -1,0 +1,7 @@
+Hallo {{{Recipient.FirstName}}},
+
+gerne beantworten wir Ihre Anfrage vom {{{Case.CreatedDate}}}.
+
+Wir bitten Sie zunächst um eine kurze Bestätigung für den von Ihnen erteilten Beratungsauftrag, da diese Leistung nicht durch die Buchführungspauschale abgegolten ist. 
+
+Vielen Dank.

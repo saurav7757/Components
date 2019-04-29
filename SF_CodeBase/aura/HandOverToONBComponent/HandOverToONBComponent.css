@@ -1,0 +1,21 @@
+.THIS .bold-group{
+    font-weight:bold;
+}
+
+.THIS .img {
+    margin-left: 510px;border-radius: 25px;width: 209px;
+}
+
+.THIS .frsrClass {
+   color: rgb(194, 57, 52); 
+}
+
+.THIS .frsrZGClass {
+   color: rgb(194, 57, 52); 
+}
+
+.THIS .helpText {
+   padding: 5px; 
+   top: -3px;
+   position: relative;
+}

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Completeness Check - 2. Mail - DE</name>
+    <style>none</style>
+    <subject>Benötigte Unterlagen zur vollständigen Übernahme Deiner Buchhaltung</subject>
+    <textOnly>Hallo {{{Recipient.FirstName}}},
+
+
+vielen Dank für die bereits übermittelten Dokumente! Nach Durchsicht der Dokumente aus der letzten Box-Abholung haben wir festgestellt, dass uns noch folgende Unterlagen für Deine Finanz- und Lohnbuchhaltung fehlen:
+
+
+1. BETRIEBSWIRTSCHAFTLICHE AUSWERTUNG (BWA)
+
+Dafür benötigen wir noch folgende Dokumente:
+
+[LISTE INDIVIDUELL ANPASSEN]
+
+BWA bzw. Summen- und Saldenliste für den letzten Monat vor dem Zeitgold-Start
+
+Mietvertrag für Deine Geschäftsräume
+
+Laufende Darlehensverträge
+
+Laufende Leasingverträge
+
+
+
+Anmerkung: Bei Nicht-Einreichen der Dokumente entstehen keine Säumnisgebühren. Jedoch wird die BWA erst dann aussagekräftig sein, wenn uns alle notwendigen Informationen, einschließlich die aus den oben angeführten Dokumenten, vorliegen. Lasse uns diese Dokumente daher so schnell wie möglich zukommen.
+
+
+2. JAHRESABSCHLUSS
+
+Dafür benötigen wir noch folgende Dokumente:
+
+[LISTE INDIVIDUELL ANPASSEN]
+
+Gesellschaftsvertrag Deines Unternehmens
+
+Protokolle der Gesellschafterversammlung (inkl. Dokumente zu Änderungen an der Gesellschafter- und/oder Geschäftsführerstruktur)
+
+Jahresabschluss des Vorjahres (sofern bereits vorhanden)
+
+Kaufverträge aus den Vorjahren (aus Abschreibungsgründen)
+
+Arbeitsverträge aller Deiner Mitarbeiter
+
+
+
+Anmerkung: Diese Dokumente sind zur Erstellung des Jahresabschluss notwendig. Auch, wenn das Jahresende noch nicht unmittelbar bevorsteht – wenn Du ohnehin dabei bist, die anderen Unterlagen herauszusuchen, sollten diese ebenfalls schnell gefunden sein. Erledigt ist erledigt!
+
+
+________________
+
+
+&gt;&gt; Bitte lege uns die Unterlagen in den Versandumschlag für die nächste Box-Abholung.
+
+
+&gt;&gt; Bitte gib uns auch per Mail eine kurze Rückmeldung darüber, welche Dokumente Du in die Box legst - das erleichtert uns das Auffinden zwischen den übrigen Belegen.
+
+
+&gt;&gt; Bitte teile uns auch mit, falls eines oder mehrere dieser Dokumente (bspw. Darlehensverträge) nicht für Deine Geschäftssituation relevant sind oder bei Deinem bisherigen Steuerberater vorliegen.
+
+________________
+
+
+Vielen Dank für Deine Unterstützung!
+
+Bei Fragen kannst Du uns jederzeit unter service@zeitgold.com oder 030/3031811 kontaktieren.
+
+
+Viele Grüße
+
+{{{Sender.FirstName}}} von Zeitgold</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

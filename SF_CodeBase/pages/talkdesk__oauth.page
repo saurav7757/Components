@@ -1,0 +1,11 @@
+<apex:page id="oauth" controller="talkdesk.OAuthController" action="{! redeemCode }" showHeader="false" sideBar="false">
+    <script type="text/javascript">
+        window.onload = () => {
+            if({! codeRedeemed }) {
+                opener.handlePopupClose();
+                close();
+            }
+        };
+    </script>
+    <apex:pageMessages rendered="{! not(codeRedeemed) }" />
+</apex:page>

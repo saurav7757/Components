@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>SLS Handover Email-German-New</name>
+    <style>none</style>
+    <subject>Herzlich Willkommen bei Zeitgold</subject>
+    <textOnly>Hallo {!Account.Customer_First_Name__c},
+
+ich bin {!Account.Onboarding_Manager_First_Name__c} und ich freue mich sehr, dass Du Dich mit Deinem Unternehmen, {!Account.Company_Legal_Name__c} für Zeitgold entschieden hast!
+
+Bis zu Deinem offiziellen Start mit Zeitgold werde ich für Dich da sein, um mit Dir zusammen das Zeitgold-System einzurichten und Dich beim Kennenlernen unseres Services zu begleiten. Als ersten Schritt logge Dich bitte in Deine Zeitgold-App ein und erledige dort Deine ersten App-Aufgaben.
+
+
+Um Dich einzuloggen, lade bitte die Zeitgold-App herunter, gib Deine E-Mail-Adresse ein und erstelle Deine Passwort indem Du auf “Passwort vergessen?” klickst.
+
+
+
+Darüber hinaus wäre es super, wenn Du mir vorab ein paar wichtige Dateien per E-Mail schicken könntest:
+
+Ein Foto eines Z-Berichts von Deinem Kassensystem (beispielsweise mit allen Umsatzarten)
+Eine aktuelle Betriebswirtschaftliche Auswertung (BWA) von Deinem jetzigen Steuerberater
+
+Hiermit stellst Du sicher, dass eventuelle technische Anpassungen rechtzeitig geklärt werden können. Bei Fragen kannst Du uns jederzeit unter service@zeitgold.com oder 030/30808111 erreichen.
+
+Ich freue mich schon auf unser erstes Onboarding Telefonat!
+
+Viele Grüße,
+{!Account.Onboarding_Manager_First_Name__c} von Zeitgold
+
+
+{!Account.Onboarding_Manager_Name__c}
+Onboarding Delivery Specialist
+Zeitgold Onboarding Team</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <validationRules>
+        <fullName>IsIBANCorrect</fullName>
+        <active>true</active>
+        <errorConditionFormula>MOD(
+VALUE(
+SUBSTITUTE((SUBSTITUTE((SUBSTITUTE((SUBSTITUTE((SUBSTITUTE((SUBSTITUTE((SUBSTITUTE((SUBSTITUTE((SUBSTITUTE((SUBSTITUTE((SUBSTITUTE((SUBSTITUTE((SUBSTITUTE((SUBSTITUTE((SUBSTITUTE((SUBSTITUTE((SUBSTITUTE((SUBSTITUTE((SUBSTITUTE((SUBSTITUTE((SUBSTITUTE((SUBSTITUTE((SUBSTITUTE((SUBSTITUTE((SUBSTITUTE((
+SUBSTITUTE(
+RPAD( MID( SUBSTITUTE(IBAN_Main_Bank_Account__c, &quot; &quot;, &quot;&quot;),5,LEN(SUBSTITUTE(IBAN_Main_Bank_Account__c, &quot; &quot;, &quot;&quot;)) ) ,LEN(SUBSTITUTE(IBAN_Main_Bank_Account__c, &quot; &quot;, &quot;&quot;)), MID(SUBSTITUTE(IBAN_Main_Bank_Account__c, &quot; &quot;, &quot;&quot;),1,4) ),&quot;A&quot;,&quot;10&quot;))
+,&quot;B&quot;,&quot;11&quot;)),&quot;C&quot;,&quot;12&quot;)),&quot;D&quot;,&quot;13&quot;)),&quot;E&quot;,&quot;14&quot;)),&quot;F&quot;,&quot;15&quot;)),&quot;G&quot;,&quot;16&quot;)),&quot;H&quot;,&quot;17&quot;)),&quot;I&quot;,&quot;18&quot;)),&quot;J&quot;,&quot;19&quot;)),&quot;K&quot;,&quot;20&quot;)),&quot;L&quot;,&quot;21&quot;)),&quot;M&quot;,&quot;22&quot;)),&quot;N&quot;,&quot;23&quot;)),&quot;O&quot;,&quot;24&quot;)),&quot;P&quot;,&quot;25&quot;)),&quot;Q&quot;,&quot;26&quot;)),&quot;R&quot;,&quot;27&quot;)),&quot;S&quot;,&quot;28&quot;)),&quot;T&quot;,&quot;29&quot;)),&quot;U&quot;,&quot;30&quot;)),&quot;V&quot;,&quot;31&quot;)),&quot;W&quot;,&quot;32&quot;)),&quot;X&quot;,&quot;33&quot;)),&quot;Y&quot;,&quot;34&quot;)),&quot;Z&quot;,&quot;35&quot;))
+,97)
+&lt;&gt;1</errorConditionFormula>
+        <errorDisplayField>IBAN_Main_Bank_Account__c</errorDisplayField>
+        <errorMessage>The IBAN appears to be not correct.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>IsYearEstablishedNumber</fullName>
+        <active>false</active>
+        <errorConditionFormula>IF( 
+    NOT(ISBLANK( Year_business_established__c )), 
+    NOT(ISNUMBER( Year_business_established__c )), 
+NULL)</errorConditionFormula>
+        <errorDisplayField>Year_business_established__c</errorDisplayField>
+        <errorMessage>Only numbers are allowed</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Restrict_Service_cloud_users</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND( 
+ISCHANGED(Name), 
+OR($Profile.Name = &quot;Zeitgold Service Cloud User&quot;,$Profile.Name = &quot;Pioneer Service Cloud User&quot;))</errorConditionFormula>
+        <errorMessage>You are not allowed to change the Account Name. Please contact your system administrator.</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>Clone</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Clone</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <url>/{!Account.Id}/e?clone=1</url>
+    </webLinks>
+    <webLinks>
+        <fullName>GoogleMaps</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Google Maps</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>http://maps.google.com/maps?f=q&amp;hl=en&amp;q={!Account_BillingStreet}+{!Account_BillingCity}+{!Account_BillingState}&amp;om=1</url>
+    </webLinks>
+    <webLinks>
+        <fullName>GoogleNews</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Google News</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>http://www.google.com/news?&amp;q={!Account_Name}&amp;btnG=Search+News</url>
+    </webLinks>
+    <webLinks>
+        <fullName>GoogleSearch</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Google Search</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>http://www.google.com/search?q={!Account_Name}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>dsfs__Send_with_DocuSign</fullName>
+        <availability>online</availability>
+        <description>This button will initiate a DocuSign Envelope that is linked to the Account</description>
+        <displayType>button</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Send with DocuSign</masterLabel>
+        <openType>noSidebar</openType>
+        <page>dsfs__CreateEnvelopeFromAccount</page>
+        <protected>false</protected>
+    </webLinks>
+    <webLinks>
+        <fullName>dsfs__Verify_with_DNB</fullName>
+        <availability>online</availability>
+        <description>This button will initiate DnBs Pre-Contract Risk Screening linked to the Opportunity</description>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Verify with D&amp;B</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/apex/dsfs__DocuSign_JavaScript&quot;)}
+        
+{!REQUIRESCRIPT(&apos;//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js&apos;)} 
+{!REQUIRESCRIPT(&apos;//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js&apos;)} 
+
+var html = &apos;&lt;div id=&quot;dialog&quot; style=&quot;display: none;&quot;&gt;&lt;/div&gt;&apos;;
+
+var $g = jQuery.noConflict();
+
+var address = &apos;&lt;iframe id=&quot;dnbContent&quot; width=&quot;700&quot; height=&quot;730&quot; scrolling=&quot;no&quot; marginheight=&quot;0&quot; marginwidth=&quot;0&quot; frameborder=&quot;0&quot; src=&quot;&apos;+DocuSign_GetVerifyWithDnb(&apos;account&apos;)+&apos;&quot;&gt;&lt;/iframe&gt;&apos;;
+		
+$g(function() { 
+
+	$g(&apos;head&apos;).append(&apos;&lt;link rel=&quot;stylesheet&quot; href=&quot;https://code.jquery.com/ui/1.11.4/themes/redmond/jquery-ui.css&quot;/&gt;&apos;);
+
+	if($g(&apos;#dialog&apos;).length == 0) {
+		$g(&apos;body&apos;).append(html); 
+	}
+	$g(&quot;#dialog&quot;).dialog({ 
+		autoOpen: true, 
+		modal: true, 
+		width: 700,
+		height: 783,
+		open: function(event, ui) {
+		  if($g(&apos;#myNewImage&apos;).length == 0) {
+		     $g(&quot;.ui-dialog-titlebar&quot;).append(&quot;&lt;img src=&apos;&quot;+getDnbLogo()+&quot;&apos; id=&apos;myNewImage&apos; /&gt;&quot;);
+		  }
+		  $g(&apos;.ui-widget-overlay&apos;).bind(&apos;click&apos;,function(){
+    			$g(&apos;#dialog&apos;).dialog(&quot;close&quot;);
+		  });
+		}
+	})
+	if($g(&apos;#dnbContent&apos;).length == 0) {
+		$g(&apos;#dialog&apos;).append(address); 
+	}
+
+
+	$g(&quot;.ui-dialog-title&quot;).hide();
+	$g(&quot;#dialog&quot;).css(&apos;padding&apos;, &apos;0px&apos;);
+	$g(&quot;.ui-widget-header&quot;).attr(&apos;style&apos;, &apos;padding-top:5px; padding-right:5px; padding-left:10px;padding-bottom:5px; border-radius:0px; background: #005172;border:0px;margin:auto;&apos;);
+	$g(&quot;.ui-button-text&quot;).css(&apos;padding&apos;, &apos;0&apos;);
+	$g(&quot;.ui-icon-closethick&quot;).attr(&apos;style&apos;, &apos;background-color:#005172; width:19px; height:19px; margin-top:-10px; margin-left:-10px;&apos;);
+	$g(&quot;.ui-dialog-titlebar-close&quot;).attr(&apos;style&apos;, &apos;border-radius:0px; padding:0px; width:18px; height:18px; border:0px;&apos;);
+	$g(&quot;.ui-dialog&quot;).css(&apos;z-index&apos;, &apos;10000&apos;);
+	$g(&quot;.ui-dialog&quot;).css(&apos;border-radius&apos;, &apos;0px&apos;);
+});</url>
+    </webLinks>
+    <webLinks>
+        <fullName>pi__Send_Pardot_Emails</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Send Engage Email</masterLabel>
+        <openType>sidebar</openType>
+        <page>pi__MicroCampaignPersonAccount</page>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+    </webLinks>
+    <webLinks>
+        <fullName>pi__Send_Single_Pardot_Email</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Send Engage Email</masterLabel>
+        <openType>sidebar</openType>
+        <page>pi__MicroCampaignSinglePersonAccount</page>
+        <protected>false</protected>
+    </webLinks>
+    <webLinks>
+        <fullName>pi__Send_To_Prospect_Insight</fullName>
+        <availability>online</availability>
+        <description>Send this Person Account to Pardot</description>
+        <displayType>button</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Send To Pardot</masterLabel>
+        <openType>sidebar</openType>
+        <page>pi__PardotAccountSendToPardot</page>
+        <protected>false</protected>
+    </webLinks>
+</CustomObject>

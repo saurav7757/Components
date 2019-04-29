@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <dynamicChoiceSets>
+        <name>LeadSource</name>
+        <dataType>Picklist</dataType>
+        <displayField xsi:nil="true"/>
+        <object xsi:nil="true"/>
+        <picklistField>LeadSource</picklistField>
+        <picklistObject>Lead</picklistObject>
+    </dynamicChoiceSets>
+    <interviewLabel>Outbound Lead {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Outbound Lead</label>
+    <processType>Flow</processType>
+    <recordCreates>
+        <name>Create_Lead</name>
+        <label>Create Lead</label>
+        <locationX>311</locationX>
+        <locationY>255</locationY>
+        <assignRecordIdToReference>FlowID</assignRecordIdToReference>
+        <inputAssignments>
+            <field>City</field>
+            <value>
+                <elementReference>City</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Company</field>
+            <value>
+                <elementReference>CompanyName</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Email</field>
+            <value>
+                <elementReference>E_Mail</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>FirstName</field>
+            <value>
+                <elementReference>LeadFirstName</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>LastName</field>
+            <value>
+                <elementReference>Last_Name</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>LeadSource</field>
+            <value>
+                <elementReference>Lead_Source</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>MobilePhone</field>
+            <value>
+                <elementReference>MobileNumber</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Phone</field>
+            <value>
+                <elementReference>Telefonnummer</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Phone_2__c</field>
+            <value>
+                <elementReference>Telefonnummer_2</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PostalCode</field>
+            <value>
+                <elementReference>Postleitzahl</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Status</field>
+            <value>
+                <stringValue>Unqualified Lead</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Street</field>
+            <value>
+                <elementReference>Street</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Lead</object>
+    </recordCreates>
+    <screens>
+        <name>New_Lead</name>
+        <label>New Lead</label>
+        <locationX>312</locationX>
+        <locationY>87</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>Create_Lead</targetReference>
+        </connector>
+        <fields>
+            <name>LeadFirstName</name>
+            <dataType>String</dataType>
+            <fieldText>Vorname</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>Last_Name</name>
+            <dataType>String</dataType>
+            <fieldText>Nachname</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>CompanyName</name>
+            <dataType>String</dataType>
+            <fieldText>Firma</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>Street</name>
+            <dataType>String</dataType>
+            <fieldText>Straße &amp; Nummer</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>Postleitzahl</name>
+            <dataType>String</dataType>
+            <fieldText>Postleitzahl</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+        <fields>
+            <name>City</name>
+            <dataType>String</dataType>
+            <fieldText>Stadt</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>Telefonnummer</name>
+            <dataType>String</dataType>
+            <fieldText>Telefon</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>true</isRequired>
+            <validationRule>
+                <errorMessage>The value you entered doesn&apos;t meet the validation criteria for this input field.</errorMessage>
+                <formulaExpression>ISNUMBER (Telefonnummer) &amp;&amp; Contains (Telefonnummer,&quot;+&quot;)</formulaExpression>
+            </validationRule>
+        </fields>
+        <fields>
+            <name>Telefonnummer_2</name>
+            <dataType>String</dataType>
+            <fieldText>Telefon 2</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>false</isRequired>
+            <validationRule>
+                <errorMessage>The value you entered doesn&apos;t meet the validation criteria for this input field.</errorMessage>
+                <formulaExpression>ISNUMBER (Telefonnummer_2) &amp;&amp; Contains (Telefonnummer_2,&quot;+&quot;)</formulaExpression>
+            </validationRule>
+        </fields>
+        <fields>
+            <name>MobileNumber</name>
+            <dataType>String</dataType>
+            <fieldText>Mobilnummer</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>false</isRequired>
+            <validationRule>
+                <errorMessage>The value you entered doesn&apos;t meet the validation criteria for this input field.</errorMessage>
+                <formulaExpression>ISNUMBER (MobileNumber) &amp;&amp; Contains (MobileNumber,&quot;+&quot;)</formulaExpression>
+            </validationRule>
+        </fields>
+        <fields>
+            <name>E_Mail</name>
+            <dataType>String</dataType>
+            <fieldText>E-Mail</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>true</isRequired>
+            <validationRule>
+                <errorMessage>The value you entered doesn&apos;t meet the validation criteria for this input field.</errorMessage>
+                <formulaExpression>Contains (E_Mail,&quot;@&quot;) &amp;&amp; Contains (E_Mail,&quot;.&quot;)</formulaExpression>
+            </validationRule>
+        </fields>
+        <fields>
+            <name>Lead_Source</name>
+            <choiceReferences>LeadSource</choiceReferences>
+            <dataType>String</dataType>
+            <fieldText>Lead Quelle</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+        <pausedText>{!Create_Lead}</pausedText>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <startElementReference>New_Lead</startElementReference>
+    <variables>
+        <name>FlowID</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <elementReference>Create_Lead</elementReference>
+        </value>
+    </variables>
+</Flow>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <listViews>
+        <fullName>pi__All</fullName>
+        <columns>NAME</columns>
+        <columns>pi__Lead__c</columns>
+        <columns>pi__Pardot_Scoring_Category__c</columns>
+        <columns>pi__Score__c</columns>
+        <columns>OBJECT_ID</columns>
+        <columns>pi__Pardot_Account_Id__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>pi__All1</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+</CustomObject>

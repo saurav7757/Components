@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Active Contact (14 days) --></label>
+        <name>Active_Contact_14_days__c</name>
+    </fields>
+    <fields>
+        <help><!-- Please enter the birthplace of the contact --></help>
+        <label><!-- Birthplace --></label>
+        <name>Birthplace__c</name>
+    </fields>
+    <fields>
+        <label><!-- Comment --></label>
+        <name>Comment__c</name>
+    </fields>
+    <fields>
+        <label><!-- Company Legal Name --></label>
+        <name>Company_Legal_Name__c</name>
+    </fields>
+    <fields>
+        <help><!-- Please enter the country of birth --></help>
+        <label><!-- Country of birth --></label>
+        <name>Country_of_birth__c</name>
+    </fields>
+    <fields>
+        <label><!-- Current Team in Charge --></label>
+        <name>Current_Team_in_Charge__c</name>
+        <picklistValues>
+            <masterLabel>customer_care</masterLabel>
+            <translation><!-- customer_care --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>onboarding</masterLabel>
+            <translation><!-- onboarding --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Second email address --></help>
+        <label><!-- Email (2) --></label>
+        <name>Email_2__c</name>
+    </fields>
+    <fields>
+        <help><!-- Defines the status for our ZG events. This field is only a workaround until we defined a proper tracking solution. --></help>
+        <label><!-- Event Status --></label>
+        <name>Event_Status__c</name>
+        <picklistValues>
+            <masterLabel>attended</masterLabel>
+            <translation><!-- attended --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>first confirmation</masterLabel>
+            <translation><!-- first confirmation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>invited email</masterLabel>
+            <translation><!-- invited email --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>invited phone</masterLabel>
+            <translation><!-- invited phone --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>lost - no interest</masterLabel>
+            <translation><!-- lost - no interest --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>lost - not available</masterLabel>
+            <translation><!-- lost - not available --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>lost - unresponsive</masterLabel>
+            <translation><!-- lost - unresponsive --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>new</masterLabel>
+            <translation><!-- new --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>not attended</masterLabel>
+            <translation><!-- not attended --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>not reached</masterLabel>
+            <translation><!-- not reached --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>reached owner</masterLabel>
+            <translation><!-- reached owner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>secondary confirmation (via email/phone)</masterLabel>
+            <translation><!-- secondary confirmation (via email/phone) --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Function in company of 1st ZG Contact --></label>
+        <name>Function_in_company_of_1st_ZG_Contact__c</name>
+    </fields>
+    <fields>
+        <help><!-- Please enter the contact&apos;s gender. --></help>
+        <label><!-- Gender --></label>
+        <name>Gender__c</name>
+        <picklistValues>
+            <masterLabel>Female</masterLabel>
+            <translation><!-- Female --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Male</masterLabel>
+            <translation><!-- Male --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Please enter the preferred language of the contact --></help>
+        <label><!-- Language --></label>
+        <name>Language__c</name>
+        <picklistValues>
+            <masterLabel>English</masterLabel>
+            <translation><!-- English --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>German</masterLabel>
+            <translation><!-- German --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Days this Lead took from lead creation to converting the Lead to Account, Opportunity, Contact --></help>
+        <label><!-- Lead Age --></label>
+        <name>Lead_Age__c</name>
+    </fields>
+    <fields>
+        <label><!-- MKT_winterholidays --></label>
+        <name>MKT_winterholidays__c</name>
+        <picklistValues>
+            <masterLabel>Erst im neuen Jahr wieder</masterLabel>
+            <translation><!-- Erst im neuen Jahr wieder --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ist mir egal</masterLabel>
+            <translation><!-- Ist mir egal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Zwischen dem 26.12 - 31.12</masterLabel>
+            <translation><!-- Zwischen dem 26.12 - 31.12 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Most Recent Cadence - Cadence ID --></help>
+        <label><!-- Most Recent Cadence - Cadence ID --></label>
+        <name>Most_Recent_Cadence_Cadence_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Most Recent Cadence - Cadence Name --></label>
+        <name>Most_Recent_Cadence_Cadence_Name__c</name>
+    </fields>
+    <fields>
+        <help><!-- Most Recent Cadence - Next Step Due Date --></help>
+        <label><!-- Most Recent Cadence - Next Step Due Date --></label>
+        <name>Most_Recent_Cadence_Next_Step_Due_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- Most Recent Cadence - Next Step --></help>
+        <label><!-- Most Recent Cadence - Next Step --></label>
+        <name>Most_Recent_Cadence_Next_Step__c</name>
+    </fields>
+    <fields>
+        <help><!-- Please enter the contacts nationality --></help>
+        <label><!-- Nationality --></label>
+        <name>Nationality__c</name>
+    </fields>
+    <fields>
+        <help><!-- Please enter the shares that this shareholder owns --></help>
+        <label><!-- Percentage of shares of organisation --></label>
+        <name>Percentage_of_shares_of_organisation__c</name>
+    </fields>
+    <fields>
+        <help><!-- Please enter the personal tax id number of this contact --></help>
+        <label><!-- Personal Tax ID Number --></label>
+        <name>Personal_Tax_ID_Number__c</name>
+    </fields>
+    <fields>
+        <help><!-- What kind of personality type is the lead? 
+
+This is crucial for adapting our communication style within the sales process. --></help>
+        <label><!-- Personality --></label>
+        <name>Personality__c</name>
+        <picklistValues>
+            <masterLabel>blau = catious, precise, delibarate, questioning, formal, analytical</masterLabel>
+            <translation><!-- blau = catious, precise, delibarate, questioning, formal, analytical --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>gelb = social, dynamic, demonstrative, enthusiastic, persuasive, expressive</masterLabel>
+            <translation><!-- gelb = social, dynamic, demonstrative, enthusiastic, persuasive, expressive --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>grün = caring, encouraging, sharing, patient, relaxed, amiable</masterLabel>
+            <translation><!-- grün = caring, encouraging, sharing, patient, relaxed, amiable --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>rot = competitive, demanding, determined, strong-willed, purposeful, driver</masterLabel>
+            <translation><!-- rot = competitive, demanding, determined, strong-willed, purposeful, driver --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Additional phone number. --></help>
+        <label><!-- Phone (2) --></label>
+        <name>Phone_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Power of 1 --></label>
+        <name>Power_of_1__c</name>
+    </fields>
+    <fields>
+        <help><!-- Select the date when the contact became proprietor. --></help>
+        <label><!-- Proprietor since --></label>
+        <name>Proprietor_since__c</name>
+    </fields>
+    <fields>
+        <help><!-- Please do not change. This field shows the Person stage from SalesLoft. This field is filled in automatically by SalesLoft! --></help>
+        <label><!-- SalesLoft Stage - automation field --></label>
+        <name>SalesLoft_Stage_automation_field__c</name>
+        <picklistValues>
+            <masterLabel>Bounced</masterLabel>
+            <translation><!-- Bounced --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cadence Completed</masterLabel>
+            <translation><!-- Cadence Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Closed Lost - Not Converted</masterLabel>
+            <translation><!-- Closed Lost - Not Converted --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Closed- Converted</masterLabel>
+            <translation><!-- Closed- Converted --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Demo Scheduled</masterLabel>
+            <translation><!-- Demo Scheduled --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Do Not Contact</masterLabel>
+            <translation><!-- Do Not Contact --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Open</masterLabel>
+            <translation><!-- Open --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Removed</masterLabel>
+            <translation><!-- Removed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Replied</masterLabel>
+            <translation><!-- Replied --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Success - Meeting (re)scheduled</masterLabel>
+            <translation><!-- Success - Meeting (re)scheduled --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Working - Added to Cadence</masterLabel>
+            <translation><!-- Working - Added to Cadence --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Working - Finished first step of Cadence</masterLabel>
+            <translation><!-- Working - Finished first step of Cadence --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Please select formal, if we should address them with the German &quot;Sie&quot; or select informal, if we should address them with the German &quot;Du&quot; in all (verbal/written) communication. --></help>
+        <label><!-- Tone of address --></label>
+        <name>Tone_of_address__c</name>
+        <picklistValues>
+            <masterLabel>Formal</masterLabel>
+            <translation><!-- Formal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Informal</masterLabel>
+            <translation><!-- Informal --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Needs Score Synced --></label>
+        <name>pi__Needs_Score_Synced__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot Last Scored At --></label>
+        <name>pi__Pardot_Last_Scored_At__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot Campaign --></label>
+        <name>pi__campaign__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot Comments --></label>
+        <name>pi__comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot Conversion Date --></label>
+        <name>pi__conversion_date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot Conversion Object Name --></label>
+        <name>pi__conversion_object_name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot Conversion Object Type --></label>
+        <name>pi__conversion_object_type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot Created Date --></label>
+        <name>pi__created_date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot First Activity --></label>
+        <name>pi__first_activity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot First Referrer Query --></label>
+        <name>pi__first_search_term__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot First Referrer Type --></label>
+        <name>pi__first_search_type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot First Referrer --></label>
+        <name>pi__first_touch_url__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot Grade --></label>
+        <name>pi__grade__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot Last Activity --></label>
+        <name>pi__last_activity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot Notes --></label>
+        <name>pi__notes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot Hard Bounced --></label>
+        <name>pi__pardot_hard_bounced__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot Score --></label>
+        <name>pi__score__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot URL --></label>
+        <name>pi__url__c</name>
+    </fields>
+    <fields>
+        <label><!-- Google Analytics Campaign --></label>
+        <name>pi__utm_campaign__c</name>
+    </fields>
+    <fields>
+        <label><!-- Google Analytics Content --></label>
+        <name>pi__utm_content__c</name>
+    </fields>
+    <fields>
+        <label><!-- Google Analytics Medium --></label>
+        <name>pi__utm_medium__c</name>
+    </fields>
+    <fields>
+        <label><!-- Google Analytics Source --></label>
+        <name>pi__utm_source__c</name>
+    </fields>
+    <fields>
+        <label><!-- Google Analytics Term --></label>
+        <name>pi__utm_term__c</name>
+    </fields>
+    <webLinks>
+        <label><!-- GoogleMaps --></label>
+        <name>GoogleMaps</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleSearch --></label>
+        <name>GoogleSearch</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_with_DocuSign --></label>
+        <name>dsfs__Send_with_DocuSign</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_Pardot_Email --></label>
+        <name>pi__Send_Pardot_Email</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_Pardot_Emails --></label>
+        <name>pi__Send_Pardot_Emails</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_Single_Pardot_Email --></label>
+        <name>pi__Send_Single_Pardot_Email</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_to_Prospect_Insight --></label>
+        <name>pi__Send_to_Prospect_Insight</name>
+    </webLinks>
+</CustomObjectTranslation>

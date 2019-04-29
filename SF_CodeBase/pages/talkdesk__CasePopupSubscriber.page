@@ -1,0 +1,65 @@
+<apex:page id="CasePopupSubscriber" sideBar="false" showHeader="false" controller="talkdesk.CasePopupSubscriberController" extensions="talkdesk.SessionManager">
+    <apex:includeScript value="{! $resource.streaming + '/js/jquery-3.3.1.min.js' }" />
+    <apex:includeScript value="{! $resource.streaming + '/js/cometd.js' }" />
+    <apex:includeScript value="{! $resource.streaming + '/js/jquery.cometd.js' }" />
+
+    <script type="text/javascript">
+        var subscription = null;
+
+        $(document).ready(function() {
+            if ({! !casePopupEnabled }) return;
+            Visualforce.remoting.Manager.invokeAction('{! $RemoteAction.SessionManager.getSessionId }',
+                function(sessionId, event) {
+                    if (event.status && event.statusCode === 200 && sessionId) {
+                        handleConnection(sessionId);
+                    } else if (event.type === 'exception') {
+                        console.error('Error: ', event.where, event.message);
+                    }
+                }
+            );
+        });
+
+        function handleConnection(sessionId) {
+            connect(sessionId);
+            $.cometd.addListener('/meta/handshake', handshakeMessageReceived);
+            $.cometd.addListener('/meta/disconnect', message => disconnectMessageReceived(message, sessionId));
+        }
+
+        function connect(sessionId) {
+            //Initialize the cometD connection.
+            $.cometd.init({
+                url: window.location.protocol + '//' + window.location.hostname + '/cometd/23.0/',
+                requestHeaders: { Authorization: 'OAuth ' + sessionId },
+                appendMessageTypeToURL: false,
+                logLevel: 'debug',
+            });
+        }
+
+        function handshakeMessageReceived(message) {
+            //If the push topic is already subscribed then unsubscribe.
+            //This is necessary in case the connection was lost and an
+            //handshake is made to restore it.
+            if (subscription) {
+                $.cometd.unsubscribe(subscription);
+            }
+            //Subscribe to receive events from the push topic.
+            subscribe();
+        }
+
+        function disconnectMessageReceived(message, sessionId) {
+            //If a disconnect occurred then simply reconnect.
+            connect(sessionId);
+        }
+
+        function pushTopicEventReceived(message) {
+            if ('{! $user.id }' === message.data.sobject.OwnerId) {
+                parent.postMessage('popupcase' + message.data.sobject.Id, '{!JSENCODE( currentUserCtiAdapterUrl )}');
+            }
+        }
+
+        function subscribe() {
+            var pushTopic = '/topic/' + '{! pushTopicName }';
+            subscription = $.cometd.subscribe(pushTopic, pushTopicEventReceived);
+        }
+    </script>
+</apex:page>

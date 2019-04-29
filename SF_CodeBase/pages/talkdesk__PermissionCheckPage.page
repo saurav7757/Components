@@ -1,0 +1,44 @@
+<apex:page id="PermissionCheckPage" showHeader="false" sideBar="false" controller="talkdesk.PermissionCheckPageController" action="{!checkPermissions}">
+    <apex:slds />
+    <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <head>
+            <apex:stylesheet value="{! urlFor($Resource.slds, 'assets/styles/salesforce-lightning-design-system-vf.css') }" />
+            <style>
+                .talkdesk .rocket {
+                    padding-top: 90px;
+                }
+
+                .talkdesk h4 {
+                    font-size: 2em;
+                    padding-top: 25px;
+                }
+
+                .talkdesk p {
+                    font-size: 1.1em;
+                    padding: 25px 0;
+                }
+
+                .talkdesk input[type=submit] {
+                    font-size: 1.2em;
+                    width: 100% !important;
+                }
+            </style>
+        </head>
+        <body>
+            <div class="talkdesk">
+                <div class="slds">
+                    <div class="slds-grid slds-grid--align-center slds-wrap slds-grid--pull-padded">
+                        <div class="slds-p-horizontal--small slds-size--1-of-1 slds-text-align--center">
+                            <apex:image url="{! urlFor($Resource.assets, 'rocket.png') }" styleClass="rocket" />
+                        </div>
+                        <div class="slds-align-middle slds-p-horizontal--small slds-size--1-of-1 slds-medium-size--1-of-1 slds-large-size--1-of-4 slds-text-align--center">
+                            <h4>Success</h4>
+                            <p>You have all the necessary permissions to use Talkdesk 4 Salesforce</p>
+                            <p style="display: none;">{! hasPermissions }</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </body>
+    </html>
+</apex:page>

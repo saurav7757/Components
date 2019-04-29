@@ -1,0 +1,86 @@
+<apex:page controller="talkdesk.IntegrationsController" tabStyle="Talkdesk_Admin__tab" action="{! init }">
+    <apex:slds />
+
+    <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <head>
+        <apex:stylesheet value="{! urlFor($Resource.slds, 'assets/styles/salesforce-lightning-design-system-vf.css') }" />
+        <style>
+            .talkdesk .rocket {
+                padding-top: 90px;
+            }
+
+            .talkdesk h4 {
+                font-size: 2em;
+                padding-top: 25px;
+            }
+
+            .talkdesk p {
+                font-size: 1.1em;
+                padding: 25px 0;
+            }
+
+            .talkdesk input[type=submit] {
+                font-size: 1.2em;
+                width: 100% !important;
+            }
+        </style>
+    </head>
+    <body>
+    <div class="talkdesk">
+        <div class="slds">
+            <div class="slds-grid slds-grid--align-center slds-wrap slds-grid--pull-padded">
+                <div class="slds-p-horizontal--small slds-size--1-of-1 slds-text-align--center">
+                    <apex:image url="{! urlFor($Resource.assets, 'rocket.png') }" styleClass="rocket" />
+                </div>
+                <div class="slds-align-middle slds-p-horizontal--small slds-size--1-of-1 slds-medium-size--1-of-1 slds-large-size--1-of-4 slds-text-align--center">
+                    <h4>Start using Talkdesk</h4>
+                    <p>One-Time Configuration on how Talkdesk integrates with your Salesforce organization.</p>
+                    <apex:form id="integrationForm">
+                        <apex:commandbutton onclick="return doConnectedAppHandshake();"
+                                            value="Connect to Talkdesk"
+                                            disabled="{! integrationError }"
+                                            styleClass="slds-button slds-button--brand" />
+                    </apex:form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <apex:outputPanel rendered="{! integrationError }">
+        <div class="talkdesk slds" id="alertOnIntegrationsCrudFail">
+            <div aria-hidden="false" role="dialog" class="slds-modal slds-modal--prompt slds-fade-in-open">
+                <div class="slds-modal__container slds-modal--prompt">
+                    <div class="slds-modal__header slds-theme--error slds-theme--alert-texture">
+                        <button class="slds-button slds-button--icon-inverse slds-modal__close">
+                            <svg aria-hidden="true" class="slds-button__icon slds-button__icon--large">
+                                <use xlink:href="{!URLFOR($Resource.slds, '/assets/icons/action-sprite/svg/symbols.svg#close')}"></use>
+                            </svg>
+                            <span class="slds-assistive-text">Close</span>
+                        </button>
+                        <h2 class="slds-text-heading--medium">Error</h2>
+                    </div>
+                    <div class="slds-modal__content slds-p-around--medium">
+                        <div>
+                            <p>There is some problem during creation of Integration Settings in Talkdesk. Please contact Talkdesk Support team for troubleshooting.</p>
+                        </div>
+                    </div>
+                    <div class="slds-modal__footer slds-theme--default">
+                        <button class="slds-button slds-button--neutral" onclick="closeAlertModal();">Close</button>
+                    </div>
+                </div>
+            </div>
+            <div class="slds-backdrop slds-backdrop--open"></div>
+        </div>
+    </apex:outputPanel>
+    </body>
+    <script>
+            function closeAlertModal() {
+                document.getElementById('alertOnIntegrationsCrudFail').style.display = 'none';
+            }
+
+            function doConnectedAppHandshake() {
+                window.top.location.href = '{! connectedAppHandshakeUrl }';
+                return false;
+            }
+        </script>
+    </html>
+</apex:page>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>OBC Mails - Post-OBC 2 - DE</name>
+    <style>none</style>
+    <subject>[TO DO]: Deine letzten Schritte bis zu unserem Start</subject>
+    <textOnly>Hallo {{{Recipient.FirstName}}},
+
+wie besprochen findest Du die verbleibenden Aufgaben im Onboarding für Deinen Start mit Zeitgold:
+
+1. Verträge und Vollmachten
+
+Vertragspaket elektronisch unterzeichnen &amp; zurücksenden
+Vollmachten für Pioneer ausdrucken, unterzeichnen &amp; über erste Boxabholung zurücksenden
+
+
+2. Freischaltung der Zeitgold-Services
+
+Fragebogen zur Finanzbuchhaltung: FINANZBUCHHALTUNG FREISCHALTEN [INDIVIDUALISIERTER LINK AUS SALESFORCE]
+Fragebogen zur Lohnbuchhaltung: LOHNBUCHHALTUNG FREISCHALTEN [INDIVIDUALISIERTER LINK AUS SALESFORCE]
+
+
+3. Vorberaterinformation und Kontakt
+
+Vorigen Steuerberater über Wechsel informieren + kündigen (und ggf. Lohnabrechner)
+Zeitgold Erlaubnis geben, den/die Vorberater zu kontaktieren
+
+
+4. Checks / Anpassungen Deiner Infrastruktur [falls nötig, ggf. aus Post OBC 1 Mail kopieren]
+
+5. Ersten App-Aufgaben erledigen
+
+Verbinde Dein Bankkonto, damit Du unseren Zeitgold-Service nutzen kannst.
+Erstmalige Mitarbeiteranlage &quot;Mitarbeiterübersicht&quot; Damit wir die Entgeltabrechnungen für Deine Mitarbeiter erstellen können, müssen alle abrechnungsrelevanten Angaben in der App vollständig hinterlegt und bestätigt sein.
+Kassenbuch führen: Eröffne Dein Kassenbuch am [Startdatum] in der App und pflege es anschließend täglich. Kurze Erinnerung: Bitte lege die für das Kassenbuch relevanten Unterlagen (z.B. Z-Berichte, Belege usw.) erst nach dem Eintragen ins Kassenbuch in die Box zur Abholung.
+
+
+6. Erste Box-Abholung vorbereiten
+
+Am [Tag, Datum und Zeitraum erste Abholung] wird der erste Versandumschlag abgeholt. Denke daran, die Dokumente in die entsprechenden Klarsichthüllen zu sortieren. Fülle hierfür auch die Checkliste &quot;Bereite Deine erste Box-Abholung vor&quot; aus, das Du als extra Blatt in der Zeitgoldbox findest.
+Deine Zeitgold-Web-App (reines Dokumentenarchiv): https://documents.zeitgold.com zugänglich mit denselben Login-Daten wie für Deine mobile App
+
+
+Um unseren Start sicherzustellen, solltest Du diese Aufgaben so schnell wir möglich erledigen. Natürlich kannst Du uns für Fragen unter service@zeitgold.com oder 030/30808111 kontaktieren. Wir helfen Dir gerne weiter!
+
+Viele Grüße
+
+{{{Sender.FirstName}}} von Zeitgold
+
+​​​​</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,1854 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- AC Company Legal Name --></label>
+        <name>AC_Cmy_Legal_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- ARR Monthly Tax --></label>
+        <name>ARR_Monthly_Tax__c</name>
+    </fields>
+    <fields>
+        <help><!-- Annual recurring revenues for tax advisor services that are charged on a yearly basis (mostly Year End Statement &amp; tax delcaration) --></help>
+        <label><!-- ARR Tax Advisor (Year End Statement --></label>
+        <name>ARR_Tax_Advisor_Year_End_Statement__c</name>
+    </fields>
+    <fields>
+        <label><!-- ARR Tax --></label>
+        <name>ARR_Tax__c</name>
+    </fields>
+    <fields>
+        <label><!-- Problems with old Advisors Providers --></label>
+        <name>A_Problems_with_old_Advisors_Providers__c</name>
+    </fields>
+    <fields>
+        <label><!-- BA Number --></label>
+        <name>Ac_ACC_BetriebsstaetteHausnummer__c</name>
+    </fields>
+    <fields>
+        <label><!-- BA Country --></label>
+        <name>Ac_ACC_BetriebsstaetteLand__c</name>
+    </fields>
+    <fields>
+        <label><!-- BA City --></label>
+        <name>Ac_ACC_BetriebsstaetteOrt__c</name>
+    </fields>
+    <fields>
+        <label><!-- BA Postal code --></label>
+        <name>Ac_ACC_BetriebsstaettePostleitzahl__c</name>
+    </fields>
+    <fields>
+        <label><!-- BA Street --></label>
+        <name>Ac_ACC_BetriebsstaetteStrase__c</name>
+    </fields>
+    <fields>
+        <label><!-- Accounting Start Date --></label>
+        <name>Ac_Accounting_Start_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- AnnualRevenue --></label>
+        <name>Ac_AnnualRevenue__c</name>
+    </fields>
+    <fields>
+        <label><!-- CEP Migration necessary? --></label>
+        <name>Ac_CEP_Migration_necessary__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Company Legal Name --></label>
+        <name>Ac_Company_Legal_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Official Email --></label>
+        <name>Ac_Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- Email of first Shareholder --></label>
+        <name>Ac_Email_of_1st_ZG_Contact__c</name>
+    </fields>
+    <fields>
+        <label><!-- First Shareholder --></label>
+        <name>Ac_First_Shareholder__c</name>
+        <relationshipLabel><!-- Opportunities (First_Shareholder__c) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- First name of first Shareholder --></label>
+        <name>Ac_First_name_ZG_1st_Contact_Person__c</name>
+    </fields>
+    <fields>
+        <label><!-- Function in company of first Shareholder --></label>
+        <name>Ac_Function_in_company_of_1st_ZG_Contact__c</name>
+    </fields>
+    <fields>
+        <label><!-- Industry Type --></label>
+        <name>Ac_Industry_Type__c</name>
+        <picklistValues>
+            <masterLabel>B2B Services</masterLabel>
+            <translation><!-- B2B Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>B2B Wholesale</masterLabel>
+            <translation><!-- B2B Wholesale --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>B2C Retail</masterLabel>
+            <translation><!-- B2C Retail --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>B2C Services</masterLabel>
+            <translation><!-- B2C Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Consulting</masterLabel>
+            <translation><!-- Consulting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Craftsmen</masterLabel>
+            <translation><!-- Craftsmen --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>E-Commerce</masterLabel>
+            <translation><!-- E-Commerce --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Gastronomy</masterLabel>
+            <translation><!-- Gastronomy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mixed-Industry</masterLabel>
+            <translation><!-- Mixed-Industry --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>na</masterLabel>
+            <translation><!-- na --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Industry --></label>
+        <name>Ac_Industry__c</name>
+        <picklistValues>
+            <masterLabel>A: Land- und Forstwirtschaft - Fischerei</masterLabel>
+            <translation><!-- A: Land- und Forstwirtschaft - Fischerei --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>A: Land- und Forstwirtschaft - Forstwirtschaft</masterLabel>
+            <translation><!-- A: Land- und Forstwirtschaft - Forstwirtschaft --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>A: Land- und Forstwirtschaft - Landwirtschaft - Anbau</masterLabel>
+            <translation><!-- A: Land- und Forstwirtschaft - Landwirtschaft - Anbau --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>A: Land- und Forstwirtschaft - Landwirtschaft - Baumschulen</masterLabel>
+            <translation><!-- A: Land- und Forstwirtschaft - Landwirtschaft - Baumschulen --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>A: Land- und Forstwirtschaft - Landwirtschaft - Erbringung von landwirtschaftlichen Dienstleistungen</masterLabel>
+            <translation><!-- A: Land- und Forstwirtschaft - Landwirtschaft - Erbringung von landwirtschaftlichen Dienstleistungen --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>A: Land- und Forstwirtschaft - Landwirtschaft - Gemischte Landwirtschaft</masterLabel>
+            <translation><!-- A: Land- und Forstwirtschaft - Landwirtschaft - Gemischte Landwirtschaft --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>A: Land- und Forstwirtschaft - Landwirtschaft - Tierhaltung</masterLabel>
+            <translation><!-- A: Land- und Forstwirtschaft - Landwirtschaft - Tierhaltung --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>B: Bergbau und Gewinnung von Steinen und Erden</masterLabel>
+            <translation><!-- B: Bergbau und Gewinnung von Steinen und Erden --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>C: Verarbeitendes Gewerbe - Getränkeherstellung</masterLabel>
+            <translation><!-- C: Verarbeitendes Gewerbe - Getränkeherstellung --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>C: Verarbeitendes Gewerbe - Herstellung von Bekleidung</masterLabel>
+            <translation><!-- C: Verarbeitendes Gewerbe - Herstellung von Bekleidung --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>C: Verarbeitendes Gewerbe - Herstellung von Datenverarbeitungsgeräten, elektronischen und optischen Erzeugnissen</masterLabel>
+            <translation><!-- C: Verarbeitendes Gewerbe - Herstellung von Datenverarbeitungsgeräten, elektronischen und optischen Erzeugnissen --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>C: Verarbeitendes Gewerbe - Herstellung von Druckerzeugnissen, Vervielfältigung von bespielten Ton-, Bild und Datenträgern</masterLabel>
+            <translation><!-- C: Verarbeitendes Gewerbe - Herstellung von Druckerzeugnissen, Vervielfältigung von bespielten Ton-, Bild und Datenträgern --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>C: Verarbeitendes Gewerbe - Herstellung von Glas und Glaswaren, Keramik, Verarbeitung von Steinen und Erden</masterLabel>
+            <translation><!-- C: Verarbeitendes Gewerbe - Herstellung von Glas und Glaswaren, Keramik, Verarbeitung von Steinen und Erden --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>C: Verarbeitendes Gewerbe - Herstellung von Gummi- und Kunststoffwaren</masterLabel>
+            <translation><!-- C: Verarbeitendes Gewerbe - Herstellung von Gummi- und Kunststoffwaren --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>C: Verarbeitendes Gewerbe - Herstellung von Holz-, Flecht-, Korb- und Korkwaren (ohne Möbel)</masterLabel>
+            <translation><!-- C: Verarbeitendes Gewerbe - Herstellung von Holz-, Flecht-, Korb- und Korkwaren (ohne Möbel) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>C: Verarbeitendes Gewerbe - Herstellung von Kraftwagen und Kraftwagenteilen</masterLabel>
+            <translation><!-- C: Verarbeitendes Gewerbe - Herstellung von Kraftwagen und Kraftwagenteilen --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>C: Verarbeitendes Gewerbe - Herstellung von Leder, Lederwaren und Schuhen</masterLabel>
+            <translation><!-- C: Verarbeitendes Gewerbe - Herstellung von Leder, Lederwaren und Schuhen --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>C: Verarbeitendes Gewerbe - Herstellung von Metallerzeugnissen</masterLabel>
+            <translation><!-- C: Verarbeitendes Gewerbe - Herstellung von Metallerzeugnissen --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>C: Verarbeitendes Gewerbe - Herstellung von Möbeln</masterLabel>
+            <translation><!-- C: Verarbeitendes Gewerbe - Herstellung von Möbeln --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>C: Verarbeitendes Gewerbe - Herstellung von Nahrungs- und Futtermitteln</masterLabel>
+            <translation><!-- C: Verarbeitendes Gewerbe - Herstellung von Nahrungs- und Futtermitteln --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>C: Verarbeitendes Gewerbe - Herstellung von Papier, Pappe und Waren daraus</masterLabel>
+            <translation><!-- C: Verarbeitendes Gewerbe - Herstellung von Papier, Pappe und Waren daraus --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>C: Verarbeitendes Gewerbe - Herstellung von Textilien</masterLabel>
+            <translation><!-- C: Verarbeitendes Gewerbe - Herstellung von Textilien --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>C: Verarbeitendes Gewerbe - Herstellung von chemischen Erzeugnissen</masterLabel>
+            <translation><!-- C: Verarbeitendes Gewerbe - Herstellung von chemischen Erzeugnissen --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>C: Verarbeitendes Gewerbe - Herstellung von elektrischen Ausrüstungen</masterLabel>
+            <translation><!-- C: Verarbeitendes Gewerbe - Herstellung von elektrischen Ausrüstungen --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>C: Verarbeitendes Gewerbe - Herstellung von pharmazeutischen Erzeugnissen</masterLabel>
+            <translation><!-- C: Verarbeitendes Gewerbe - Herstellung von pharmazeutischen Erzeugnissen --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>C: Verarbeitendes Gewerbe - Herstellung von sonstigen Waren</masterLabel>
+            <translation><!-- C: Verarbeitendes Gewerbe - Herstellung von sonstigen Waren --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>C: Verarbeitendes Gewerbe - Kokerei und Mineralölverarbeitung</masterLabel>
+            <translation><!-- C: Verarbeitendes Gewerbe - Kokerei und Mineralölverarbeitung --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>C: Verarbeitendes Gewerbe - Maschinenbau</masterLabel>
+            <translation><!-- C: Verarbeitendes Gewerbe - Maschinenbau --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>C: Verarbeitendes Gewerbe - Metallerzeugung und -bearbeitung</masterLabel>
+            <translation><!-- C: Verarbeitendes Gewerbe - Metallerzeugung und -bearbeitung --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>C: Verarbeitendes Gewerbe - Reparatur und Installation von Maschinen und Ausrüstungen</masterLabel>
+            <translation><!-- C: Verarbeitendes Gewerbe - Reparatur und Installation von Maschinen und Ausrüstungen --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>C: Verarbeitendes Gewerbe - Sonstiger Fahrzeugbau</masterLabel>
+            <translation><!-- C: Verarbeitendes Gewerbe - Sonstiger Fahrzeugbau --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>C: Verarbeitendes Gewerbe - Tabakverarbeitung</masterLabel>
+            <translation><!-- C: Verarbeitendes Gewerbe - Tabakverarbeitung --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>D: Energieversorgung</masterLabel>
+            <translation><!-- D: Energieversorgung --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>E: Wasserversorgung, Abwasser- und Abfallentsorgung und Beseitigung von Umweltverschmutzungen</masterLabel>
+            <translation><!-- E: Wasserversorgung, Abwasser- und Abfallentsorgung und Beseitigung von Umweltverschmutzungen --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>F: Baugewerbe - Hochbau</masterLabel>
+            <translation><!-- F: Baugewerbe - Hochbau --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>F: Baugewerbe - Tiefbau</masterLabel>
+            <translation><!-- F: Baugewerbe - Tiefbau --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>F: Baugewerbe - Vorbereitende Baustellenarbeiten, Bauinstallation und sonstiges Ausbaugewerbe</masterLabel>
+            <translation><!-- F: Baugewerbe - Vorbereitende Baustellenarbeiten, Bauinstallation und sonstiges Ausbaugewerbe --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>G: Handel, Instandhaltung und Reparatur von Kraftfahrzeugen - Einzelhandel (ohne Handel mit Kraftfahrzeugen)</masterLabel>
+            <translation><!-- G: Handel, Instandhaltung und Reparatur von Kraftfahrzeugen - Einzelhandel (ohne Handel mit Kraftfahrzeugen) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>G: Handel, Instandhaltung und Reparatur von Kraftfahrzeugen - Großhandel (ohne Handel mit Kraftfahrzeugen)</masterLabel>
+            <translation><!-- G: Handel, Instandhaltung und Reparatur von Kraftfahrzeugen - Großhandel (ohne Handel mit Kraftfahrzeugen) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>G: Handel, Instandhaltung und Reparatur von Kraftfahrzeugen - Handel mit Kraftfahrzeugen, Instandhaltung und Reparatur von Kraftfahrzeugen</masterLabel>
+            <translation><!-- G: Handel, Instandhaltung und Reparatur von Kraftfahrzeugen - Handel mit Kraftfahrzeugen, Instandhaltung und Reparatur von Kraftfahrzeugen --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>H: Verkehr und Lagerei - Lagerei sowie Erbringung von sonstigen Dienstleistungen für den Verkehr</masterLabel>
+            <translation><!-- H: Verkehr und Lagerei - Lagerei sowie Erbringung von sonstigen Dienstleistungen für den Verkehr --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>H: Verkehr und Lagerei - Landverkehr und Transport in Rohrfernleitungen</masterLabel>
+            <translation><!-- H: Verkehr und Lagerei - Landverkehr und Transport in Rohrfernleitungen --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>H: Verkehr und Lagerei - Luftfahrt</masterLabel>
+            <translation><!-- H: Verkehr und Lagerei - Luftfahrt --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>H: Verkehr und Lagerei - Post-, Kurier- und Expressdienste</masterLabel>
+            <translation><!-- H: Verkehr und Lagerei - Post-, Kurier- und Expressdienste --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>H: Verkehr und Lagerei - Schifffahrt</masterLabel>
+            <translation><!-- H: Verkehr und Lagerei - Schifffahrt --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>I: Gastgewerbe - Beherbergung - Campingplätze</masterLabel>
+            <translation><!-- I: Gastgewerbe - Beherbergung - Campingplätze --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>I: Gastgewerbe - Beherbergung - Ferienunterkünfte und ähnliche Beherbergungsstätten</masterLabel>
+            <translation><!-- I: Gastgewerbe - Beherbergung - Ferienunterkünfte und ähnliche Beherbergungsstätten --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>I: Gastgewerbe - Beherbergung - Hotels, Gasthöfe und Pensionen</masterLabel>
+            <translation><!-- I: Gastgewerbe - Beherbergung - Hotels, Gasthöfe und Pensionen --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>I: Gastgewerbe - Beherbergung - Sonstige Beherbergungsstätten</masterLabel>
+            <translation><!-- I: Gastgewerbe - Beherbergung - Sonstige Beherbergungsstätten --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>I: Gastgewerbe - Gastronomie - Ausschank von Getränken - Schankwirtschaft</masterLabel>
+            <translation><!-- I: Gastgewerbe - Gastronomie - Ausschank von Getränken - Schankwirtschaft --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>I: Gastgewerbe - Gastronomie - Bars</masterLabel>
+            <translation><!-- I: Gastgewerbe - Gastronomie - Bars --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>I: Gastgewerbe - Gastronomie - Cafés</masterLabel>
+            <translation><!-- I: Gastgewerbe - Gastronomie - Cafés --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>I: Gastgewerbe - Gastronomie - Caterer und Erbringung sonstiger Verpflegungsdienstleistunge</masterLabel>
+            <translation><!-- I: Gastgewerbe - Gastronomie - Caterer und Erbringung sonstiger Verpflegungsdienstleistunge --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>I: Gastgewerbe - Gastronomie - Diskotheken und Tanzlokale</masterLabel>
+            <translation><!-- I: Gastgewerbe - Gastronomie - Diskotheken und Tanzlokale --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>I: Gastgewerbe - Gastronomie - Eissalons</masterLabel>
+            <translation><!-- I: Gastgewerbe - Gastronomie - Eissalons --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>I: Gastgewerbe - Gastronomie - Imbissstuben u. Ä.</masterLabel>
+            <translation><!-- I: Gastgewerbe - Gastronomie - Imbissstuben u. Ä. --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>I: Gastgewerbe - Gastronomie - Restaurant mit Selbstbedienung</masterLabel>
+            <translation><!-- I: Gastgewerbe - Gastronomie - Restaurant mit Selbstbedienung --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>I: Gastgewerbe - Gastronomie - Restaurants, Gaststätten, Imbissstuben, Cafés, Eissalons u. Ä. - Restaurant mit herkömmlicher Bedienung</masterLabel>
+            <translation><!-- I: Gastgewerbe - Gastronomie - Restaurants, Gaststätten, Imbissstuben, Cafés, Eissalons u. Ä. - Restaurant mit herkömmlicher Bedienung --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>I: Gastgewerbe - Gastronomie - Sonstige getränkegeprägte Gastronomie</masterLabel>
+            <translation><!-- I: Gastgewerbe - Gastronomie - Sonstige getränkegeprägte Gastronomie --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>I: Gastgewerbe - Gastronomie - Vergnügungslokale</masterLabel>
+            <translation><!-- I: Gastgewerbe - Gastronomie - Vergnügungslokale --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>J: Information und Kommunikation - Erbringung von Dienstleistungen der Informationstechnologie</masterLabel>
+            <translation><!-- J: Information und Kommunikation - Erbringung von Dienstleistungen der Informationstechnologie --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>J: Information und Kommunikation - Herstellung, Verleih und Vertrieb von Filmen und Fernsehprogrammen, Kinos, Tonstudios und Verlegen von Musik</masterLabel>
+            <translation><!-- J: Information und Kommunikation - Herstellung, Verleih und Vertrieb von Filmen und Fernsehprogrammen, Kinos, Tonstudios und Verlegen von Musik --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>J: Information und Kommunikation - Informationsdienstleistungen</masterLabel>
+            <translation><!-- J: Information und Kommunikation - Informationsdienstleistungen --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>J: Information und Kommunikation - Rundfunkveranstalter</masterLabel>
+            <translation><!-- J: Information und Kommunikation - Rundfunkveranstalter --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>J: Information und Kommunikation - Telekommunikation</masterLabel>
+            <translation><!-- J: Information und Kommunikation - Telekommunikation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>J: Information und Kommunikation - Verlagswesen</masterLabel>
+            <translation><!-- J: Information und Kommunikation - Verlagswesen --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>K: Erbringung von Finanz- und Versicherungsdienstleistungen - Erbringung von Finanzdienstleistungen</masterLabel>
+            <translation><!-- K: Erbringung von Finanz- und Versicherungsdienstleistungen - Erbringung von Finanzdienstleistungen --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>K: Erbringung von Finanz- und Versicherungsdienstleistungen - Mit Finanz- und Versicherungsdienstleistungen verbundene Tätigkeiten</masterLabel>
+            <translation><!-- K: Erbringung von Finanz- und Versicherungsdienstleistungen - Mit Finanz- und Versicherungsdienstleistungen verbundene Tätigkeiten --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>K: Erbringung von Finanz- und Versicherungsdienstleistungen - Versicherungen, Rückversicherungen und Pensionskassen (ohne Sozialversicherung)</masterLabel>
+            <translation><!-- K: Erbringung von Finanz- und Versicherungsdienstleistungen - Versicherungen, Rückversicherungen und Pensionskassen (ohne Sozialversicherung) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>L: Grundstücks- und Wohnungswesen - Grundstücks- und Wohnungswesen</masterLabel>
+            <translation><!-- L: Grundstücks- und Wohnungswesen - Grundstücks- und Wohnungswesen --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M: Erbringung von freiberuflichen, wissenschaftlichen und technischen Dienstleistungen - Rechts- und Steuerberatung, Wirtschaftsprüfung</masterLabel>
+            <translation><!-- M: Erbringung von freiberuflichen, wissenschaftlichen und technischen Dienstleistungen - Rechts- und Steuerberatung, Wirtschaftsprüfung --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M: Erbringung von freiberuflichen, wissenschaftlichen und technischen Dienstleistungen - Verwaltung und Führung von Unternehmen und Betrieben, Unternehmensberatung - Architektur- und Ingenieurbüros - Architektur- und Ingenieurbüros</masterLabel>
+            <translation><!-- M: Erbringung von freiberuflichen, wissenschaftlichen und technischen Dienstleistungen - Verwaltung und Führung von Unternehmen und Betrieben, Unternehmensberatung - Architektur- und Ingenieurbüros - Architektur- und Ingenieurbüros --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M: Erbringung von freiberuflichen, wissenschaftlichen und technischen Dienstleistungen - Verwaltung und Führung von Unternehmen und Betrieben, Unternehmensberatung - Architektur- und Ingenieurbüros - Technische, physikalische und chemische Untersuchung</masterLabel>
+            <translation><!-- M: Erbringung von freiberuflichen, wissenschaftlichen und technischen Dienstleistungen - Verwaltung und Führung von Unternehmen und Betrieben, Unternehmensberatung - Architektur- und Ingenieurbüros - Technische, physikalische und chemische Untersuchung --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M: Erbringung von freiberuflichen, wissenschaftlichen und technischen Dienstleistungen - Verwaltung und Führung von Unternehmen und Betrieben, Unternehmensberatung - Ateliers für Textil-, Schmuck-, Grafik- u. ä. Design</masterLabel>
+            <translation><!-- M: Erbringung von freiberuflichen, wissenschaftlichen und technischen Dienstleistungen - Verwaltung und Führung von Unternehmen und Betrieben, Unternehmensberatung - Ateliers für Textil-, Schmuck-, Grafik- u. ä. Design --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M: Erbringung von freiberuflichen, wissenschaftlichen und technischen Dienstleistungen - Verwaltung und Führung von Unternehmen und Betrieben, Unternehmensberatung - Forschung und Entwicklung</masterLabel>
+            <translation><!-- M: Erbringung von freiberuflichen, wissenschaftlichen und technischen Dienstleistungen - Verwaltung und Führung von Unternehmen und Betrieben, Unternehmensberatung - Forschung und Entwicklung --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M: Erbringung von freiberuflichen, wissenschaftlichen und technischen Dienstleistungen - Verwaltung und Führung von Unternehmen und Betrieben, Unternehmensberatung - Fotografie und Fotolabors</masterLabel>
+            <translation><!-- M: Erbringung von freiberuflichen, wissenschaftlichen und technischen Dienstleistungen - Verwaltung und Führung von Unternehmen und Betrieben, Unternehmensberatung - Fotografie und Fotolabors --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M: Erbringung von freiberuflichen, wissenschaftlichen und technischen Dienstleistungen - Verwaltung und Führung von Unternehmen und Betrieben, Unternehmensberatung - Public-Relations- und Unternehmensberatung - Public-Relations-Beratung</masterLabel>
+            <translation><!-- M: Erbringung von freiberuflichen, wissenschaftlichen und technischen Dienstleistungen - Verwaltung und Führung von Unternehmen und Betrieben, Unternehmensberatung - Public-Relations- und Unternehmensberatung - Public-Relations-Beratung --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M: Erbringung von freiberuflichen, wissenschaftlichen und technischen Dienstleistungen - Verwaltung und Führung von Unternehmen und Betrieben, Unternehmensberatung - Public-Relations- und Unternehmensberatung - Unternehmensberatung</masterLabel>
+            <translation><!-- M: Erbringung von freiberuflichen, wissenschaftlichen und technischen Dienstleistungen - Verwaltung und Führung von Unternehmen und Betrieben, Unternehmensberatung - Public-Relations- und Unternehmensberatung - Unternehmensberatung --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M: Erbringung von freiberuflichen, wissenschaftlichen und technischen Dienstleistungen - Verwaltung und Führung von Unternehmen und Betrieben, Unternehmensberatung - Sonstige freiberufliche, wissenschaftliche und technische Tätigkeiten</masterLabel>
+            <translation><!-- M: Erbringung von freiberuflichen, wissenschaftlichen und technischen Dienstleistungen - Verwaltung und Führung von Unternehmen und Betrieben, Unternehmensberatung - Sonstige freiberufliche, wissenschaftliche und technische Tätigkeiten --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M: Erbringung von freiberuflichen, wissenschaftlichen und technischen Dienstleistungen - Verwaltung und Führung von Unternehmen und Betrieben, Unternehmensberatung - Verwaltung und Führung von Unternehmen und Betrieben</masterLabel>
+            <translation><!-- M: Erbringung von freiberuflichen, wissenschaftlichen und technischen Dienstleistungen - Verwaltung und Führung von Unternehmen und Betrieben, Unternehmensberatung - Verwaltung und Führung von Unternehmen und Betrieben --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M: Erbringung von freiberuflichen, wissenschaftlichen und technischen Dienstleistungen - Verwaltung und Führung von Unternehmen und Betrieben, Unternehmensberatung - Veterinärwesen</masterLabel>
+            <translation><!-- M: Erbringung von freiberuflichen, wissenschaftlichen und technischen Dienstleistungen - Verwaltung und Führung von Unternehmen und Betrieben, Unternehmensberatung - Veterinärwesen --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M: Erbringung von freiberuflichen, wissenschaftlichen und technischen Dienstleistungen - Verwaltung und Führung von Unternehmen und Betrieben, Unternehmensberatung - Werbung und Marktforschung - Markt- und Meinungsforschung</masterLabel>
+            <translation><!-- M: Erbringung von freiberuflichen, wissenschaftlichen und technischen Dienstleistungen - Verwaltung und Führung von Unternehmen und Betrieben, Unternehmensberatung - Werbung und Marktforschung - Markt- und Meinungsforschung --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M: Erbringung von freiberuflichen, wissenschaftlichen und technischen Dienstleistungen - Verwaltung und Führung von Unternehmen und Betrieben, Unternehmensberatung - Werbung und Marktforschung - Werbung</masterLabel>
+            <translation><!-- M: Erbringung von freiberuflichen, wissenschaftlichen und technischen Dienstleistungen - Verwaltung und Führung von Unternehmen und Betrieben, Unternehmensberatung - Werbung und Marktforschung - Werbung --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M: Erbringung von freiberuflichen, wissenschaftlichen und technischen Dienstleistungen - Verwaltung und Führung von Unternehmen und Betrieben, Unternehmensberatung - Übersetzen und Dolmetschen</masterLabel>
+            <translation><!-- M: Erbringung von freiberuflichen, wissenschaftlichen und technischen Dienstleistungen - Verwaltung und Führung von Unternehmen und Betrieben, Unternehmensberatung - Übersetzen und Dolmetschen --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>N: Erbringung von sonstigen wirtschaftlichen Dienstleistungen - Erbringung von wirtschaftlichen Dienstleistungen für Unternehmen und Privatpersonen (anderweitig nicht genannt) - Call Centers</masterLabel>
+            <translation><!-- N: Erbringung von sonstigen wirtschaftlichen Dienstleistungen - Erbringung von wirtschaftlichen Dienstleistungen für Unternehmen und Privatpersonen (anderweitig nicht genannt) - Call Centers --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>N: Erbringung von sonstigen wirtschaftlichen Dienstleistungen - Erbringung von wirtschaftlichen Dienstleistungen für Unternehmen und Privatpersonen (anderweitig nicht genannt) - Messe-, Ausstellungs- und Kongressveranstalter</masterLabel>
+            <translation><!-- N: Erbringung von sonstigen wirtschaftlichen Dienstleistungen - Erbringung von wirtschaftlichen Dienstleistungen für Unternehmen und Privatpersonen (anderweitig nicht genannt) - Messe-, Ausstellungs- und Kongressveranstalter --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>N: Erbringung von sonstigen wirtschaftlichen Dienstleistungen - Erbringung von wirtschaftlichen Dienstleistungen für Unternehmen und Privatpersonen (anderweitig nicht genannt) - Sekretariats- und Schreibdienste, Copy-Shops</masterLabel>
+            <translation><!-- N: Erbringung von sonstigen wirtschaftlichen Dienstleistungen - Erbringung von wirtschaftlichen Dienstleistungen für Unternehmen und Privatpersonen (anderweitig nicht genannt) - Sekretariats- und Schreibdienste, Copy-Shops --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>N: Erbringung von sonstigen wirtschaftlichen Dienstleistungen - Gebäudebetreuung, Garten- und Landschaftsbau - Garten- und Landschaftsbau sowie Erbringung von sonstigen gärtnerischen Dienstleistungen</masterLabel>
+            <translation><!-- N: Erbringung von sonstigen wirtschaftlichen Dienstleistungen - Gebäudebetreuung, Garten- und Landschaftsbau - Garten- und Landschaftsbau sowie Erbringung von sonstigen gärtnerischen Dienstleistungen --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>N: Erbringung von sonstigen wirtschaftlichen Dienstleistungen - Gebäudebetreuung, Garten- und Landschaftsbau - Hausmeisterdienste</masterLabel>
+            <translation><!-- N: Erbringung von sonstigen wirtschaftlichen Dienstleistungen - Gebäudebetreuung, Garten- und Landschaftsbau - Hausmeisterdienste --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>N: Erbringung von sonstigen wirtschaftlichen Dienstleistungen - Gebäudebetreuung, Garten- und Landschaftsbau - Reinigung von Gebäuden, Straßen und Verkehrsmitteln</masterLabel>
+            <translation><!-- N: Erbringung von sonstigen wirtschaftlichen Dienstleistungen - Gebäudebetreuung, Garten- und Landschaftsbau - Reinigung von Gebäuden, Straßen und Verkehrsmitteln --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>N: Erbringung von sonstigen wirtschaftlichen Dienstleistungen - Reisebüros, Reiseveranstalter und Erbringung sonstiger Reservierungsdienstleistungen</masterLabel>
+            <translation><!-- N: Erbringung von sonstigen wirtschaftlichen Dienstleistungen - Reisebüros, Reiseveranstalter und Erbringung sonstiger Reservierungsdienstleistungen --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>N: Erbringung von sonstigen wirtschaftlichen Dienstleistungen - Vermietung von beweglichen Sachen - Leasing von nichtfinanziellen immateriellen Vermögensgegenständen (ohne Copyrights)</masterLabel>
+            <translation><!-- N: Erbringung von sonstigen wirtschaftlichen Dienstleistungen - Vermietung von beweglichen Sachen - Leasing von nichtfinanziellen immateriellen Vermögensgegenständen (ohne Copyrights) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>N: Erbringung von sonstigen wirtschaftlichen Dienstleistungen - Vermietung von beweglichen Sachen - Vermietung von Gebrauchsgütern - Vermietung von Sport- und Freizeitgeräten</masterLabel>
+            <translation><!-- N: Erbringung von sonstigen wirtschaftlichen Dienstleistungen - Vermietung von beweglichen Sachen - Vermietung von Gebrauchsgütern - Vermietung von Sport- und Freizeitgeräten --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>N: Erbringung von sonstigen wirtschaftlichen Dienstleistungen - Vermietung von beweglichen Sachen - Vermietung von Gebrauchsgütern - Vermietung von sonstigen Gebrauchsgütern</masterLabel>
+            <translation><!-- N: Erbringung von sonstigen wirtschaftlichen Dienstleistungen - Vermietung von beweglichen Sachen - Vermietung von Gebrauchsgütern - Vermietung von sonstigen Gebrauchsgütern --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>N: Erbringung von sonstigen wirtschaftlichen Dienstleistungen - Vermietung von beweglichen Sachen - Vermietung von Gebrauchsgütern - Videotheken</masterLabel>
+            <translation><!-- N: Erbringung von sonstigen wirtschaftlichen Dienstleistungen - Vermietung von beweglichen Sachen - Vermietung von Gebrauchsgütern - Videotheken --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>N: Erbringung von sonstigen wirtschaftlichen Dienstleistungen - Vermietung von beweglichen Sachen - Vermietung von Kraftwagen</masterLabel>
+            <translation><!-- N: Erbringung von sonstigen wirtschaftlichen Dienstleistungen - Vermietung von beweglichen Sachen - Vermietung von Kraftwagen --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>N: Erbringung von sonstigen wirtschaftlichen Dienstleistungen - Vermietung von beweglichen Sachen - Vermietung von Maschinen, Geräten und sonstigen beweglichen Sachen</masterLabel>
+            <translation><!-- N: Erbringung von sonstigen wirtschaftlichen Dienstleistungen - Vermietung von beweglichen Sachen - Vermietung von Maschinen, Geräten und sonstigen beweglichen Sachen --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>N: Erbringung von sonstigen wirtschaftlichen Dienstleistungen - Vermittlung und Überlassung von Arbeitskräften</masterLabel>
+            <translation><!-- N: Erbringung von sonstigen wirtschaftlichen Dienstleistungen - Vermittlung und Überlassung von Arbeitskräften --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>N: Erbringung von sonstigen wirtschaftlichen Dienstleistungen - Wach- und Sicherheitsdienste sowie Detekteien</masterLabel>
+            <translation><!-- N: Erbringung von sonstigen wirtschaftlichen Dienstleistungen - Wach- und Sicherheitsdienste sowie Detekteien --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>O: Öffentliche Verwaltung, Verteidigung, Sozialversicherung</masterLabel>
+            <translation><!-- O: Öffentliche Verwaltung, Verteidigung, Sozialversicherung --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>P: Erziehung und Unterricht</masterLabel>
+            <translation><!-- P: Erziehung und Unterricht --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Q: Gesundheits- und Sozialwesen - Gesundheitswesen - Arzt- und Zahnarztpraxen</masterLabel>
+            <translation><!-- Q: Gesundheits- und Sozialwesen - Gesundheitswesen - Arzt- und Zahnarztpraxen --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Q: Gesundheits- und Sozialwesen - Gesundheitswesen - Gesundheitswesen (anderweitig nicht genannt)</masterLabel>
+            <translation><!-- Q: Gesundheits- und Sozialwesen - Gesundheitswesen - Gesundheitswesen (anderweitig nicht genannt) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Q: Gesundheits- und Sozialwesen - Gesundheitswesen - Krankenhäuser</masterLabel>
+            <translation><!-- Q: Gesundheits- und Sozialwesen - Gesundheitswesen - Krankenhäuser --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Q: Gesundheits- und Sozialwesen - Heime (ohne Erholungs- und Ferienheime) - Altenheime, Alten- und Behindertenwohnheime</masterLabel>
+            <translation><!-- Q: Gesundheits- und Sozialwesen - Heime (ohne Erholungs- und Ferienheime) - Altenheime, Alten- und Behindertenwohnheime --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Q: Gesundheits- und Sozialwesen - Heime (ohne Erholungs- und Ferienheime) - Pflegeheime</masterLabel>
+            <translation><!-- Q: Gesundheits- und Sozialwesen - Heime (ohne Erholungs- und Ferienheime) - Pflegeheime --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Q: Gesundheits- und Sozialwesen - Heime (ohne Erholungs- und Ferienheime) - Sonstige Heime (ohne Erholungs- und Ferienheime)</masterLabel>
+            <translation><!-- Q: Gesundheits- und Sozialwesen - Heime (ohne Erholungs- und Ferienheime) - Sonstige Heime (ohne Erholungs- und Ferienheime) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Q: Gesundheits- und Sozialwesen - Heime (ohne Erholungs- und Ferienheime) - Stationäre Einrichtungen zur psychosozialen Betreuung, Suchtbekämpfung u. Ä.</masterLabel>
+            <translation><!-- Q: Gesundheits- und Sozialwesen - Heime (ohne Erholungs- und Ferienheime) - Stationäre Einrichtungen zur psychosozialen Betreuung, Suchtbekämpfung u. Ä. --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Q: Gesundheits- und Sozialwesen - Sozialwesen (ohne Heime) - Sonstiges Sozialwesen (ohne Heime)</masterLabel>
+            <translation><!-- Q: Gesundheits- und Sozialwesen - Sozialwesen (ohne Heime) - Sonstiges Sozialwesen (ohne Heime) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Q: Gesundheits- und Sozialwesen - Sozialwesen (ohne Heime) - Soziale Betreuung älterer Menschen und Behinderter</masterLabel>
+            <translation><!-- Q: Gesundheits- und Sozialwesen - Sozialwesen (ohne Heime) - Soziale Betreuung älterer Menschen und Behinderter --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>R: Kunst, Unterhaltung und Erholung - Bibliotheken, Archive, Museen, botanische und zoologische Gärten</masterLabel>
+            <translation><!-- R: Kunst, Unterhaltung und Erholung - Bibliotheken, Archive, Museen, botanische und zoologische Gärten --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>R: Kunst, Unterhaltung und Erholung - Erbringung von Dienstleistungen des Sports, der Unterhaltung und der Erholung</masterLabel>
+            <translation><!-- R: Kunst, Unterhaltung und Erholung - Erbringung von Dienstleistungen des Sports, der Unterhaltung und der Erholung --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>R: Kunst, Unterhaltung und Erholung - Kreative, künstlerische und unterhaltende Tätigkeiten</masterLabel>
+            <translation><!-- R: Kunst, Unterhaltung und Erholung - Kreative, künstlerische und unterhaltende Tätigkeiten --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>R: Kunst, Unterhaltung und Erholung - Spiel-, Wett- und Lotteriewesen</masterLabel>
+            <translation><!-- R: Kunst, Unterhaltung und Erholung - Spiel-, Wett- und Lotteriewesen --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S: Erbringung von sonstigen Dienstleistungen - Erbringung von sonstigen überwiegend persönlichen Dienstleistungen - Bestattungswesen</masterLabel>
+            <translation><!-- S: Erbringung von sonstigen Dienstleistungen - Erbringung von sonstigen überwiegend persönlichen Dienstleistungen - Bestattungswesen --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S: Erbringung von sonstigen Dienstleistungen - Erbringung von sonstigen überwiegend persönlichen Dienstleistungen - Erbringung von sonstigen Dienstleistungen (anderweitig nicht genannt)</masterLabel>
+            <translation><!-- S: Erbringung von sonstigen Dienstleistungen - Erbringung von sonstigen überwiegend persönlichen Dienstleistungen - Erbringung von sonstigen Dienstleistungen (anderweitig nicht genannt) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S: Erbringung von sonstigen Dienstleistungen - Erbringung von sonstigen überwiegend persönlichen Dienstleistungen - Frisör- und Kosmetiksalons - Frisörsalons</masterLabel>
+            <translation><!-- S: Erbringung von sonstigen Dienstleistungen - Erbringung von sonstigen überwiegend persönlichen Dienstleistungen - Frisör- und Kosmetiksalons - Frisörsalons --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S: Erbringung von sonstigen Dienstleistungen - Erbringung von sonstigen überwiegend persönlichen Dienstleistungen - Frisör- und Kosmetiksalons - Kosmetiksalons</masterLabel>
+            <translation><!-- S: Erbringung von sonstigen Dienstleistungen - Erbringung von sonstigen überwiegend persönlichen Dienstleistungen - Frisör- und Kosmetiksalons - Kosmetiksalons --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S: Erbringung von sonstigen Dienstleistungen - Erbringung von sonstigen überwiegend persönlichen Dienstleistungen - Saunas, Solarien, Bäder u. Ä.</masterLabel>
+            <translation><!-- S: Erbringung von sonstigen Dienstleistungen - Erbringung von sonstigen überwiegend persönlichen Dienstleistungen - Saunas, Solarien, Bäder u. Ä. --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S: Erbringung von sonstigen Dienstleistungen - Erbringung von sonstigen überwiegend persönlichen Dienstleistungen - Wäscherei und chemische Reinigung</masterLabel>
+            <translation><!-- S: Erbringung von sonstigen Dienstleistungen - Erbringung von sonstigen überwiegend persönlichen Dienstleistungen - Wäscherei und chemische Reinigung --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S: Erbringung von sonstigen Dienstleistungen - Interessenvertretungen sowie kirchliche und sonstige religiöse Vereinigungen (ohne Sozialwesen und Sport)</masterLabel>
+            <translation><!-- S: Erbringung von sonstigen Dienstleistungen - Interessenvertretungen sowie kirchliche und sonstige religiöse Vereinigungen (ohne Sozialwesen und Sport) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S: Erbringung von sonstigen Dienstleistungen - Reparatur von Datenverarbeitungsgeräten und Gebrauchsgütern</masterLabel>
+            <translation><!-- S: Erbringung von sonstigen Dienstleistungen - Reparatur von Datenverarbeitungsgeräten und Gebrauchsgütern --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>T: Private Haushalte mit Hauspersonal, Herstellung von Waren und Erbringung von Dienstleistungen durch private Haushalte für den Eigenbedarf ohne ausgeprägten Schwerpunkt</masterLabel>
+            <translation><!-- T: Private Haushalte mit Hauspersonal, Herstellung von Waren und Erbringung von Dienstleistungen durch private Haushalte für den Eigenbedarf ohne ausgeprägten Schwerpunkt --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Test 1</masterLabel>
+            <translation><!-- Test 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>U: Exterritoriale Organisationen und Körperschaften</masterLabel>
+            <translation><!-- U: Exterritoriale Organisationen und Körperschaften --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Link to sales offer --></label>
+        <name>Ac_Link_to_sales_offer__c</name>
+    </fields>
+    <fields>
+        <label><!-- Name --></label>
+        <name>Ac_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Name cash register --></label>
+        <name>Ac_Name_cash_register__c</name>
+    </fields>
+    <fields>
+        <label><!-- Nature &amp; Purpose of business --></label>
+        <name>Ac_Nature_Purpose_of_business__c</name>
+    </fields>
+    <fields>
+        <label><!-- NumberOfEmployees --></label>
+        <name>Ac_NumberOfEmployees__c</name>
+    </fields>
+    <fields>
+        <label><!-- Payroll Start Date --></label>
+        <name>Ac_Payroll_Start_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Official Phone --></label>
+        <name>Ac_Phone__c</name>
+    </fields>
+    <fields>
+        <label><!-- Preferred Language of first Shareholder --></label>
+        <name>Ac_Preferred_Language_of_1st_ZG_Contact__c</name>
+        <picklistValues>
+            <masterLabel>English</masterLabel>
+            <translation><!-- English --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>German</masterLabel>
+            <translation><!-- German --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Sales related comments for ONB and CE --></label>
+        <name>Ac_Sales_related_comments_for_ONB_and_CE__c</name>
+    </fields>
+    <fields>
+        <label><!-- Salutation of first Shareholder --></label>
+        <name>Ac_Salutation__c</name>
+        <picklistValues>
+            <masterLabel>Dr.</masterLabel>
+            <translation><!-- Dr. --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mr</masterLabel>
+            <translation><!-- Mr --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ms</masterLabel>
+            <translation><!-- Ms --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Prof.</masterLabel>
+            <translation><!-- Prof. --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Surname of first Shareholder --></label>
+        <name>Ac_Surname_ZG_1st_Contact_Person__c</name>
+    </fields>
+    <fields>
+        <label><!-- Phone of first Shareholder --></label>
+        <name>Ac_Tel_of_1st_ZG_Contact__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tone of address for first Shareholder --></label>
+        <name>Ac_Tone_of_address__c</name>
+        <picklistValues>
+            <masterLabel>Formal</masterLabel>
+            <translation><!-- Formal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Informal</masterLabel>
+            <translation><!-- Informal --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Account-Accounting Start Date --></label>
+        <name>Account_Accounting_Start_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- This field shows the billing city of the account. --></help>
+        <label><!-- Address - Billing: City --></label>
+        <name>Address_Billing_City__c</name>
+    </fields>
+    <fields>
+        <help><!-- This field shows the billing zip of the account. --></help>
+        <label><!-- Address - Billing: ZIP --></label>
+        <name>Address_Billing_ZIP__c</name>
+    </fields>
+    <fields>
+        <help><!-- This field shows the billing address of the account. --></help>
+        <label><!-- Address - Billing: Street &amp; No --></label>
+        <name>Address_Street_No__c</name>
+    </fields>
+    <fields>
+        <label><!-- Budget bestätigt --></label>
+        <name>Budget_Confirmed__c</name>
+    </fields>
+    <fields>
+        <help><!-- Indicates if the contract has been signed yet.
+Note that if the contract file is deleted this field is not updated automatically. --></help>
+        <label><!-- Contract signed --></label>
+        <name>Contract_signed__c</name>
+    </fields>
+    <fields>
+        <help><!-- This field defines wether the opportunity was created by the user. Don&apos;t change this field, it is a formula! --></help>
+        <label><!-- Created by me? --></label>
+        <name>Created_by_me__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date Zeitgold Rejection Reasons Changed --></label>
+        <name>Date_Zeitgold_Rejection_Reasons_Changed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Days Count --></label>
+        <name>Days_Count__c</name>
+    </fields>
+    <fields>
+        <label><!-- Demo completed? --></label>
+        <name>Demo_completed__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Please fill in the date the demo happened (or has been rescheduled). --></help>
+        <label><!-- Demo date --></label>
+        <name>Demo_date__c</name>
+    </fields>
+    <fields>
+        <help><!-- Please indicate why the customer decided to reject us. --></help>
+        <label><!-- Detailed Lost or Rejection Reason --></label>
+        <name>Detailed_Lost_or_Rejection_Reason__c</name>
+    </fields>
+    <fields>
+        <label><!-- Email of first ZG Contact --></label>
+        <name>Email_of_first_ZG_Contact__c</name>
+    </fields>
+    <fields>
+        <help><!-- Feature wishes (both hard requirements and nice to have requirements) --></help>
+        <label><!-- Feature wishes --></label>
+        <name>Feature_wishes__c</name>
+    </fields>
+    <fields>
+        <help><!-- same as the first one --></help>
+        <label><!-- Field For Stage Validation Second One --></label>
+        <name>Field_For_Stage_Validation_Second_One__c</name>
+    </fields>
+    <fields>
+        <label><!-- Field For Stage Validation Third ONE --></label>
+        <name>Field_For_Stage_Validation_Third_ONE__c</name>
+    </fields>
+    <fields>
+        <label><!-- Field For Stage Validation --></label>
+        <name>Field_For_Stage_Validation__c</name>
+    </fields>
+    <fields>
+        <help><!-- First VAT decleration Zeitgold needs to do --></help>
+        <label><!-- First VAT decleration Zeitgold needs to --></label>
+        <name>First_VAT_decleration_Zeitgold_needs_to__c</name>
+    </fields>
+    <fields>
+        <label><!-- First ZG Contact --></label>
+        <name>First_ZG_Contact__c</name>
+        <relationshipLabel><!-- Opportunities (First ZG Contact) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- First name of first ZG Contact --></label>
+        <name>First_name_of_first_ZG_Contact__c</name>
+    </fields>
+    <fields>
+        <label><!-- Forecast Count --></label>
+        <name>Forecast_Count__c</name>
+    </fields>
+    <fields>
+        <label><!-- Function in company of first ZG Contact --></label>
+        <name>Function_in_company_of_first_ZG_Contact__c</name>
+    </fields>
+    <fields>
+        <help><!-- Go Live Date --></help>
+        <label><!-- Go Live Date --></label>
+        <name>Go_Live_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- Is checked when SLS Handover Email was sent automatically --></help>
+        <label><!-- Handover Email sent --></label>
+        <name>Handover_Email_sent__c</name>
+    </fields>
+    <fields>
+        <help><!-- Please fill in if the prospect completed a healthcheck with us (e.g. METRO, Deutsche Bank partnerships). --></help>
+        <label><!-- Healthcheck completed --></label>
+        <name>Healthcheck_completed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Industry --></label>
+        <name>Industry__c</name>
+    </fields>
+    <fields>
+        <label><!-- Initial pricing reaction --></label>
+        <name>Initial_pricing_reaction__c</name>
+        <picklistValues>
+            <masterLabel>Cheap</masterLabel>
+            <translation><!-- Cheap --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Expensive</masterLabel>
+            <translation><!-- Expensive --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Indifferent</masterLabel>
+            <translation><!-- Indifferent --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Very cheap</masterLabel>
+            <translation><!-- Very cheap --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Very expensive</masterLabel>
+            <translation><!-- Very expensive --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Is ZG First Contact and Shareholder same --></label>
+        <name>Is_ZG_First_Contact_and_Shareholder_same__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- What are the pain points of the prospect and how could we solve them? 
+
+Dig deep to get to the root cause! We need to truly understand their current process and their pain. This starts in the assessment call. Use the 5 Whys technology. --></help>
+        <label><!-- Key Pain Point --></label>
+        <name>Key_Pain_Point__c</name>
+        <picklistValues>
+            <masterLabel>Archiving documents (GoBD compliant)</masterLabel>
+            <translation><!-- Archiving documents (GoBD compliant) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Chaotic paperwork</masterLabel>
+            <translation><!-- Chaotic paperwork --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No understanding of German tax system</masterLabel>
+            <translation><!-- No understanding of German tax system --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Non compliant bookkeeping</masterLabel>
+            <translation><!-- Non compliant bookkeeping --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Non compliant cash journal</masterLabel>
+            <translation><!-- Non compliant cash journal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Too high costs for tax advisor</masterLabel>
+            <translation><!-- Too high costs for tax advisor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Too time consuming</masterLabel>
+            <translation><!-- Too time consuming --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unhappy with work of tax advisor</masterLabel>
+            <translation><!-- Unhappy with work of tax advisor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wants to simplify complex workflows</masterLabel>
+            <translation><!-- Wants to simplify complex workflows --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Lead Source 2 --></label>
+        <name>Lead_Source_2__c</name>
+        <picklistValues>
+            <masterLabel>Cold Call - DeliveryHero</masterLabel>
+            <translation><!-- Cold Call - DeliveryHero --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cold Call - Other</masterLabel>
+            <translation><!-- Cold Call - Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cold Call - facebook comment</masterLabel>
+            <translation><!-- Cold Call - facebook comment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cold Call - manual research</masterLabel>
+            <translation><!-- Cold Call - manual research --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DL1 Foodora</masterLabel>
+            <translation><!-- DL1 Foodora --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DL2 Deliveroo</masterLabel>
+            <translation><!-- DL2 Deliveroo --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DL3 Lieferheld</masterLabel>
+            <translation><!-- DL3 Lieferheld --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Direct - Incoming Email</masterLabel>
+            <translation><!-- Direct - Incoming Email --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Direct - Incoming Phone Call</masterLabel>
+            <translation><!-- Direct - Incoming Phone Call --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Event - Coda - 092018</masterLabel>
+            <translation><!-- Event - Coda - 092018 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Event - Meierei - 082018</masterLabel>
+            <translation><!-- Event - Meierei - 082018 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Event - Nürnberg - 092018</masterLabel>
+            <translation><!-- Event - Nürnberg - 092018 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Marketing - online</masterLabel>
+            <translation><!-- Marketing - online --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Partner - Deutsche Bank - External</masterLabel>
+            <translation><!-- Partner - Deutsche Bank - External --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Partner - Deutsche Bank - Internal</masterLabel>
+            <translation><!-- Partner - Deutsche Bank - Internal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Partner - Metro</masterLabel>
+            <translation><!-- Partner - Metro --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Partner - Pioneer</masterLabel>
+            <translation><!-- Partner - Pioneer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Partner - orderbird</masterLabel>
+            <translation><!-- Partner - orderbird --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Referral - customer</masterLabel>
+            <translation><!-- Referral - customer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Referral - employee</masterLabel>
+            <translation><!-- Referral - employee --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Referral - other</masterLabel>
+            <translation><!-- Referral - other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Trade Show</masterLabel>
+            <translation><!-- Trade Show --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Walk In</masterLabel>
+            <translation><!-- Walk In --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Please provide the reason why we lost the opportunity. --></help>
+        <label><!-- OLD Lost Reason --></label>
+        <name>Loss_Reason__c</name>
+        <picklistValues>
+            <masterLabel>Budget fit missing</masterLabel>
+            <translation><!-- Budget fit missing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lost to Competitor</masterLabel>
+            <translation><!-- Lost to Competitor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No Decision / Non-Responsive</masterLabel>
+            <translation><!-- No Decision / Non-Responsive --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No compelling event/missing motivation</masterLabel>
+            <translation><!-- No compelling event/missing motivation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not ready to buy</masterLabel>
+            <translation><!-- Not ready to buy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not willing to change tax advisor</masterLabel>
+            <translation><!-- Not willing to change tax advisor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other contract terms than price</masterLabel>
+            <translation><!-- Other contract terms than price --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pain not big enough</masterLabel>
+            <translation><!-- Pain not big enough --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Product or feature fit missing</masterLabel>
+            <translation><!-- Product or feature fit missing --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Please select a reason why this lead/prospect is unqualified. --></help>
+        <label><!-- Lost Reason --></label>
+        <name>Lost_Reason__c</name>
+        <picklistValues>
+            <masterLabel>Budget fit missing</masterLabel>
+            <translation><!-- Budget fit missing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lost to Competitor</masterLabel>
+            <translation><!-- Lost to Competitor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No authority</masterLabel>
+            <translation><!-- No authority --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No interest / need</masterLabel>
+            <translation><!-- No interest / need --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not ready to buy</masterLabel>
+            <translation><!-- Not ready to buy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not willing to change tax advisor</masterLabel>
+            <translation><!-- Not willing to change tax advisor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other contract terms than price</masterLabel>
+            <translation><!-- Other contract terms than price --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Out of business</masterLabel>
+            <translation><!-- Out of business --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pain not big enough</masterLabel>
+            <translation><!-- Pain not big enough --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Product or feature fit missing</masterLabel>
+            <translation><!-- Product or feature fit missing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unhappy with our processes or behaviour</masterLabel>
+            <translation><!-- Unhappy with our processes or behaviour --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unresponsive</masterLabel>
+            <translation><!-- Unresponsive --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- MRR Zeitgold + MRR Tax Advisor --></help>
+        <label><!-- MCP --></label>
+        <name>MCP__c</name>
+    </fields>
+    <fields>
+        <help><!-- Evaluation of this opportunity by sales management and sales rep, if this opportunity could be closed this month. --></help>
+        <label><!-- MGMT Call --></label>
+        <name>MGMT_Call__c</name>
+        <picklistValues>
+            <masterLabel>CW</masterLabel>
+            <translation><!-- CW --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DEMO SCHEDULED</masterLabel>
+            <translation><!-- DEMO SCHEDULED --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LIKELY OUT</masterLabel>
+            <translation><!-- LIKELY OUT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MAYBE IN</masterLabel>
+            <translation><!-- MAYBE IN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>STRONG IN</masterLabel>
+            <translation><!-- STRONG IN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>STRONG OUT</masterLabel>
+            <translation><!-- STRONG OUT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UNKNOWN</masterLabel>
+            <translation><!-- UNKNOWN --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- MKT_Create Date --></label>
+        <name>MKT_Create_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- MKT_Industry --></label>
+        <name>MKT_Industry__c</name>
+    </fields>
+    <fields>
+        <help><!-- If the lead clicked on an ad with a promo code, this is the promo code --></help>
+        <label><!-- MKT_Promo Code --></label>
+        <name>MKT_Promo_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- MKT_ReferredByCode --></label>
+        <name>MKT_ReferredByCode_c__c</name>
+    </fields>
+    <fields>
+        <help><!-- Please set the monthly recurring revenue for the tax advisor services --></help>
+        <label><!-- MRR Tax Advisor --></label>
+        <name>MRR_Tax_Advisor__c</name>
+    </fields>
+    <fields>
+        <help><!-- Please select, whether you pitched Zeitgold MRR as one package or two (Base+Payroll), if you pitched Plan A --></help>
+        <label><!-- Plan A Pitch Style --></label>
+        <name>MRR_Zeitgold_Pitch_Style__c</name>
+        <picklistValues>
+            <masterLabel>Separating Zeitgold MRRs into Base and Payroll</masterLabel>
+            <translation><!-- Separating Zeitgold MRRs into Base and Payroll --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Summarizing Zeitgold MRRs to one price</masterLabel>
+            <translation><!-- Summarizing Zeitgold MRRs to one price --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Please set the monthly recurring revenue for the zeitgold services --></help>
+        <label><!-- MRR Zeitgold --></label>
+        <name>MRR_Zeitgold__c</name>
+    </fields>
+    <fields>
+        <label><!-- Marketing Campaign --></label>
+        <name>Marketing_Campaign__c</name>
+    </fields>
+    <fields>
+        <label><!-- Marketing Source / Medium --></label>
+        <name>Marketing_Source_Medium__c</name>
+    </fields>
+    <fields>
+        <label><!-- Metro Lead Product ID (long) --></label>
+        <name>Metro_Lead_Product_ID_long__c</name>
+    </fields>
+    <fields>
+        <help><!-- Coupon codes from partners or Zeitgold sales specials. --></help>
+        <label><!-- Mkt_Cold_Letter_Coupon --></label>
+        <name>Mkt_Cold_Letter_Coupon__c</name>
+    </fields>
+    <fields>
+        <help><!-- Coupon codes from partners or Zeitgold sales specials. --></help>
+        <label><!-- Mkt_Coupon --></label>
+        <name>Mkt_Coupon__c</name>
+    </fields>
+    <fields>
+        <help><!-- Please define the date for your next step. --></help>
+        <label><!-- Next Step Date --></label>
+        <name>Next_Step_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Offer expiration date --></label>
+        <name>Offer_expiration_date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Onboarding Contact --></label>
+        <name>Onboarding_Contact__c</name>
+        <relationshipLabel><!-- Opportunities --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Onboarding Customer FirstName --></label>
+        <name>Onboarding_Customer_FirstName__c</name>
+    </fields>
+    <fields>
+        <label><!-- Onboarding Process --></label>
+        <name>Onboarding_Process__c</name>
+        <picklistValues>
+            <masterLabel>Fastlane</masterLabel>
+            <translation><!-- Fastlane --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Standard</masterLabel>
+            <translation><!-- Standard --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- One-time annual tax advisor fee --></label>
+        <name>One_time_annual_tax_advisor_fee__c</name>
+    </fields>
+    <fields>
+        <label><!-- Phone of first ZG Contact --></label>
+        <name>Phone_of_first_ZG_Contact__c</name>
+    </fields>
+    <fields>
+        <help><!-- Which risks (actively communicated and potential) could result in loosing this opportunity? --></help>
+        <label><!-- Potential dealbreaker --></label>
+        <name>Pot__c</name>
+    </fields>
+    <fields>
+        <label><!-- Power of 1 --></label>
+        <name>Power_of_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Preferred Language of first ZG Contact --></label>
+        <name>Preferred_Language_of_first_ZG_Contact__c</name>
+        <picklistValues>
+            <masterLabel>English</masterLabel>
+            <translation><!-- English --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>German</masterLabel>
+            <translation><!-- German --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Please submit the initial reaction of the prospect towards the pricing that you walked them through.
+Please state which part of the pricing they think is expensive or cheap compared to what they know?
+Additional comments --></help>
+        <label><!-- Pricing Feedback --></label>
+        <name>Pricing_Feedback__c</name>
+    </fields>
+    <fields>
+        <help><!-- Please select the pricing model that you pitched. --></help>
+        <label><!-- Pricing Model --></label>
+        <name>Pricing_Model__c</name>
+        <picklistValues>
+            <masterLabel>New Pricing 2019</masterLabel>
+            <translation><!-- New Pricing 2019 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New pricing (C)</masterLabel>
+            <translation><!-- New pricing (C) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Old Pricing (Tax advisor fee code)</masterLabel>
+            <translation><!-- Old Pricing (Tax advisor fee code) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pricing A</masterLabel>
+            <translation><!-- Pricing A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pricing B</masterLabel>
+            <translation><!-- Pricing B --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pricing not discussed</masterLabel>
+            <translation><!-- Pricing not discussed --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Primary Contact --></label>
+        <name>Primary_Contact__c</name>
+        <relationshipLabel><!-- Opportunities (Primary Contact) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Qualification type --></label>
+        <name>Qualification_type__c</name>
+        <picklistValues>
+            <masterLabel>Demo scheduled - no assessment</masterLabel>
+            <translation><!-- Demo scheduled - no assessment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Demo scheduled - standard assessment</masterLabel>
+            <translation><!-- Demo scheduled - standard assessment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Direct handover to AE - no assessment</masterLabel>
+            <translation><!-- Direct handover to AE - no assessment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Direct handover to AE - standard assessment</masterLabel>
+            <translation><!-- Direct handover to AE - standard assessment --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Ready to Handover ? --></label>
+        <name>Ready_to_Handover__c</name>
+    </fields>
+    <fields>
+        <label><!-- Recent Closed Task Date --></label>
+        <name>Recent_Closed_Task_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- Please select the SDR who has scheduled the Demo etc. 
+This field is used to track Demos scheduled by SDR --></help>
+        <label><!-- Responsible SDR --></label>
+        <name>Responsible_SDR__c</name>
+        <relationshipLabel><!-- Opportunities (Responsible SDR) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Salutation of first ZG Contact --></label>
+        <name>Salutation_of_first_ZG_Contact__c</name>
+        <picklistValues>
+            <masterLabel>Dr.</masterLabel>
+            <translation><!-- Dr. --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mr</masterLabel>
+            <translation><!-- Mr --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ms</masterLabel>
+            <translation><!-- Ms --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Prof.</masterLabel>
+            <translation><!-- Prof. --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Special Initial MRR Valid for how many months --></help>
+        <label><!-- Special Initial MRR Valid for how many m --></label>
+        <name>Special_Initial_MRR_Valid_for_how_many_m__c</name>
+    </fields>
+    <fields>
+        <help><!-- Special Initial MRR (w./o. Tax Advisor Fee) --></help>
+        <label><!-- Special Initial MRR (w./o. Tax Advisor F --></label>
+        <name>Special_Initial_MRR_w_o_Tax_Advisor_F__c</name>
+    </fields>
+    <fields>
+        <help><!-- Special offer, Other (if applicable) --></help>
+        <label><!-- Special offer, Other (if applicable) --></label>
+        <name>Special_offer_Other_if_applicable__c</name>
+    </fields>
+    <fields>
+        <help><!-- Special offer PIO (if applicable) --></help>
+        <label><!-- Special offer PIO (if applicable) --></label>
+        <name>Special_offer_PIO_if_applicable__c</name>
+    </fields>
+    <fields>
+        <label><!-- Surname of first ZG Contact --></label>
+        <name>Surname_of_first_ZG_Contact__c</name>
+    </fields>
+    <fields>
+        <help><!-- Feedback after the question: &quot;Ok, X sounds ok already. Do you mind telling me what you would like to see to get to a 10?&quot; 
+These are acceptance criteria for this lead to become a customer and therefore very important closing infos. --></help>
+        <label><!-- Feedback Temperature Check --></label>
+        <name>Temperature_Check_Result__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tone of address for first ZG Contact --></label>
+        <name>Tone_of_address_for_first_ZG_Contact__c</name>
+        <picklistValues>
+            <masterLabel>Formal</masterLabel>
+            <translation><!-- Formal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Informal</masterLabel>
+            <translation><!-- Informal --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Here you find the total annual tax advisor fee including the YES and the monthly bookkeeping (calculated for 12 months) fees.
+
+This field is calculated automatically using the &quot;MRR Tax Advisor&quot; and the &quot;ARR_Tax_Advisor_Year_End_Statement&quot; fields. --></help>
+        <label><!-- Total annual tax advisor fee --></label>
+        <name>Total_annual_tax_advisor_fee__c</name>
+    </fields>
+    <fields>
+        <help><!-- Here you find the total monthly tax advisor fee including the YES (proportionately for month) and the monthly bookkeeping fees.
+
+This field is calculated automatically using the &quot;MRR Tax Advisor&quot; and the &quot;ARR_Tax_Advisor_Year_End_Statement&quot; fields. --></help>
+        <label><!-- Total monthly tax advisor fee --></label>
+        <name>Total_monthly_Tax_advisor_fee__c</name>
+    </fields>
+    <fields>
+        <label><!-- Upcoming Task Due Date --></label>
+        <name>Upcoming_Task_Due_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- Why did he/she contacted us? What solution is the lead looking for in first place? 
+
+Use this point to get the prospect into talking. --></help>
+        <label><!-- What are they looking for? --></label>
+        <name>What_are_they_looking_for__c</name>
+    </fields>
+    <fields>
+        <help><!-- Indicates which AE actually won this Opportunity --></help>
+        <label><!-- Won by --></label>
+        <name>Won_by__c</name>
+        <relationshipLabel><!-- Opportunities (Won by) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- YES info --></label>
+        <name>YES_info__c</name>
+        <picklistValues>
+            <masterLabel>YES not pitched</masterLabel>
+            <translation><!-- YES not pitched --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>YES not pitched - but asked for price</masterLabel>
+            <translation><!-- YES not pitched - but asked for price --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>YES pitched</masterLabel>
+            <translation><!-- YES pitched --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>YES pitched after customer insisted</masterLabel>
+            <translation><!-- YES pitched after customer insisted --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Please select ALL reasons why you had to reject this customer. --></help>
+        <label><!-- Rejection Reasons --></label>
+        <name>Zeitgold_Rejection_Reasons__c</name>
+        <picklistValues>
+            <masterLabel>Abweichendes Geschäftsjahr</masterLabel>
+            <translation><!-- Abweichendes Geschäftsjahr --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Box pick up not possible</masterLabel>
+            <translation><!-- Box pick up not possible --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Business is too large (employees or revenue)</masterLabel>
+            <translation><!-- Business is too large (employees or revenue) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Business not based in Germany</masterLabel>
+            <translation><!-- Business not based in Germany --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Chaotic backlog (i.e. last year) needs to be cleaned up first</masterLabel>
+            <translation><!-- Chaotic backlog (i.e. last year) needs to be cleaned up first --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Construction wages</masterLabel>
+            <translation><!-- Construction wages --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Controlling requirements beyond BWA</masterLabel>
+            <translation><!-- Controlling requirements beyond BWA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Customer accepts cash payments in foreign currency</masterLabel>
+            <translation><!-- Customer accepts cash payments in foreign currency --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Customer generates significant B2B or B2C revenues outside of Germany. (Significant revenues = more than 10% of annual revenues)</masterLabel>
+            <translation><!-- Customer generates significant B2B or B2C revenues outside of Germany. (Significant revenues = more than 10% of annual revenues) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Customer that are &quot;Ist-Versteuerer&quot; AND issue outgoing invoices (not in-store sales) with a VAT rate of 7% or without VAT (0%).</masterLabel>
+            <translation><!-- Customer that are &quot;Ist-Versteuerer&quot; AND issue outgoing invoices (not in-store sales) with a VAT rate of 7% or without VAT (0%). --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Customized balance sheet structure</masterLabel>
+            <translation><!-- Customized balance sheet structure --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Data privacy requirements</masterLabel>
+            <translation><!-- Data privacy requirements --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Differential taxation - §25a</masterLabel>
+            <translation><!-- Differential taxation - §25a --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Handling of domestic Inbound invoices with different VAT than 7% and 19%</masterLabel>
+            <translation><!-- Handling of domestic Inbound invoices with different VAT than 7% and 19% --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Handling of domestic Outbound invoices with different VAT than 7% and 19%</masterLabel>
+            <translation><!-- Handling of domestic Outbound invoices with different VAT than 7% and 19% --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Has 1+ bank unsupported by FIGO</masterLabel>
+            <translation><!-- Has 1+ bank unsupported by FIGO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In the process of restructuring business</masterLabel>
+            <translation><!-- In the process of restructuring business --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Installment payments, Outbound</masterLabel>
+            <translation><!-- Installment payments, Outbound --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lack of language skills</masterLabel>
+            <translation><!-- Lack of language skills --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Merchant requires multiple bank accounts for payments</masterLabel>
+            <translation><!-- Merchant requires multiple bank accounts for payments --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mixed business/private bank acc./credit cards/PayPal acc.</masterLabel>
+            <translation><!-- Mixed business/private bank acc./credit cards/PayPal acc. --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Multiple different businesses in one legal entity</masterLabel>
+            <translation><!-- Multiple different businesses in one legal entity --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No permanent extension</masterLabel>
+            <translation><!-- No permanent extension --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Outbound Membership contracts</masterLabel>
+            <translation><!-- Outbound Membership contracts --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pays Bettensteuer or Kurtaxe and is not willing to do it themselves (outside of Zeitgold)</masterLabel>
+            <translation><!-- Pays Bettensteuer or Kurtaxe and is not willing to do it themselves (outside of Zeitgold) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Prepayments for expenses</masterLabel>
+            <translation><!-- Prepayments for expenses --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Short time work</masterLabel>
+            <translation><!-- Short time work --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Special tax requirements - Industries</masterLabel>
+            <translation><!-- Special tax requirements - Industries --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Special tax requirements - Tax exemption (§ 4)</masterLabel>
+            <translation><!-- Special tax requirements - Tax exemption (§ 4) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Special tax requirements - §13 b</masterLabel>
+            <translation><!-- Special tax requirements - §13 b --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Specific marketplace partners that also clear payment for the merchant (e.g. Deliveroo, Booking.com, Treatwell, Tock, ...)</masterLabel>
+            <translation><!-- Specific marketplace partners that also clear payment for the merchant (e.g. Deliveroo, Booking.com, Treatwell, Tock, ...) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Specific other systems for financial transaction (e.g. vouchers)</masterLabel>
+            <translation><!-- Specific other systems for financial transaction (e.g. vouchers) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unsupported bank</masterLabel>
+            <translation><!-- Unsupported bank --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unsupported cash register</masterLabel>
+            <translation><!-- Unsupported cash register --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unsupported industry</masterLabel>
+            <translation><!-- Unsupported industry --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unsupported legal form</masterLabel>
+            <translation><!-- Unsupported legal form --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unsupported payment providers</masterLabel>
+            <translation><!-- Unsupported payment providers --></translation>
+        </picklistValues>
+    </fields>
+    <validationRules>
+        <errorMessage><!-- Please Click on Handover to Onboarding to mark as Closed Won. --></errorMessage>
+        <name>Check_Status_before_Closed_Won_to_Onbdg</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- The SLS Handover Email was not sent yet --></errorMessage>
+        <name>Closed_Won_only_if_Handover_Email_sent</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- FillContractField_Account_AccStartDate --></errorMessage>
+        <name>FillContractField_Account_AccStartDate</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- FillContractField_Account_AmountWageAcco --></errorMessage>
+        <name>FillContractField_Account_AmountWageAcco</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- FillContractField_Account_AnnualRevenue --></errorMessage>
+        <name>FillContractField_Account_AnnualRevenue</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- FillContractField_Account_BillingAddress --></errorMessage>
+        <name>FillContractField_Account_BillingAddress</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- FillContractField_Account_IncomingInvoic --></errorMessage>
+        <name>FillContractField_Account_IncomingInvoic</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- FillContractField_Account_LegalForm --></errorMessage>
+        <name>FillContractField_Account_LegalForm</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- FillContractField_Account_LegalName --></errorMessage>
+        <name>FillContractField_Account_LegalName</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- FillContractField_Account_NumberOfEmployees --></errorMessage>
+        <name>FillContractField_Account_NumberOfEmploy</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- FillContractField_Account_OutgoingInvoic --></errorMessage>
+        <name>FillContractField_Account_OutgoingInvoic</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- FillContractField_Account_ParStartDate --></errorMessage>
+        <name>FillContractField_Account_ParStartDate</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Onboarding_Contact --></errorMessage>
+        <name>FillContractField_Onboarding_Contact</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- FillContractField_Opp_ArrTaxYearEndStatement --></errorMessage>
+        <name>FillContractField_Opp_ArrTaxYES</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- FillContractField_Opp_MrrTax --></errorMessage>
+        <name>FillContractField_Opp_MrrTax</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- FillContractField_Opp_MrrZg --></errorMessage>
+        <name>FillContractField_Opp_MrrZg</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- FillContractField_Opp_OfferExpirationDate --></errorMessage>
+        <name>FillContractField_Opp_OfferExpirationDat</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please check the Field: &quot;Name Bank (business bank account)&quot; in the Account. --></errorMessage>
+        <name>ISNameBankBusinessBankAccount_SET</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please state which pricing you discussed or will discuss (in Demo completed). If you lost the opportunity and didn&apos;t discuss pricing at all, please state so too. --></errorMessage>
+        <name>ISPricingModelKnown</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please check the Field: &quot;Separate private &amp; business bank account&quot; in the Account --></errorMessage>
+        <name>ISSeparatePrivateBusinessBankAccount_Set</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please check the Field: &quot; Legal Form&quot; in the Account --></errorMessage>
+        <name>IS_LegalForm_SET</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please check the Field: &quot;Membership Contracts&quot; in the Account --></errorMessage>
+        <name>IS_MembershipContracts_SET</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please check the Field: &quot;Sold goods/services in foreign countries&quot; in the Account --></errorMessage>
+        <name>IS_SoldGoodsInForeignCountries_SET</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please set the Accounting Start Date in the Account Object. --></errorMessage>
+        <name>IsAccountingStartDateSet</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- For this stage, you need to set an amount. --></errorMessage>
+        <name>IsAmountSet</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please set the account field annual revenue. --></errorMessage>
+        <name>IsAnnualRevenueEmpty</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please fill in the  Opportunity field &quot;Total annual tax advisor fee&quot; --></errorMessage>
+        <name>IsArrSet</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please set the billing street in the Account Object --></errorMessage>
+        <name>IsBillingAddressSet</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please set the billing city in the account object --></errorMessage>
+        <name>IsBillingCitySet</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please set the billing country in the account object. --></errorMessage>
+        <name>IsBillingCountrySet</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please set the billing/legal addresses zip code in the account object --></errorMessage>
+        <name>IsBillingZipSet</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please attach BWA and z-report and check the field in the Account object. --></errorMessage>
+        <name>IsBwaMissing</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You need to fill the field Company Legal Name in the Account object before setting this opportunity to stage Proposal --></errorMessage>
+        <name>IsCompanyLegalNameSet</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please set the account field controlling requirements beyond BWA. --></errorMessage>
+        <name>IsControllingRequirementsBeyondBwaSet</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please state, if you completed the demo or not. --></errorMessage>
+        <name>IsDemoCompletedAndClosedRejected</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please fill in if you did a Demo or not. --></errorMessage>
+        <name>IsDemoCompletedAndNotLost</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please fill in the demo date in the opportunity. --></errorMessage>
+        <name>IsDemoDateUnknown</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please set the account field installment payments. --></errorMessage>
+        <name>IsInstallmentPaymentsSet</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please fill out the lead source. Where is this Lead from? --></errorMessage>
+        <name>IsLeadSourceEmpty</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please enter the detailed reason(s) why the prospect rejected us in Detailed Lost reason --></errorMessage>
+        <name>IsLostDetailedEmpty</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- It appears that MRR Zeitgold + MRR Tax Advisor don&apos;t sum up correctly in the Amount field. --></errorMessage>
+        <name>IsMrrAndAmountSame</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please set the tax advisors MRR in the Opportunity object. --></errorMessage>
+        <name>IsMrrTAaSet</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please set the MRR for Zeitgold services --></errorMessage>
+        <name>IsMrrZeitgoldSet</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please set the account fields number of invoices in- and outgoing. --></errorMessage>
+        <name>IsNrInvoicesSet</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please set the account field employees. --></errorMessage>
+        <name>IsNrOfEmployeesEmpty</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please set the Payroll Start date in the Account object. --></errorMessage>
+        <name>IsPayrollStartDateSet</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please set the account field short time work. --></errorMessage>
+        <name>IsShortTimeWorkSet</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please set the account field sources revenue. --></errorMessage>
+        <name>IsSourcesRevenueSet</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please set the account field special balance sheet structure. --></errorMessage>
+        <name>IsSpecialBalanceSheetStructureSet</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please set the tax number in the account object. --></errorMessage>
+        <name>IsTaxNumberSet</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please set the name of the tax office in the account object. --></errorMessage>
+        <name>IsTaxOfficeSet</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please set the account field VAT declaration extension. --></errorMessage>
+        <name>IsVatDeclarationExtensionSet</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Send_for_Signing_WIP --></label>
+        <name>Send_for_Signing_WIP</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_with_DocuSign --></label>
+        <name>dsfs__Send_with_DocuSign</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Verify_with_DNB --></label>
+        <name>dsfs__Verify_with_DNB</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_Pardot_Emails --></label>
+        <name>pi__Send_Pardot_Emails</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_Single_Pardot_Email --></label>
+        <name>pi__Send_Single_Pardot_Email</name>
+    </webLinks>
+</CustomObjectTranslation>

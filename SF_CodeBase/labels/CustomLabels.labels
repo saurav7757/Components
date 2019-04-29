@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>ACC_Jotform_Link</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ACC Jotform Link</shortDescription>
+        <value>https://form.jotformeu.com/90722478251357?id=</value>
+    </labels>
+    <labels>
+        <fullName>LineBreak</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LineBreak</shortDescription>
+        <value>- 
+-</value>
+    </labels>
+    <labels>
+        <fullName>PAR_Jotform_Link</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PAR Jotform Link</shortDescription>
+        <value>https://form.jotformeu.com/90722663981363?id=</value>
+    </labels>
+</CustomLabels>

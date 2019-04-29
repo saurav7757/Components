@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Translations xmlns="http://soap.sforce.com/2006/04/metadata">
+    <scontrols>
+        <label><!-- Pardot Contact Activities --></label>
+        <name>Prospect_Insight_Contact_Activities</name>
+    </scontrols>
+    <scontrols>
+        <label><!-- Pardot Lead Activities --></label>
+        <name>Prospect_Insight_Lead_Activities</name>
+    </scontrols>
+</Translations>

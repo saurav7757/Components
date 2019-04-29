@@ -1,0 +1,58 @@
+<apex:page controller="talkdesk.TabTalkdeskLivePageController" extensions="talkdesk.RemoteActionManagerExtension" showHeader="true" sidebar="false" action="{! checkTalkdeskConnectivity }">
+<apex:stylesheet value="{! URLFOR($Resource.slds, 'assets/styles/salesforce-lightning-design-system-vf.css') }" />
+
+<apex:outputPanel rendered="{! isTalkdeskUser }">
+    <iframe src="{! iframeSrc }" width="100%" height="850px" id="talkdeskLive" marginheight="0" frameborder="0" onLoad="autoResize('talkdeskLive');" />
+</apex:outputPanel>
+
+<apex:outputPanel rendered="{! not(isTalkdeskUser) }">
+    <c:NonTalkdeskUserModal />
+</apex:outputPanel>
+
+<script>
+    var iframe = document.getElementById('talkdeskLive');
+
+    window.addEventListener('message', function(event) {
+        if (event.data === 'req_token' && iframe.src.indexOf(event.origin) !== -1) {
+            Visualforce.remoting.Manager.invokeAction(
+                '{!$RemoteAction.RemoteActionManagerExtension.getAccessToken}',
+                function(r, e){
+                    if (e.status) {
+                        if (r.result === 'SUCCESS') {
+                            sendMessageToTalkdeskLive(event, r.token, r.expires_at);
+                        }
+                    } else {
+                        alert(e.message);
+                    }
+                },
+                {escape: true}
+            );
+        }
+    }, false);
+
+
+    function sendMessageToTalkdeskLive(event, token, expires_at) {
+        iframe.contentWindow.postMessage(
+            {
+                "type" : "receive_token",
+                "token" : token,
+                "expires_at" : expires_at
+            },
+            '{! postMessageTarget }'
+        );
+    };
+
+    function autoResize(id) {
+        var newheight;
+        var newwidth;
+
+        if (document.getElementById) {
+            newheight = document.getElementById(id).contentWindow.document.body.scrollHeight;
+            newwidth = document.getElementById(id).contentWindow.document.body.scrollWidth;
+        }
+        document.getElementById(id).height = (newheight) + "px";
+        document.getElementById(id).width = (newwidth) + "px";
+    };
+
+</script>
+</apex:page>

@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- talkdesk Answered by --></label>
+        <name>talkdesk_Answered_by__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is Abandoned --></label>
+        <name>talkdesk__Abandoned__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account --></label>
+        <name>talkdesk__Account__c</name>
+        <relationshipLabel><!-- Talkdesk Activities --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- CSAT Icon --></label>
+        <name>talkdesk__CSAT_Icon__c</name>
+    </fields>
+    <fields>
+        <label><!-- CSAT Response --></label>
+        <name>talkdesk__CSAT_Response_del__c</name>
+    </fields>
+    <fields>
+        <label><!-- CSAT Text Response --></label>
+        <name>talkdesk__CSAT_Text_Response__c</name>
+    </fields>
+    <fields>
+        <label><!-- CSAT --></label>
+        <name>talkdesk__CSAT__c</name>
+    </fields>
+    <fields>
+        <label><!-- Talk Time --></label>
+        <name>talkdesk__CallDuration__c</name>
+    </fields>
+    <fields>
+        <label><!-- Call Id --></label>
+        <name>talkdesk__Call_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Case --></label>
+        <name>talkdesk__Case__c</name>
+        <relationshipLabel><!-- Talkdesk Activities --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Channel --></label>
+        <name>talkdesk__Channel__c</name>
+        <picklistValues>
+            <masterLabel>SMS</masterLabel>
+            <translation><!-- SMS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Voice</masterLabel>
+            <translation><!-- Voice --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Contact Phone --></label>
+        <name>talkdesk__Contact_Phone__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contact --></label>
+        <name>talkdesk__Contact__c</name>
+        <relationshipLabel><!-- Talkdesk Activities --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Day of Week --></label>
+        <name>talkdesk__Day_of_Week__c</name>
+    </fields>
+    <fields>
+        <label><!-- Disposition Code (Lookup) --></label>
+        <name>talkdesk__DispositionCode__c</name>
+        <relationshipLabel><!-- Talkdesk Activities --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Disposition Code External Id --></label>
+        <name>talkdesk__Disposition_Code_External_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Disposition Code --></label>
+        <name>talkdesk__Disposition_Code__c</name>
+        <picklistValues>
+            <masterLabel>Attempting Contact</masterLabel>
+            <translation><!-- Attempting Contact --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Interested</masterLabel>
+            <translation><!-- Not Interested --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Successful Call</masterLabel>
+            <translation><!-- Successful Call --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- End Time --></label>
+        <name>talkdesk__End_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is External Number --></label>
+        <name>talkdesk__External_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Half Hour of Day --></label>
+        <name>talkdesk__Half_Hour__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hold Time (sec) --></label>
+        <name>talkdesk__Hold_TIme_sec__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hold Time --></label>
+        <name>talkdesk__Hold_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hour of Day --></label>
+        <name>talkdesk__Hour_of_Day__c</name>
+    </fields>
+    <fields>
+        <label><!-- IVR Options (raw) --></label>
+        <name>talkdesk__IVR_Options_raw__c</name>
+    </fields>
+    <fields>
+        <label><!-- If No Answer --></label>
+        <name>talkdesk__If_No_Answer__c</name>
+    </fields>
+    <fields>
+        <label><!-- In Business Hours --></label>
+        <name>talkdesk__In_Business_Hours_del__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is Callback --></label>
+        <name>talkdesk__Is_Callback_del__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is Deleted --></label>
+        <name>talkdesk__Is_Deleted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is Mood set --></label>
+        <name>talkdesk__Is_Mood_set__c</name>
+    </fields>
+    <fields>
+        <help><!-- Denotes if the log entry was uploaded as a sample --></help>
+        <label><!-- Is Sample --></label>
+        <name>talkdesk__Is_Sample__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is Transfer --></label>
+        <name>talkdesk__Is_Transfer_del__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead --></label>
+        <name>talkdesk__Lead__c</name>
+        <relationshipLabel><!-- Talkdesk Activities --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Is Missed --></label>
+        <name>talkdesk__Missed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Month of Year --></label>
+        <name>talkdesk__Month_of_Year__c</name>
+    </fields>
+    <fields>
+        <label><!-- Mood Num Value --></label>
+        <name>talkdesk__MoodNumValue__c</name>
+    </fields>
+    <fields>
+        <label><!-- Mood Face --></label>
+        <name>talkdesk__Mood_Face__c</name>
+    </fields>
+    <fields>
+        <label><!-- Mood --></label>
+        <name>talkdesk__Mood_PL__c</name>
+        <picklistValues>
+            <masterLabel>happy</masterLabel>
+            <translation><!-- happy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>neutral</masterLabel>
+            <translation><!-- neutral --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>unhappy</masterLabel>
+            <translation><!-- unhappy --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Name Id --></label>
+        <name>talkdesk__Name_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Notes --></label>
+        <name>talkdesk__Notes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Opportunity --></label>
+        <name>talkdesk__Opportunity__c</name>
+        <relationshipLabel><!-- Talkdesk Activities --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Recording --></label>
+        <name>talkdesk__Recording__c</name>
+    </fields>
+    <fields>
+        <label><!-- Related To --></label>
+        <name>talkdesk__Related_To__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hangup --></label>
+        <name>talkdesk__Result__c</name>
+        <picklistValues>
+            <masterLabel>Handled</masterLabel>
+            <translation><!-- Handled --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hold</masterLabel>
+            <translation><!-- Hold --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IVR</masterLabel>
+            <translation><!-- IVR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Offered</masterLabel>
+            <translation><!-- Offered --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Transfer</masterLabel>
+            <translation><!-- Transfer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Waiting</masterLabel>
+            <translation><!-- Waiting --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Ring Groups --></label>
+        <name>talkdesk__Ring_Groups__c</name>
+        <picklistValues>
+            <masterLabel>Admins</masterLabel>
+            <translation><!-- Admins --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Agents</masterLabel>
+            <translation><!-- Agents --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- SLA --></label>
+        <name>talkdesk__SLA__c</name>
+    </fields>
+    <fields>
+        <label><!-- Speed to Answer --></label>
+        <name>talkdesk__Speed_to_Answer__c</name>
+    </fields>
+    <fields>
+        <label><!-- Speed to Answer (sec) --></label>
+        <name>talkdesk__Speed_to_Answer_sec_del__c</name>
+    </fields>
+    <fields>
+        <label><!-- Start Date --></label>
+        <name>talkdesk__Start_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Start Time --></label>
+        <name>talkdesk__Start_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>talkdesk__Status__c</name>
+        <picklistValues>
+            <masterLabel>Delivered</masterLabel>
+            <translation><!-- Delivered --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Failed</masterLabel>
+            <translation><!-- Failed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Received</masterLabel>
+            <translation><!-- Received --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sending</masterLabel>
+            <translation><!-- Sending --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sent</masterLabel>
+            <translation><!-- Sent --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Undelivered</masterLabel>
+            <translation><!-- Undelivered --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Talk Time (sec) --></label>
+        <name>talkdesk__Talk_Time_sec__c</name>
+    </fields>
+    <fields>
+        <label><!-- Talkdesk Id --></label>
+        <name>talkdesk__Talkdesk_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Talkdesk Phone --></label>
+        <name>talkdesk__Talkdesk_Phone_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Type --></label>
+        <name>talkdesk__Type__c</name>
+        <picklistValues>
+            <masterLabel>Abandoned</masterLabel>
+            <translation><!-- Abandoned --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Inbound</masterLabel>
+            <translation><!-- Inbound --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Missed</masterLabel>
+            <translation><!-- Missed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Outbound</masterLabel>
+            <translation><!-- Outbound --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Outbound_Missed</masterLabel>
+            <translation><!-- Outbound_Missed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Outbound_Voicemail</masterLabel>
+            <translation><!-- Outbound_Voicemail --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Short_Abandoned</masterLabel>
+            <translation><!-- Short_Abandoned --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Voicemail</masterLabel>
+            <translation><!-- Voicemail --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- User Email --></label>
+        <name>talkdesk__UserEmail__c</name>
+    </fields>
+    <fields>
+        <label><!-- User --></label>
+        <name>talkdesk__User__c</name>
+        <relationshipLabel><!-- Talkdesk Activities --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Wait Time --></label>
+        <name>talkdesk__Wait_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Wait Time (sec) --></label>
+        <name>talkdesk__Wait_Time_sec__c</name>
+    </fields>
+    <fields>
+        <label><!-- User Timezone --></label>
+        <name>talkdesk__user_timezone__c</name>
+    </fields>
+</CustomObjectTranslation>

@@ -1,0 +1,11 @@
+Hi {!User.FirstName},
+a new link just signed up on our website.
+
+Link: {!Lead.Link}
+Name: {!Lead.FirstName} {!Lead.LastName}
+Industry: {!Lead.MKT_Industry_type__c} - {!Lead.MKT_Industry_type_Detailed__c}
+Revenue: {!Lead.MKT_revenue_per_year__c}
+Employees: {!Lead.MKT_Number_of_employees__c}
+TA satisfaction: {!Lead.MKT_Tax_Advisor_satisfaction__c}
+
+Calling back a lead after less than 15min after they signed up increases conversion rate by 400% - do you need more motivation? :)

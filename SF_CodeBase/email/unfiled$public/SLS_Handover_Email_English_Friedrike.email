@@ -1,0 +1,27 @@
+<div><div>Hallo {!Account.First_ZG_Contact__c},</div>
+<div><br></div>
+<div>we are very happy that you have chosen Zeitgold with your business {!Account.Company_Legal_Name__c}. The first step to your accounting in the digital age.</div>
+<div>Our onboarding team will set up the Zeitgold system for you and guide you through the first steps so that you get to know the product even better. You can reach your onboarding expert under our service hotline +49 30 30808111 or via <a href="mailto: service@zeitgold.com">service@zeitgold.com</a>.</div>
+<div><br></div>
+<div>As a first step in onboarding we would like to ask you for the following things:</div>
+<div><br></div>
+<div><br></div>
+<div><b>1. Installation of your Zeitgold-Box</b></div>
+<div>In order to be able to send your personal Zeitgold box to you and organise the regular pickup, we need a few details from you. This can be done on your smartphone and should not take more than 5 minutes: <a href="https://form.jotformeu.com/90714513158354?id={!Account.Id}" target="_blank"><b>PLEASE CLICK HERE</b></a></div>
+<div><br></div>
+<div><b>2. Information about your payroll and financial accounting</b></div>
+<div>In order to be able to support you quickly and on time with your payroll and financial accounting, we need more information about your company.</div>
+<div>Activation of the payroll accounting (duration approx. 15 minutes) <a href="https://form.jotformeu.com/90722663981363?id={!Account.Id}" target="_blank"><b>PLEASE CLICK HERE</b></a></div>
+<div>Activation of the financial accounting (duration approx. 15 minutes) <a href="https://form.jotformeu.com/90722478251357?id={!Account.Id}" target="_blank"><b>PLEASE CLICK HERE</b></a></div>
+<div><br></div>
+<div>Here is a brief overview of how the onboarding process looks.</div>
+<div><br></div>
+<div><img src="https://zeitgold--c.eu8.content.force.com/servlet/servlet.ImageServer?id=0150N000007Fldd&oid=00D0N000001MQYz&lastMod=1550573319000" width="539px;" height="113px;"><br></div>
+<div><br></div>
+<div>Your tax consultant partner Pioneer will also contact you as soon as the installation of the Zeitgold system has been completed.</div>
+<div><br></div>
+<div>Many greetings</div>
+<div></div>
+<div>{!Account.OwnerFullName}</div>
+</div>
+<div></div>

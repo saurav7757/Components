@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>Lead</entityName>
+    <fieldName>Status</fieldName>
+    <masterLabel>Default</masterLabel>
+    <pathAssistantSteps>
+        <info>&lt;ol&gt;&lt;li&gt;&lt;a href=&quot;https://docs.google.com/document/d/1MPecmZOU-v8_s1yLOzdZ3UumSuhqaqfYiuQiTlNqIFI&quot; target=&quot;_blank&quot; style=&quot;font-size: 13px;&quot;&gt;&lt;b&gt;Use this call script here&lt;/b&gt;&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;b style=&quot;font-size: 13px;&quot;&gt;Collect the following information&lt;/b&gt;&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;u&gt;Basic information&lt;/u&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Salutation&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 13px;&quot;&gt;First &amp;amp; last name&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 13px;&quot;&gt;Gender&lt;/span&gt;&lt;/li&gt;&lt;li&gt;Tone of address&lt;/li&gt;&lt;li&gt;Lead Source&lt;/li&gt;&lt;li&gt;Company&lt;/li&gt;&lt;li&gt;Address&lt;/li&gt;&lt;li&gt;Year business established&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;u&gt;Constraints&lt;/u&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Legal Form&lt;/li&gt;&lt;li&gt;Cash journal needed?&lt;/li&gt;&lt;li&gt;Cash journal kept in compliant way?&lt;/li&gt;&lt;li&gt;Name cash register&lt;/li&gt;&lt;li&gt;Sole trader business run by owner&lt;/li&gt;&lt;li&gt;VAT declaration extension (DFV)&lt;/li&gt;&lt;li&gt;Separate private &amp;amp; business bank account&lt;/li&gt;&lt;li&gt;Name Bank&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;u&gt;Closing Path&lt;/u&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;All fields&lt;/li&gt;&lt;/ul&gt;</info>
+        <picklistValueName>Assessment Call scheduled</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Lost_Reason_Lead__c</fieldNames>
+        <fieldNames>Detailed_Lost_or_Rejection_Reason__c</fieldNames>
+        <picklistValueName>Closed Lost</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <picklistValueName>Lead Pool</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;ol&gt;&lt;li&gt;&lt;a href=&quot;https://docs.google.com/document/d/1MPecmZOU-v8_s1yLOzdZ3UumSuhqaqfYiuQiTlNqIFI&quot; target=&quot;_blank&quot; style=&quot;font-size: 13px;&quot;&gt;&lt;b&gt;Use this call script here&lt;/b&gt;&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;b style=&quot;font-size: 13px;&quot;&gt;Collect the following information&lt;/b&gt;&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;u style=&quot;font-size: 13px;&quot;&gt;Basic information&lt;/u&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Salutation&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 13px;&quot;&gt;First &amp;amp; last name&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 13px;&quot;&gt;Gender&lt;/span&gt;&lt;/li&gt;&lt;li&gt;Tone of address&lt;/li&gt;&lt;li&gt;Lead Source&lt;/li&gt;&lt;li&gt;Company&lt;/li&gt;&lt;li&gt;Address&lt;/li&gt;&lt;li&gt;Year business established&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;u&gt;Constraints&lt;/u&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Legal Form&lt;/li&gt;&lt;li&gt;Cash journal needed?&lt;/li&gt;&lt;li&gt;Cash journal kept in compliant way?&lt;/li&gt;&lt;li&gt;Name cash register&lt;/li&gt;&lt;li&gt;Sole trader business run by owner&lt;/li&gt;&lt;li&gt;VAT declaration extension (DFV)&lt;/li&gt;&lt;li&gt;Separate private &amp;amp; business bank account&lt;/li&gt;&lt;li&gt;Name Bank&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;u style=&quot;font-size: 13px;&quot;&gt;Closing Path&lt;/u&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;All fields&lt;/li&gt;&lt;/ul&gt;</info>
+        <picklistValueName>MQL</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;ol&gt;&lt;li&gt;&lt;a href=&quot;https://docs.google.com/document/d/1MPecmZOU-v8_s1yLOzdZ3UumSuhqaqfYiuQiTlNqIFI&quot; target=&quot;_blank&quot; style=&quot;font-size: 13px;&quot;&gt;&lt;b&gt;Use this call script here&lt;/b&gt;&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;b style=&quot;font-size: 13px;&quot;&gt;Collect the following information&lt;/b&gt;&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;u&gt;Basic information&lt;/u&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Salutation&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 13px;&quot;&gt;First &amp;amp; last name&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 13px;&quot;&gt;Gender&lt;/span&gt;&lt;/li&gt;&lt;li&gt;Tone of address&lt;/li&gt;&lt;li&gt;Lead Source&lt;/li&gt;&lt;li&gt;Company&lt;/li&gt;&lt;li&gt;Address&lt;/li&gt;&lt;li&gt;Year business established&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;u&gt;Constraints&lt;/u&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Legal Form&lt;/li&gt;&lt;li&gt;Cash journal needed?&lt;/li&gt;&lt;li&gt;Cash journal kept in compliant way?&lt;/li&gt;&lt;li&gt;Name cash register&lt;/li&gt;&lt;li&gt;Sole trader business run by owner&lt;/li&gt;&lt;li&gt;VAT declaration extension (DFV)&lt;/li&gt;&lt;li&gt;Separate private &amp;amp; business bank account&lt;/li&gt;&lt;li&gt;Name Bank&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;u&gt;Closing Path&lt;/u&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;All fields&lt;/li&gt;&lt;/ul&gt;</info>
+        <picklistValueName>Reached Out</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;ol&gt;&lt;li&gt;&lt;a href=&quot;https://docs.google.com/document/d/1MPecmZOU-v8_s1yLOzdZ3UumSuhqaqfYiuQiTlNqIFI&quot; target=&quot;_blank&quot; style=&quot;font-size: 13px;&quot;&gt;&lt;b&gt;Use this call script here&lt;/b&gt;&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;b style=&quot;font-size: 13px;&quot;&gt;Collect the following information&lt;/b&gt;&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;u&gt;Basic information&lt;/u&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Salutation&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 13px;&quot;&gt;First &amp;amp; last name&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 13px;&quot;&gt;Gender&lt;/span&gt;&lt;/li&gt;&lt;li&gt;Tone of address&lt;/li&gt;&lt;li&gt;Lead Source&lt;/li&gt;&lt;li&gt;Company&lt;/li&gt;&lt;li&gt;Address&lt;/li&gt;&lt;li&gt;Year business established&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;u&gt;Constraints&lt;/u&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Legal Form&lt;/li&gt;&lt;li&gt;Cash journal needed?&lt;/li&gt;&lt;li&gt;Cash journal kept in compliant way?&lt;/li&gt;&lt;li&gt;Name cash register&lt;/li&gt;&lt;li&gt;Sole trader business run by owner&lt;/li&gt;&lt;li&gt;VAT declaration extension (DFV)&lt;/li&gt;&lt;li&gt;Separate private &amp;amp; business bank account&lt;/li&gt;&lt;li&gt;Name Bank&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;u&gt;Closing Path&lt;/u&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;All fields&lt;/li&gt;&lt;/ul&gt;</info>
+        <picklistValueName>Reached decision maker</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Zeitgold_Rejection_Reasons__c</fieldNames>
+        <fieldNames>Detailed_Lost_or_Rejection_Reason__c</fieldNames>
+        <picklistValueName>Rejected</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;It seems like we gathered all relevant information. Only one thing is missing:&lt;b&gt; the date for the demo call.&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Pick up the phone and schedule the demo call with one of our AEs!&lt;/p&gt;</info>
+        <picklistValueName>SQL</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>AnnualRevenue</fieldNames>
+        <fieldNames>NumberOfEmployees</fieldNames>
+        <picklistValueName>SQL and Demo scheduled</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;ol&gt;&lt;li&gt;&lt;a href=&quot;https://docs.google.com/document/d/1MPecmZOU-v8_s1yLOzdZ3UumSuhqaqfYiuQiTlNqIFI&quot; target=&quot;_blank&quot; style=&quot;font-size: 13px;&quot;&gt;&lt;b&gt;Use this call script here&lt;/b&gt;&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;b style=&quot;font-size: 13px;&quot;&gt;Collect the following information&lt;/b&gt;&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;u&gt;Basic information&lt;/u&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Salutation&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 13px;&quot;&gt;First &amp;amp; last name&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 13px;&quot;&gt;Gender&lt;/span&gt;&lt;/li&gt;&lt;li&gt;Tone of address&lt;/li&gt;&lt;li&gt;Lead Source&lt;/li&gt;&lt;li&gt;Company&lt;/li&gt;&lt;li&gt;Address&lt;/li&gt;&lt;li&gt;Year business established&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;u&gt;Constraints&lt;/u&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Legal Form&lt;/li&gt;&lt;li&gt;Cash journal needed?&lt;/li&gt;&lt;li&gt;Cash journal kept in compliant way?&lt;/li&gt;&lt;li&gt;Name cash register&lt;/li&gt;&lt;li&gt;Sole trader business run by owner&lt;/li&gt;&lt;li&gt;VAT declaration extension (DFV)&lt;/li&gt;&lt;li&gt;Separate private &amp;amp; business bank account&lt;/li&gt;&lt;li&gt;Name Bank&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;u&gt;Closing Path&lt;/u&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;All fields&lt;/li&gt;&lt;/ul&gt;</info>
+        <picklistValueName>Unqualified Lead</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>__MASTER__</recordTypeName>
+</PathAssistant>

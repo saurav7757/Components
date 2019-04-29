@@ -1,0 +1,19 @@
+<apex:page showHeader="false" sidebar="false" controller="talkdesk.TalkdeskPageController"
+           action="{! checkTalkdeskConnectivity }">
+    <apex:stylesheet value="{!URLFOR($Resource.talkdesk__slds, 'assets/styles/salesforce-lightning-design-system-vf.css')}" />
+
+    <style>
+
+        .c-modal {
+            display: none;
+        }
+
+    </style>
+
+    <script>
+        window.open('{!urlWithSso}', '_blank');
+        window.history.back();
+
+    </script>
+
+</apex:page>

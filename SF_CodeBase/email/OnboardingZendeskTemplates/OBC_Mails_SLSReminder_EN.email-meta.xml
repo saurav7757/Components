@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>OBC Mails - SLS Reminder - EN</name>
+    <style>none</style>
+    <subject>[Reminder]: Welcome to Zeitgold</subject>
+    <textOnly>Hello {{{Recipient.FirstName}}},
+
+
+Once again, a warm welcome to Zeitgold! I am {{{Sender.FirstName}}} and will accompany you in your Onboarding process at Zeitgold. To guarantee a smooth start, I would like to remind you of the following things:
+
+1. Your First In-App Tasks
+To make sure you are all ready for your start, please log into your Zeitgold App and complete your first app tasks.
+
+
+2. Send us a recent Z-Report and BWA
+Furthermore, please send me the following important items via E-Mail to ensure any technical adjustments can be made:
+
+A picture of a Z-Report from your cash register system (including the various available revenue types)
+A recent business assessment (BWA) from your current financial tax advisor
+
+
+Please complete these tasks as soon as possible, so that nothing stands in the way of our start.
+If you have any further questions, feel free to contact us at service@zeitgold.com or by telephone at 030/30808111.
+
+I am looking forward getting to know you!
+
+Best Wishes,
+
+{{{Sender.FirstName}}} at Zeitgold</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

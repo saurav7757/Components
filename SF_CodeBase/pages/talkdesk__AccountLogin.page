@@ -1,0 +1,235 @@
+<apex:page controller="talkdesk.TalkdeskLoginController" tabStyle="Talkdesk_Admin__tab" id="accountLoginPage">
+    <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <apex:composition template="talkdesk__LoginTemplate">
+        <apex:define name="loginArea">
+            <div class="slds-grid slds-grid--align-center">
+                <div class="slds-col slds-size--5-of-12 slds-medium-size--5-of-12 slds-large-size--4-of-12 slds-box"
+                     id="loginWindow">
+                    <apex:form id="loginForm" onSubmit="handleLoginEnter(event); return false;">
+                        <div class="slds-form-element">
+                            <label class="slds-form-element__label slds-m-top--small" for="inputName">Your Account
+                                Name</label>
+                            <div class="slds-grid slds-form-element__control">
+                                <apex:inputText id="accountName" value="{! accountName }"
+                                                styleClass="slds-input slds-size--3-of-5" required="true"/>
+                                <div class="slds-text-align--center slds-theme--shade slds-size--2-of-5"><p
+                                        class="slds-m-top--x-small">.mytalkdesk.com</p></div>
+                            </div>
+                            <apex:outputlabel styleClass="slds-text-color--error slds-hide" id="errorMessage"
+                                              value="This field is required"/>
+                        </div>
+                    </apex:form>
+                    <button class="btn slds-button slds-button--brand" onClick="handleLoginClick(); return false;">Log
+                        In with Talkdesk
+                    </button>
+                    <apex:outputPanel rendered="{! duplicatedIntegration }">
+                        <div class="slds-text-color--error slds-text-align_center" id="errorMessage">
+                            Your Talkdesk account is already synced to another Salesforce environment.
+                            Please disconnect other Salesforce environments before proceeding.
+                        </div>
+                    </apex:outputPanel>
+                    <hr/>
+                    <div class="slds-grid slds-grid--align-spread">
+                        <div class="slds-col slds-float--left"></div>
+                        <div class="slds-col slds-float--right">
+                            <a class="forgot-link" href="https://support.talkdesk.com/hc/en-us/requests/new"
+                               target="_blank">Forgot your account name?</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slds-grid slds-align--center slds-grid--vertical-align-center slds-m-top--x-large slds-m-bottom--xx-large">
+                <div class="slds-col slds-p-right--x-small">
+                    <span class="slds-float--right">Not a customer?</span>
+                </div>
+                <div class="slds-col slds-float--left slds-p-left--x-small">
+                    <button class="slds-button slds-button--neutral forgot-link"
+                            onclick="window.open('{! liveDemoUrl }', '_blank');">Request a Live Demo
+                    </button>
+                </div>
+            </div>
+            <div class="slds slds-hide" id="remoteSiteSettingModal">
+                <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true"
+                         aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+                    <div class="slds-modal__container">
+                        <header class="slds-modal__header">
+                            <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
+                                    title="Close" onclick="closeAlertModal();">
+                                <svg class="slds-button__icon slds-button__icon_large" aria-hidden="false">
+                                    <use xlink:href="{! URLFOR($Resource.slds, '/assets/icons/action-sprite/svg/symbols.svg#close') }"></use>
+                                </svg>
+                                <span class="slds-assistive-text">Close</span>
+                            </button>
+                            <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Connecting to
+                                Talkdesk</h2>
+                        </header>
+                        <div class="slds-notify slds-notify_alert slds-theme_alert-texture slds-theme_error slds-hide"
+                             role="alert" id="remoteSiteSettingModalError">
+                            <span class="slds-assistive-text">error</span>
+                            <span class="slds-icon_container slds-icon-utility-error slds-m-right_x-small"
+                                  title="Description of icon when needed">
+                                    <svg class="slds-icon slds-icon_x-small" aria-hidden="true">
+                                      <use xlink:href="{!URLFOR($Resource.slds, '/assets/icons/utility-sprite/svg/symbols.svg#error') }"></use>
+                                    </svg>
+                                  </span>
+                            <h2>There was an error while creating the setting&nbsp;<a href="javascript:void(0);">Please
+                                contact support</a>
+                            </h2>
+                        </div>
+                        <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                            <p class="slds-text-body_regular">In order to connect with Talkdesk, T4SF needs to create a
+                                Remote Site Setting</p>
+                            <p class="slds-text-body_regular">It can created automatically or be done manually adding a
+                                new setting with the URL</p>
+                            <p id="remoteUrlText"></p>
+                        </div>
+                        <footer class="slds-modal__footer">
+                            <button class="slds-button slds-button_neutral" onclick="closeAlertModal();">Cancel
+                            </button>
+                            <button class="slds-button slds-button_brand" onclick="handleTakeMeClick();">Take me there
+                            </button>
+                            <button class="slds-button slds-button_brand" onclick="handleCreateClick();">Create</button>
+                        </footer>
+                    </div>
+                </section>
+                <div class="slds-backdrop slds-backdrop_open"></div>
+            </div>
+        </apex:define>
+    </apex:composition>
+    </html>
+    <script>
+
+            function handleLoginEnter(event) {
+                if(event.type === 'submit'){
+                    checkRemoteSiteSetting();
+                }
+            }
+
+            function handleLoginClick() {
+                checkRemoteSiteSetting();
+            }
+
+            function handleCreateClick() {
+                hideModalError();
+                deleteRemoteSite();
+            }
+
+            function handleTakeMeClick() {
+                if('{! isLightningExperience }' === 'true') {
+                    top.location.href = '{! baseUrl }/lightning/setup/SecurityRemoteProxy/home';
+                } else {
+                    top.location.href = '{! baseUrl }/0rp?spl1=1&setupid=SecurityRemoteProxy';
+                }
+            }
+
+            function doRedirect() {
+                if(getAccountInput().value != '') {
+                    getAccountInput().classList.remove("slds-has-error");
+                    document.getElementById('{! $component.accountLoginPage.LoginTemplate.loginForm.errorMessage }').classList.add('slds-hide');
+                    const talkdeskIdUrl = new URL('{! urlFor($page.RedirectToTalkdeskId) }');
+                    talkdeskIdUrl.searchParams.append('accountName', getAccountInput().value);
+
+                    openPopup(talkdeskIdUrl, 'authentication', 700, 900);
+                } else {
+                    getAccountInput().classList.add("slds-has-error");
+                    document.getElementById('{! $component.accountLoginPage.LoginTemplate.loginForm.errorMessage }').classList.remove('slds-hide');
+                }
+            }
+
+            function getAccountInput() {
+                return document.getElementById('{! $component.accountLoginPage.LoginTemplate.loginForm.accountName }');
+            }
+
+            function getRemoteUrl() {
+                return 'https://' + getAccountInput().value + '{! remoteUrlSufix }';
+            }
+
+            function handlePopupClose() {
+               location = '{! redirectTo }';
+            }
+
+            function openAlertModal() {
+                document.getElementById('remoteUrlText').innerHTML = getRemoteUrl();
+                document.getElementById('remoteSiteSettingModal').classList.remove('slds-hide');
+            }
+
+            function closeAlertModal() {
+                document.getElementById('remoteSiteSettingModal').classList.add('slds-hide');
+            }
+
+            function showModalError() {
+                document.getElementById('remoteSiteSettingModalError').classList.remove('slds-hide');
+            }
+
+            function hideModalError() {
+                document.getElementById('remoteSiteSettingModalError').classList.add('slds-hide');
+            }
+
+            function checkRemoteSiteSetting() {
+                let binding = new XMLHttpRequest();
+                binding.open('GET', 'https://{! host }/services/data/v43.0/tooling/query?q=SELECT+Id,EndpointUrl+FROM+RemoteProxy+WHERE+EndpointUrl+=+\'' + getRemoteUrl() + '\'');
+                binding.setRequestHeader('Authorization', 'Bearer {! $Api.Session_ID }');
+                binding.setRequestHeader('Content-Type', 'application/json');
+                binding.onreadystatechange =
+                    function() {
+                        if(this.readyState == 4) {
+                            let res  = JSON.parse(this.response);
+                            if(res.records.length == 1) {
+                                doRedirect();
+                            } else {
+                                openAlertModal();
+                            }
+                        }
+                    }
+                binding.send();
+            }
+
+            function createRemoteSite() {
+                let binding = new XMLHttpRequest();
+                let request = '{! createPayload }';
+                request = request.replace('%%REMOTE_URL%%', getRemoteUrl());
+                binding.open('POST', 'https://{! host }/services/data/v41.0/tooling/sobjects/RemoteProxy');
+                binding.setRequestHeader('Authorization', 'Bearer {! $Api.Session_ID }');
+                binding.setRequestHeader('Content-Type', 'application/json');
+                binding.onreadystatechange =
+                    function() {
+                        if(this.readyState == 4) {
+                            let res  = JSON.parse(this.response);
+                            if(res.success) {
+                                closeAlertModal();
+                                doRedirect();
+                            } else {
+                                showModalError();
+                            }
+                        }
+                    }
+                binding.send(request);
+            }
+
+            function deleteRemoteSite() {
+                let binding = new XMLHttpRequest();
+                let request = '{! deletePayload }';
+                request = request.replace('%%SESSION_ID%%', '{! $Api.Session_ID }');
+                binding.open('POST', 'https://{! host }/services/Soap/m/43.0');
+                binding.setRequestHeader('SOAPAction','""');
+                binding.setRequestHeader('Content-Type', 'text/xml');
+                binding.onreadystatechange =
+                    function() {
+                        if(this.readyState == 4) {
+                            let parser = new DOMParser();
+                            let doc  = parser.parseFromString(this.response, 'application/xml');
+                            let errors = doc.getElementsByTagName('errors');
+                            if(errors.length > 0) {
+                                let statusCode = errors[0].getElementsByTagName('statusCode');
+                                if(statusCode[0].textContent != 'INVALID_CROSS_REFERENCE_KEY') {
+                                    showModalError();
+                                    return;
+                                }
+                            }
+                            createRemoteSite();
+                        }
+                    }
+                binding.send(request);
+            }
+    </script>
+</apex:page>

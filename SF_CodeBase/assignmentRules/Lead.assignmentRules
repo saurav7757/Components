@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssignmentRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <assignmentRule>
+        <fullName>Incoming Leads</fullName>
+        <active>false</active>
+        <ruleEntry>
+            <assignedTo>All_Incoming_Leads_Queue</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Lead.MKT_Industry_type__c</field>
+                <operation>notEqual</operation>
+                <value>Agentur / Beratung</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>All_Incoming_Agency_Leads_Queue</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Lead.MKT_Industry_type__c</field>
+                <operation>equals</operation>
+                <value>Agentur / Beratung</value>
+            </criteriaItems>
+        </ruleEntry>
+    </assignmentRule>
+</AssignmentRules>

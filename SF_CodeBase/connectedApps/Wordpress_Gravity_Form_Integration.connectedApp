@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConnectedApp xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contactEmail>joachim@zeitgold.com</contactEmail>
+    <label>Wordpress Gravity Form Integration</label>
+    <oauthConfig>
+        <callbackUrl>https://zeitgold.com</callbackUrl>
+        <consumerKey>3MVG9TSaZ8P6zP1rSLTVf1hECk7Gv2bDpmCWb6PwGfQh9NguMCUQ5NHQzEtsqU24Bw6UV.cC9ywD1SptDEUVG</consumerKey>
+        <scopes>Full</scopes>
+    </oauthConfig>
+</ConnectedApp>

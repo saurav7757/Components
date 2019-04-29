@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Delay Logic - OBC 2 Delay Mail - DE</name>
+    <style>none</style>
+    <subject>[WICHTIG]: Dein Start mit Zeitgold wird verschoben</subject>
+    <textOnly>Hallo {{{Recipient.FirstName}}},
+
+
+wir mussten feststellen, dass Du [Dir noch keinen Termin für das zweite Onboarding Telefonat vereinbart hast] [und/oder] [die Fragebögen zur Freischaltung der Zeitgold-Services noch nicht ausgefüllt hast].
+
+
+Wir müssen Dich daher darüber informieren, dass wir unseren gemeinsamen Start um einen Monat auf den [01.VERSCHIEBUNGSMONAT.JAHR] verschieben müssen.
+
+Wir werden Dich erneut kontaktieren, um Dein neues Startdatum sicherzustellen.
+
+Bei Rückfragen kannst Du uns jederzeit unter service@zeitgold.com oder 030/30808111 erreichen.
+
+Viele Grüße
+
+{{{Sender.FirstName}}} von Zeitgold</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

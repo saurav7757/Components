@@ -1,0 +1,109 @@
+<apex:page id="CSATPanelToCaseLayout" standardController="Case" extensions="talkdesk.CSATController" sideBar="false"
+           showHeader="false" applyHtmlTag="false" applyBodyTag="false" standardStylesheets="false"
+           docType="html-5.0" cache="false" action="{! checkTalkdeskConnectivity }">
+
+    <apex:stylesheet value="{! urlFor($Resource.slds, 'assets/styles/salesforce-lightning-design-system-vf.css') }" />
+    <style>
+        .sentiments-error-maincontainer {
+          width:100%;
+          height: 100%;
+          padding-top: 40px;
+          padding-bottom: 40px;
+        }
+
+        .sentiments-error-maincontainer span {
+            display: inline-block;
+            vertical-align: bottom;
+        }
+
+        .sentiments-error-leftcolumn {
+          display:inline-block;
+          width: 120px;
+          margin-left: 24px;
+          margin-right: 24px;
+        }
+
+        .sentiments-error-contentwrapper {
+          display:inline-block;
+          width: calc(100% - 196px);
+          margin-right: 24px;
+        }
+
+        .talkdesklogo {
+            height: 24px;
+        }
+
+        .sentiments-message-body {
+            color: #a8b7c7;
+            padding-top: 16px;
+            font-size: 14px;
+            line-height: 18px;
+        }
+    </style>
+
+    <apex:form >
+        <apex:outputPanel rendered="{! or(not(isAuthenticated), not(hasOrgIntegration)) }">
+            <div  class="talkdesk slds">
+                <div class="sentiments-error-maincontainer">
+                <span class="sentiments-error-leftcolumn">
+                    <apex:image url="{! urlFor($Resource.assets,'/sms-placeholder-images/SF_hat.png') }"
+                                width="120px" />
+                </span>
+                <span class="sentiments-error-contentwrapper">
+                    <div class="talkdesklogo">
+                        <apex:image url="{! urlFor($Resource.assets,'/sms-placeholder-images/TD_LOGO_RGB_DARK_BLUE.png') }"
+                                    style="height: 100%"/>
+                        </div>
+                    <apex:outputPanel rendered="{! and(hasOrgIntegration, not(isAuthenticated)) }">
+                        <div class="slds-text-color_weak sentiments-message-body">In order to use Sentiments, please login to
+                            your Talkdesk account.</div>
+                        <div class="sentiments-message-body">
+                            <apex:commandButton value="Login to Talkdesk"
+                                                onClick="handleLoginClick()"
+                                                styleClass="slds-button slds-button--neutral slds-not-selected"/>
+                        </div>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{! not(hasOrgIntegration) }">
+                        <div class="slds-text-color_weak sentiments-message-body">No integration previously setup.<br />
+                            Please contact your administrator in order to use Sentiments.</div>
+                    </apex:outputPanel>
+                </span>
+            </div>
+            </div>
+        </apex:outputPanel>
+
+        <apex:outputPanel rendered="{! and(isAuthenticated, hasOrgIntegration) }">
+            <c:CSATPanelToPageLayout relatedContact="{! Case.Contact }"
+                                     activities="{! relatedTalkdeskActivites }"
+                                     stars="{! stars }"
+                                     isEnabled="{! isEnabled }"
+                                     isEmpty="{! isEmpty }" />
+
+            <apex:actionFunction name="sortAsc" action="{! sortAsc }" reRender="csatPanel"
+                                 onComplete="setSorted('asc');"/>
+            <apex:actionFunction name="sortDesc" action="{! sortDesc }" reRender="csatPanel"
+                                 onComplete="setSorted('dsc');"/>
+
+        </apex:outputPanel>
+    </apex:form>
+    <script>
+        function handleLoginClick() {
+            const talkdeskIdUrl = new URL('{! urlFor($page.RedirectToTalkdeskId) }');
+            talkdeskIdUrl.searchParams.append('accountName', '{! accountName }');
+            openPopup(talkdeskIdUrl.toString(), 'authentication', 700, 900);
+        }
+
+        function openPopup(url, name, h, w) {
+            const y = (window.screen.height - (h | 0)) / 2;
+            const x = (window.screen.width - (w | 0)) / 2;
+            const win = window.open(url, name,
+                'scrollbars=yes,location=no,toolbar=no,menubar=no, width=' + w + ', height=' + h + ', top=' + y + ', left=' + x
+            );
+            win.focus();
+        }
+
+        function handlePopupClose() {
+            location.reload();
+        }
+    </script>
+</apex:page>

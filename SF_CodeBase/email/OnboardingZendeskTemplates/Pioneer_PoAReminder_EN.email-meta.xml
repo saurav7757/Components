@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Pioneer - PoA Reminder - EN</name>
+    <style>none</style>
+    <subject>[Reminder]: Important documents for your new tax advisor pioneer</subject>
+    <textOnly>Hello {{{Recipient.FirstName}}},
+
+Unfortunately, we still have not received your signed Power of Attorney for pioneer.
+
+As previously mentioned, in order for pioneer to be able to act as your tax advisor, we&apos;d like to ask you to put the original, signed documents into your first box pick-up.
+
+You can find the documents attached. Please complete this step by the end of the week.
+
+[ATTACH PoA (G-DRIVE)]
+
+If you have any questions, you can contact us at service@zeitgold.com or 030/30808111.
+
+We will be happy to help you!
+
+My best,
+
+{{{Sender.FirstName}}} at Zeitgold</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>COMPANY</field>
+    </columns>
+    <columns>
+        <field>FIRST_NAME</field>
+    </columns>
+    <columns>
+        <field>LAST_NAME</field>
+    </columns>
+    <columns>
+        <field>EMAIL</field>
+    </columns>
+    <columns>
+        <field>LEAD_SOURCE</field>
+    </columns>
+    <columns>
+        <field>STREET</field>
+    </columns>
+    <columns>
+        <field>RATING</field>
+    </columns>
+    <columns>
+        <field>OWNER</field>
+    </columns>
+    <columns>
+        <field>LEAD_ID</field>
+    </columns>
+    <currency>EUR</currency>
+    <description>Leads with closed lost not ready to buy, not willing to change, and no interest</description>
+    <filter>
+        <booleanFilter>(1 OR 5) AND 2 AND (3 OR 4)</booleanFilter>
+        <criteriaItems>
+            <column>Lead.MKT_Industry_type__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Gastro</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>STATUS</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Rejected,Closed Lost</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Lead.Lost_Reason_Lead__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Budget fit missing,Just browsing / No interest,Not ready to buy,Not willing to change tax advisor</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Lead.Zeitgold_Rejection_Reasons__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>includes</operator>
+            <value>US tax requirements,Business younger than 2 years,Business is too small (employees or revenue)</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>INDUSTRY</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>contains</operator>
+            <value>gastgewerbe</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Tabular</format>
+    <name>Leads Closed Lost</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>LeadList</reportType>
+    <scope>org</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

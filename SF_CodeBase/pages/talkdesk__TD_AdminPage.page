@@ -1,0 +1,185 @@
+<apex:page controller="talkdesk.FinishedPageController" tabStyle="Talkdesk_Admin__tab" action="{! checkTalkdeskConnectivity }"
+           showChat="false" sideBar="false">
+
+    <apex:slds />
+
+    <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <style>
+            html, body {
+                height: 100%;
+            }
+
+            .bodyDiv {
+                -webkit-box-shadow: unset;
+                box-shadow: unset;
+            }
+
+            .noSidebarCell, .sidebarCell .fixed {
+                padding: 0;
+            }
+
+            html body.sfdcBody {
+                padding: 0;
+                background: unset;
+            }
+
+            #lightning {
+                height: 100%;
+            }
+
+            #alertOnIntegrationsCrudFail {
+               display: {!IF($CurrentPage.parameters.showAlertModal == 'true', 'contents', 'none')};
+            }
+
+            #wrongOrgAlert {
+               display: {!IF(diffSalesforceOrg, 'contents', 'none')};
+            }
+
+
+    </style>
+
+    <apex:includeLightning />
+    <div id="lightning" class="talkdesk slds"/>
+    <div class="talkdesk slds" id="alertOnIntegrationsCrudFail">
+        <div aria-hidden="false" role="dialog" class="slds-modal slds-modal--prompt slds-fade-in-open">
+            <div class="slds-modal__container slds-modal--prompt">
+                <div class="slds-modal__header slds-theme--error slds-theme--alert-texture">
+                    <button class="slds-button slds-button--icon-inverse slds-modal__close">
+                        <svg aria-hidden="true" class="slds-button__icon slds-button__icon--large">
+                            <use xlink:href="{!URLFOR($Resource.slds, '/assets/icons/action-sprite/svg/symbols.svg#close')}"></use>
+                        </svg>
+                        <span class="slds-assistive-text">Close</span>
+                    </button>
+                    <h2 class="slds-text-heading--medium">Attention!</h2>
+                </div>
+                <div class="slds-modal__content slds-p-around--medium">
+                    <div>
+                        <p>There is some problem during creation of Integration Settings in Talkdesk. Please contact
+                            Talkdesk Support team for troubleshooting.</p>
+                    </div>
+                </div>
+                <div class="slds-modal__footer slds-theme--default">
+                    <button class="slds-button slds-button--neutral" onclick="closeAlertModal();">Okay</button>
+                </div>
+            </div>
+        </div>
+        <div class="slds-backdrop slds-backdrop--open"></div>
+    </div>
+    <div class="talkdesk slds" id="wrongOrgAlert">
+        <div aria-hidden="false" role="dialog" class="slds-modal slds-modal--prompt slds-fade-in-open">
+            <div class="slds-modal__container slds-modal--prompt">
+                <div class="slds-modal__header slds-theme--error slds-theme--alert-texture">
+                    <h2 class="slds-text-heading--medium">Integration error!</h2>
+                </div>
+                <div class="slds-modal__content slds-p-around--medium">
+                    <div>
+                        <p>The Talkdesk Integration doesn't belong to this org, you will be disconnected.</p>
+                    </div>
+                </div>
+                <div class="slds-modal__footer slds-theme--default">
+                    <button class="slds-button slds-button--neutral" onclick="closeWrongOrgModal();">Disconnect from
+                        Talkdesk
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="slds-backdrop slds-backdrop--open"></div>
+    </div>
+
+    <apex:form id="mapActions">
+        <apex:actionFunction id="sentimentSettings" name="setSentimentSettings" action="{! setSentimentSettings }"
+                             rerender="setupLightningCodeBlock" onComplete="setupLightning();"/>
+    </apex:form>
+
+    <script>
+            window.onload = function() {
+                try {
+                    if (window.opener != null && window.opener.windowObjectReference && window.opener.windowObjectReference != null) {
+                        window.opener.location = '{! adminPageUrl }';
+                        window.opener.windowObjectReference.close();
+                    }
+                }
+                catch (e) {
+                    console.error(e);
+                }
+
+                if('{! diffSalesforceOrg }' != 'true') {
+                    setSentimentSettings();
+                }
+            };
+
+            function closeAlertModal() {
+                document.getElementById('alertOnIntegrationsCrudFail').style.display = 'none';
+            }
+
+            function closeWrongOrgModal() {
+                location.reload();
+            }
+
+    </script>
+
+    <apex:outputPanel id="setupLightningCodeBlock">
+        <script>
+            const ns = "{! namespace }" == null || "{! namespace }" == "" ? "c" : "{! namespace }";
+            function handleAdapterEvent(event) {
+                if (event) {
+                    let params = event.getParams() || {data:{}};
+                    switch (params.action) {
+                        case 'NAVIGATE_TO_URL': window.open(params.data.url, params.data.target);
+                            break;
+                        case 'CLOSE': window.close();
+                            break;
+                        case 'RELOAD': window.location.reload();
+                            break;
+                        default: break;
+                    }
+                }
+            }
+
+            function useLightning(appName, cmpName, params) {
+                $Lightning.use(appName, function() {
+                    $Lightning.createComponent(cmpName, params, "lightning", function(cmp, status, errorMessage) {
+                        if (status === 'SUCCESS') {
+                            addAuraEventHandler('adapterEvent', handleAdapterEvent);
+                        }
+                        else if (status === 'INCOMPLETE') {
+                            console.warn('No response from server or client is offline.')
+                        }
+                        else if (status === 'ERROR') {
+                            console.error(errorMessage);
+                        }
+                    });
+                });
+            }
+
+            function addAuraEventHandler(eventName, handler) {
+                return $A.eventService.addHandler({
+                    "event": `${ns}:${eventName}`,
+                    "handler" : handler
+                });
+            }
+
+            function setupLightning() {
+                const isWizardPassed = {! isWizardPassed };
+                const appName = `${ns}:AdminApp`;
+                const cmpName = `${ns}:AdminLayoutHandler`;
+                const hiddenTabs = JSON.parse('{! hiddenTabNames }');
+                const params = {
+                    layout: {
+                        name: isWizardPassed ? 'tabset' : 'wizard'
+                    },
+                    namespace: "{! namespace }",
+                    hiddenTabs: hiddenTabs,
+                    defaultTabId: '{! JSENCODE(HTMLENCODE(currentTabName)) }',
+                    wizardState: JSON.parse('{!wizardState}'),
+                    isOmniChannelSyncEnabled: {!isOmniChannelSyncEnabled},
+                    isSmartRoutingEnabled: {!isSmartRoutingEnabled}
+                };
+
+                useLightning(appName, cmpName, params);
+            }
+
+        </script>
+    </apex:outputPanel>
+    </html>
+</apex:page>

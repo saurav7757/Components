@@ -1,0 +1,20 @@
+<div><div>Hallo {!Account.First_ZG_Contact__c},</div>
+<br><div>wir freuen uns sehr, dass Sie sich mit Ihrem Unternehmen {!Account.Company_Legal_Name__c} für Zeitgold entschieden haben! Der erste Schritt zur Buchhaltung im digitalen Zeitalter.</div>
+<div>Unser Onboarding-Team wird das Zeitgold-System für Sie einrichten und Sie auf den ersten Schritten begleiten, damit Sie das Produkt noch besser kennenlernen. Deinen Onboarding-Experten erreichst du unter unserer Servicenummer +49 30 30808111 oder unter <a href="mailto: service@zeitgold.com">service@zeitgold.com</a>.</div>
+<br><div>Als ersten Schritt im Onboarding möchten wir Sie um folgende Dinge bitten:</div>
+
+<br><div><b>1. Installation Ihrer Zeitgold-Box</b></div>
+<div>Um Ihnen Ihre persönliche Zeitgold-Box schicken zu können und die regelmäßige Abholung zu organisieren, benötigen wir ein paar Angaben von Ihnen. Bitte klicken Sie dazu auf den folgenden Link. Das geht auch über Ihr Smartphone und sollte nicht mehr als 5 min dauern: <a href="https://form.jotformeu.com/90714513158354?id={!Account.Id}" target="_blank"><b>BITTE HIER KLICKEN</b></a></div>
+<br><div><b>2. Informationen zu Ihrer Lohn- und Finanzbuchhaltung</b></div>
+<div>Um Sie schnell und fristgerecht bei der Finanz- und Lohnbuchhaltung unterstützen zu können, benötigen wir noch weitere Informationen zu Ihrem Unternehmen.</div>
+<div>Freischaltung der Lohnbuchhaltung (Dauer ca. 15 Minuten) <a href="https://form.jotformeu.com/90722663981363?id={!Account.Id}" target="_blank"><b>BITTE HIER KLICKEN</b></a></div>
+<div>Freischaltung der Finanzbuchhaltung (Dauer ca. 15 Minuten) <a href="https://form.jotformeu.com/90722478251357?id={!Account.Id}" target="_blank"><b>BITTE HIER KLICKEN</b></a></div>
+<br><div>Hier ein kurzer Überblick, wie der Onboarding-Prozess ablaufen wird.</div>
+<br><div><img src="https://zeitgold--c.eu8.content.force.com/servlet/servlet.ImageServer?id=0150N000007Fldi&oid=00D0N000001MQYz&lastMod=1550573700000" width="539px;" height="113px;"><br></div>
+<br><div>Ihr Steuerberatungspartner Pioneer wird zudem direkt auf Sie zukommen, sobald die Einrichtung des Zeitgold Systems abgeschlossen ist.</div>
+<br><div>Viele Grüße</div>
+<div>{!Account.OwnerFullName}</div>
+</div>
+<div></div>
+<div></div>
+<div></div>

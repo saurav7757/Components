@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Old TA - Data Transfer Problems - EN</name>
+    <style>none</style>
+    <subject>[IMPORTANT]: Data Transfer from your Pre-Advisor</subject>
+    <textOnly>Hi there {{ticket.requester.first_name}},
+
+
+For the complete transfer of your business&apos;s important tax- and payroll-related data, we need to collect data from your previous tax advisor and/or payroll accountant.
+
+[Written cancellation note required]
+Unfortunately, your previous tax advisor still requires a written cooperation termination letter from you. Until they receive this from you, they will not release any data. Therefore, I kindly ask you to get in touch with them to resolve these matters.
+
+[Outstanding debts]
+
+Your previous tax advisor has informed me that they are unable to release any data to me until outstanding debts are paid to them. Therefore, I kindly ask you to get in touch with them to resolve these matters.
+
+[Unresponsive tax advisor]
+
+Unfortunately your previous tax advisor has been unresponsive to both e-mail and telephone calls. Can you please reach out to them to ask that they respond to us? It would be great appreciated.
+
+Once you have everything resolved, please let us know via a quick confirmation. Should you have any questions, you are always welcome to contact us at service@zeitgold.com or 030/30808111.
+
+
+Thank you,
+
+Jill at Zeitgold</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

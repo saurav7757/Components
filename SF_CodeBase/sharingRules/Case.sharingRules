@@ -1,0 +1,485 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>Payments_CCA_Escalated</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Payments CCA Escalated</label>
+        <sharedTo>
+            <role>Payments_DS</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>Escalation_to_Payments_DS__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Share_Cases_for_Talkdesk_with_CCA</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Share Cases for Talkdesk with CCA</label>
+        <sharedTo>
+            <role>General_CCA</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>OwnerId</field>
+            <operation>equals</operation>
+            <value>0050N000007FQoE</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Subject</field>
+            <operation>contains</operation>
+            <value>Abandoned call</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Share_Cases_with_Accounting_CCA_Users</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Share Cases with Accounting CCA Users</label>
+        <sharedTo>
+            <role>Accounting_CCA</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>Accounting_CCA_Status__c</field>
+            <operation>notEqual</operation>
+            <value>Closed</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Share_Cases_with_Accounting_DS_Users</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Share Cases with Accounting DS Users</label>
+        <sharedTo>
+            <role>Accounting_DS</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>Escalation_to_Accounting_DS__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Share_Cases_with_Digitalization_CCA_Users</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Share Cases with Digitalization CCA Users</label>
+        <sharedTo>
+            <role>Digitalization_CCA</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>Digitalization_CCA_Status__c</field>
+            <operation>notEqual</operation>
+            <value>Closed</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Share_Cases_with_Digitalization_DS_Users</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Share Cases with Digitalization DS Users</label>
+        <sharedTo>
+            <role>Digitalization_DS</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>Escalation_to_Digitalization_DS__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Share_Cases_with_Onboarding_CCA_Users</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Share Cases with Onboarding CCA Users</label>
+        <sharedTo>
+            <role>Onboarding_CCA</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>Onboarding_CCA_Status__c</field>
+            <operation>notEqual</operation>
+            <value>Closed</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Share_Cases_with_Onboarding_DS_Users</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Share Cases with Onboarding DS Users</label>
+        <sharedTo>
+            <role>Onboarding_DS</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>Escalation_to_Onboarding_DS__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Share_Cases_with_Payment_CCA_Users</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Share Cases with Payment CCA Users</label>
+        <sharedTo>
+            <role>Payments_CCA</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>Payments_CCA_Status__c</field>
+            <operation>notEqual</operation>
+            <value>Closed</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Share_Cases_with_Payroll_CCA_Users</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Share Cases with Payroll CCA Users</label>
+        <sharedTo>
+            <role>Payroll_CCA</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>Payroll_CCA_Status__c</field>
+            <operation>notEqual</operation>
+            <value>Closed</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Share_Cases_with_Payroll_DS_Users</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Share Cases with Payroll DS Users</label>
+        <sharedTo>
+            <role>Payroll_DS</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>Escalation_to_Payroll_DS__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Share_Cases_with_RND</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Share Cases with RND</label>
+        <sharedTo>
+            <role>RND</role>
+        </sharedTo>
+        <booleanFilter>1 OR 2</booleanFilter>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Zeitgold Case</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Pioneer Case</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Share_Cases_with_Support_CCA_Users</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Share Cases with Support CCA Users</label>
+        <sharedTo>
+            <role>Support_CCA</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>Support_CCA_Status__c</field>
+            <operation>notEqual</operation>
+            <value>Closed</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Share_Cases_with_Support_DS_Users</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Share Cases with Support DS Users</label>
+        <sharedTo>
+            <role>Support_DS</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>Escalation_to_Support_DS__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Share_TalkDesk_Cases_with_CCA</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Share TalkDesk Cases with CCA</label>
+        <sharedTo>
+            <role>General_CCA</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>OwnerId</field>
+            <operation>equals</operation>
+            <value>0050N000007FQoE</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Subject</field>
+            <operation>contains</operation>
+            <value>Missed Call</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Share_Voice_Cases_for_Talkdesk_with_CCA</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Share Voice Cases for Talkdesk with CCA</label>
+        <sharedTo>
+            <role>General_CCA</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>OwnerId</field>
+            <operation>equals</operation>
+            <value>0050N000007FQoE</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Subject</field>
+            <operation>contains</operation>
+            <value>Voicemail left</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingOwnerRules>
+        <fullName>Share_Cases_with_PAR_DS_for_PIO_TA</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Share Cases with PAR DS for PIO TA</label>
+        <sharedTo>
+            <role>Payroll_DS</role>
+        </sharedTo>
+        <sharedFrom>
+            <role>Pioneer_TA</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Share_Cases_with_PAR_DS_for_PIO_TS</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Share Cases with PAR DS for PIO TS</label>
+        <sharedTo>
+            <role>Payroll_DS</role>
+        </sharedTo>
+        <sharedFrom>
+            <role>Pioneer_TS</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Share_Cases_with_PIO_TA_for_PAR_CCA</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Share Cases with PIO TA for PAR CCA</label>
+        <sharedTo>
+            <role>Pioneer_TA</role>
+        </sharedTo>
+        <sharedFrom>
+            <role>Payroll_CCA</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Share_Cases_with_PIO_TA_for_PAR_DS</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Share Cases with PIO TA for PAR DS</label>
+        <sharedTo>
+            <role>Pioneer_TA</role>
+        </sharedTo>
+        <sharedFrom>
+            <role>Payroll_DS</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Share_PAR_CCA_Cases_with_PIO_TS</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Share PAR CCA Cases with PIO TS</label>
+        <sharedTo>
+            <role>Pioneer_TS</role>
+        </sharedTo>
+        <sharedFrom>
+            <role>Payroll_CCA</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Share_PAR_Cases_with_Product</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Share PAR Cases with Product</label>
+        <sharedTo>
+            <role>Product</role>
+        </sharedTo>
+        <sharedFrom>
+            <role>Payroll_CCA</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Share_PAR_DS_Cases_with_PIO_TS</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Share PAR DS Cases with PIO TS</label>
+        <sharedTo>
+            <role>Pioneer_TS</role>
+        </sharedTo>
+        <sharedFrom>
+            <role>Payroll_DS</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Share_PAR_DS_Cases_with_Product</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Share PAR DS Cases with Product</label>
+        <sharedTo>
+            <role>Product</role>
+        </sharedTo>
+        <sharedFrom>
+            <role>Payroll_DS</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Share_PIO_TS_with_PIO_TA</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Share PIO TS with PIO TA</label>
+        <sharedTo>
+            <role>Pioneer_TA</role>
+        </sharedTo>
+        <sharedFrom>
+            <role>Pioneer_TS</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Share_with_ACC_CCA_Users</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Share with ACC CCA Users</label>
+        <sharedTo>
+            <role>Accounting_CCA</role>
+        </sharedTo>
+        <sharedFrom>
+            <role>Accounting_CCA</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Share_with_ACC_DS_Users</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Share with ACC DS Users</label>
+        <sharedTo>
+            <role>Accounting_DS</role>
+        </sharedTo>
+        <sharedFrom>
+            <role>Accounting_DS</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Share_with_DIG_CCA_Users</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Share with DIG CCA Users</label>
+        <sharedTo>
+            <role>Digitalization_CCA</role>
+        </sharedTo>
+        <sharedFrom>
+            <role>Digitalization_CCA</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Share_with_DIG_DS_Users</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Share with DIG DS Users</label>
+        <sharedTo>
+            <role>Digitalization_DS</role>
+        </sharedTo>
+        <sharedFrom>
+            <role>Digitalization_DS</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Share_with_ONB_CCA_Users</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Share with ONB CCA Users</label>
+        <sharedTo>
+            <role>Onboarding_CCA</role>
+        </sharedTo>
+        <sharedFrom>
+            <role>Onboarding_CCA</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Share_with_ONB_DS_Users</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Share with ONB DS Users</label>
+        <sharedTo>
+            <role>Onboarding_DS</role>
+        </sharedTo>
+        <sharedFrom>
+            <role>Onboarding_DS</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Share_with_PAR_CCA_Users</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Share with PAR CCA Users</label>
+        <sharedTo>
+            <role>Payroll_CCA</role>
+        </sharedTo>
+        <sharedFrom>
+            <role>Payroll_CCA</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Share_with_PAR_DS_Users</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Share with PAR DS Users</label>
+        <sharedTo>
+            <role>Payroll_DS</role>
+        </sharedTo>
+        <sharedFrom>
+            <role>Payroll_DS</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Share_with_PAY_CCA_Users</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Share with PAY CCA Users</label>
+        <sharedTo>
+            <role>Payments_CCA</role>
+        </sharedTo>
+        <sharedFrom>
+            <role>Payments_CCA</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Share_with_PAY_DS_Users</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Share with PAY DS Users</label>
+        <sharedTo>
+            <role>Payments_DS</role>
+        </sharedTo>
+        <sharedFrom>
+            <role>Payments_DS</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Share_with_PIO_TA_Users</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Share with PIO TA Users</label>
+        <sharedTo>
+            <role>Pioneer_TA</role>
+        </sharedTo>
+        <sharedFrom>
+            <role>Pioneer_TA</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Share_with_PIO_TS_Users</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Share with PIO TS Users</label>
+        <sharedTo>
+            <role>Pioneer_TS</role>
+        </sharedTo>
+        <sharedFrom>
+            <role>Pioneer_TS</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Share_with_SUPP_CCA_Users</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Share with SUPP CCA Users</label>
+        <sharedTo>
+            <role>Support_CCA</role>
+        </sharedTo>
+        <sharedFrom>
+            <role>Support_CCA</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Share_with_SUPP_DS_Users</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Share with SUPP DS Users</label>
+        <sharedTo>
+            <role>Support_DS</role>
+        </sharedTo>
+        <sharedFrom>
+            <role>Support_DS</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

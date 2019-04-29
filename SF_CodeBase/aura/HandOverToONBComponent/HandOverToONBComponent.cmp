@@ -1,0 +1,594 @@
+<aura:component implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" controller="HandOverToONBFromSales">
+	 <!--use boolean attribute for Store true/false value,
+    make default to "false" so modal box are not display on the load of component. 
+    --> 
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:attribute name="isOpen" type="boolean" default="false"/>
+	<aura:attribute name="isRender" type="boolean" default="false"/>
+	<aura:attribute name="isRenderZGComp" type="boolean" default="false"/>
+	<aura:attribute name="objInfo" type="Opportunity" default="{sobjectType : 'Opportunity'}" />
+	<aura:attribute name="objInfoCont" type="Contact" default="{sobjectType : 'Contact'}" />
+	<aura:attribute name="objInfoAcct" type="Account" default="{sobjectType : 'Account'}" />
+	<aura:attribute name="selectedLookUpRecord" type="sObject" default="{}"/>
+	<aura:attribute name="selectedLookUpRecordForShareHolder" type="sObject" default="{}"/>
+	<aura:attribute name="selectedLookUpRecordForParentAcc" type="sObject" default="{}"/>
+	<aura:attribute name="showModal" type="boolean" default="false" /> 
+	<aura:attribute name="showModalonSave" type="boolean" default="false" /> 
+	<aura:attribute name="employeeNumber" type="Integer"/>
+	<aura:attribute name="IsSpinner" type="Boolean" default="false"/>
+	<aura:attribute name="validateFrstShrHol" type="String" default=""/>
+	<aura:attribute name="validateFrstZG" type="String" default=""/>
+    
+    <aura:handler event="c:ClearLookupComponent" action="{!c.clearLookupVals}" />
+    <aura:handler event="c:ConnectLookupComponent" action="{!c.getContactRecordDetails}"/>
+    <aura:handler event="c:ConnectLookupComponent" action="{!c.getContactRecordDetailsShareHold}"/>
+	<aura:attribute name="conDetailsFrstZGCon" type="Contact" default="{'sobjectType': 'Contact',
+						'Salutation': '',
+						'FirstName': '',
+						'LastName': '',
+						'Email': '',
+						'Phone': '',
+						'Title': '',
+						'Tone_of_address__c': '',
+						'Language__c': ''
+						}"/>
+	<aura:attribute name="conDetailsShrHold" type="Contact" default="{'sobjectType': 'Contact',
+						'Salutation': '',
+						'FirstName': '',
+						'LastName': '',
+						'Email': '',
+						'Phone': '',
+						'Title': '',
+						'Tone_of_address__c': '',
+						'Language__c': ''
+						}"/>
+	<aura:attribute name="accDetails" type="Account" default="{'sobjectType': 'Account',
+						'Go_Live_Date__c': '',
+						'Company_Legal_Name__c': '',
+						'Name': '',
+						'Industry': '',
+						'Industry_Type__c': '',
+						'Is_ZG_First_Contact_and_Shareholder_same__c': '',
+						'BillingStreet': '',
+						'BillingCity': '',
+						'BillingPostalCode': '',
+						'BillingCountry': '',
+						'Nature_Purpose_of_business__c': '', 
+						'Link_to_sales_offer__c': '',
+						'VAT_declaration_cadence__c': '',
+						'VAT_declaration_extension_DFV__c': '',
+						'Accounting_Start_Date__c': '',
+						'AnnualRevenue': '',
+						'Payroll_Start_Date__c': '',
+						'Name_cash_register__c': '',
+						'CEP_Migration_necessary__c': '',
+						'Sales_related_comments_for_ONB_and_CE__c': '',
+						'Problems_with_old_Advisors_Providers__c': '',
+						}"/>
+	<aura:attribute name="OppDetails" type="Opportunity" default="{'sobjectType': 'Opportunity',
+						 'MRR_Zeitgold__c': '',
+						 'MRR_Tax_Advisor__c': '',
+						 'Special_Initial_MRR_w_o_Tax_Advisor_F__c': '',
+						 'Special_Initial_MRR_Valid_for_how_many_m__c': '',
+						 'Total_monthly_Tax_advisor_fee__c': '',
+						 'Total_annual_tax_advisor_fee__c': '',
+						 'ARR_Tax_Advisor_Year_End_Statement__c': '',
+						 'Special_offer_Other_if_applicable__c': '',
+						 'Special_offer_PIO_if_applicable__c': ''
+                       }"/>
+	<aura:attribute name="AccrecordId" type="String"/>
+	<aura:attribute name="ContactIdFrstZG" type="String"/>
+	<aura:attribute name="ContactIdFrstShr" type="String"/>
+    <aura:attribute name="recordId" type="String"/>
+    <!--Use "slds-m-around_xx-large" class to add standard X-Large padding to the component--> 
+    <div class="slds-m-around_xx-small">
+        
+        <lightning:button variant="brand"
+                          label="Handover to Onboarding"
+                          title="Click here to Handover to Onboarding"
+                          class="img"
+                          onclick="{!c.openModel}" />
+        <!--Use aura:if tag to display Model Box, on the bese of conditions. [isOpen boolean attribute] -->   
+        <aura:if isTrue="{!v.isOpen}">
+            
+            <!--###### MODAL BOX Start######--> 
+            <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+                <div class="slds-modal__container">
+                    <!-- ###### MODAL BOX HEADER Start ######-->
+                    <header class="slds-modal__header">
+                        <lightning:buttonIcon iconName="utility:close"
+                                              onclick="{! c.closeModel }"
+                                              alternativeText="close"
+                                              variant="bare-inverse"
+                                              class="slds-modal__close"/>
+                        <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Handover to Onboarding</h2>
+                    </header>
+                    <!--###### MODAL BOX BODY Part Start######-->
+                    <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                        
+						<div class="form-group">
+							<tr>
+								<td style="width: 33%;">
+								<label class="bold-group">Go Live Date</label><br/>
+								<ui:inputDate aura:id="goliveDate" displayDatePicker="true" class="form-control" value="{!v.accDetails.Go_Live_Date__c}"/>
+								</td>
+							</tr>
+						</div><br/>
+						<h3 class="slds-section-title--divider">First ZG Contact Information</h3>
+						<div class="slds-form--stacked slds-p-around--medium slds-m-bottom--x-small">
+                        <div class="form-group">
+							<label class="bold-group">First ZG Contact</label>
+							<c:customLookup objectAPIName="Contact" IconName="standard:contact" selectedRecord="{!v.selectedLookUpRecord}" />
+							<ui:outputText aura:id="firstZeitgCont" class="frsrZGClass" value="{!v.validateFrstZG}"/>	
+						</div><br/>
+                            <div class="form-group">
+							<tr>
+								<td style="width: 33%;">
+								<label class="bold-group">Salutation of first ZG Contact</label><br/>
+								<ui:inputSelect  aura:id="salnameZG" class="slds-input" labelClass="slds-form-element__label" value="{!v.conDetailsFrstZGCon.Salutation}"/>
+								</td>
+								<td style="width: 5%;"></td>
+								<td style="width: 33%;">
+								<label class="bold-group">First name of first ZG Contact</label><br/>
+								<ui:inputText  aura:id="frstnameZG" class="slds-input" labelClass="slds-form-element__label" value="{!v.conDetailsFrstZGCon.FirstName}"/>
+								</td>
+							</tr>
+							</div><br/>
+                            
+                            <div class="form-group">
+							<tr>
+								<td style="width: 33%;">
+								<label class="bold-group">Surname of first ZG Contact</label><br/>
+								<ui:inputText  aura:id="lstnameZG" class="slds-input" labelClass="slds-form-element__label" value="{!v.conDetailsFrstZGCon.LastName}"/>
+								</td>
+								<td style="width: 5%;"></td>
+								<td style="width: 33%;">
+								<label class="bold-group">Email of first ZG Contact</label><br/>
+								<ui:inputText  aura:id="EmailZG" class="slds-input" labelClass="slds-form-element__label" value="{!v.conDetailsFrstZGCon.Email}"/>
+								</td>
+							</tr>
+							</div><br/>
+                            
+                            <div class="form-group">
+							<tr>
+								<td style="width: 33%;">
+								<label class="bold-group">Phone of first ZG Contact</label><br/>
+								<ui:inputText  aura:id="PhoneZG" class="slds-input" labelClass="slds-form-element__label" value="{!v.conDetailsFrstZGCon.Phone}"/>
+								</td>
+								<td style="width: 5%;"></td>
+								<td style="width: 33%;">
+								<label class="bold-group">Preferred Language of first ZG Contact</label><br/>
+								<ui:inputSelect  aura:id="LanguageZG" class="slds-input" labelClass="slds-form-element__label" value="{!v.conDetailsFrstZGCon.Language__c}"/>
+								</td>
+							</tr>
+							</div><br/>
+                            
+                            <div class="form-group">
+							<tr>
+								<td style="width: 33%;">
+								<label class="bold-group">Tone of address for first ZG Contact</label><br/>
+								<ui:inputSelect  aura:id="ToneZG" class="slds-input" labelClass="slds-form-element__label" value="{!v.conDetailsFrstZGCon.Tone_of_address__c}"/>
+								</td>
+								<td style="width: 5%;"></td>
+								<td style="width: 33%;">
+								<label class="bold-group">Function in company of first ZG Contact</label><br/>
+								<ui:inputText  aura:id="TitleZG" class="slds-input" labelClass="slds-form-element__label" value="{!v.conDetailsFrstZGCon.Title}"/>
+								</td>
+							</tr>
+							</div></div><br/>
+                        
+						<div class="form-group">
+							<label class="bold-group">Is ZG First Contact and Shareholder same ?</label><br/>
+							<ui:inputSelect  aura:id="sameZGandShrHol" class="slds-input" labelClass="slds-form-element__label" value="{!v.accDetails.Is_ZG_First_Contact_and_Shareholder_same__c}" change="{!c.onSingleSelectChange}"/>
+							</div><br/>
+						<h3 class="slds-section-title--divider">First Shareholder Contact Information</h3>
+						<div class="slds-form--stacked slds-p-around--medium slds-m-bottom--x-small">
+						<div class="form-group">
+							<label class="bold-group">First Shareholder</label>
+							<c:customLookup objectAPIName="Contact" IconName="standard:contact" selectedRecord="{!v.selectedLookUpRecordForShareHolder}" />
+							<ui:outputText aura:id="firstShareCont" class="frsrClass" value="{!v.validateFrstShrHol}"/>
+								
+						</div><br/>
+                            <div class="form-group">
+							<tr>
+								<td style="width: 33%;">
+								<label class="bold-group">Salutation of first Shareholder</label><br/>
+								<ui:inputSelect  aura:id="salnameZG1" class="slds-input" labelClass="slds-form-element__label" value="{!v.conDetailsShrHold.Salutation}"/>
+								</td>
+								<td style="width: 5%;"></td>
+								<td style="width: 33%;">
+								<label class="bold-group">First name of first Shareholder</label><br/>
+								<ui:inputText  aura:id="frstnameZG1" class="slds-input" labelClass="slds-form-element__label" value="{!v.conDetailsShrHold.FirstName}"/>
+								</td>
+							</tr>
+							</div><br/>
+                            
+                            <div class="form-group">
+							<tr>
+								<td style="width: 33%;">
+								<label class="bold-group">Surname of first Shareholder</label><br/>
+								<ui:inputText  aura:id="lstnameZG1" class="slds-input" labelClass="slds-form-element__label" value="{!v.conDetailsShrHold.LastName}"/>
+								</td>
+								<td style="width: 5%;"></td>
+								<td style="width: 33%;">
+								<label class="bold-group">Email of first Shareholder</label><br/>
+								<ui:inputText  aura:id="EmailZG1" class="slds-input" labelClass="slds-form-element__label" value="{!v.conDetailsShrHold.Email}"/>
+								</td>
+							</tr>
+							</div><br/>
+                            
+                            <div class="form-group">
+							<tr>
+								<td style="width: 33%;">
+								<label class="bold-group">Phone of first Shareholder</label><br/>
+								<ui:inputText  aura:id="PhoneZG1" class="slds-input" labelClass="slds-form-element__label" value="{!v.conDetailsShrHold.Phone}"/>
+								</td>
+								<td style="width: 5%;"></td>
+								<td style="width: 33%;">
+								<label class="bold-group">Preferred Language of first Shareholder</label><br/>
+								<ui:inputSelect  aura:id="LanguageZG1" class="slds-input" labelClass="slds-form-element__label" value="{!v.conDetailsShrHold.Language__c}"/>
+								</td>
+							</tr>
+							</div><br/>
+                            
+                            <div class="form-group">
+							<tr>
+								<td style="width: 33%;">
+								<label class="bold-group">Tone of address for first Shareholder</label><br/>
+								<ui:inputSelect  aura:id="ToneZG1" class="slds-input" labelClass="slds-form-element__label" value="{!v.conDetailsShrHold.Tone_of_address__c}"/>
+								</td>
+								<td style="width: 5%;"></td>
+								<td style="width: 33%;">
+								<label class="bold-group">Function in company of first Shareholder</label><br/>
+								<ui:inputText  aura:id="TitleZG1" class="slds-input" labelClass="slds-form-element__label" value="{!v.conDetailsShrHold.Title}"/>
+								</td>
+							</tr>
+							</div></div><br/>
+							<h3 class="slds-section-title--divider">Company related Information</h3>
+							<div class="slds-form--stacked slds-p-around--medium slds-m-bottom--x-small">
+							<div class="form-group">
+							<tr>
+								<td style="width: 33%;">
+								<label class="bold-group">Company Legal Name</label><br/>
+								<ui:inputText  aura:id="CompLeg" class="slds-input" labelClass="slds-form-element__label" value="{!v.accDetails.Company_Legal_Name__c}"/>
+								</td>
+								<td style="width: 5%;"></td>
+								<td style="width: 33%;">
+								<label class="bold-group">Name</label><br/>
+								<ui:inputText  aura:id="AccNames" class="slds-input" labelClass="slds-form-element__label" value="{!v.accDetails.Name}"/>
+								</td>
+							</tr>	
+							</div><br/>
+							
+							<div class="form-group">
+							<tr>
+								<td style="width: 33%;">
+								<label class="bold-group">Industry</label><br/>
+								<ui:inputSelect  aura:id="AccInd" class="slds-input" labelClass="slds-form-element__label" value="{!v.accDetails.Industry}"/>
+								</td>
+								<td style="width: 5%;"></td>
+								<td style="width: 33%;">
+								<label class="bold-group">Industry Type</label><br/>
+								<ui:inputSelect  aura:id="AccIndType" class="slds-input" labelClass="slds-form-element__label" value="{!v.accDetails.Industry_Type__c}"/>
+								</td>
+							</tr>	
+							</div></div><br/>
+							
+							<h3 class="slds-section-title--divider">Billing Address Information</h3>
+							<div class="slds-form--stacked slds-p-around--medium slds-m-bottom--x-small">
+							<div class="form-group">
+							<tr>
+								<td style="width: 33%;">
+								<label class="bold-group">BA Street and Number</label><br/>
+								<ui:inputText  aura:id="lastreet" class="slds-input" labelClass="slds-form-element__label" value="{!v.accDetails.BillingStreet}"/>
+								</td>
+								<td style="width: 5%;"></td>
+								<td style="width: 33%;">
+								<label class="bold-group">BA City</label><br/>
+								<ui:inputText  aura:id="lacity" class="slds-input" labelClass="slds-form-element__label" value="{!v.accDetails.BillingCity}"/>
+								</td>
+							</tr>	
+							</div><br/>
+							
+							<div class="form-group">
+							<tr>
+								<td style="width: 33%;">
+								<label class="bold-group">BA Zip/Postal Code</label><br/>
+								<ui:inputText  aura:id="lapostalcode" class="slds-input" labelClass="slds-form-element__label" value="{!v.accDetails.BillingPostalCode}"/>
+								</td>
+								<td style="width: 5%;"></td>
+								<td style="width: 33%;">
+								<label class="bold-group">BA Country</label><br/>
+								<ui:inputText aura:id="lacountry" class="slds-input" labelClass="slds-form-element__label" value="{!v.accDetails.BillingCountry}"/>
+								</td>
+							</tr>	
+							</div><br/>
+							
+							</div>
+							
+							
+							<h3 class="slds-section-title--divider">Pricing and Offer Related Information</h3>
+							<div class="slds-form--stacked slds-p-around--medium slds-m-bottom--x-small">
+							<div class="form-group">
+							<tr>
+								<td style="width: 33%;">
+								<label class="bold-group">MRR Tax Advisor</label><br/>
+								<ui:inputCurrency   aura:id="mrrtax" class="slds-input" labelClass="slds-form-element__label" value="{!v.OppDetails.MRR_Tax_Advisor__c}" updateOn="keyup"/>
+								</td>
+								<td style="width: 5%;"></td>
+								<td style="width: 33%;">
+								<label class="bold-group">MRR Zeitgold</label><br/>
+								<ui:inputCurrency   aura:id="mrrzg" class="slds-input" labelClass="slds-form-element__label" value="{!v.OppDetails.MRR_Zeitgold__c}" updateOn="keyup"/>
+								</td>
+							</tr>
+							</div><br/>
+							
+							<div class="form-group">
+							<tr>
+								<td style="width: 33%;">
+								<label class="bold-group">Special Initial MRR Valid for how many months</label><br/>
+								<ui:inputText  aura:id="splmrrmonths" class="slds-input" labelClass="slds-form-element__label" value="{!v.OppDetails.Special_Initial_MRR_Valid_for_how_many_m__c}"/>
+								</td>
+								<td style="width: 5%;"></td>
+								<td style="width: 33%;">
+								<label class="bold-group">Special Initial MRR (w./o. Tax Advisor)</label><br/><br/>
+								<ui:inputText  aura:id="spcintmrr" class="slds-input" labelClass="slds-form-element__label" value="{!v.OppDetails.Special_Initial_MRR_w_o_Tax_Advisor_F__c}"/>
+								</td>
+							</tr>	
+							</div><br/>
+							
+							<div class="form-group">
+							<tr>
+								<td style="width: 33%;">
+								<label class="bold-group">Total annual tax advisor fee</label><br/>
+								<ui:outputCurrency  aura:id="totalannualtax" value="{!v.OppDetails.Total_annual_tax_advisor_fee__c}"/>
+								</td>
+								<td style="width: 5%;"></td>
+								<td style="width: 33%;">
+								<label class="bold-group">Total monthly tax advisor fee</label><br/>
+								<ui:outputCurrency  aura:id="totaltax" value="{!v.OppDetails.Total_monthly_Tax_advisor_fee__c}"/>
+								</td>
+							</tr>
+							</div><br/>
+							
+							<div class="form-group">
+							<tr>
+								<td style="width: 33%;">
+								<label class="bold-group">Special offer, Other (if applicable)</label><br/>
+								<ui:inputText  aura:id="splofferappl" class="slds-input" labelClass="slds-form-element__label" value="{!v.OppDetails.Special_offer_Other_if_applicable__c}"/>
+								</td>
+								<td style="width: 5%;"></td>
+								<td style="width: 33%;">
+								<label class="bold-group">Special offer PIO (if applicable)</label><br/>
+								<ui:inputText  aura:id="spcPIO" class="slds-input" labelClass="slds-form-element__label" value="{!v.OppDetails.Special_offer_PIO_if_applicable__c}"/>
+								</td>
+							</tr>
+							</div><br/>
+							
+							<div class="form-group">
+							<tr>
+								<td style="width: 33%;">
+								<label class="bold-group">Link to sales offer</label><br/>
+								<ui:inputText  aura:id="linktosls" class="slds-input" labelClass="slds-form-element__label" value="{!v.accDetails.Link_to_sales_offer__c}"/>
+								</td>
+								<td style="width: 5%;"></td>
+								<td style="width: 33%;">
+								<label class="bold-group">ARR Tax Advisor (Year End Statement)</label><br/>
+								<ui:inputCurrency  aura:id="arrtaxadv" class="slds-input" labelClass="slds-form-element__label" value="{!v.OppDetails.ARR_Tax_Advisor_Year_End_Statement__c}" updateOn="keyup"/>
+								</td>
+							</tr>
+							</div></div><br/>
+							
+							<h3 class="slds-section-title--divider">Additional Information</h3>
+							<div class="slds-form--stacked slds-p-around--medium slds-m-bottom--x-small">
+							
+							<div class="form-group">
+								<label class="bold-group">Accounting Start Date</label><br/>
+								<ui:inputDate aura:id="accstartdate" displayDatePicker="true" class="form-control" value="{!v.accDetails.Accounting_Start_Date__c}"/>
+								
+							</div><br/>
+							
+							<div class="form-group">
+							<tr>
+								<td style="width: 33%;">
+								<label class="bold-group">Nature and Purpose of business</label><br/>
+								<ui:inputTextArea rows="2"  aura:id="natandpurp" class="slds-input" labelClass="slds-form-element__label" value="{!v.accDetails.Nature_Purpose_of_business__c}"/>
+								</td>
+								<td style="width: 5%;"></td>
+								<td style="width: 33%;">
+								<label class="bold-group">Annual Revenue</label><br/>
+								<ui:inputCurrency  aura:id="annualRev" class="slds-input" labelClass="slds-form-element__label" value="{!v.accDetails.AnnualRevenue}" updateOn="keyup"/>
+								</td>
+							</tr>	
+							</div><br/>
+							
+							<div class="form-group">
+							<tr>
+								<td style="width: 33%;">
+								<label class="bold-group">Payroll Start Date</label><br/>
+								<ui:inputDate aura:id="payStartdate" displayDatePicker="true" class="form-control" value="{!v.accDetails.Payroll_Start_Date__c}"/>
+								</td>
+								<td style="width: 5%;"></td>
+								<td style="width: 33%;">
+								<label class="bold-group">Number Of Employees</label><br/>
+								<ui:inputNumber  aura:id="noofemp" class="slds-input" labelClass="slds-form-element__label" value="{!v.employeeNumber}"/>
+								</td>
+							</tr>	
+							</div><br/>
+							
+							<div class="form-group">
+							<tr>
+								<td style="width: 33%;">
+								<label class="bold-group">Name cash register</label><br/>
+								<ui:inputText  aura:id="namecash" class="slds-input" labelClass="slds-form-element__label" value="{!v.accDetails.Name_cash_register__c}"/>
+								</td>
+								<td style="width: 5%;"></td>
+								<td style="width: 33%;">
+								<label class="bold-group">CEP Migration necessary?</label><br/>
+								<ui:inputSelect  aura:id="cepNecc" class="slds-input" labelClass="slds-form-element__label" value="{!v.accDetails.CEP_Migration_necessary__c}"/>
+								</td>
+							</tr>	
+							</div><br/>
+							
+							<div class="form-group">
+							<tr>
+								<td style="width: 33%;">
+								<label class="bold-group">VAT declaration cadence</label><br/>
+								<ui:inputSelect  aura:id="vatDecl" class="slds-input" labelClass="slds-form-element__label" value="{!v.accDetails.VAT_declaration_cadence__c}"/>
+								</td>
+								<td style="width: 5%;"></td>
+								<td style="width: 33%;">
+								<label class="bold-group">VAT declaration extension (DFV)</label><br/>
+								<ui:inputSelect  aura:id="vatDeclDFV" class="slds-input" labelClass="slds-form-element__label" value="{!v.accDetails.VAT_declaration_extension_DFV__c}"/>
+								</td>
+							</tr>	
+							</div><br/>
+							
+							<div class="form-group">
+							<tr>
+								<td style="width: 33%;">
+								<label class="bold-group">Sales related comments for ONB and CE</label><br/>
+								<ui:inputTextArea rows="2" aura:id="salerelcomment" class="slds-input" labelClass="slds-form-element__label" value="{!v.accDetails.Sales_related_comments_for_ONB_and_CE__c}"/>
+								</td>
+								<td style="width: 5%;"></td>
+								<td style="width: 33%;">
+								<label class="bold-group">Problems with old Advisors Providers</label><br/>
+								<ui:inputTextArea rows="2" aura:id="probwithOldAdv" class="slds-input" labelClass="slds-form-element__label" value="{!v.accDetails.Problems_with_old_Advisors_Providers__c}"/>
+								</td>
+							</tr>
+							</div></div>
+							<h3 class="slds-section-title--divider">Optional Information</h3>
+							<div class="slds-form--stacked slds-p-around--medium slds-m-bottom--x-small">
+								<div class="form-group">
+									<label class="bold-group">Parent Account</label>
+									<lightning:helptext class = "helpText" content="Falls der Interessent bereits Kunde mit einem anderen Business bei Zeitgold ist, wähle hier bitte das vorherige Business aus. Dann wird der ursprüngliche Onboarding Manager diesen Kunden übernehmen."/>
+									<c:customLookup objectAPIName="Account" IconName="standard:account" selectedRecord="{!v.selectedLookUpRecordForParentAcc}" />	
+								</div>
+							
+							</div>
+							<br/>
+					</div>	
+                    <!--###### MODAL BOX FOOTER Part Start ######-->
+                    <footer class="slds-modal__footer">
+                        <lightning:button variant="neutral" 
+                                          label="Cancel"
+                                          title="Cancel"
+                                          onclick="{! c.closeModel }"/>
+						<lightning:button variant="neutral" 
+                                          label="Save"
+                                          title="Save"
+                                          onclick="{! c.saveAndCloseWon }"/>
+                        <lightning:button variant="brand" 
+                                          label="Save &amp; Handover"
+                                          title="Save &amp; Handover"
+                                          onclick="{!c.saveandHandOver }"/>
+                    </footer>
+                </div>
+            </section>
+            <div class="slds-backdrop slds-backdrop_open"></div>
+            <!--###### MODAL BOX Part END Here ######-->
+            
+        </aura:if>
+		<!--###### Second MODAL BOX Part start Here ######-->
+		<aura:if isTrue="{!v.showModal}">
+			<!--###### MODAL BOX Start######--> 
+            <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+                <aura:if isTrue="{!v.IsSpinner}">
+					<lightning:spinner variant="brand"  size="large" />
+				</aura:if>
+				<div class="slds-modal__container" style="width: 35%;">
+                    <!-- ###### MODAL BOX HEADER Start ######-->
+                    <header class="slds-modal__header" style="border: 1px solid darkgrey;">
+                        <lightning:buttonIcon iconName="utility:close"
+                                              onclick="{! c.closeModel }"
+                                              alternativeText="close"
+                                              variant="bare-inverse"
+                                              class="slds-modal__close"/>
+                        <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Ready to Handover</h2>
+                    </header>
+                    <!--###### MODAL BOX BODY Part Start######-->
+					
+                    <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1" style="border: 1px solid darkgrey;">
+                        <p><b>Email will be sent to the customer having following details:
+                            </b>
+                        </p><br/>
+						
+						<div class="form-group">
+							<label class="bold-group">Customer Email -</label><br/>
+							<ui:outputText aura:id="custEmail" value="{!v.conDetailsFrstZGCon.Email}"/>
+						</div><br/>
+						<div class="form-group">
+							<label class="bold-group">Customer Preferred Language -</label><br/>
+							<ui:outputText  aura:id="custPrefLang"  value="{!v.conDetailsFrstZGCon.Language__c}"/>
+						</div><br/>
+						<div class="form-group">
+							<label class="bold-group">Customer Tone of Address -</label><br/>
+							<ui:outputText  aura:id="custToneAddress" value="{!v.conDetailsFrstZGCon.Tone_of_address__c}"/>
+						</div><br/>
+                    </div>
+					 
+                    <!--###### MODAL BOX FOOTER Part Start ######-->
+                    <footer class="slds-modal__footer" style="border: 1px solid darkgrey;">
+						<lightning:button variant="neutral" 
+                                          label="Cancel"
+                                          title="Cancel"
+                                          onclick="{! c.closeModelPopup }"/>
+                        
+                        <lightning:button variant="brand" 
+                                          label="OK"
+                                          title="OK"
+                                          onclick="{! c.saveAndHandoverToONB }"/>
+                    </footer>
+                </div>
+
+            </section>
+            <div class="slds-backdrop slds-backdrop_open"></div>
+		</aura:if>	
+		
+		<!--###### Third MODAL BOX Part start Here ######-->
+		<aura:if isTrue="{!v.showModalonSave}">
+			<!--###### MODAL BOX Start######--> 
+            <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+                <aura:if isTrue="{!v.IsSpinner}">
+					<lightning:spinner variant="brand"  size="large" />
+				</aura:if>
+				<div class="slds-modal__container" style="width: 35%;">
+                    <!-- ###### MODAL BOX HEADER Start ######-->
+                    <header class="slds-modal__header" style="border: 1px solid darkgrey;">
+                        <lightning:buttonIcon iconName="utility:close"
+                                              onclick="{! c.closeModel }"
+                                              alternativeText="close"
+                                              variant="bare-inverse"
+                                              class="slds-modal__close"/>
+                        <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Save Opportunity Details</h2>
+                    </header>
+                    <!--###### MODAL BOX BODY Part Start######-->
+					
+                    <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1" style="border: 1px solid darkgrey;">
+                        <p><b>Please note that by clicking on ‘Save’, the Opportunity will only be marked as Closed Won and not handed over to Onboarding. Please proceed if you wish to handover the opportunity later by clicking on ‘Save and Handover’.
+                            </b>
+                        </p><br/>
+						
+						
+                    </div>
+					 
+                    <!--###### MODAL BOX FOOTER Part Start ######-->
+                    <footer class="slds-modal__footer" style="border: 1px solid darkgrey;">
+						<lightning:button variant="neutral" 
+                                          label="Cancel"
+                                          title="Cancel"
+                                          onclick="{! c.closeModelPopupSave }"/>
+                        
+                        <lightning:button variant="brand" 
+                                          label="Save"
+                                          title="Save"
+                                          onclick="{! c.saveAndClosedWonppty }"/>
+                    </footer>
+                </div>
+
+            </section>
+            <div class="slds-backdrop slds-backdrop_open"></div>
+		</aura:if>	
+		
+    </div>
+</aura:component>

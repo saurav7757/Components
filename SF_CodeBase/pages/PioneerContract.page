@@ -1,0 +1,657 @@
+<apex:page controller="PioneerCtl" showHeader="false" applyHtmlTag="false"  applyBodyTag="false"  renderAs="pdf">
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <style type="text/css">
+      .underline {
+        text-decoration: underline;
+      }
+      .fine-text {
+        font-size: 14px;
+      }
+      .table {
+        height: 180px;
+      }
+      .white { color: white; }
+
+      .table .left {
+        float: left;
+        width: 60%
+      }
+      .table .right {
+        float: right;
+        width: 35%;
+        text-align: left;
+      }
+	  .table .all {
+        float: left;
+        width: 100%
+      }
+      .footer {
+        margin-top: 250px;
+        vertical-align: top;
+        font-size: 13px;
+      }
+
+      .footer .col-a {
+        vertical-align: top;
+        display: inline-block;
+        width: 25%;
+      }
+      .footer .col-b {
+        vertical-align: top;
+        display: inline-block;
+        width: 40%;
+      }
+      .footer .col-c {
+        vertical-align: top;
+        display: inline-block;
+        width: 32%;
+      }
+
+      .indent {
+        padding-left: 10%;
+      }
+
+      ol li, ul li {
+        line-height: 1.15em;
+        padding-bottom: 6px;
+      }
+
+      ol.two li { list-style-type: none; }
+      ol.two li:before {
+        content: '2.' counter(item, decimal) '. ';
+        counter-increment: item;
+      }
+
+      ol.numbers {
+        counter-reset: item;
+          padding-left: 0;
+      }
+
+      ol.numbers li {
+        padding-left: 0;
+        margin-left: 0;
+        list-style-type: none; }
+
+      ol.numbers li:before {
+        content: '(' counter(item) ') ';
+        font-weight: bold;
+        counter-increment: item;
+      }
+
+      ol.four li { list-style-type: none; }
+      ol.four li:before {
+        content: '4.' counter(item, decimal) '. ';
+        counter-increment: item;
+      }
+
+      body {
+        font-size: 12px;
+        margin: 1cm;
+      }
+      h3 {
+        padding: 0;
+        margin: 0;
+        font-size: 14px;
+        padding-top: 3px;
+        padding-bottom: 0px;
+        margin-bottom:-2px;
+      }
+      .center {
+        text-align: center;
+      }
+      .bold {
+        font-weight: bold;
+      }
+      p {
+        line-height: 1.5;
+      }
+      p.list {
+        margin-top:3px;
+        padding-top:0px;
+      }
+      .pb {
+        page-break-after: always;
+      }
+      .title {
+        color: navy;
+      }
+
+      .grey {
+        color: #444;
+        margin-bottom: 20px;
+      }
+      .date {
+        text-align: right;
+        padding-top: 20px
+        padding-bottom: 20px;
+      }
+      .img {
+        text-align: right;
+        margin-bottom: 100px;
+      }
+      .s_anchor {
+      	margin-right: 140px;
+        margin-left: 0px;
+      }        
+      h4 {
+        text-align: center;
+        color: #2b376c;
+      }
+        
+      .blue {
+        color: #2b376c;
+      }
+      h5 {
+        text-align: center;
+        color: #2b376c;
+      }
+      .check {
+        background-color: #fff;
+        background-image: url({!$Resource.contractCheck});
+        background-position: center bottom;
+        background-repeat: no-repeat;
+        text-align:center;
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        right: 0;
+      }
+                    
+        
+      .fifty .left {
+        display:inline-block;
+        width: 48%;
+        position: relative;
+        margin-right: 2%;
+      }
+        
+      .fifty {
+        line-height: 2;
+        vertical-align: top;
+      }
+        
+      .fifty .right {
+        display:inline-block;
+        width: 49%;
+        text-align: left;
+        position: relative;
+        vertical-align: top;
+      }
+    </style>
+  </head>
+  <body>    
+    <div class="center">
+      <h2>Angebot/Auftragsbestätigung</h2>
+      <br/>
+      zwischen<br/>
+      <br/>
+      <span class="bold">{!legalName}</span><br/>
+      <!--span class="white">\n1\</span><br/-->
+      {!legalStreet}<br/>
+      {!legalPostCode} {!legalCity}<br/>
+      <br/>
+      <span class="bold">- „Auftraggeber“ -</span>
+      <br/>
+      <br/>
+      und <br/>
+      <br/>
+      <span class="bold">pioneer Steuerberatungsgesellschaft mbH</span><br/>
+      Rankstraße 33<br/>
+      10789 Berlin<br/>
+      <br/>
+      <span class="bold">- „Auftragnehmer“ -</span>
+      <br/>
+      <br/>
+    </div>
+
+    <h3>
+      1. Auftragsgegenstand / Beratungsleistungen
+    </h3>
+
+    <p>
+      Unsere Tätigkeit für Sie umfasst für den Zeitraum ab {!accountingStartDate} folgende Leistungen, die im Pauschal-Paket enthalten sind:
+    </p>
+
+    <p>              
+      Je Kalendermonat:
+      <ul>
+        <li>
+          Einlesen elektronischer, automatisiert lesbarer und vom Auftraggeber / von einem vom Auftraggeber beauftragten Dritten übermittelter Datensätze
+        </li>
+        <li>
+          Erstellung der laufenden Buchhaltung aus diesen Datensätzen
+        </li>
+        <li>
+          Grobe Durchsicht der Datensätze auf Plausibilität
+        </li>
+        <li>
+          Erstellung der Summen- Saldenliste / BWA / Auswertungen aus DATEV heraus
+        </li>
+        <li>
+          Erstellung und Versendung der Umsatzsteuer-Voranmeldungen (USt-VA) an das Finanzamt sowie an den Mandanten
+        </li>
+        <li>
+          Sofern erforderlich: Erstellung und Versendung der Zusammenfassenden Meldung (ZM) an das Finanzamt sowie an den Mandanten
+        </li>
+      </ul>
+	</p>
+
+    <p>
+      Einmal im Kalenderjahr:<br/>
+      <apex:outputText escape="false" value="{!annualTaxAdvisorServices1}"/>
+      <apex:outputText escape="false" value="{!annualTaxAdvisorServices2}"/>
+    </p>
+
+
+    <h3> 2. Allgemeine Auftragsbedingungen und Hinweis zur Heranziehung Dritter
+    </h3>
+    <p>
+      Für die Durchführung der von Ihnen erteilten Aufträge und unsere Verantwortlichkeit und Haftung, auch im Verhältnis zu Dritten, gelten unsere Allgemeinen Auftragsbedingungen, die als Anlage beigefügt sind.
+    </p>
+
+    <p>
+      Wir möchten Sie darauf hinweisen, dass wir nach Ziffer 3. Abs. 1 der Allgemeinen Auftragsbedingungen berechtigt sind, zur Ausführung des Auftrags unsere Mitarbeiter, aber auch fachkundige Dritte sowie datenverarbeitende Unternehmen heranzuziehen. Soweit die Beauftragung eines außenstehenden Dritten erforderlich wird, werden wir dies, auch im Hinblick auf die zu erwartenden Kosten, vorab mit Ihnen besprechen. Außenstehende Dritte werden von uns gesondert zur Verschwiegenheit verpflichtet, soweit es sich nicht um Personen handelt, die der Berufsverschwiegenheit unterliegen. In Bezug auf die Zusammenarbeit mit unserem Service-Dienstleister „Zeitgold GmbH, Rosa-Luxemburg-Straße 14, 10178 Berlin“ bevollmächtigen Sie uns bereits hiermit alle notwendigen Dokumente, Daten und Informationen mit der Zeitgold GmbH zu teilen und auszutauschen. Der Zeitgold GmbH wird Zugriff auf alle elektronischen Daten gewährt, wie beispielsweise DATEV-Daten oder Unterlagen der Finanzbuchhaltung. (Die Mitarbeiter der Zeitgold GmbH unterliegen der Verschwiegenheitspflicht unserer allgemeinen Auftragsbedingungen.)
+    </p>
+    <div class="pb"/>        
+    <h3>
+      3. Kommunikation per E-Mail
+    </h3>
+
+    <p>
+      Wir machen im Rahmen unserer Tätigkeit von der Möglichkeit Gebrauch, mittels E-Mail zu kommunizieren. Es ist nicht ausgeschlossen, dass sich bei der Versendung von vertraulichen Informationen, Daten und Dokumenten per E-Mail Dritte Zugang zu den Daten verschaffen, von diesen Kenntnis nehmen oder diese verändern. Wir gehen davon aus, dass Sie dennoch aufgrund der heute üblichen Kommunikationsformen damit einverstanden sind, dass zwischen Ihnen, beteiligten Dritten und uns mittels E-Mail kommuniziert wird. Eine Haftung für eventuelle Schäden, die Ihnen oder Dritten aus der Versendung von Informationen, Daten und Dokumenten mittels E-Mail entstehen, können wir nicht übernehmen.
+    </p>
+    <p>
+      Wenn Sie eine Kommunikation per E-Mail nicht (mehr) wünschen, bitten wir Sie, uns dies schriftlich mitzuteilen. Bitte sprechen Sie uns auch an, wenn die E-Mail-Kommunikation unter Einsatz von Verschlüsselungstechniken erfolgen soll.
+    </p>
+
+    <h3>
+      4. Vergütung
+    </h3>
+
+    <p>
+      Die Vergütung der Auftragnehmerin richtet sich nach den gesetzlichen Bestimmungen der Steuerberatervergütungsverordnung in der jeweils gültigen Fassung soweit nicht zwischen den Parteien eine gesonderte Vergütungsvereinbarung geschlossen wird.
+    </p>
+
+
+    <h3>
+      5. Ausgenommene Leistungen
+    </h3>
+    <p>
+      Nicht in den angebotenen Leistungen enthalten sind insbesondere folgende Leistungen:
+      <ul>
+        <li>
+          Kontrolle oder Beurteilung der Kasse bzw. der Einhaltung der Grundsätze ordnungsgemäßer Buchführung und der konformen Kassenführung
+        </li>
+        <li>
+          Belegkontrolle oder Prüfung der Belege; es erfolgt keine Kontrolle auf Vollständigkeit
+        </li>
+        <li>
+          Prüfung der Existenz und Korrektheit der Umsatzsteuer ID des Leistungsempfängers im Falle von EU-Lieferungen bzw. sonstigen EU-Leistungen
+        </li>
+        <li>
+          Prüfung des Vorhandenseins der Ausfuhrpapiere im Falle von Ausfuhrlieferungen ins Drittland
+        </li>
+      </ul>
+    </p>
+    <p>
+      Die nicht von dem Angebot erfassten Leistungen sind von dem Auftraggeber
+      selbst zu erbringen. Sie sind wesentlich dafür, dass die steuerlichen
+      Meldungen richtig und vollständig sind.
+    </p>
+
+
+    <p>
+      Hiermit erteile ich den Auftrag in dem oben beschriebenen Umfang für die
+      laufende steuerberatende Tätigkeit:
+    </p>
+    <div class="table">
+      <div class="left">
+        <br/>
+        <br/>
+        <span class="white">\d1\</span><br/>
+        __________________________________<br/>
+        <br/>
+        Datum<br/>
+        <!--Mandant<br/-->
+      </div>
+	  <br/>
+      <br/>
+      <br/>
+      <!--div class="right"-->
+      <div class="all">
+        <br/>
+        <br/>
+        <br/>
+        <!--span class="white">\s1\</span><br/-->
+        <apex:outputText escape="false" value="{! signingAnchors}"/>        
+        ______________________________________________________________________________________________________<br/>
+        <br/>
+        <!--{!salutation}<br/-->
+        {!legalName}<br/>
+        <!--span class="white">\n1\</span><br/-->
+      </div>
+    </div>
+    <div class="pb"></div>
+    <div class="center">
+      <h2>Vergütungsvereinbarung</h2>
+      zwischen<br/>
+      <br/>
+      <span class="bold">pioneer Steuerberatungsgesellschaft mbH</span><br/>
+      Rankstraße 33<br/>
+      10789 Berlin<br/>
+      <br/>
+      - nachstehend „<span class="bold">Steuerberater</span>“ genannt -
+      <br/>
+      <br/>
+      und <br/>
+      <br/>
+      <span class="bold">{!legalName}</span><br/>
+      <!--span class="white">\n1\</span><br/-->
+      {!legalStreet}<br/>
+      {!legalPostCode} {!legalCity}<br/>
+      <br/>
+      - nachstehend „<span class="bold">Mandant</span>“ genannt -
+      <br/>
+      <br/>
+    </div>
+    <p>
+      wird folgende Vergütungsvereinbarung getroffen:
+    </p>
+    <h3>1. Geltungsbereich </h3>
+    <p>
+      Diese Vergütungsvereinbarung bezieht sich auf den im
+      Auftragsbestätigungsschreiben vom {!date} näher beschriebenen Auftrag, den der Mandant dem Steuerberater bzw. den im Einzelfall für den Steuerberater tätigen Berufsträgern (Steuerberater/Wirtschaftsprüfer) erteilt hat.
+    </p>
+    <p>
+      Die Vergütungsvereinbarung gilt auch für alle weiteren Aufträge, die der Mandant dem Steuerberater oder den im Einzelfall für den Steuerberater tätigen Berufsträgern (Steuerberater/Wirtschaftsprüfer) erteilt, soweit nichts Abweichendes vereinbart wird.
+    </p>
+    <h3> 2. Vergütung</h3>
+    <p>
+Die in dem Auftragsbestätigungsschreiben im Pauschal-Paket enthaltenen Leistungen setzen sich aus einer monatlichen Gebühr i.H.v. EUR {!monthlyTaxAdvisorFee} zzgl. MwSt. und einer jährlichen Gebühr i.H.v. EUR {!oneTimeAnnualTaxAdvisorFee} zzgl. MwSt. zusammen. In Summe ergibt sich somit ein jährlicher Pauschal-Betrag i.H.v. {!totalAnnualTaxAdvisorFee} zzgl. MwSt.
+    </p>
+
+    <p>
+      Die Erstellung weiterer Steuererklärungen wird nach mittlerer Gebühr der Steuerberatervergütungsverordnung in der jeweils gültigen Fassung abgerechnet.
+    </p>
+
+    <p>
+      Die Abrechnung weiterer Leistungen erfolgt nach Zeitaufwand und Mitarbeiterqualifikation:
+    </p>
+    <p> EUR pro Stunde zzgl. MwSt
+        <ul>
+    	    <li>Steuerberater 150,00</li>
+    	    <li>Bilanzbuchhalter/Steuerfachwirt 100,00</li>
+    	    <li>Steuerfachangestellte 80,00</li>
+    	</ul>	      
+    </p>
+    <p>
+      Zu den weiteren Leistungen gehören beispielsweise:<br/>
+      <ul>
+        <li>Gestaltungsberatung in allen Steuerarten (insbesondere Vertragsgestaltungen von Verträgen zwischen Gesellschaftern und Gesellschaft)</li>
+        <li>Unterstützung bei Betriebsprüfungen und Prüfungen der
+          Sozialversicherungsträger</li>
+        <li>Einspruchsverfahren und Finanzgerichtsverfahren</li>
+        <li>Jegliche Beratung zu lohnsteuerlichen Themen und im Bereich des
+          Sozialversicherungsrechtes</li>
+        <li>Sonstige fallweise Steuerberatungsleistungen (z.B. steuerliche
+          Behandlung von Firmenwagen)</li>
+      </ul>
+    </p>
+	<div class="pb"/>        
+    <h3> 3. Fälligkeit</h3>
+    <p>Forderungen werden sofort nach Rechnungsstellung fällig. Die Abrechnung des unter 2. genannten jährlichen Gesamt-Pauschalbetrages erfolgt monatlich mit EUR {!totalMonthlyTaxAdvisorFee} zzgl. MwSt.
+    </p>
+    <h3>4. Gesetzliche Umsatzsteuer </h3>
+    <p>
+    Alle Beträge verstehen sich zzgl. der gesetzlichen Umsatzsteuer.
+    </p>
+    <h3> 5. Zahlungsweise</h3>
+    <p> Zahlungen des Mandanten erfolgen durch SEPA-Firmenlastschrifteinzug auf
+      eines der in der Rechnung angegebenen Bankkonten des Steuerberaters.</p>
+	<!--div class="pb"></div-->
+    <div class="table">
+      <div class="left">
+        <br/>
+        <br/>
+        <br/>
+        <span class="white">\d1\</span><br/>
+        __________________________________<br/>
+        <br/>
+        Datum<br/>
+      </div>
+
+      <div class="right">
+      </div>
+    </div>
+    <div class="table">
+      <!--div class="right"-->
+      <div class="all">
+        <br/>
+        <br/>
+        <br/>
+        <!--span class="white">\s1\</span><br/-->
+        <apex:outputText escape="false" value="{! signingAnchors}"/>        
+        ______________________________________________________________________________________________________<br/>
+        <br/>
+        {!legalName}<br/>
+        <!--span class="white">\n1\</span><br/-->
+      </div>
+
+      <div class="right">
+      </div>
+    </div>
+	<div class="table">
+      <div class="left">
+        <br/>
+        <span class="white">\d1\</span><br/>
+        <br/>
+        <apex:image url="{!$Resource.zgSig_Philipp}" width="150" height="45"/><br/>
+        Philipp Ballhausen<br/>
+        Pioneer Steuerberatungsgesellschaft mbH
+      </div>
+
+      <div class="right">
+      </div>
+    </div>
+    <div class="pb"></div>
+    <div class="fine-text">
+      <div class="center">
+        <h2> Allgemeine Auftragsbedingungen</h2>
+        Stand: November 2016
+      </div>
+      <p>
+Die folgenden "Allgemeinen Auftragsbedingungen" gelten für Verträge zwischen der Pioneer Steuerberatungsgesellschaft mit beschränkter Berufshaftung (im Folgenden "Steuerberater" genannt) und ihren Auftraggebern, soweit nicht etwas anderes ausdrücklich schriftlich vereinbart oder gesetzlich zwingend vorgeschrieben ist.
+      </p>
+
+      <h3>1. Umfang und Ausführung des Auftrages </h3>      
+        <p class="list">
+            <span class="bold">(1)</span> Für den Umfang der vom Steuerberater zu erbringenden Leistungen ist der erteilte Auftrag maßgebend.
+            <br/>
+            <span class="bold">(2)</span> Der Auftrag wird nach den Grundsätzen ordnungsgemäßer Berufsausübung unter Beachtung der einschlägigen berufsrechtlichen Normen und der Berufspflichten (vgl. StBerG, BOStB) ausgeführt.
+            <br/>
+            <span class="bold">(3)</span> Dem Steuerberater sind die benötigten Unterlagen und Aufklärungen vollständig zu übergeben. Die Prüfung der Richtigkeit, Vollständigkeit und Ordnungsmäßigkeit der dem Steuerberater übergebenen Unterlagen und Zahlen, insbesondere der Buchführung und Bilanz, gehört nur zum Auftrag, wenn dies in Textform vereinbart ist. Der Steuerberater wird die vom Auftraggeber genannten Tatsachen, insbesondere Zahlenangaben, als richtig zu Grunde legen. Soweit er offensichtliche Unrichtigkeiten feststellt, ist er verpflichtet, darauf hinzuweisen.
+            <br/>
+            <span class="bold">(4)</span> Der Auftrag stellt keine Vollmacht für die Vertretung vor Behörden und sonstigen Stellen dar. Sie ist gesondert zu erteilen. Ist wegen der Abwesenheit des Auftraggebers eine Abstimmung mit diesem über die Einlegung von Rechtsbehelfen oder Rechtsmitteln nicht möglich, ist der Steuerberater im Zweifel zu fristwahrenden Handlungen berechtigt und verpflichtet.
+            <br/>
+            <span class="bold">(5)</span> Grundsätzlich obliegt die Wahrung von Not- (z.B. Einspruchs- und Klagefristen) sowie Ausschlussfristen (nicht verlängerbare Antragsfristen) dem Steuerberater nur dann, wenn und soweit der über die Frist unterrichtete Auftraggeber rechtzeitig dazu die erforderlichen Unterlagen und Angaben zur Verfügung gestellt, sowie jeweils einen gesonderten Auftrag zur Antragstellung, Einlegung des Einspruchs oder Erhebung der Klage erteilt hat. Ein Klageauftrag im gerichtlichen Verfahren kann nur unter gleichzeitiger Hingabe einer schriftlichen Prozessvollmacht wirksam erteilt werden.
+        </p>        
+
+      <h3>2. Verschwiegenheitspflicht</h3>
+		<p class="list">
+            <span class="bold">(1)</span> Der Steuerberater ist nach Maßgabe der Gesetze verpflichtet, über alle Tatsachen, die ihm im Zusammenhang mit der Ausführung des Auftrages zur Kenntnis gelangen, Stillschweigen zu bewahren, es sei denn, der Auftraggeber entbindet ihn von dieser Verpflichtung. Die Verschwiegenheitspflicht besteht auch nach Beendigung des Vertragsverhältnisses fort.
+            <br/>
+            <span class="bold">(2)</span> Die Verschwiegenheitspflicht besteht im gleichen Umfang auch für die Mitarbeiter des Steuerberaters.
+            <br/>
+            <span class="bold">(3)</span> Die Verschwiegenheitspflicht besteht nicht, soweit die Offenlegung zur Wahrung berechtigter Interessen des Steuerberaters erforderlich ist. Der Steuerberater ist auch insoweit von der Verschwiegenheitspflicht entbunden, als er nach den Versicherungsbedingungen seiner Berufshaftpflichtversicherung zur Information und Mitwirkung verpflichtet ist.
+            <br/>
+            <span class="bold">(4)</span> Gesetzliche Auskunfts- und Aussageverweigerungsrechte nach § 102 AO, § 53 stopp und § 383 ZPO bleiben unberührt.
+            <br/>
+            <span class="bold">(5)</span> Der Steuerberater ist von der Verschwiegenheitspflicht entbunden, soweit dies zur Durchführung eines Zertifizierungsaudits in der Kanzlei des Steuerberaters erforderlich ist und die insoweit tätigen Personen ihrerseits über ihre Verschwiegenheitspflicht belehrt worden sind. Der Auftraggeber erklärt sich damit einverstanden, dass durch den Zertifizierer/Auditor Einsicht in seine – vom Steuerberater angelegte und geführte – Handakte genommen wird.
+        </p>
+        
+      <h3>3. Mitwirkung Dritter</h3>
+        <p class="list">
+            <span class="bold">(1)</span> Der Steuerberater ist berechtigt, zur Ausführung des Auftrags angestellte oder freie Mitarbeiter, fachkundige Dritte sowie datenverarbeitende Unternehmen heranzuziehen.
+            <br/>
+            <span class="bold">(2)</span> Bei der Heranziehung von fachkundigen Dritten und datenverarbeitenden Unternehmen hat der Steuerberater dafür zu sorgen, dass sich diese zur Verschwiegenheit entsprechend Nr. 2 Abs. 1 verpflichten. Der Steuerberater haftet unter keinen Umständen für die Leistungen herangezogener Dritter; bei diesen Herangezogenen handelt es sich haftungsrechtlich nicht um Erfüllungsgehilfen des Steuerberaters. Hat der Steuerberater die Beiziehung eines von ihm namentlich benannten Dritten angeregt, so haftet der lediglich für eine ordnungsgemäße Auswahl des Herangezogenen.
+            <br/>
+            <span class="bold">(3)</span> Der Steuerberater ist berechtigt, allgemeinen Vertretern (§ 69 StBerG, § 53 BRAO) sowie Praxistreuhändern (§ 71 StBerG) im Falle ihrer Bestellung Einsichtnahme in die Handakten i. S. d. § 66 Abs. 2 StBerG bzw. § 50 BRAO zu verschaffen.
+        </p>
+        
+      <h3>
+        3a. Elektronische Kommunikation, Datenschutz
+      </h3>
+        <p class="list">
+            <span class="bold">(1)</span> Der Steuerberater ist berechtigt, personenbezogene Daten des Auftraggebers und von dessen Mitarbeitern, im Rahmen der erteilten Aufträge maschinell zu erheben und in einer automatisierten Datei zu verarbeiten oder einem Dienstleistungsrechenzentrum zur weiteren Auftragsdatenverarbeitung zu übertragen.
+            <br/>
+            <span class="bold">(2)</span> Der Steuerberater ist berechtigt, in Erfüllung seiner Pflichten nach dem Bundesdatenschutzgesetz einen Beauftragten für den Datenschutz zu bestellen. Sofern dieser Beauftragte für den Datenschutz nicht bereits nach Nr. 2 Abs. 1 der Verschwiegenheitspflicht unterliegt, hat der Steuerberater dafür Sorge zu tragen, dass der Beauftragte für den Datenschutz sich mit Aufnahme seiner Tätigkeit zur Wahrung des Datengeheimnisses verpflichtet.
+            <br/>
+            <span class="bold">(3)</span> Soweit der Auftraggeber dem Steuerberater einen Telefaxanschluss oder eine Email-Adresse mitteilt, erklärt er sich bis auf Widerruf oder ausdrückliche Anderweitige Weisung damit einverstanden, dass der Steuerberater ihm ohne Einschränkungen über jene Kontaktdaten mandatsbezogene Informationen zusendet. Der Auftraggeber sichert zu, dass nur er oder von ihm beauftragte Personen Zugriff auf das Empfangs-/Sendegerät bzw. den Email-Account haben und dass er dortige Sendungseingänge regelmäßig überprüft. Der Auftraggeber ist verpflichtet, den Steuerberater daraufhin zu weisen, wenn Einschränkungen bestehen, etwa das Empfangs-/Sendegerät bzw. der Email-Account nur unregelmäßig auf Sendungseingänge überprüft wird oder Einsendungen nur nach vorheriger Ankündigung gewünscht werden. Der Steuerberater übernimmt keine Haftung für die Sicherheit der mit unverschlüsselten Emails übermittelten Daten und Informationen und haftet auch nicht für die dem Auftraggeber dieserhalb gegebenenfalls entstehenden Schäden. Soweit der Auftraggeber zum Einsatz von Signaturverfahren und Verschlüsselungsverfahren die technischen Voraussetzungen besitzt und deren Einsatz wünscht, teilt er dies dem Steuerberater rechtzeitig mit; damit einhergehende Kosten des Steuerberaters (bspw. zur Anschaffung und Einrichtung notwendiger Soft- bzw. Hardware) trägt der Auftraggeber.
+        </p>
+        
+      <h3>
+        4. Mängelbeseitigung
+      </h3>
+        <p class="list">
+            <span class="bold">(1)</span> Der Auftraggeber hat Anspruch auf Beseitigung etwaiger Mängel. Dem Steuerberater ist Gelegenheit zur Nachbesserung geben. Der Auftraggeber hat das Recht – wenn und soweit es sich bei dem Mandat um einen Dienstvertrag i.S.d. §§ 611, 675 BGB handelt -, die Nachbesserung durch den Steuerberater abzulehnen, wenn das Mandat durch den Auftraggeber beendet und der Mangel erst nach wirksamer Beendigung des Mandats festgestellt wird.
+            <br/>
+            <span class="bold">(2)</span> Beseitigt der Steuerberater die geltend gemachten Mängel nicht innerhalb einer angemessenen Frist oder lehnt die Mängelbeseitigung ab, so kann der Auftraggeber auf Kosten des Steuerberaters die Mängel durch einen anderen Steuerberater beseitigen lassen bzw. nach seiner Wahl Herabsetzung der Vergütung oder Rückgängigmachung des Vertrages verlangen.
+            <br/>
+            <span class="bold">(3)</span> Offenbare Unrichtigkeiten (z.B. Schreibfehler, Rechenfehler) können vom Steuerberater jederzeit auch Dritten gegenüber berichtigt werden. Sonstige Mängel darf der Steuerberater Dritten gegenüber mit Einwilligung des Auftraggebers berichtigen. Die Einwilligung ist nicht erforderlich, wenn berechtigte Interessen des Steuerberaters den Interessen des Auftraggebers vorgehen. Unrichtigkeiten, die geeignet sind, in der beruflichen Leistung enthaltene Ergebnisse in Frage zu stellen, berechtigen den Steuerberater in jedem Falle, sie auch gegenüber Dritten richtigzustellen oder die berufliche Leistung zurückzunehmen.
+        </p>
+         
+      <h3>
+        5. Haftung
+      </h3>
+        <p class="list">
+            <span class="bold">(1)</span> Der Steuerberater haftet für eigenes und das Verschulden seiner Erfüllungsgehilfen sowie für die Beachtung der verkehrsüblichen Sorgfalt bei der Auswahl des von ihr eingeschalteten datenverarbeitenden Unternehmens, nicht jedoch für Verschulden eines im Einvernehmen mit dem Auftraggeber herangezogenen fachkundigen Dritten.
+            <br/>
+            <span class="bold">(2)</span> Die Haftung des Steuerberaters und seiner Erfüllungsgehilfen für einen Schaden, der aus einer oder – bei einheitlicher Schadensfolge – aus mehreren Pflichtverletzungen anlässlich eines Auftrags resultiert, wird auf EUR 1 Mio. (in Worten: eine Million Euro) begrenzt.
+            <br/>
+            <span class="bold">(3)</span> Die Haftungsbegrenzung bezieht sich allein auf Fahrlässigkeit. Die Haftung für Vorsatz bleibt insofern unberührt. Von der Haftungsbegrenzung ausgenommen sind Haftungsansprüche für Schäden aus der Verletzung des Lebens, des Körpers oder der Gesundheit.
+            <br/>
+            <span class="bold">(4)</span> Die Haftungsbegrenzung gilt für die gesamte Tätigkeit des Steuerberaters für den Auftraggeber, also insbesondere auch für eine Ausweitung des Auftragsinhalts; einer erneuten Vereinbarung der Haftungsbegrenzung bedarf es insoweit nicht.
+            <br/>
+            <span class="bold">(5)</span> Die Haftungsbegrenzung gilt auch bei Bildung einer Sozietät/Partner und Übernahme des Auftrags durch die Sozietät/Partnerschaft sowie für neu in die Sozietät/Partnerschaft eintretende Sozien/Partner.
+            <br/>
+            <span class="bold">(6)</span> Die Haftungsbegrenzung gilt ferner auch gegenüber Dritten, soweit diese in den Schutzbereich des Mandatsverhältnisses fallen; § 334 BGB wird insoweit ausdrücklich nicht abbedungen. Einzelvertragliche Haftungsbegrenzungsvereinbarungen gehen dieser Regelung vor, lassen die Wirksamkeit dieser Regelung jedoch – soweit nicht ausdrücklich anders geregelt – unberührt. Eine Haftung Dritten gegenüber ist ausgeschlossen, soweit Arbeitsergebnisse des Steuerberaters ohne dessen schriftliche Zustimmung an Dritte weitergegeben werden, es sei denn, die Zustimmung hierzu ergibt sich direkt aus dem Auftragsinhalt.
+            <br/>
+            <span class="bold">(7)</span> Die Haftungsbegrenzung gilt, wenn entsprechend hoher Versicherungsschutz bestanden hat, rückwirkend von Beginn des Mandatsverhältnisses bzw. dem Zeitpunkt der Höherversicherung an und erstreckt sich, wenn der Auftragsumfang nachträglich geändert oder erweitert wird, auch auf diese Fälle.
+            <br/>
+            <span class="bold">(8)</span> Eine Haftung des Steuerberaters wegen Verletzung oder Nichtbeachtung ausländischen Rechts ist ausgeschlossen. Der Ausschluss gilt nicht im Rahmen eines ausdrücklichen übernommenen Auftrags, zu dessen Erledigung die Anwendung ausländischen Rechts erforderlich und die Haftung des Steuerberaters schriftlich auch auf Schäden wegen Verletzung oder Nichtbeachtung ausländischen Rechts ausgedehnt worden ist.
+            <br/>
+            <span class="bold">(9)</span> Soweit ein Schadensersatzanspruch des Auftraggebers kraft Gesetzes nicht einer kürzeren Verjährungsfrist unterliegt, verjährt er in drei Jahren von dem Zeitpunkt an, in dem der Anspruch entstanden ist.
+        </p>
+        
+        <div class="pb"/>
+        
+      <h3>
+        6. Pflichten des Auftraggebers
+      </h3>
+        <p class="list">
+            <span class="bold">(1)</span> Der Auftraggeber ist zur Mitwirkung verpflichtet, soweit es zur ordnungsgemäßen Erledigung des Auftrags erforderlich ist. Insbesondere hat er dem Steuerberater unaufgefordert alle für die Ausführung des Auftrags notwendigen Unterlagen vollständig und so rechtzeitig zu übergeben, dass dem Steuerberater eine angemessene Bearbeitungszeit zur Verfügung steht. Entsprechendes gilt für die Unterrichtung über alle Vorgänge und Umstände, die für die Ausführung des Auftrags von Bedeutung sein können. Der Auftraggeber ist verpflichtet, alle schriftlichen und mündlichen Mitteilungen des Steuerberaters zur Kenntnis zu nehmen und bei Zweifelsfragen Rücksprache zu halten.
+            <br/>
+            <span class="bold">(2)</span> Der Auftraggeber hat alles zu unterlassen, was die Unabhängigkeit des Steuerberaters oder seiner Erfüllungsgehilfen beeinträchtigen könnte.
+            <br/>
+            <span class="bold">(3)</span> Der Auftraggeber verpflichtet sich, Arbeitsergebnisse des Steuerberaters nur mit dessen schriftlicher Einwilligung weiterzugeben, soweit sich nicht bereits aus dem Auftragsinhalt die Einwilligung zur Weitergabe an einen bestimmten Dritten ergibt.
+            <br/>
+            <span class="bold">(4)</span> Setzt der Steuerberater beim Auftraggeber in dessen Räumen Datenverarbeitungsprogramme ein, so ist der Auftraggeber verpflichtet, den Hinweisen des Steuerberaters zur Installation und Anwendung der Programme nachzukommen. Des Weiteren ist der Auftraggeber verpflichtet, die Programme nur in dem vom Steuerberater vorgeschriebenen Umfang zu nutzen, und er ist auch nur in dem Umfang zur Nutzung berechtigt. Der Auftraggeber darf die Programme nicht verbreiten. Der Steuerberater bleibt Inhaber der Nutzungsrechte. Der Auftraggeber hat alles zu unterlassen, was der Ausübung der Nutzungsrechte an den Programmen durch den Steuerberater entgegensteht.
+            <br/>            
+        </p>      
+
+      <h3>
+        7. Unterlassene Mitwirkung und Annahmeverzug des Auftraggebers
+      </h3>
+      <p class="list">
+        Unterlässt der Auftraggeber eine ihm nach Nr. 6 oder sonst wie obliegende Mitwirkung oder kommt er mit der Annahme der von dem Steuerberater angebotenen Leistung in Verzug, so ist der Steuerberater berechtigt, den Vertrag fristlos zu kündigen. Unberührt bleibt der Anspruch des Steuerberaters auf Ersatz der ihm durch den Verzug oder die unterlassene Mitwirkung des Auftraggebers entstandenen Mehraufwendungen sowie des verursachten Schadens, und zwar auch dann, wenn der Steuerberater von dem Kündigungsrecht keinen Gebrauch macht.
+      </p>
+
+ 
+
+      <h3>
+        8. Bemessung der Vergütung
+      </h3>
+        <p class="list">
+            <span class="bold">(1)</span> Soweit nicht konkrete anderweitige Vereinbarungen zur Vergütung getroffen werden, bemisst sich die Vergütung (Gebühren und Auslagenersatz) des Steuerberaters für seine Berufstätigkeit nach § 33 StBerG nach der Vergütungsverordnung für Steuerberater, Steuerbevollmächtigte und Steuerberatungsgesellschaften, für Berufstätigkeiten i.S.v. § 3 BRAO nach dem Rechtsanwaltsvergütungsgesetz.
+            <br/>
+            <span class="bold">(2)</span> Für Tätigkeiten, die in den entsprechenden Gebührenverordnungen keine Regelung erfahren (z.B. § 57 Abs. 3 Nrn. 2 und 3 StBerG), gilt die vereinbarte Vergütung, anderenfalls die übliche Vergütung (§ 612 Abs. 2 BGB).
+            <br/>
+            <span class="bold">(3)</span> Für bereits entstandene und voraussichtliche entstehende Gebühren und Auslage kann der Steuerberater einen Vorschuss fordern. Wird der eingeforderte Vorschuss nicht gezahlt, kann der Steuerberater nach vorheriger Ankündigung seine weitere Tätigkeit für den Auftraggeber einstellen, bis der Vorschuss eingeht. Der Steuerberater ist verpflichtet, seine Absicht, die Tätigkeit einzustellen, dem Auftraggeber rechtzeitig bekanntzugeben, wenn dem Auftraggeber Nachteile aus einer Einstellung der Tätigkeit erwachsen können.
+            <br/>
+            <span class="bold">(4)</span> Eine Aufrechnung gegenüber einem Vergütungsanspruch des Steuerberaters ist nur mit unbestrittenen oder rechtskräftig festgestellten Forderungen zulässig.
+            <br/>            
+        </p>         
+
+        <div class="pb"/>
+        
+      <h3>
+        9. Beendigung des Vertrages
+      </h3>
+        <p class="list">
+            <span class="bold">(1)</span> Der Vertrag endet mit Erfüllung der vereinbarten Leistung, durch Ablauf der vereinbarten Laufzeit oder durch Kündigung. Der Vertrag endet nicht durch den Tod, durch den Eintritt der Geschäftsunfähigkeit des Auftraggebers oder im Falle einer Gesellschaft durch deren Auflösung.
+            <br/>
+            <span class="bold">(2)</span> Der Vertrag kann – wenn und soweit er einen Dienstvertrag i. S. d. §§ 611, 675 BGB darstellt – von jedem Vertragspartner  außerordentlich nach Maßgabe der §§ 626 ff. BGB gekündigt werden. Soweit im Einzelfall hiervon abgewichen werden soll, bedarf es einer gesondert zu erstellenden Vereinbarung, die dem Auftraggeber zusammen mit diesen Allgemeinen Auftragsbedingungen bei Vertragsabschluss ausgehändigt werden soll.
+            <br/>
+            <span class="bold">(3)</span> Der Steuerberater ist verpflichtet, dem Auftraggeber alles, was er zur Ausführung des Auftrags erhält oder erhalten hat und was er aus der Geschäftsbesorgung erlangt, herauszugeben.
+            <br/>
+            <span class="bold">(4)</span> Mit Beendigung des Vertrages hat der Auftraggeber dem Steuerberater die bei ihm zur Ausführung des Auftrags eingesetzten Datenverarbeitungsprogramme einschließlich angefertigter Kopien sowie sonstige Programmunterlagen unverzüglich herauszugeben bzw. von der Festplatte zu löschen.
+            <br/>            
+            <span class="bold">(5)</span> Nach Beendigung des Mandatsverhältnisses sind die Unterlagen bei dem Steuerberater abzuholen.
+        </p> 
+        
+      <h3>
+        10. Vergütungsanspruch bei vorzeitiger Beendigung des Vertrages
+      </h3>
+        <p class="list">
+            <span class="bold">(1)</span> Endet der Auftrag vor seiner vollständigen Ausführung, so richtet sich der Vergütungsanspruch des Steuerberaters nach dem Gesetz.
+            <br/>
+            <span class="bold">(2)</span> Soweit im Einzelfall hiervon abgewichen werden soll, bedarf es einer gesonderten Vereinbarung in Textform.            
+        </p>
+        
+
+      <h3>
+        11. Aufbewahrung, Herausgabe und Zurückbehaltungsrecht von Arbeitsergebnissen und Unterlagen
+      </h3>
+        <p class="list">
+            <span class="bold">(1)</span> Der Steuerberater hat die Handakten aus seiner Steuerberatertätigkeit auf die Dauer von zehn Jahren nach Beendigung des Auftrags aufzubewahren. Diese Verpflichtung erlischt jedoch schon vor Beendigung dieses Zeitraums, wenn der Steuerberater den Auftraggeber schriftlich aufgefordert hat, die Handakten in Empfang zu nehmen und der Auftraggeber dieser Aufforderung binnen sechs Monaten, nachdem er sie erhalten hat, nicht nachgekommen ist.
+            <br/>
+            <span class="bold">(2)</span> Zu den Handakten, im Sinne dieser Regelung, gehören alle Schriftstücke, die der Steuerberater aus Anlass ihrer beruflichen Tätigkeit von dem Auftraggeber oder für ihn erhalten hat. Dies gilt jedoch nicht für den Briefwechsel zwischen dem Steuerberater und seinem Auftraggeber und für die Schriftstücke, die dieser bereits in Urschrift oder Abschrift erhalten hat sowie für die zu internen Zwecken gefertigten Arbeitspapiere.
+            <br/>
+            <span class="bold">(3)</span> Auf Anforderung des Auftraggebers, spätestens nach Beendigung des Auftrags, hat der Steuerberater dem Auftraggeber die Handakten innerhalb einer angemessenen Frist herauszugeben. Der Steuerberater kann von Unterlagen, die er an den Auftraggeber zurückgibt, Abschriften oder Fotokopien anfertigen und zurückbehalten.
+            <br/>
+            <span class="bold">(4)</span> Der Steuerberater kann die Herausgabe der Handakten verweigern, bis er wegen seiner Gebühren und Auslagen befriedigt ist. Dies gilt nicht, soweit die Vorenthaltung der Handakten und der einzelnen Schriftstücke nach den Umständen unangemessen wäre.
+        </p> 
+     
+      <h3>
+        12. Anzuwendendes Recht und Erfüllungsort
+      </h3>
+        <p class="list">
+            <span class="bold">(1)</span> Für den Auftrag, seine Ausführung und die sich hieraus ergebenden Ansprüche gilt ausschließlich deutsches Recht.
+            <br/>
+            <span class="bold">(2)</span> Erfüllungsort ist der Ort der beruflichen Niederlassung bzw. der Ort der weiteren Beratungsstelle des Steuerberaters, soweit nicht etwas anderes vereinbart wird. Der Steuerberater ist nicht bereit, an einem Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen (§§ 36, 37 VSBG).            
+        </p>
+        
+         <div class="pb"/>
+        
+        <h3>
+        13. Wirksamkeit bei Teilnichtigkeit
+        </h3>
+        <p class="list">
+        Falls einzelne Bestimmungen dieser Auftragsbedingungen unwirksam sein oder
+        werden sollten, wird die Wirksamkeit der übrigen Bestimmungen dadurch nicht
+        berührt. Die unwirksame Bestimmung ist durch eine gültige zu ersetzen, die dem
+        angestrebten Ziel nahe kommt.</p>
+        
+        <h3>
+          14. Änderungen und Ergänzungen
+        </h3>
+        <p class="list">
+        Änderungen und Ergänzungen dieser Auftragsbedingungen bedürfen der Textform, § 126b BGB. Nebenabreden sind nicht getroffen worden.
+        </p>
+    </div>
+  </body>
+</html>
+</apex:page>

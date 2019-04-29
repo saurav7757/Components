@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Archive::Dokumente an elektronische Box |EN| Send documents to electronic box-ad</name>
+    <style>none</style>
+    <subject>Digitalization</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

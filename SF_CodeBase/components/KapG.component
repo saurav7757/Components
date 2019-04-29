@@ -1,0 +1,65 @@
+<apex:component >
+    <b>Monatliche Leistungen</b>
+<ul>
+  <li>
+    Buchhaltung
+  </li>
+  <li>
+    Betriebswirtschaftliche Auswertung (BWA)
+  </li>
+  <li>
+    Umsatzsteuer-Voranmeldung / Zusammenfassende Meldung
+  </li>
+</ul>
+
+<b>Jährliche Leistungen</b>
+<ul>
+  <li>
+    Aufstellung der Bilanz
+  </li>
+  <li>
+    Aufstellung des Jahresabschlusses
+  </li>
+  <li>
+    Gewinn- und Verlustrechnung (GuV)
+  </li>
+  <li>
+    Einkünfte aus Gewerbebetrieb (Anlage G)
+  </li>
+  <li>
+    Prüfung einmaliger Bescheide und Zusendungen
+  </li>
+</ul>
+
+<b>
+  Steuererklärungen und Offenlegung
+</b>
+<ul>
+  <li>
+    USt-Jahreserklärung
+  </li>
+  <li>
+    Körperschafts- und Gewerbesteuererklärung
+  </li>
+  <li>
+    Übermittlung der eBilanz an das Finanzamt
+  </li>
+  <li>
+    Offenlegung bzw. Hinterlegung beim Bundesanzeiger
+  </li>
+</ul>
+
+<b>
+  Weitere Leistungen
+</b>
+<ul>
+  <li>
+    Koordination mit dem Finanzamt
+  </li>
+  <li>
+    Datenschnittstelle für Betriebsprüfung
+  </li>
+</ul>
+
+
+</apex:component>

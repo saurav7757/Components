@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Completeness Check - Final Mail - DE</name>
+    <style>none</style>
+    <subject>Benötigte Unterlagen zur vollständigen Übernahme Deiner Buchhaltung</subject>
+    <textOnly>Hallo {{{Recipient.FirstName}}},
+
+
+Herzlichen Dank an Dich! Für die Freischaltung aller Zeitgold-Services, insbesondere der BWA und des Jahresabschlusses, werden allerdings noch ein paar Dokumente benötigt. Diese haben wir im Folgenden gelistet:
+
+
+1. BETRIEBSWIRTSCHAFTLICHE AUSWERTUNG (BWA)
+
+[LISTE INDIVIDUELL ANPASSEN]
+
+BWA bzw. Summen- und Saldenliste für den letzten Monat vor dem Zeitgold-Start
+
+Mietvertrag für Deine Geschäftsräume
+
+Laufende Darlehensverträge
+
+Laufende Leasingverträge
+
+
+
+Wann benötigt? Damit Deine BWAs so aussagekräftig wie möglich sind, solltest Du uns die Dokumente in Deine nächste Box legen.
+
+_____________________________________
+
+
+2. JAHRESABSCHLUSS
+
+[LISTE INDIVIDUELL ANPASSEN]
+
+Gesellschaftsvertrag Deines Unternehmens
+
+Protokolle der Gesellschafterversammlung (inkl. Dokumente zu Änderungen an der Gesellschafter- und/oder Geschäftsführerstruktur)
+
+Jahresabschluss des Vorjahres (sofern bereits vorhanden)
+
+Kaufverträge aus den Vorjahren (aus Abschreibungsgründen)
+
+Arbeitsverträge all Deiner Mitarbeiter
+
+
+
+Wann benötigt? Diese Dokumente sollten an uns so schnell wie möglich gesendet werden, damit wir Deinen Jahresabschluss rechtzeitig erstellen können und keine Säumnisgebühren beim Finanzamt entstehen. Lege die Dokumente am besten in Deine nächste Zeitgold-Box.
+
+
+Wir schließen Dein Onboarding hiermit ab und werden die Sammlung der Dokumente nun an Deinen Steuerberatungspartner Pioneer übergeben.
+
+Falls Du Fragen hast kannst Du uns immer unter service@zeitgold.com oder 030/3031811 erreichen.
+
+
+Schöne Grüße
+
+{{{Sender.FirstName}}} von Zeitgold</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

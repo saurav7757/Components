@@ -1,0 +1,836 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <validationRules>
+        <fullName>Check_Status_before_Closed_Won_to_Onbdg</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(Ready_to_Handover__c = FALSE,ISPICKVAL(StageName,&quot;Closed Won&quot;), ISCHANGED(StageName))</errorConditionFormula>
+        <errorMessage>Please Click on Handover to Onboarding to mark as Closed Won.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Closed_Won_only_if_Handover_Email_sent</fullName>
+        <active>false</active>
+        <errorConditionFormula>AND(
+
+NOT(Handover_Email_sent__c ),
+
+ISPICKVAL(StageName, &quot;Closed Won&quot;)
+
+)</errorConditionFormula>
+        <errorMessage>The SLS Handover Email was not sent yet</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>FillContractField_Account_AccStartDate</fullName>
+        <active>false</active>
+        <description>FillContractField_Account_AccStartDate</description>
+        <errorConditionFormula>/*If Field is Empty and Stage is one of the following then Error Message will appear */ 
+AND( 
+ISBLANK(Account.Accounting_Start_Date__c), /*This is the field which has to be filled before entering the following stages */ 
+OR( 
+/*Stagename is a Picklist for ur Satges And the second Value is the one of the current stage */ 
+
+ISPICKVAL(StageName, &quot;Verbal Commitment&quot;), 
+ISPICKVAL(StageName, &quot;Offer sent&quot;) 
+) 
+)</errorConditionFormula>
+        <errorMessage>FillContractField_Account_AccStartDate</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>FillContractField_Account_AmountWageAcco</fullName>
+        <active>false</active>
+        <description>FillContractField_Account_AmountWageAcco</description>
+        <errorConditionFormula>/*If Field is Empty and Stage is one of the following then Error Message will appear */ 
+AND( 
+ISBLANK(Account.Amount_Wage_Account__c), /*This is the field which has to be filled before entering the following stages */ 
+OR( 
+/*Stagename is a Picklist for ur Satges And the second Value is the one of the current stage */ 
+
+ISPICKVAL(StageName, &quot;Verbal Commitment&quot;), 
+ISPICKVAL(StageName, &quot;Offer sent&quot;)
+) 
+)</errorConditionFormula>
+        <errorMessage>FillContractField_Account_AmountWageAcco</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>FillContractField_Account_AnnualRevenue</fullName>
+        <active>false</active>
+        <description>FillContractField_Account_AnnualRevenue</description>
+        <errorConditionFormula>/*If Field is Empty and Stage is one of the following then Error Message will appear */ 
+AND( 
+ISBLANK(Account.AnnualRevenue), /*This is the field which has to be filled before entering the following stages */ 
+OR( 
+/*Stagename is a Picklist for ur Satges And the second Value is the one of the current stage */ 
+
+ISPICKVAL(StageName, &quot;Verbal Commitment&quot;), 
+ISPICKVAL(StageName, &quot;Offer sent&quot;)
+) 
+)</errorConditionFormula>
+        <errorMessage>FillContractField_Account_AnnualRevenue</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>FillContractField_Account_BillingAddress</fullName>
+        <active>false</active>
+        <description>FillContractField_Account_BillingAddress</description>
+        <errorConditionFormula>/*If Field is Empty and Stage is one of the following then Error Message will appear  */
+AND(
+ISBLANK(Account.BillingCity),    /*This is the field which has to be filled before entering the following stages */
+ OR(
+    /*Stagename is a Picklist for ur Satges And the second Value is the one of the current stage */
+  
+  ISPICKVAL(StageName, &quot;Verbal Commitment&quot;),
+  ISPICKVAL(StageName, &quot;Offer sent&quot;)
+)
+)</errorConditionFormula>
+        <errorMessage>FillContractField_Account_BillingAddress</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>FillContractField_Account_IncomingInvoic</fullName>
+        <active>false</active>
+        <description>FillContractField_Account_IncomingInvoic</description>
+        <errorConditionFormula>/*If Field is Empty and Stage is one of the following then Error Message will appear */ 
+AND( 
+ISBLANK(Account.No_of_incoming_invoices_per_month__c), /*This is the field which has to be filled before entering the following stages */ 
+OR( 
+/*Stagename is a Picklist for ur Satges And the second Value is the one of the current stage */ 
+
+ISPICKVAL(StageName, &quot;Verbal Commitment&quot;), 
+ISPICKVAL(StageName, &quot;Offer sent&quot;)
+) 
+)</errorConditionFormula>
+        <errorMessage>FillContractField_Account_IncomingInvoic</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>FillContractField_Account_LegalForm</fullName>
+        <active>false</active>
+        <description>FillContractField_Account_LegalForm</description>
+        <errorConditionFormula>/*If Field is Empty and Stage is one of the following then Error Message will appear */ 
+AND( 
+ISBLANK(TEXT(Account.Legal_Form__c)),
+/*This is the field which has to be filled before entering the following stages */ 
+OR( 
+/*Stagename is a Picklist for ur Satges And the second Value is the one of the current stage */ 
+
+ISPICKVAL(StageName, &quot;Verbal Commitment&quot;), 
+ISPICKVAL(StageName, &quot;Offer sent&quot;)
+) 
+)</errorConditionFormula>
+        <errorMessage>FillContractField_Account_LegalForm</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>FillContractField_Account_LegalName</fullName>
+        <active>false</active>
+        <description>FillContractField_Account_LegalName</description>
+        <errorConditionFormula>/*If Field is Empty and Stage is one of the following then Error Message will appear  */
+AND(
+ISBLANK(Account.Company_Legal_Name__c),    /*This is the field which has to be filled before entering the following stages */
+ OR(
+    /*Stagename is a Picklist for ur Satges And the second Value is the one of the current stage */
+  
+  ISPICKVAL(StageName, &quot;Verbal Commitment&quot;),
+  ISPICKVAL(StageName, &quot;Offer sent&quot;)
+)
+)</errorConditionFormula>
+        <errorMessage>FillContractField_Account_LegalName</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>FillContractField_Account_NumberOfEmploy</fullName>
+        <active>false</active>
+        <description>FillContractField_Account_NumberOfEmployees</description>
+        <errorConditionFormula>/*If Field is Empty and Stage is one of the following then Error Message will appear */ 
+AND( 
+ISBLANK(Account.NumberOfEmployees), /*This is the field which has to be filled before entering the following stages */ 
+OR( 
+/*Stagename is a Picklist for ur Satges And the second Value is the one of the current stage */ 
+
+ISPICKVAL(StageName, &quot;Verbal Commitment&quot;), 
+ISPICKVAL(StageName, &quot;Offer sent&quot;)
+) 
+)</errorConditionFormula>
+        <errorMessage>FillContractField_Account_NumberOfEmployees</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>FillContractField_Account_OutgoingInvoic</fullName>
+        <active>false</active>
+        <description>FillContractField_Account_OutgoingInvoic</description>
+        <errorConditionFormula>/*If Field is Empty and Stage is one of the following then Error Message will appear */ 
+AND( 
+ISBLANK(Account.No_of_outgoing_invoices_per_month__c), /*This is the field which has to be filled before entering the following stages */ 
+OR( 
+/*Stagename is a Picklist for ur Satges And the second Value is the one of the current stage */ 
+
+ISPICKVAL(StageName, &quot;Verbal Commitment&quot;), 
+ISPICKVAL(StageName, &quot;Offer sent&quot;) 
+) 
+)</errorConditionFormula>
+        <errorMessage>FillContractField_Account_OutgoingInvoic</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>FillContractField_Account_ParStartDate</fullName>
+        <active>false</active>
+        <description>FillContractField_Account_ParStartDate</description>
+        <errorConditionFormula>/*If Field is Empty and Stage is one of the following then Error Message will appear */ 
+AND( 
+ISBLANK(Account.Payroll_Start_Date__c), /*This is the field which has to be filled before entering the following stages */ 
+OR( 
+/*Stagename is a Picklist for ur Satges And the second Value is the one of the current stage */ 
+
+ISPICKVAL(StageName, &quot;Verbal Commitment&quot;), 
+ISPICKVAL(StageName, &quot;Offer sent&quot;)
+) 
+)</errorConditionFormula>
+        <errorMessage>FillContractField_Account_ParStartDate</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>FillContractField_Onboarding_Contact</fullName>
+        <active>false</active>
+        <errorConditionFormula>/*If Field is Empty and Stage is one of the following then Error Message will appear */
+AND(
+ISBLANK( Primary_Contact__c), /*This is the field which has to be filled before entering the following stages */
+OR(
+/*Stagename is a Picklist for ur Satges And the second Value is the one of the current stage */
+
+ISPICKVAL(StageName, &quot;Verbal Commitment&quot;),
+ISPICKVAL(StageName, &quot;Offer sent&quot;)
+)
+)</errorConditionFormula>
+        <errorMessage>Onboarding_Contact</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>FillContractField_Opp_ArrTaxYES</fullName>
+        <active>false</active>
+        <description>FillContractField_Opp_ArrTaxYearEndStatement</description>
+        <errorConditionFormula>/*If Field is Empty and Stage is one of the following then Error Message will appear  */
+AND(
+ISBLANK(ARR_Tax_Advisor_Year_End_Statement__c),    /*This is the field which has to be filled before entering the following stages */
+ OR(
+    /*Stagename is a Picklist for ur Satges And the second Value is the one of the current stage */
+  
+  ISPICKVAL(StageName, &quot;Verbal Commitment&quot;),
+  ISPICKVAL(StageName, &quot;Offer sent&quot;),
+  ISPICKVAL(StageName, &quot;Closed Won&quot;)
+)
+)</errorConditionFormula>
+        <errorMessage>FillContractField_Opp_ArrTaxYearEndStatement</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>FillContractField_Opp_MrrTax</fullName>
+        <active>false</active>
+        <description>FillContractField_Opp_MrrTax</description>
+        <errorConditionFormula>/*If Field is Empty and Stage is one of the following then Error Message will appear  */
+AND(
+ISBLANK(MRR_Tax_Advisor__c),    /*This is the field which has to be filled before entering the following stages */
+ OR(
+    /*Stagename is a Picklist for ur Satges And the second Value is the one of the current stage */
+  
+  ISPICKVAL(StageName, &quot;Verbal Commitment&quot;),
+  ISPICKVAL(StageName, &quot;Offer sent&quot;),
+  ISPICKVAL(StageName, &quot;Closed Won&quot;)
+)
+)</errorConditionFormula>
+        <errorMessage>FillContractField_Opp_MrrTax</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>FillContractField_Opp_MrrZg</fullName>
+        <active>false</active>
+        <description>FillContractField_Opp_MrrZg</description>
+        <errorConditionFormula>/*If Field is Empty and Stage is one of the following then Error Message will appear  */
+AND(
+ISBLANK(MRR_Zeitgold__c),    /*This is the field which has to be filled before entering the following stages */
+ OR(
+    /*Stagename is a Picklist for ur Satges And the second Value is the one of the current stage */
+  
+  ISPICKVAL(StageName, &quot;Verbal Commitment&quot;),
+  ISPICKVAL(StageName, &quot;Offer sent&quot;),
+  ISPICKVAL(StageName, &quot;Closed Won&quot;)
+)
+)</errorConditionFormula>
+        <errorMessage>FillContractField_Opp_MrrZg</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>FillContractField_Opp_OfferExpirationDat</fullName>
+        <active>false</active>
+        <description>FillContractField_Opp_OfferExpirationDate</description>
+        <errorConditionFormula>/*If Field is Empty and Stage is one of the following then Error Message will appear */ 
+AND( 
+ISBLANK(Offer_expiration_date__c), /*This is the field which has to be filled before entering the following stages */ 
+OR( 
+/*Stagename is a Picklist for ur Satges And the second Value is the one of the current stage */ 
+
+ISPICKVAL(StageName, &quot;Verbal Commitment&quot;), 
+ISPICKVAL(StageName, &quot;Offer sent&quot;), 
+ISPICKVAL(StageName, &quot;Closed Won&quot;) 
+) 
+)</errorConditionFormula>
+        <errorMessage>FillContractField_Opp_OfferExpirationDate</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>ISNameBankBusinessBankAccount_SET</fullName>
+        <active>true</active>
+        <errorConditionFormula>and( 
+OR( 
+ispickval(StageName,&apos;Demo completed&apos;), 
+ispickval(StageName, &apos;Negotiation / Review&apos; ), 
+ispickval(StageName, &apos;Verbal Commitment&apos; ), 
+ispickval(StageName, &apos;Offer sent&apos;) 
+), 
+ISBLANK(Account.Name_Bank_business_bank_account__c),
+$Profile.Name = &apos;Standard User 2.0&apos; 
+)</errorConditionFormula>
+        <errorMessage>Please check the Field: &quot;Name Bank (business bank account)&quot; in the Account.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>ISPricingModelKnown</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(
+    OR( 
+ispickval(StageName, &apos;Offer sent&apos;), 
+        ispickval(StageName, &apos;Verbal Commitment&apos; ),
+        ispickval(StageName, &apos;Offer sent&apos; )
+       ),
+    ISBLANK(TEXT(Pricing_Model__c))
+   )</errorConditionFormula>
+        <errorMessage>Please state which pricing you discussed or will discuss (in Demo completed). If you lost the opportunity and didn&apos;t discuss pricing at all, please state so too.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>ISSeparatePrivateBusinessBankAccount_Set</fullName>
+        <active>true</active>
+        <errorConditionFormula>and( 
+OR( 
+ispickval(StageName,&apos;Demo completed&apos;), 
+ispickval(StageName, &apos;Negotiation / Review&apos; ), 
+ispickval(StageName, &apos;Verbal Commitment&apos; ), 
+ispickval(StageName, &apos;Offer sent&apos;) 
+), 
+ISBLANK(TEXT(Account.Separate_private_business_bank_account__c  )),
+$Profile.Name = &apos;Standard User 2.0&apos;  
+)</errorConditionFormula>
+        <errorMessage>Please check the Field: &quot;Separate private &amp; business bank account&quot; in the Account</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>IS_LegalForm_SET</fullName>
+        <active>true</active>
+        <errorConditionFormula>and( 
+OR( 
+ispickval(StageName,&apos;Demo completed&apos;), 
+ispickval(StageName, &apos;Negotiation / Review&apos; ), 
+ispickval(StageName, &apos;Verbal Commitment&apos; ), 
+ispickval(StageName, &apos;Offer sent&apos;) 
+), 
+ISBLANK(TEXT(Account.Legal_Form__c)),
+$Profile.Name = &apos;Standard User 2.0&apos; 
+)</errorConditionFormula>
+        <errorMessage>Please check the Field: &quot; Legal Form&quot; in the Account</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>IS_MembershipContracts_SET</fullName>
+        <active>true</active>
+        <errorConditionFormula>and( 
+OR( 
+ispickval(StageName,&apos;Demo completed&apos;), 
+ispickval(StageName, &apos;Negotiation / Review&apos; ), 
+ispickval(StageName, &apos;Verbal Commitment&apos; ), 
+ispickval(StageName, &apos;Offer sent&apos;) 
+), 
+ISBLANK(TEXT( Account.Membership_contracts__c )),
+$Profile.Name = &apos;Standard User 2.0&apos;  
+)</errorConditionFormula>
+        <errorMessage>Please check the Field: &quot;Membership Contracts&quot; in the Account</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>IS_SoldGoodsInForeignCountries_SET</fullName>
+        <active>true</active>
+        <errorConditionFormula>and( 
+OR( 
+ispickval(StageName,&apos;Demo completed&apos;), 
+ispickval(StageName, &apos;Negotiation / Review&apos; ), 
+ispickval(StageName, &apos;Verbal Commitment&apos; ), 
+ispickval(StageName, &apos;Offer sent&apos;) 
+), 
+ISBLANK(TEXT(Account.Sold_goods_services_in_foreign_countries__c)),$Profile.Name = &apos;Standard User 2.0&apos; 
+)</errorConditionFormula>
+        <errorMessage>Please check the Field: &quot;Sold goods/services in foreign countries&quot; in the Account</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>IsAccountingStartDateSet</fullName>
+        <active>false</active>
+        <errorConditionFormula>/*If Field is Empty and Stage is one of the following then Error Message will appear */ 
+
+and(
+ISPICKVAL(StageName, &quot;Verbal Commitment&quot;), 
+ISPICKVAL(StageName, &quot;Offer sent&quot;),
+ISPICKVAL(StageName, &quot;Closed Won&quot;),
+
+isblank(  Account.Accounting_Start_Date__c ) 
+)</errorConditionFormula>
+        <errorDisplayField>StageName</errorDisplayField>
+        <errorMessage>Please set the Accounting Start Date in the Account Object.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>IsAmountSet</fullName>
+        <active>true</active>
+        <errorConditionFormula>and(
+OR(
+ispickval( StageName, &apos;Offer sent&apos; ) 
+), 
+isblank(Amount) )</errorConditionFormula>
+        <errorDisplayField>Amount</errorDisplayField>
+        <errorMessage>For this stage, you need to set an amount.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>IsAnnualRevenueEmpty</fullName>
+        <active>true</active>
+        <errorConditionFormula>and( 
+OR( 
+ispickval(StageName,&apos;Demo completed&apos;), 
+ispickval(StageName, &apos;Negotiation / Review&apos; ), 
+ispickval(StageName, &apos;Verbal Commitment&apos; ), 
+ispickval(StageName, &apos;Offer sent&apos;)
+), 
+OR( 
+ISNULL( Account.AnnualRevenue ), 
+Account.AnnualRevenue &lt; 0 
+) 
+)</errorConditionFormula>
+        <errorMessage>Please set the account field annual revenue.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>IsArrSet</fullName>
+        <active>true</active>
+        <errorConditionFormula>and( 
+ispickval(StageName, &apos;Verbal Commitment&apos; ), 
+ispickval(StageName, &apos;Offer sent&apos; ), 
+isblank( ARR_Tax_Advisor_Year_End_Statement__c ) )</errorConditionFormula>
+        <errorMessage>Please fill in the  Opportunity field &quot;Total annual tax advisor fee&quot;</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>IsBillingAddressSet</fullName>
+        <active>true</active>
+        <errorConditionFormula>and(
+ispickval(StageName, &apos;Offer sent&apos;)
+, 
+isblank(  Account.BillingStreet ) )</errorConditionFormula>
+        <errorDisplayField>StageName</errorDisplayField>
+        <errorMessage>Please set the billing street in the Account Object</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>IsBillingCitySet</fullName>
+        <active>true</active>
+        <errorConditionFormula>and(
+ispickval(StageName, &apos;Offer sent&apos;) , 
+isblank(  Account.BillingCity ) )</errorConditionFormula>
+        <errorDisplayField>StageName</errorDisplayField>
+        <errorMessage>Please set the billing city in the account object</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>IsBillingCountrySet</fullName>
+        <active>true</active>
+        <errorConditionFormula>and(
+ispickval(StageName, &apos;Offer sent&apos;) , 
+isblank(  Account.BillingCountry ) )</errorConditionFormula>
+        <errorDisplayField>StageName</errorDisplayField>
+        <errorMessage>Please set the billing country in the account object.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>IsBillingZipSet</fullName>
+        <active>true</active>
+        <errorConditionFormula>and( 
+ispickval(StageName, &apos;Offer sent&apos;)
+, 
+isblank(  Account.BillingPostalCode ) )</errorConditionFormula>
+        <errorDisplayField>StageName</errorDisplayField>
+        <errorMessage>Please set the billing/legal addresses zip code in the account object</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>IsBwaMissing</fullName>
+        <active>false</active>
+        <description>Checks if BWA and z-report are attached</description>
+        <errorConditionFormula>and
+    (ispickval(StageName, &apos;Offer sent&apos; ),
+OR(
+    (ispickval(  Account.BWA_Z_Report_attached__c, &apos;BWA, Z-report missing&apos;) ),
+    (ispickval(  Account.BWA_Z_Report_attached__c, &apos;None&apos;) )
+   ))</errorConditionFormula>
+        <errorDisplayField>StageName</errorDisplayField>
+        <errorMessage>Please attach BWA and z-report and check the field in the Account object.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>IsCompanyLegalNameSet</fullName>
+        <active>true</active>
+        <errorConditionFormula>and(
+OR( 
+ispickval(StageName, &apos;Offer sent&apos;)
+), 
+isblank( Account.Company_Legal_Name__c) )</errorConditionFormula>
+        <errorDisplayField>StageName</errorDisplayField>
+        <errorMessage>You need to fill the field Company Legal Name in the Account object before setting this opportunity to stage Proposal</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>IsControllingRequirementsBeyondBwaSet</fullName>
+        <active>true</active>
+        <errorConditionFormula>and(
+OR(
+ispickval(StageName,&apos;Demo completed&apos;),
+ispickval(StageName, &apos;Negotiation / Review&apos; ),
+ispickval(StageName, &apos;Verbal Commitment&apos; ),
+ispickval(StageName, &apos;Offer sent&apos;)
+),
+ISBLANK(TEXT( Account.Controlling_requirements_beyond_BWA__c ) 
+)
+)</errorConditionFormula>
+        <errorMessage>Please set the account field controlling requirements beyond BWA.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>IsDemoCompletedAndClosedRejected</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND( 
+    OR( 
+       ispickval(StageName, &apos;Closed Lost&apos; ), 
+       ispickval(StageName, &apos;Rejected&apos; ) 
+       ), 
+    ISBLANK(TEXT( Demo_completed__c ))
+   )</errorConditionFormula>
+        <errorMessage>Please state, if you completed the demo or not.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>IsDemoCompletedAndNotLost</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(
+    OR(
+        ispickval(StageName, &apos;Demo completed&apos; ),
+        ispickval(StageName, &apos;Negotiation / Review&apos; ),
+        ispickval(StageName, &apos;Verbal Commitment&apos; ),
+        ispickval(StageName, &apos;Offer sent&apos; )
+       ),
+      ISBLANK(TEXT(Demo_completed__c))
+)</errorConditionFormula>
+        <errorDisplayField>Account_Accounting_Start_Date__c</errorDisplayField>
+        <errorMessage>Please fill in if you did a Demo or not.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>IsDemoDateUnknown</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND( 
+OR( 
+ispickval(StageName, &apos;Demo completed&apos; ), 
+ispickval(StageName, &apos;Negotiation / Review&apos; ), 
+ispickval(StageName, &apos;Verbal Commitment&apos; ), 
+ispickval(StageName, &apos;Offer sent&apos; ), 
+AND(
+ispickval(StageName, &apos;Closed Lost&apos;),
+ispickval(Demo_completed__c, &apos;Yes&apos;)
+)
+),  
+ISNULL(Demo_date__c)
+)</errorConditionFormula>
+        <errorMessage>Please fill in the demo date in the opportunity.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>IsInstallmentPaymentsSet</fullName>
+        <active>false</active>
+        <errorConditionFormula>and(
+OR(
+ispickval(StageName,&apos;Demo completed&apos;),
+ispickval(StageName, &apos;Negotiation / Review&apos; ),
+ispickval(StageName, &apos;Verbal Commitment&apos; ),
+ispickval(StageName, &apos;Offer sent&apos;)
+),
+ISBLANK(TEXT(Account.Installment_payments__c) 
+)
+)</errorConditionFormula>
+        <errorMessage>Please set the account field installment payments.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>IsLeadSourceEmpty</fullName>
+        <active>true</active>
+        <errorConditionFormula>and(
+$Profile.Name = &apos;Standard User 2.0&apos;,
+OR(
+ispickval(StageName,&apos;Demo completed&apos;),
+ispickval(StageName, &apos;Negotiation / Review&apos; ),
+ispickval(StageName, &apos;Verbal Commitment&apos; ),
+ispickval(StageName, &apos;Offer sent&apos;)
+),
+ISBLANK( 
+TEXT(LeadSource)
+)
+)</errorConditionFormula>
+        <errorMessage>Please fill out the lead source. Where is this Lead from?</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>IsLostDetailedEmpty</fullName>
+        <active>true</active>
+        <errorConditionFormula>and ( $Profile.Name = &apos;`Standard User 2.0&apos;, (OR(ispickval(StageName, &apos;Closed Lost&apos; ), ispickval(StageName, &apos;Rejected&apos; ))), isblank( Detailed_Lost_or_Rejection_Reason__c ))</errorConditionFormula>
+        <errorDisplayField>Detailed_Lost_or_Rejection_Reason__c</errorDisplayField>
+        <errorMessage>Please enter the detailed reason(s) why the prospect rejected us in Detailed Lost reason</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>IsMrrAndAmountSame</fullName>
+        <active>true</active>
+        <description>Are the MRR fields and Amount fields correct.</description>
+        <errorConditionFormula>Amount &lt;&gt; 12*MRR_Zeitgold__c + 12*MRR_Tax_Advisor__c +  ARR_Tax_Advisor_Year_End_Statement__c</errorConditionFormula>
+        <errorDisplayField>Amount</errorDisplayField>
+        <errorMessage>It appears that MRR Zeitgold + MRR Tax Advisor don&apos;t sum up correctly in the Amount field.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>IsMrrTAaSet</fullName>
+        <active>true</active>
+        <errorConditionFormula>and(
+OR( 
+ispickval(StageName, &apos;Offer sent&apos;)
+), 
+isblank(  MRR_Tax_Advisor__c ) )</errorConditionFormula>
+        <errorDisplayField>MRR_Tax_Advisor__c</errorDisplayField>
+        <errorMessage>Please set the tax advisors MRR in the Opportunity object.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>IsMrrZeitgoldSet</fullName>
+        <active>true</active>
+        <errorConditionFormula>and(
+OR( 
+ispickval(StageName, &apos;Offer sent&apos;)
+), 
+isblank(  MRR_Zeitgold__c ) )</errorConditionFormula>
+        <errorDisplayField>MRR_Zeitgold__c</errorDisplayField>
+        <errorMessage>Please set the MRR for Zeitgold services</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>IsNrInvoicesSet</fullName>
+        <active>false</active>
+        <errorConditionFormula>and(
+OR(
+ispickval(StageName,&apos;Demo completed&apos;),
+ispickval(StageName, &apos;Negotiation / Review&apos; ),
+ispickval(StageName, &apos;Verbal Commitment&apos; ),
+ispickval(StageName, &apos;Offer sent&apos;)
+),
+ISBLANK(Account.No_of_incoming_invoices_per_month__c),
+ISBLANK(Account.No_of_outgoing_invoices_per_month__c )
+)</errorConditionFormula>
+        <errorMessage>Please set the account fields number of invoices in- and outgoing.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>IsNrOfEmployeesEmpty</fullName>
+        <active>true</active>
+        <errorConditionFormula>and( 
+OR( 
+ispickval(StageName,&apos;Demo completed&apos;), 
+ispickval(StageName, &apos;Negotiation / Review&apos; ), 
+ispickval(StageName, &apos;Verbal Commitment&apos; ), 
+ispickval(StageName, &apos;Offer sent&apos;)
+), 
+OR(
+ISNULL(Account.NumberOfEmployees),
+Account.NumberOfEmployees &lt; 0
+)
+)</errorConditionFormula>
+        <errorMessage>Please set the account field employees.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>IsPayrollStartDateSet</fullName>
+        <active>false</active>
+        <errorConditionFormula>and(
+ispickval(StageName, &apos;Closed Won&apos; ), 
+isblank(  Account.Payroll_Start_Date__c ) )</errorConditionFormula>
+        <errorMessage>Please set the Payroll Start date in the Account object.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>IsShortTimeWorkSet</fullName>
+        <active>false</active>
+        <errorConditionFormula>and(
+OR(
+ispickval(StageName,&apos;Demo completed&apos;),
+ispickval(StageName, &apos;Negotiation / Review&apos; ),
+ispickval(StageName, &apos;Verbal Commitment&apos; ),
+ispickval(StageName, &apos;Offer sent&apos;)
+),
+ISBLANK(TEXT(Account.Short_time_work__c) 
+)
+)</errorConditionFormula>
+        <errorMessage>Please set the account field short time work.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>IsSourcesRevenueSet</fullName>
+        <active>true</active>
+        <errorConditionFormula>and(
+OR(
+ispickval(StageName,&apos;Demo completed&apos;),
+ispickval(StageName, &apos;Negotiation / Review&apos; ),
+ispickval(StageName, &apos;Verbal Commitment&apos; ),
+ispickval(StageName, &apos;Offer sent&apos;)
+),
+ISBLANK( Account.Source_Revenues__c)
+)</errorConditionFormula>
+        <errorMessage>Please set the account field sources revenue.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>IsSpecialBalanceSheetStructureSet</fullName>
+        <active>true</active>
+        <errorConditionFormula>and(
+OR(
+ispickval(StageName,&apos;Demo completed&apos;),
+ispickval(StageName, &apos;Negotiation / Review&apos; ),
+ispickval(StageName, &apos;Verbal Commitment&apos; ),
+ispickval(StageName, &apos;Offer sent&apos;)
+),
+ISBLANK(TEXT(Account.Special_balance_sheet_structure__c) 
+)
+)</errorConditionFormula>
+        <errorDisplayField>Account_Accounting_Start_Date__c</errorDisplayField>
+        <errorMessage>Please set the account field special balance sheet structure.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>IsTaxNumberSet</fullName>
+        <active>false</active>
+        <errorConditionFormula>and(ispickval(StageName, &apos;Offer sent&apos; ), isblank(  Account.Tax_Number__c ) )</errorConditionFormula>
+        <errorDisplayField>StageName</errorDisplayField>
+        <errorMessage>Please set the tax number in the account object.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>IsTaxOfficeSet</fullName>
+        <active>false</active>
+        <errorConditionFormula>and(ispickval(StageName, &apos;Offer sent&apos; ), isblank(  Account.Tax_Office__c ) )</errorConditionFormula>
+        <errorDisplayField>StageName</errorDisplayField>
+        <errorMessage>Please set the name of the tax office in the account object.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>IsVatDeclarationExtensionSet</fullName>
+        <active>true</active>
+        <errorConditionFormula>and(
+OR(
+ispickval(StageName,&apos;Demo completed&apos;),
+ispickval(StageName, &apos;Negotiation / Review&apos; ),
+ispickval(StageName, &apos;Verbal Commitment&apos; ),
+ispickval(StageName, &apos;Offer sent&apos;)
+),
+ISBLANK(TEXT( Account.VAT_declaration_extension_DFV__c) 
+)
+)</errorConditionFormula>
+        <errorMessage>Please set the account field VAT declaration extension.</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>Send_for_Signing_WIP</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Send for Signing (WIP)</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/30.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/24.0/apex.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/apex/dsfs__DocuSign_JavaScript&quot;)} 
+
+//********* Option Declarations (Do not modify )*********// 
+var RC = &apos;&apos;;var RSL=&apos;&apos;;var RSRO=&apos;&apos;;var RROS=&apos;&apos;;var CCRM=&apos;&apos;;var CCTM=&apos;&apos;;var CCNM=&apos;&apos;;var CRCL=&apos;&apos;; var CRL=&apos;&apos;;var OCO=&apos;&apos;;var DST=&apos;&apos;;var LA=&apos;&apos;;var CEM=&apos;&apos;;var CES=&apos;&apos;;var STB=&apos;&apos;;var SSB=&apos;&apos;;var SES=&apos;&apos;;var SEM=&apos;&apos;;var SRS=&apos;&apos;;var SCS =&apos;&apos;;var RES=&apos;&apos;; 
+
+var shareholdersRes = sforce.connection.query(&quot;SELECT ID, Role, Contact.LastName, Contact.Email FROM OpportunityContactRole WHERE OpportunityId = &apos;0061q000001sxM7AAI&apos; AND role like &apos;Shareholder %&apos;&quot;); 
+var shareholders = shareholdersRes.getArray(&quot;records&quot;); 
+// check null 
+
+shareholders.forEach(function(element) {
+  alert(element);
+});
+
+var recipients = shareholders.map(x =&gt; &apos;Email~&apos; + encodeURIComponent(x.Contact.Email) + &apos;;LastName~&apos; + x.Contact.LastName + &apos;;Role~&apos; + x.Role); 
+alert(recipients);
+var CRL = recipients.join(&apos;,&apos;); 
+alert(CRL);
+
+var CCRM = &apos;Shareholder 1~Shareholder 1;Shareholder 2~Shareholder 2;Shareholder 2~Shareholder 2;Shareholder 3~Shareholder 3;Shareholder 4~Shareholder 4;&apos;; 
+
+var sourceID = window.sfdcPage.getEntityId(); 
+
+//********* Page Callout (Do not modify) *********// 
+window.location.href = &quot;/apex/dsfs__DocuSign_CreateEnvelope?DSEID=0 &amp;SourceID=&quot;+sourceID+&quot;&amp;RC=&quot;+RC+&quot;&amp;RSL=&quot;+RSL+&quot;&amp;RSRO=&quot;+RSRO+&quot;&amp;RROS=&quot;+RROS+&quot; &amp;CCRM=&quot;+CCRM+&quot;&amp;CCTM=&quot;+CCTM+&quot;&amp;CRCL=&quot;+CRCL+&quot;&amp;CRL=&quot;+CRL+&quot;&amp;OCO=&quot;+OCO+&quot; &amp;DST=&quot;+DST+&quot;&amp;CCNM=&quot;+CCNM+&quot;&amp;LA=&quot;+LA+&quot;&amp;CEM=&quot;+CEM+&quot;&amp;CES=&quot;+CES+&quot;&amp;SRS=&quot;+SRS+&quot;&amp;STB=&quot;+STB+&quot;&amp;SSB=&quot;+SSB+&quot;&amp;SES=&quot;+SES+&quot;&amp;SEM=&quot;+SEM+&quot; &amp;SRS=&quot;+SRS+&quot;&amp;SCS=&quot;+SCS+&quot;&amp;RES=&quot;+RES; 
+//*******************************************//</url>
+    </webLinks>
+    <webLinks>
+        <fullName>dsfs__Send_with_DocuSign</fullName>
+        <availability>online</availability>
+        <description>This button will initiate a DocuSign Envelope that is linked to the Opportunity</description>
+        <displayType>button</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Send with DocuSign</masterLabel>
+        <openType>noSidebar</openType>
+        <page>dsfs__CreateEnvelopeFromOpportunity</page>
+        <protected>false</protected>
+    </webLinks>
+    <webLinks>
+        <fullName>dsfs__Verify_with_DNB</fullName>
+        <availability>online</availability>
+        <description>This button will initiate DnBs Pre-Contract Risk Screening linked to the Opportunity</description>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Verify with D&amp;B</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/apex/dsfs__DocuSign_JavaScript&quot;)}
+        
+{!REQUIRESCRIPT(&apos;//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js&apos;)} 
+{!REQUIRESCRIPT(&apos;//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js&apos;)} 
+
+var html = &apos;&lt;div id=&quot;dialog&quot; style=&quot;display: none;&quot;&gt;&lt;/div&gt;&apos;;
+
+var $g = jQuery.noConflict();
+
+var address = &apos;&lt;iframe id=&quot;dnbContent&quot; width=&quot;700&quot; height=&quot;730&quot; scrolling=&quot;no&quot; marginheight=&quot;0&quot; marginwidth=&quot;0&quot; frameborder=&quot;0&quot; src=&quot;&apos;+DocuSign_GetVerifyWithDnb(&apos;opportunity&apos;)+&apos;&quot;&gt;&lt;/iframe&gt;&apos;;
+		
+$g(function() { 
+
+	$g(&apos;head&apos;).append(&apos;&lt;link rel=&quot;stylesheet&quot; href=&quot;https://code.jquery.com/ui/1.11.4/themes/redmond/jquery-ui.css&quot;/&gt;&apos;);
+
+	if($g(&apos;#dialog&apos;).length == 0) {
+		$g(&apos;body&apos;).append(html); 
+	}
+	$g(&quot;#dialog&quot;).dialog({ 
+		autoOpen: true, 
+		modal: true, 
+		width: 700,
+		height: 783,
+		open: function(event, ui) {
+		  if($g(&apos;#myNewImage&apos;).length == 0) {
+		     $g(&quot;.ui-dialog-titlebar&quot;).append(&quot;&lt;img src=&apos;&quot;+getDnbLogo()+&quot;&apos; id=&apos;myNewImage&apos; /&gt;&quot;);
+		  }
+		  $g(&apos;.ui-widget-overlay&apos;).bind(&apos;click&apos;,function(){
+    			$g(&apos;#dialog&apos;).dialog(&quot;close&quot;);
+		  });
+		}
+	})
+	if($g(&apos;#dnbContent&apos;).length == 0) {
+		$g(&apos;#dialog&apos;).append(address); 
+	}
+
+
+	$g(&quot;.ui-dialog-title&quot;).hide();
+	$g(&quot;#dialog&quot;).css(&apos;padding&apos;, &apos;0px&apos;);
+	$g(&quot;.ui-widget-header&quot;).attr(&apos;style&apos;, &apos;padding-top:5px; padding-right:5px; padding-left:10px;padding-bottom:5px; border-radius:0px; background: #005172;border:0px;margin:auto;&apos;);
+	$g(&quot;.ui-button-text&quot;).css(&apos;padding&apos;, &apos;0&apos;);
+	$g(&quot;.ui-icon-closethick&quot;).attr(&apos;style&apos;, &apos;background-color:#005172; width:19px; height:19px; margin-top:-10px; margin-left:-10px;&apos;);
+	$g(&quot;.ui-dialog-titlebar-close&quot;).attr(&apos;style&apos;, &apos;border-radius:0px; padding:0px; width:18px; height:18px; border:0px;&apos;);
+	$g(&quot;.ui-dialog&quot;).css(&apos;z-index&apos;, &apos;10000&apos;);
+	$g(&quot;.ui-dialog&quot;).css(&apos;border-radius&apos;, &apos;0px&apos;);
+});</url>
+    </webLinks>
+    <webLinks>
+        <fullName>pi__Send_Pardot_Emails</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Send Engage Email</masterLabel>
+        <openType>sidebar</openType>
+        <page>pi__MicroCampaignOpportunity</page>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+    </webLinks>
+    <webLinks>
+        <fullName>pi__Send_Single_Pardot_Email</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Send Engage Email</masterLabel>
+        <openType>sidebar</openType>
+        <page>pi__MicroCampaignSingleOpportunity</page>
+        <protected>false</protected>
+    </webLinks>
+</CustomObject>

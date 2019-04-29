@@ -1,0 +1,1183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Onboarding</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Onboardings</value>
+    </caseValues>
+    <fields>
+        <label><!-- ACC Bankkonto_Verwendungszweck3 --></label>
+        <name>ACCBankkonto_Verwendungszweck3__c</name>
+    </fields>
+    <fields>
+        <label><!-- ACC AnzahlBetriebsstaette --></label>
+        <name>ACC_AnzahlBetriebsstaette__c</name>
+    </fields>
+    <fields>
+        <label><!-- ACC BWAAktuellUpload --></label>
+        <name>ACC_BWAAktuellUpload__c</name>
+    </fields>
+    <fields>
+        <label><!-- ACC BWAAktuell --></label>
+        <name>ACC_BWAAktuell__c</name>
+    </fields>
+    <fields>
+        <label><!-- ACC BankVerwendungszweck --></label>
+        <name>ACC_BankVerwendungszweck__c</name>
+    </fields>
+    <fields>
+        <label><!-- ACC Bank --></label>
+        <name>ACC_Bank__c</name>
+    </fields>
+    <fields>
+        <label><!-- ACC Bankkonto_IBAN2 --></label>
+        <name>ACC_Bankkonto_IBAN2__c</name>
+    </fields>
+    <fields>
+        <label><!-- ACC Bankkonto_IBAN3 --></label>
+        <name>ACC_Bankkonto_IBAN3__c</name>
+    </fields>
+    <fields>
+        <label><!-- ACC Bankkonto_IBAN4 --></label>
+        <name>ACC_Bankkonto_IBAN4__c</name>
+    </fields>
+    <fields>
+        <label><!-- ACC Bankkonto_IBAN5 --></label>
+        <name>ACC_Bankkonto_IBAN5__c</name>
+    </fields>
+    <fields>
+        <label><!-- ACC Bankkonto_Verwendungszweck2 --></label>
+        <name>ACC_Bankkonto_Verwendungszweck2__c</name>
+    </fields>
+    <fields>
+        <label><!-- ACC Bankkonto_Verwendungszweck4 --></label>
+        <name>ACC_Bankkonto_Verwendungszweck4__c</name>
+    </fields>
+    <fields>
+        <label><!-- ACC Bankkonto_Verwendungszweck5 --></label>
+        <name>ACC_Bankkonto_Verwendungszweck5__c</name>
+    </fields>
+    <fields>
+        <label><!-- ACC BetriebsstaetteAbweichenderName2 --></label>
+        <name>ACC_BetriebsstaetteAbweichenderName2__c</name>
+    </fields>
+    <fields>
+        <label><!-- ACC BetriebsstaetteAbweichenderName3 --></label>
+        <name>ACC_BetriebsstaetteAbweichenderName3__c</name>
+    </fields>
+    <fields>
+        <label><!-- ACC BetriebsstaetteHausnummer --></label>
+        <name>ACC_BetriebsstaetteHausnummer__c</name>
+    </fields>
+    <fields>
+        <label><!-- ACC BetriebsstaetteOrt2 --></label>
+        <name>ACC_BetriebsstaetteOrt2__c</name>
+    </fields>
+    <fields>
+        <label><!-- ACC BetriebsstaetteOrt3 --></label>
+        <name>ACC_BetriebsstaetteOrt3__c</name>
+    </fields>
+    <fields>
+        <label><!-- ACC BetriebsstaetteOrt --></label>
+        <name>ACC_BetriebsstaetteOrt__c</name>
+    </fields>
+    <fields>
+        <label><!-- ACC BetriebsstaettePostleitzahl2 --></label>
+        <name>ACC_BetriebsstaettePostleitzahl2__c</name>
+    </fields>
+    <fields>
+        <label><!-- ACC BetriebsstaettePostleitzahl3 --></label>
+        <name>ACC_BetriebsstaettePostleitzahl3__c</name>
+    </fields>
+    <fields>
+        <label><!-- ACC BetriebsstaettePostleitzahl --></label>
+        <name>ACC_BetriebsstaettePostleitzahl__c</name>
+    </fields>
+    <fields>
+        <label><!-- ACC BetriebsstaetteStraße2 --></label>
+        <name>ACC_BetriebsstaetteStrase2__c</name>
+    </fields>
+    <fields>
+        <label><!-- ACC BetriebsstaetteStraße3 --></label>
+        <name>ACC_BetriebsstaetteStrase3__c</name>
+    </fields>
+    <fields>
+        <label><!-- ACC BetriebsstaetteStraße --></label>
+        <name>ACC_BetriebsstaetteStrase__c</name>
+    </fields>
+    <fields>
+        <label><!-- ACC DFVBeantragen --></label>
+        <name>ACC_DFVBeantragen__c</name>
+    </fields>
+    <fields>
+        <label><!-- ACC DFV --></label>
+        <name>ACC_DFV__c</name>
+    </fields>
+    <fields>
+        <label><!-- ACC FinanzamtEinzugsermaechtigung --></label>
+        <name>ACC_FinanzamtEinzugsermaechtigung__c</name>
+    </fields>
+    <fields>
+        <label><!-- ACC GebutsdatumEinzelunternehmer --></label>
+        <name>ACC_GebutsdatumEinzelunternehmer__c</name>
+    </fields>
+    <fields>
+        <label><!-- ACC GeschäftsjahrEnde --></label>
+        <name>ACC_GeschaeftsjahrEnde__c</name>
+    </fields>
+    <fields>
+        <label><!-- ACC GesellschaftsvertragDate --></label>
+        <name>ACC_GesellschaftsvertragDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- ACC GewinnermittlungArt --></label>
+        <name>ACC_GewinnermittlungArt__c</name>
+    </fields>
+    <fields>
+        <label><!-- ACC GruendungsDate --></label>
+        <name>ACC_GruendungsDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- ACC HandelsregisterNr --></label>
+        <name>ACC_HandelsregisterNr__c</name>
+    </fields>
+    <fields>
+        <label><!-- ACC Hauptgeschaeftskonto_BIC --></label>
+        <name>ACC_Hauptgeschaeftskonto_BIC__c</name>
+    </fields>
+    <fields>
+        <label><!-- ACC Hauptgeschaeftskonto_BankName --></label>
+        <name>ACC_Hauptgeschaeftskonto_BankName__c</name>
+    </fields>
+    <fields>
+        <label><!-- ACC Hauptgeschaeftskonto_IBAN --></label>
+        <name>ACC_Hauptgeschaeftskonto_IBAN__c</name>
+    </fields>
+    <fields>
+        <label><!-- ACC IBAN --></label>
+        <name>ACC_IBAN__c</name>
+    </fields>
+    <fields>
+        <label><!-- ACC KontorahmenBuchhaltung --></label>
+        <name>ACC_KontorahmenBuchhaltung__c</name>
+    </fields>
+    <fields>
+        <label><!-- ACC KreditAusstellendeBank2 --></label>
+        <name>ACC_KreditAusstellendeBank2__c</name>
+    </fields>
+    <fields>
+        <label><!-- ACC KreditAusstellendeBank3 --></label>
+        <name>ACC_KreditAusstellendeBank3__c</name>
+    </fields>
+    <fields>
+        <label><!-- ACC KreditAusstellendeBank4 --></label>
+        <name>ACC_KreditAusstellendeBank4__c</name>
+    </fields>
+    <fields>
+        <label><!-- ACC KreditAusstellendeBank --></label>
+        <name>ACC_KreditAusstellendeBank__c</name>
+    </fields>
+    <fields>
+        <label><!-- ACC KreditkartenNummer2 --></label>
+        <name>ACC_KreditkartenNummer2__c</name>
+    </fields>
+    <fields>
+        <label><!-- ACC KreditkartenNummer3 --></label>
+        <name>ACC_KreditkartenNummer3__c</name>
+    </fields>
+    <fields>
+        <label><!-- ACC KreditkartenNummer4 --></label>
+        <name>ACC_KreditkartenNummer4__c</name>
+    </fields>
+    <fields>
+        <label><!-- ACC KreditkartenNummer --></label>
+        <name>ACC_KreditkartenNummer__c</name>
+    </fields>
+    <fields>
+        <label><!-- ACC MailGesellschafter2 --></label>
+        <name>ACC_MailGesellschafter2__c</name>
+    </fields>
+    <fields>
+        <label><!-- ACC MailGesellschafter3 --></label>
+        <name>ACC_MailGesellschafter3__c</name>
+    </fields>
+    <fields>
+        <label><!-- ACC MailGesellschafter4 --></label>
+        <name>ACC_MailGesellschafter4__c</name>
+    </fields>
+    <fields>
+        <label><!-- ACC MailGesellschafter --></label>
+        <name>ACC_MailGesellschafter__c</name>
+    </fields>
+    <fields>
+        <label><!-- ACC MehrereBankkonten --></label>
+        <name>ACC_MehrereBankkonten__c</name>
+    </fields>
+    <fields>
+        <label><!-- ACC MehrereBetriebsstätte --></label>
+        <name>ACC_MehrereBetriebsst_tte__c</name>
+    </fields>
+    <fields>
+        <label><!-- ACC MehrereFirmenKreditkarten --></label>
+        <name>ACC_MehrereFirmenKreditkarten__c</name>
+    </fields>
+    <fields>
+        <label><!-- ACC NameGesellschafter2 --></label>
+        <name>ACC_NameGesellschafter2__c</name>
+    </fields>
+    <fields>
+        <label><!-- ACC NameGesellschafter3 --></label>
+        <name>ACC_NameGesellschafter3__c</name>
+    </fields>
+    <fields>
+        <label><!-- ACC NameGesellschafter4 --></label>
+        <name>ACC_NameGesellschafter4__c</name>
+    </fields>
+    <fields>
+        <label><!-- ACC NameGesellschafter --></label>
+        <name>ACC_NameGesellschafter__c</name>
+    </fields>
+    <fields>
+        <label><!-- ACC Rechtsformauswahl --></label>
+        <name>ACC_Rechtsformauswahl__c</name>
+    </fields>
+    <fields>
+        <label><!-- ACC Registergericht --></label>
+        <name>ACC_Registergericht__c</name>
+    </fields>
+    <fields>
+        <label><!-- ACC StBGekündigt --></label>
+        <name>ACC_StBGekuendigt__c</name>
+    </fields>
+    <fields>
+        <label><!-- ACC Status --></label>
+        <name>ACC_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- ACC SteuerID --></label>
+        <name>ACC_SteuerID__c</name>
+    </fields>
+    <fields>
+        <label><!-- ACC SteuerberaterAnsprechpartnerMail --></label>
+        <name>ACC_SteuerberaterAnsprechpartnerMail__c</name>
+    </fields>
+    <fields>
+        <label><!-- ACC SteuerberaterAnsprechpartnerName --></label>
+        <name>ACC_SteuerberaterAnsprechpartnerName__c</name>
+    </fields>
+    <fields>
+        <label><!-- ACC SteuerberaterAnsprechpartnerNummer --></label>
+        <name>ACC_SteuerberaterAnsprechpartnerNummer__c</name>
+    </fields>
+    <fields>
+        <label><!-- ACC SteuerberaterKontaktierung --></label>
+        <name>ACC_SteuerberaterKontaktierung__c</name>
+    </fields>
+    <fields>
+        <label><!-- ACC SteuerberaterName --></label>
+        <name>ACC_SteuerberaterName__c</name>
+    </fields>
+    <fields>
+        <label><!-- ACC SteuerberaterOrt --></label>
+        <name>ACC_SteuerberaterOrt__c</name>
+    </fields>
+    <fields>
+        <label><!-- ACC SteuerberaterPostleitzahl --></label>
+        <name>ACC_SteuerberaterPostleitzahl__c</name>
+    </fields>
+    <fields>
+        <label><!-- ACC SteuerberaterStraßeNummer --></label>
+        <name>ACC_SteuerberaterStraseNummer__c</name>
+    </fields>
+    <fields>
+        <label><!-- ACC UmsatzsteuerAbfuehrungArt --></label>
+        <name>ACC_UmsatzsteuerAbfuehrung__c</name>
+    </fields>
+    <fields>
+        <label><!-- ACC UmsatzsteuerID --></label>
+        <name>ACC_UmsatzsteuerID__c</name>
+    </fields>
+    <fields>
+        <label><!-- ACC UmssatzsteuerAbfuehrung --></label>
+        <name>ACC_UmssatzsteuerAbfuehrung__c</name>
+    </fields>
+    <fields>
+        <label><!-- ACC UnternehmenName --></label>
+        <name>ACC_UnternehmenName__c</name>
+    </fields>
+    <fields>
+        <label><!-- ACC UnternehmenSteuernummer --></label>
+        <name>ACC_UnternehmenSteuernummer__c</name>
+    </fields>
+    <fields>
+        <label><!-- ACC WirtschaftsjahrUnternehmen --></label>
+        <name>ACC_WirtschaftsjahrUnternehmen__c</name>
+    </fields>
+    <fields>
+        <label><!-- ACC ZeitraumUmsatzsteuer --></label>
+        <name>ACC_ZeitraumUmsatzsteuer__c</name>
+    </fields>
+    <fields>
+        <label><!-- ACC ZuständigesFinanzamt --></label>
+        <name>ACC_ZustaendigesFinanzamt__c</name>
+    </fields>
+    <fields>
+        <label><!-- ACC --></label>
+        <name>ACC__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account --></label>
+        <name>Account__c</name>
+        <relationshipLabel><!-- Onboardings --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Activation in System in Salesforce --></label>
+        <name>Activation_in_System_in_Salesforce__c</name>
+    </fields>
+    <fields>
+        <label><!-- CalendlyAllDayEvent --></label>
+        <name>CalendlyAllDayEvent__c</name>
+    </fields>
+    <fields>
+        <label><!-- CalendlyDateTimeEnd --></label>
+        <name>CalendlyDateTimeEnd__c</name>
+    </fields>
+    <fields>
+        <label><!-- CalendlyDateTimeStart --></label>
+        <name>CalendlyDateTimeStart__c</name>
+    </fields>
+    <fields>
+        <label><!-- CalendlyDescription --></label>
+        <name>CalendlyDescription__c</name>
+    </fields>
+    <fields>
+        <label><!-- CalendlyEmail --></label>
+        <name>CalendlyEmail__c</name>
+    </fields>
+    <fields>
+        <label><!-- CalendlyFullname --></label>
+        <name>CalendlyFullname__c</name>
+    </fields>
+    <fields>
+        <label><!-- CalendlyLocation --></label>
+        <name>CalendlyLocation__c</name>
+    </fields>
+    <fields>
+        <label><!-- Check completion in backend --></label>
+        <name>Check_completion_in_backend__c</name>
+    </fields>
+    <fields>
+        <label><!-- ContactLookUp --></label>
+        <name>ContactLookUp__c</name>
+        <relationshipLabel><!-- Onboardings (ContactLookUp) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- DIG AnsprechpartnerFestnetznummer --></label>
+        <name>DIG_AnsprechpartnerFestnetznummer__c</name>
+    </fields>
+    <fields>
+        <label><!-- DIG AnsprechpartnerMail --></label>
+        <name>DIG_AnsprechpartnerMail__c</name>
+    </fields>
+    <fields>
+        <label><!-- DIG AnsprechpartnerName --></label>
+        <name>DIG_AnsprechpartnerName__c</name>
+    </fields>
+    <fields>
+        <label><!-- DIG AnsprechpartnerTelefonnummer --></label>
+        <name>DIG_AnsprechpartnerTelefonnummer__c</name>
+    </fields>
+    <fields>
+        <label><!-- DIG AppNutzerAnrede --></label>
+        <name>DIG_AppNutzerAnrede__c</name>
+    </fields>
+    <fields>
+        <label><!-- DIG AppNutzerAnzahl --></label>
+        <name>DIG_AppNutzerAnzahl__c</name>
+    </fields>
+    <fields>
+        <label><!-- DIG AppNutzerArbeitsStatus --></label>
+        <name>DIG_AppNutzerArbeitsStatus__c</name>
+    </fields>
+    <fields>
+        <label><!-- DIG AppNutzerEmail --></label>
+        <name>DIG_AppNutzerEmail__c</name>
+    </fields>
+    <fields>
+        <label><!-- DIG AppNutzerName --></label>
+        <name>DIG_AppNutzerName__c</name>
+    </fields>
+    <fields>
+        <label><!-- DIG AppNutzerNummer --></label>
+        <name>DIG_AppNutzerNummer__c</name>
+    </fields>
+    <fields>
+        <label><!-- DIG AppNutzerSprache --></label>
+        <name>DIG_AppNutzerSprache__c</name>
+    </fields>
+    <fields>
+        <label><!-- DIG DokumenteOrtAbholung --></label>
+        <name>DIG_DokumenteOrtAbholung__c</name>
+    </fields>
+    <fields>
+        <label><!-- DIG DokumenteOrtRuecksendungAbw.Firmen --></label>
+        <name>DIG_DokumenteOrtRuecksendungAbw_Frimen__c</name>
+    </fields>
+    <fields>
+        <label><!-- DIG DokumenteOrtRuecksendungAdresse --></label>
+        <name>DIG_DokumenteOrtRuecksendungAdresse__c</name>
+    </fields>
+    <fields>
+        <label><!-- DIG DokumenteOrtRuecksendungPostleitzahl --></label>
+        <name>DIG_DokumenteOrtRuecksendungPostleitzahl__c</name>
+    </fields>
+    <fields>
+        <label><!-- DIG DokumenteOrtRuecksendungStadt --></label>
+        <name>DIG_DokumenteOrtRuecksendungStadt__c</name>
+    </fields>
+    <fields>
+        <label><!-- DIG DokumenteOrtRuecksendungStrasseNumme --></label>
+        <name>DIG_DokumenteOrtRuecksendungStrasseNumme__c</name>
+    </fields>
+    <fields>
+        <label><!-- DIG DokumenteOrtRuecksendung --></label>
+        <name>DIG_DokumenteOrtRuecksendung__c</name>
+    </fields>
+    <fields>
+        <label><!-- DIG DokumenteZeitAbholungBerlin --></label>
+        <name>DIG_DokumenteZeitAbholungBerlin__c</name>
+    </fields>
+    <fields>
+        <label><!-- DIG DokumenteZeitAbholungIrgendwo --></label>
+        <name>DIG_DokumenteZeitAbholungIrgendwo__c</name>
+    </fields>
+    <fields>
+        <label><!-- DIG Status --></label>
+        <name>DIG_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- DIG UnternehmenName --></label>
+        <name>DIG_UnternehmenName__c</name>
+    </fields>
+    <fields>
+        <label><!-- DIG WeitereAppNutzerAnrede2 --></label>
+        <name>DIG_WeitereAppNutzerAnrede2__c</name>
+    </fields>
+    <fields>
+        <label><!-- DIG WeitereAppNutzerAnrede --></label>
+        <name>DIG_WeitereAppNutzerAnrede__c</name>
+    </fields>
+    <fields>
+        <label><!-- DIG WeitereAppNutzerHandy2 --></label>
+        <name>DIG_WeitereAppNutzerHandy2__c</name>
+    </fields>
+    <fields>
+        <label><!-- DIG WeitereAppNutzerHandy --></label>
+        <name>DIG_WeitereAppNutzerHandy__c</name>
+    </fields>
+    <fields>
+        <label><!-- DIG WeitereAppNutzerMail2 --></label>
+        <name>DIG_WeitereAppNutzerMail2__c</name>
+    </fields>
+    <fields>
+        <label><!-- DIG WeitereAppNutzerMail --></label>
+        <name>DIG_WeitereAppNutzerMail__c</name>
+    </fields>
+    <fields>
+        <label><!-- DIG WeitereAppNutzerPosition2 --></label>
+        <name>DIG_WeitereAppNutzerPosition2__c</name>
+    </fields>
+    <fields>
+        <label><!-- DIG WeitereAppNutzerPosition --></label>
+        <name>DIG_WeitereAppNutzerPosition__c</name>
+    </fields>
+    <fields>
+        <label><!-- DIG WeitereAppNutzerSprache2 --></label>
+        <name>DIG_WeitereAppNutzerSprache2__c</name>
+    </fields>
+    <fields>
+        <label><!-- DIG WeitereAppNutzerSprache --></label>
+        <name>DIG_WeitereAppNutzerSprache__c</name>
+    </fields>
+    <fields>
+        <label><!-- DIG WeitereAppNutzerVollerName2 --></label>
+        <name>DIG_WeitereAppNutzerVollerName2__c</name>
+    </fields>
+    <fields>
+        <label><!-- DIG WeitereAppNutzerVollerName --></label>
+        <name>DIG_WeitereAppNutzerVollerName__c</name>
+    </fields>
+    <fields>
+        <label><!-- DIG ZeitgoldBoxAbweichenderFirmenname --></label>
+        <name>DIG_ZeitgoldBoxAbweichenderFirmenname__c</name>
+    </fields>
+    <fields>
+        <label><!-- DIG ZeitgoldBoxAdresse --></label>
+        <name>DIG_ZeitgoldBoxAdresse__c</name>
+    </fields>
+    <fields>
+        <label><!-- DIG ZeitgoldBoxPostleitzahl --></label>
+        <name>DIG_ZeitgoldBoxPostleitzahl__c</name>
+    </fields>
+    <fields>
+        <label><!-- DIG ZeitgoldBoxStadt --></label>
+        <name>DIG_ZeitgoldBoxStadt__c</name>
+    </fields>
+    <fields>
+        <label><!-- DIG ZeitgoldBoxStrasseNummer --></label>
+        <name>DIG_ZeitgoldBoxStrasseNummer__c</name>
+    </fields>
+    <fields>
+        <label><!-- DIG --></label>
+        <name>DIG__c</name>
+    </fields>
+    <fields>
+        <label><!-- Digital WP prepared --></label>
+        <name>Digital_WP_prepared__c</name>
+    </fields>
+    <fields>
+        <label><!-- Digital WP shipped --></label>
+        <name>Digital_WP_shipped__c</name>
+    </fields>
+    <fields>
+        <label><!-- EmailFromContact --></label>
+        <name>EmailFromContact__c</name>
+    </fields>
+    <fields>
+        <label><!-- LastActivityDate Test --></label>
+        <name>LastActivityDate_Test__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Activity Date - OBC 1 --></label>
+        <name>Last_Activity_Date_OBC_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Activity Date - OBC 2 --></label>
+        <name>Last_Activity_Date_OBC_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Activity Date - OBC Trigger --></label>
+        <name>Last_Activity_Date_OBC_Trigger__c</name>
+    </fields>
+    <fields>
+        <label><!-- Mail to SOLARIS when completed --></label>
+        <name>Mail_to_SOLARIS_when_completed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Onboarding contact --></label>
+        <name>Onboarding_Contact__c</name>
+        <relationshipLabel><!-- Onboardings --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Onboarding contact FirstName --></label>
+        <name>Onboarding_contact_FirstName__c</name>
+    </fields>
+    <fields>
+        <label><!-- Opening of App Task --></label>
+        <name>Opening_of_App_Task__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAM AnsprechpartnerMail --></label>
+        <name>PAM_AnsprechpartnerMail__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAM AnsprechpartnerName --></label>
+        <name>PAM_AnsprechpartnerName__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAM AnsprechpartnerNummer --></label>
+        <name>PAM_AnsprechpartnerNummer__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAM BankName --></label>
+        <name>PAM_BankName__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAM BankOrt --></label>
+        <name>PAM_BankOrt__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAM BankPostleitzahl --></label>
+        <name>PAM_BankPostleitzahl__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAM BankStrasseHausummer --></label>
+        <name>PAM_BankStrasseHausummer__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAM Gesellschaftsanteil2 --></label>
+        <name>PAM_Gesellschaftsanteil2__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAM Gesellschaftsanteil3 --></label>
+        <name>PAM_Gesellschaftsanteil3__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAM Gesellschaftsanteil4 --></label>
+        <name>PAM_Gesellschaftsanteil4__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAM Gesellschaftsanteil --></label>
+        <name>PAM_Gesellschaftsanteil__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAM NameGesellschafter2 --></label>
+        <name>PAM_NameGesellschafter2__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAM NameGesellschafter3 --></label>
+        <name>PAM_NameGesellschafter3__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAM NameGesellschafter4 --></label>
+        <name>PAM_NameGesellschafter4__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAM NameGesellschafterAnrede2 --></label>
+        <name>PAM_NameGesellschafterAnrede2__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAM NameGesellschafterAnrede3 --></label>
+        <name>PAM_NameGesellschafterAnrede3__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAM NameGesellschafterAnrede4 --></label>
+        <name>PAM_NameGesellschafterAnrede4__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAM NameGesellschafterAnrede --></label>
+        <name>PAM_NameGesellschafterAnrede__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAM NameGesellschafterGeburtsOrtLand2 --></label>
+        <name>PAM_NameGesellschafterGeburtsOrtLand2__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAM NameGesellschafterGeburtsOrtLand3 --></label>
+        <name>PAM_NameGesellschafterGeburtsOrtLand3__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAM NameGesellschafterGeburtsOrtLand4 --></label>
+        <name>PAM_NameGesellschafterGeburtsOrtLand4__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAM NameGesellschafterGeburtsOrtLand --></label>
+        <name>PAM_NameGesellschafterGeburtsOrtLand__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAM NameGesellschafterGeburtsdatum2 --></label>
+        <name>PAM_NameGesellschafterGeburtsdatum2__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAM NameGesellschafterGeburtsdatum3 --></label>
+        <name>PAM_NameGesellschafterGeburtsdatum3__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAM NameGesellschafterGeburtsdatum4 --></label>
+        <name>PAM_NameGesellschafterGeburtsdatum4__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAM NameGesellschafterGeburtsdatum --></label>
+        <name>PAM_NameGesellschafterGeburtsdatum__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAM NameGesellschafterIstRechtsvertret2 --></label>
+        <name>PAM_NameGesellschafterIstRechtsvertret2__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAM NameGesellschafterIstRechtsvertret3 --></label>
+        <name>PAM_NameGesellschafterIstRechtsvertret3__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAM NameGesellschafterIstRechtsvertret4 --></label>
+        <name>PAM_NameGesellschafterIstRechtsvertret4__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAM NameGesellschafterIstRechtsvertreter --></label>
+        <name>PAM_NameGesellschafterIstRechtsvertreter__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAM NameGesellschafterLand2 --></label>
+        <name>PAM_NameGesellschafterLand2__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAM NameGesellschafterLand3 --></label>
+        <name>PAM_NameGesellschafterLand3__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAM NameGesellschafterLand4 --></label>
+        <name>PAM_NameGesellschafterLand4__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAM NameGesellschafterLand --></label>
+        <name>PAM_NameGesellschafterLand__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAM NameGesellschafterMail2 --></label>
+        <name>PAM_NameGesellschafterMail2__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAM NameGesellschafterMail3 --></label>
+        <name>PAM_NameGesellschafterMail3__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAM NameGesellschafterMail4 --></label>
+        <name>PAM_NameGesellschafterMail4__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAM NameGesellschafterMail --></label>
+        <name>PAM_NameGesellschafterMail__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAM NameGesellschafterNationalitaet2 --></label>
+        <name>PAM_NameGesellschafterNationalitaet2__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAM NameGesellschafterNationalitaet3 --></label>
+        <name>PAM_NameGesellschafterNationalitaet3__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAM NameGesellschafterNationalitaet4 --></label>
+        <name>PAM_NameGesellschafterNationalitaet4__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAM NameGesellschafterNationalitaet --></label>
+        <name>PAM_NameGesellschafterNationalitaet__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAM NameGesellschafterOrt2 --></label>
+        <name>PAM_NameGesellschafterOrt2__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAM NameGesellschafterOrt3 --></label>
+        <name>PAM_NameGesellschafterOrt3__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAM NameGesellschafterOrt4 --></label>
+        <name>PAM_NameGesellschafterOrt4__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAM NameGesellschafterOrt --></label>
+        <name>PAM_NameGesellschafterOrt__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAM NameGesellschafterPostleitzahl2 --></label>
+        <name>PAM_NameGesellschafterPostleitzahl2__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAM NameGesellschafterPostleitzahl3 --></label>
+        <name>PAM_NameGesellschafterPostleitzahl3__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAM NameGesellschafterPostleitzahl4 --></label>
+        <name>PAM_NameGesellschafterPostleitzahl4__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAM NameGesellschafterPostleitzahl --></label>
+        <name>PAM_NameGesellschafterPostleitzahl__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAM NameGesellschafterSeit2 --></label>
+        <name>PAM_NameGesellschafterSeit2__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAM NameGesellschafterSeit3 --></label>
+        <name>PAM_NameGesellschafterSeit3__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAM NameGesellschafterSeit4 --></label>
+        <name>PAM_NameGesellschafterSeit4__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAM NameGesellschafterSeit --></label>
+        <name>PAM_NameGesellschafterSeit__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAM NameGesellschafterStatus2 --></label>
+        <name>PAM_NameGesellschafterStatus2__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAM NameGesellschafterStatus3 --></label>
+        <name>PAM_NameGesellschafterStatus3__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAM NameGesellschafterStatus4 --></label>
+        <name>PAM_NameGesellschafterStatus4__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAM NameGesellschafterStatus --></label>
+        <name>PAM_NameGesellschafterStatus__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAM NameGesellschafterSteuerID2 --></label>
+        <name>PAM_NameGesellschafterSteuerID2__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAM NameGesellschafterSteuerID3 --></label>
+        <name>PAM_NameGesellschafterSteuerID3__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAM NameGesellschafterSteuerID4 --></label>
+        <name>PAM_NameGesellschafterSteuerID4__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAM NameGesellschafterSteuerID --></label>
+        <name>PAM_NameGesellschafterSteuerID__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAM NameGesellschafterTelefonnummer2 --></label>
+        <name>PAM_NameGesellschafterTelefonnummer2__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAM NameGesellschafterTelefonnummer3 --></label>
+        <name>PAM_NameGesellschafterTelefonnummer3__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAM NameGesellschafterTelefonnummer4 --></label>
+        <name>PAM_NameGesellschafterTelefonnummer4__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAM NameGesellschafterTelefonnummer --></label>
+        <name>PAM_NameGesellschafterTelefonnummer__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAM NameGesellschafter --></label>
+        <name>PAM_NameGesellschafter__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAM Status --></label>
+        <name>PAM_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAM WeitereRechtsvertreterAnred2 --></label>
+        <name>PAM_WeitereRechtsvertreterAnred2__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAM WeitereRechtsvertreterAnred3 --></label>
+        <name>PAM_WeitereRechtsvertreterAnred3__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAM WeitereRechtsvertreterAnred4 --></label>
+        <name>PAM_WeitereRechtsvertreterAnred4__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAM WeitereRechtsvertreterAnrede --></label>
+        <name>PAM_WeitereRechtsvertreterAnrede__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAM WeitereRechtsvertreterGeburtsdatu2 --></label>
+        <name>PAM_WeitereRechtsvertreterGeburtsdatu2__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAM WeitereRechtsvertreterGeburtsdatu3 --></label>
+        <name>PAM_WeitereRechtsvertreterGeburtsdatu3__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAM WeitereRechtsvertreterGeburtsdatu4 --></label>
+        <name>PAM_WeitereRechtsvertreterGeburtsdatu4__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAM WeitereRechtsvertreterGeburtsdatum --></label>
+        <name>PAM_WeitereRechtsvertreterGeburtsdatum__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAM_WeitereRechtsvertreterJaNein --></label>
+        <name>PAM_WeitereRechtsvertreterJaNein__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAM WeitereRechtsvertreterMail2 --></label>
+        <name>PAM_WeitereRechtsvertreterMai2__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAM WeitereRechtsvertreterMail3 --></label>
+        <name>PAM_WeitereRechtsvertreterMai3__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAM WeitereRechtsvertreterMail4 --></label>
+        <name>PAM_WeitereRechtsvertreterMai4__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAM WeitereRechtsvertreterMail --></label>
+        <name>PAM_WeitereRechtsvertreterMail__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAM WeitereRechtsvertreterNam2 --></label>
+        <name>PAM_WeitereRechtsvertreterNam2__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAM WeitereRechtsvertreterNam3 --></label>
+        <name>PAM_WeitereRechtsvertreterNam3__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAM WeitereRechtsvertreterNam4 --></label>
+        <name>PAM_WeitereRechtsvertreterNam4__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAM WeitereRechtsvertreterName --></label>
+        <name>PAM_WeitereRechtsvertreterName__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAM WeitereRechtsvertreterNationalitae2 --></label>
+        <name>PAM_WeitereRechtsvertreterNationalit2__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAM WeitereRechtsvertreterNationalitae3 --></label>
+        <name>PAM_WeitereRechtsvertreterNationalit3__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAM WeitereRechtsvertreterNationalitae4 --></label>
+        <name>PAM_WeitereRechtsvertreterNationalit4__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAM WeitereRechtsvertreterNationalitaet --></label>
+        <name>PAM_WeitereRechtsvertreterNationalitaet__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAM WeitereRechtsvertreterPost2 --></label>
+        <name>PAM_WeitereRechtsvertreterPost2__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAM WeitereRechtsvertreterPost3 --></label>
+        <name>PAM_WeitereRechtsvertreterPost3__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAM WeitereRechtsvertreterPost4 --></label>
+        <name>PAM_WeitereRechtsvertreterPost4__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAM WeitereRechtsvertreterPost --></label>
+        <name>PAM_WeitereRechtsvertreterPost__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAM WeitereRechtsvertreterStat2 --></label>
+        <name>PAM_WeitereRechtsvertreterStat2__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAM WeitereRechtsvertreterStat3 --></label>
+        <name>PAM_WeitereRechtsvertreterStat3__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAM WeitereRechtsvertreterStat4 --></label>
+        <name>PAM_WeitereRechtsvertreterStat4__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAM WeitereRechtsvertreterStatus --></label>
+        <name>PAM_WeitereRechtsvertreterStatus__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAM WeitereRechtsvertreterStrasseHaus2 --></label>
+        <name>PAM_WeitereRechtsvertreterStrasseHaus2__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAM WeitereRechtsvertreterStrasseHaus3 --></label>
+        <name>PAM_WeitereRechtsvertreterStrasseHaus3__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAM WeitereRechtsvertreterStrasseHaus4 --></label>
+        <name>PAM_WeitereRechtsvertreterStrasseHaus4__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAM WeitereRechtsvertreterStrasseHausnr --></label>
+        <name>PAM_WeitereRechtsvertreterStrasseHausnr__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAM WeitereRechtsvertreterTelefon2r --></label>
+        <name>PAM_WeitereRechtsvertreterTelefon2__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAM WeitereRechtsvertreterTelefon3 --></label>
+        <name>PAM_WeitereRechtsvertreterTelefon3__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAM WeitereRechtsvertreterTelefon4 --></label>
+        <name>PAM_WeitereRechtsvertreterTelefon4__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAM WeitereRechtsvertreterTelefonnummer --></label>
+        <name>PAM_WeitereRechtsvertreterTelefonnummer__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAM --></label>
+        <name>PAM__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAR BerufsgenossenschaftGefahrentarifst --></label>
+        <name>PAR_BerufsgenossenschaftGefahrentarifst__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAR BerufsgenossenschaftMitgliedsnummer --></label>
+        <name>PAR_BerufsgenossenschaftMitgliedsnummer__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAR BerufsgenossenschaftName --></label>
+        <name>PAR_BerufsgenossenschaftName__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAR BerufsgenossenschaftPIN --></label>
+        <name>PAR_BerufsgenossenschaftPIN__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAR BetriebsnummerSozialversicherung --></label>
+        <name>PAR_BetriebsnummerSozialversicherung__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAR KontaktierungLohnbuero --></label>
+        <name>PAR_KontaktierungLohnbuero__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAR KrankenkasseEinzugsermächtigung --></label>
+        <name>PAR_KrankenkasseEinzugserm_chtigung__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAR KrankenkassenAuswahl2 --></label>
+        <name>PAR_KrankenkassenAuswahl2__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAR KrankenkassenAuswahl3 --></label>
+        <name>PAR_KrankenkassenAuswahl3__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAR KrankenkassenAuswahl4 --></label>
+        <name>PAR_KrankenkassenAuswahl4__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAR KrankenkassenAuswahl5 --></label>
+        <name>PAR_KrankenkassenAuswahl5__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAR KrankenkassenAuswahl6 --></label>
+        <name>PAR_KrankenkassenAuswahl6__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAR KrankenkassenAuswahl7 --></label>
+        <name>PAR_KrankenkassenAuswahl7__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAR KrankenkassenAuswahl8 --></label>
+        <name>PAR_KrankenkassenAuswahl8__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAR KrankenkassenAuswahl --></label>
+        <name>PAR_KrankenkassenAuswahl__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAR LohnbuchhaltungsAnprechpartnerName --></label>
+        <name>PAR_LohnbuchhaltungsAnprechpartnerName__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAR LohnbuchhaltungsMail --></label>
+        <name>PAR_LohnbuchhaltungsMail__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAR LohnbuchhaltungsName --></label>
+        <name>PAR_LohnbuchhaltungsName__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAR LohnbuchhaltungsOrt --></label>
+        <name>PAR_LohnbuchhaltungsOrt__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAR LohnbuchhaltungsPostleitzahl --></label>
+        <name>PAR_LohnbuchhaltungsPostleitzahl__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAR LohnbuchhaltungsStrasse --></label>
+        <name>PAR_LohnbuchhaltungsStrasse__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAR LohnbuchhaltungsTelefonnummer --></label>
+        <name>PAR_LohnbuchhaltungsTelefonnummer__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAR LohnbueroKuendigung --></label>
+        <name>PAR_LohnbueroGuendigung__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAR Rechtskreis --></label>
+        <name>PAR_Rechtskreis__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAR Status --></label>
+        <name>PAR_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAR UnternehmenName --></label>
+        <name>PAR_UnternehmenName__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAR Wochenarbeitszeit --></label>
+        <name>PAR_Wochenarbeitszeit__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAR Zeitraumlohnsteuer --></label>
+        <name>PAR_Zeitraumlohnsteuer__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAR --></label>
+        <name>PAR__c</name>
+    </fields>
+    <fields>
+        <label><!-- Physical WP prepared --></label>
+        <name>Physical_WP_prepared__c</name>
+    </fields>
+    <fields>
+        <label><!-- Physical WP shipped --></label>
+        <name>Physical_WP_shipped__c</name>
+    </fields>
+    <fields>
+        <label><!-- # Reminder sent JotForm 1 --></label>
+        <name>Reminder_sent_JotForm_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- # Reminder sent JotForm 2 --></label>
+        <name>Reminder_sent_JotForm_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- # Reminder sent JotForm 3 --></label>
+        <name>Reminder_sent_JotForm_3__c</name>
+    </fields>
+    <fields>
+        <label><!-- # Reminder sent JotForm 4 --></label>
+        <name>Reminder_sent_JotForm_4__c</name>
+    </fields>
+    <fields>
+        <label><!-- # Reminder sent OBC 1 --></label>
+        <name>Reminder_sent_OBC_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- # Reminder sent OBC 2 --></label>
+        <name>Reminder_sent_OBC_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- URL_PDF_TEST --></label>
+        <name>URL_PDF_TEST__c</name>
+    </fields>
+    <fields>
+        <label><!-- Vorabrechner Daten (ACC) vollständig --></label>
+        <name>Vorabrechner_Daten_ACC_vollstaendig__c</name>
+    </fields>
+    <fields>
+        <label><!-- Vorabrechner Daten (PAR) vollständig --></label>
+        <name>Vorabrechner_Daten_PAR_vollstaendig__c</name>
+    </fields>
+    <fields>
+        <label><!-- close ONB object &amp; transfer data --></label>
+        <name>close_ONB_object_transfer_data__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Not all moduls have been validated. Please valdidate all moduls before transfering all data to the Account. --></errorMessage>
+        <name>Checks_if_all_data_is_validated</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- The Digital Welcome Package needs to be prepared before being able to send. --></errorMessage>
+        <name>Prepare_Digital_WP_before_Sending</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- The Physical Welcome Package needs to be prepared before being able to send. --></errorMessage>
+        <name>Prepare_Physical_WP_before_Sending</name>
+    </validationRules>
+</CustomObjectTranslation>

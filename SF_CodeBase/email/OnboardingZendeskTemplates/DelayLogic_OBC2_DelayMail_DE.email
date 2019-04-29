@@ -1,0 +1,5 @@
+Hallo {{{Recipient.FirstName}}},</p>
+<p><br />wir mussten feststellen, dass Du&nbsp;<strong>[Dir noch keinen Termin f&uuml;r das zweite Onboarding Telefonat vereinbart hast] [und/oder] [die Frageb&ouml;gen zur Freischaltung der Zeitgold-Services noch nicht ausgef&uuml;llt hast]</strong>.</p>
+<p><br />Wir m&uuml;ssen Dich daher dar&uuml;ber informieren, dass wir unseren gemeinsamen Start um einen Monat auf den&nbsp;<strong>[01.VERSCHIEBUNGSMONAT.JAHR]&nbsp;</strong>verschieben m&uuml;ssen.</p>
+<p>Wir werden Dich erneut kontaktieren, um Dein neues Startdatum sicherzustellen.<br /><br />Bei R&uuml;ckfragen kannst Du uns jederzeit unter&nbsp;<a href="mailto:service@zeitgold.com" target="_blank" rel="noopener noreferrer">service@zeitgold.com</a>&nbsp;oder 030/30808111 erreichen.<br /><br />Viele Gr&uuml;&szlig;e</p>
+<p>{{{Sender.FirstName}}} von Zeitgold</p>

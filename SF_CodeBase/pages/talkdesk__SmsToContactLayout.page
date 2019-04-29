@@ -1,0 +1,25 @@
+<apex:page id="SmsToContactLayout" standardController="Contact" extensions="talkdesk.SmsController" action="{! checkTalkdeskConnectivity }">
+    <apex:includeScript value="/canvas/sdk/js/publisher.js"/>
+    <style>
+        html {
+            background-color: white;
+            height: 90%;
+        }
+    </style>
+    <apex:outputPanel rendered="{! isDisabled }">
+        <apex:image url="{! urlfor($resource.assets, 'sms-placeholder-images/generic.png') }"/>
+    </apex:outputPanel>
+    <apex:outputPanel rendered="{! not(isDisabled) }">
+        <c:LightningToPageLayout pkgNamespace="{! namespace }" component="SmsLayout" params="{! recordDto }" />
+
+        <script>
+            if (window.location.search.indexOf('lightning.force.com') > 0) {
+                window.onload = function() {
+                    Sfdc.canvas.publisher.resize({
+                        height : window.innerWidth < 800 ? "650px" : "380px"
+                    });
+                }
+            }
+        </script>
+    </apex:outputPanel>
+</apex:page>

@@ -1,0 +1,2 @@
+<apex:page controller="RedirectToDocusignController" action="{! onInit}">
+</apex:page>

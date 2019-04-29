@@ -1,0 +1,76 @@
+<apex:page id="LoginTemplate">
+    <head>
+        <apex:slds ></apex:slds>
+        <style>
+            body {
+                background-color: #F4F6F9 !important;
+            }
+
+            .wrapper {
+                margin: 0;
+                padding: 0;
+            }
+
+            footer {
+                width: 100%;
+            }
+
+            .talkdesk-logo {
+                width: 213px;
+                height: 44px;
+                display: block;
+                margin: 0 auto;
+            }
+
+            #loginPage {
+                background-color: #F4F6F9;
+            }
+
+            #loginWindow {
+                background-color: #ffffff;
+                width: 400px;
+            }
+
+            .talkdesk .slds-button--brand {
+                width: 100% !important;
+                margin-top: 1rem;
+                margin-bottom: 1rem;
+                padding: 0.25rem 0;
+                font-size: 14px;
+            }
+
+            .talkdesk hr {
+                margin: 1rem 0;
+            }
+
+            .talkdesk p {
+                font-size: 17px;
+                text-align: center;
+                margin-top: 1rem;
+            }
+        </style>
+    </head>
+    <body class="slds-scope">
+        <div class="talkdesk wrapper">
+            <div class="slds" id="loginPage">
+                <div class="slds-grid slds-grid--align-center slds-m-top--x-large slds-m-bottom--large">
+                    <div class="slds-col slds-size--5-of-12 slds-medium-size--5-of-12 slds-large-size--4-of-12">
+                        <apex:image url="{! urlFor($resource.assets, 'td-logo-dark.svg') }"
+                                    styleClass="talkdesk-logo slds-m-top_large"/>
+                    </div>
+                </div>
+                <apex:insert name="loginArea"/>
+            </div>
+        </div>
+    </body>
+    <script>
+        function openPopup(url, name, h, w) {
+            const y = (window.screen.height - (h | 0)) / 2;
+            const x = (window.screen.width - (w | 0)) / 2;
+            const win = window.open(url, name,
+                'scrollbars=yes,location=no,toolbar=no,menubar=no, width=' + w + ', height=' + h + ', top=' + y + ', left=' + x
+            );
+            win.focus();
+        }
+    </script>
+</apex:page>

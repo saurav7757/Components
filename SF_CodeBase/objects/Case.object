@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <validationRules>
+        <fullName>Check_for_Account_and_Contact_values</fullName>
+        <active>false</active>
+        <errorConditionFormula>AND(ISBLANK(AccountId), ISBLANK(ContactId), NOT(ISNEW()))</errorConditionFormula>
+        <errorMessage>Please associate Account and Contact before changing/saving any details.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Check_if_Case_Split_is_Active</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(Create_Case_Split__c = false, ISPICKVAL(Status , &quot;Active Case Split&quot;), OR(AND(NOT(ISPICKVAL(Accounting_CCA_Status__c, &quot;&quot;)), NOT(ISPICKVAL(Accounting_CCA_Status__c, &quot;Solved&quot;)), NOT(ISPICKVAL(Accounting_CCA_Status__c, &quot;Closed&quot;))), AND(NOT(ISPICKVAL(Accounting_DS_Status__c, &quot;&quot;)), NOT(ISPICKVAL(Accounting_DS_Status__c, &quot;Solved&quot;)), NOT(ISPICKVAL(Accounting_DS_Status__c, &quot;Closed&quot;))), AND(NOT(ISPICKVAL(Digitalization_CCA_Status__c, &quot;&quot;)), NOT(ISPICKVAL(Digitalization_CCA_Status__c, &quot;Solved&quot;)), NOT(ISPICKVAL(Digitalization_CCA_Status__c, &quot;Closed&quot;))), AND(NOT(ISPICKVAL(Digitalization_DS_Status__c, &quot;&quot;)), NOT(ISPICKVAL(Digitalization_DS_Status__c, &quot;Solved&quot;)), NOT(ISPICKVAL(Digitalization_DS_Status__c, &quot;Closed&quot;))), 
+AND(NOT(ISPICKVAL(Payroll_CCA_Status__c, &quot;&quot;)), NOT(ISPICKVAL(Payroll_CCA_Status__c, &quot;Solved&quot;)), NOT(ISPICKVAL(Payroll_CCA_Status__c, &quot;Closed&quot;))), 
+AND(NOT(ISPICKVAL(Payroll_DS_Status__c, &quot;&quot;)), NOT(ISPICKVAL(Payroll_DS_Status__c, &quot;Solved&quot;)), NOT(ISPICKVAL(Payroll_DS_Status__c, &quot;Closed&quot;))), 
+AND(NOT(ISPICKVAL(Payments_CCA_Status__c, &quot;&quot;)), NOT(ISPICKVAL(Payments_CCA_Status__c, &quot;Solved&quot;)), NOT(ISPICKVAL(Payments_CCA_Status__c, &quot;Closed&quot;))), 
+AND(NOT(ISPICKVAL(Payments_DS_Status__c, &quot;&quot;)), NOT(ISPICKVAL(Payments_DS_Status__c, &quot;Solved&quot;)), NOT(ISPICKVAL(Payments_DS_Status__c, &quot;Closed&quot;))), 
+AND(NOT(ISPICKVAL(Onboarding_CCA_Status__c, &quot;&quot;)), NOT(ISPICKVAL(Onboarding_CCA_Status__c, &quot;Solved&quot;)), NOT(ISPICKVAL(Onboarding_CCA_Status__c, &quot;Closed&quot;))), 
+AND(NOT(ISPICKVAL(Onboarding_DS_Status__c, &quot;&quot;)), NOT(ISPICKVAL(Onboarding_DS_Status__c, &quot;Solved&quot;)), NOT(ISPICKVAL(Onboarding_DS_Status__c, &quot;Closed&quot;))), 
+AND(NOT(ISPICKVAL(Support_CCA_Status__c, &quot;&quot;)), NOT(ISPICKVAL(Support_CCA_Status__c, &quot;Solved&quot;)), NOT(ISPICKVAL(Support_CCA_Status__c, &quot;Closed&quot;))), 
+AND(NOT(ISPICKVAL(Support_DS_Status__c, &quot;&quot;)), NOT(ISPICKVAL(Support_DS_Status__c, &quot;Solved&quot;)), NOT(ISPICKVAL(Support_DS_Status__c, &quot;Closed&quot;)))
+) 
+)</errorConditionFormula>
+        <errorMessage>Can&apos;t change as status is not marked as Solved/Closed.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Restrict_Users_to_Case_Split_Owner</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(Create_Case_Split__c = TRUE,ISCHANGED(OwnerId), ISPICKVAL(Status,&apos;Active Case Split&apos;),$UserRole.DeveloperName != &apos;General_CCA&apos;,$UserRole.DeveloperName != &apos;Admin_BI&apos;,$UserRole.DeveloperName != &apos;Onboarding_DS&apos;,$UserRole.DeveloperName != &apos;Onboarding_CCA&apos;)</errorConditionFormula>
+        <errorMessage>You don&apos;t have permissions to create case splits/Change Ownership.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Restrict_users_to_case_split</fullName>
+        <active>false</active>
+        <errorConditionFormula>AND(Create_Case_Split__c = TRUE, ISCHANGED(Create_Case_Split__c),
+Current_User_Role__c != &apos;General CCA&apos;,Current_User_Role__c != &apos;Onboarding CCA&apos;,Current_User_Role__c != &apos;Onboarding DS&apos;,
+Current_User_Role__c != &apos;Admin / BI&apos;
+)</errorConditionFormula>
+        <errorMessage>Don&apos;t have permissions to create split cases. Please contact your administrator.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Split_case_validation</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(ISCHANGED(Create_Case_Split__c), Create_Case_Split__c = true, ISBLANK(OwnerId))</errorConditionFormula>
+        <errorMessage>Can&apos;t split the case if owner is not assigned.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Validate_escalation_to_Accounting_DS</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(ISCHANGED(Escalation_to_Accounting_DS__c ),Escalation_to_Accounting_DS__c = FALSE,NOT(ISPICKVAL(Accounting_DS_Status__c, &quot;&quot;)))</errorConditionFormula>
+        <errorMessage>Can&apos;t disable as Accounting DS Status is not empty.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Validate_escalation_to_Digitalization_DS</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(ISCHANGED(Escalation_to_Digitalization_DS__c ),Escalation_to_Digitalization_DS__c = FALSE,NOT(ISPICKVAL(Digitalization_DS_Status__c, &quot;&quot;)))</errorConditionFormula>
+        <errorMessage>Can&apos;t disable as Digitalization DS Status is not empty.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Validate_escalation_to_Onboarding_DS</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(ISCHANGED(Escalation_to_Onboarding_DS__c),Escalation_to_Onboarding_DS__c= FALSE,NOT(ISPICKVAL(Onboarding_DS_Status__c, &quot;&quot;)))</errorConditionFormula>
+        <errorMessage>Can&apos;t disable as Onboarding DS Status is not empty.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Validate_escalation_to_Payments_DS</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(ISCHANGED(Escalation_to_Payments_DS__c),Escalation_to_Payments_DS__c= FALSE,NOT(ISPICKVAL(Payments_DS_Status__c, &quot;&quot;)))</errorConditionFormula>
+        <errorMessage>Can&apos;t disable as Payments DS Status is not empty.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Validate_escalation_to_Payroll_DS</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(ISCHANGED(Escalation_to_Payroll_DS__c ),Escalation_to_Payroll_DS__c = FALSE,NOT(ISPICKVAL(Payroll_DS_Status__c, &quot;&quot;)))</errorConditionFormula>
+        <errorMessage>Can&apos;t disable as Payroll DS Status is not empty.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Validate_escalation_to_Support_DS</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(ISCHANGED(Escalation_to_Support_DS__c),Escalation_to_Support_DS__c= FALSE,NOT(ISPICKVAL(Support_DS_Status__c, &quot;&quot;)))</errorConditionFormula>
+        <errorMessage>Can&apos;t disable as Support DS Status is not empty.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Validate_required_fields</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(OR(Create_Case_Split__c = TRUE, ISCHANGED(Status),ISCHANGED(OwnerId)), OR(ISBLANK(TEXT(Priority)), ISBLANK(TEXT(Origin))))</errorConditionFormula>
+        <errorMessage>Please fill in the mandatory fields Account Name/Contact Name/Priority/Origin.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Validation_to_check_Status_Owner_of_dept</fullName>
+        <active>true</active>
+        <errorConditionFormula>OR(AND(ISCHANGED(Accounting_CCA_Status__c), AND(NOT(ISPICKVAL(Accounting_CCA_Status__c, &quot;Open&quot;)), NOT(ISPICKVAL(Accounting_CCA_Status__c, &quot;&quot;))), ISBLANK(Accounting_CCA_Owner__c), Escalation_to_Accounting_DS__c = false), AND(ISCHANGED(Accounting_DS_Status__c), AND(NOT(ISPICKVAL(Accounting_DS_Status__c, &quot;Open&quot;)), NOT(ISPICKVAL(Accounting_DS_Status__c, &quot;&quot;))), ISBLANK(Accounting_DS_Owner__c)), AND(ISCHANGED(Digitalization_CCA_Status__c), AND(NOT(ISPICKVAL(Digitalization_CCA_Status__c, &quot;Open&quot;)), NOT(ISPICKVAL(Digitalization_CCA_Status__c, &quot;&quot;))), ISBLANK(Digitalization_CCA_Owner__c), Escalation_to_Digitalization_DS__c = false), AND(ISCHANGED(Digitalization_DS_Status__c), AND(NOT(ISPICKVAL(Digitalization_DS_Status__c, &quot;Open&quot;)),NOT(ISPICKVAL(Digitalization_DS_Status__c, &quot;&quot;))), ISBLANK(Digitalization_DS_Owner__c)), AND(ISCHANGED(Payroll_CCA_Status__c), AND(NOT(ISPICKVAL(Payroll_CCA_Status__c, &quot;Open&quot;)),NOT(ISPICKVAL(Payroll_CCA_Status__c, &quot;&quot;))), ISBLANK(Payroll_Owner__c), Escalation_to_Payroll_DS__c = false), AND(ISCHANGED(Payroll_DS_Status__c), AND(NOT(ISPICKVAL(Payroll_DS_Status__c, &quot;Open&quot;)), NOT(ISPICKVAL(Payroll_DS_Status__c, &quot;&quot;))), ISBLANK(Payroll_DS_Owner__c)), AND(ISCHANGED(Payments_CCA_Status__c), AND(NOT(ISPICKVAL(Payments_CCA_Status__c, &quot;Open&quot;)),NOT(ISPICKVAL(Payments_CCA_Status__c, &quot;&quot;))), ISBLANK(Payments_CCA_Owner__c), Escalation_to_Payments_DS__c = false), AND(ISCHANGED(Payments_DS_Status__c), AND(NOT(ISPICKVAL(Payments_DS_Status__c, &quot;Open&quot;)), NOT(ISPICKVAL(Payments_DS_Status__c, &quot;&quot;))), ISBLANK(Payments_DS_Owner__c)), AND(ISCHANGED(Onboarding_CCA_Status__c), AND(NOT(ISPICKVAL(Onboarding_CCA_Status__c, &quot;Open&quot;)), NOT(ISPICKVAL(Onboarding_CCA_Status__c, &quot;&quot;))), ISBLANK(Onboarding_CCA_Owner__c), Escalation_to_Onboarding_DS__c = false), AND(ISCHANGED(Onboarding_DS_Status__c), AND(NOT(ISPICKVAL(Onboarding_DS_Status__c, &quot;Open&quot;)), NOT(ISPICKVAL(Onboarding_DS_Status__c, &quot;&quot;))), ISBLANK(Onboarding_DS_Owner__c)), AND(ISCHANGED(Support_CCA_Status__c), AND(NOT(ISPICKVAL(Support_CCA_Status__c, &quot;Open&quot;)), NOT(ISPICKVAL(Support_CCA_Status__c, &quot;&quot;))), ISBLANK(Support_CCA_Owner__c), Escalation_to_Support_DS__c = false), AND(ISCHANGED(Support_DS_Status__c), AND(NOT(ISPICKVAL(Support_DS_Status__c, &quot;Open&quot;)),NOT(ISPICKVAL(Support_DS_Status__c, &quot;&quot;))), ISBLANK(Support_DS_Owner__c)))</errorConditionFormula>
+        <errorMessage>Please assign the respective owner before changing the status.</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>dsfs__Send_with_DocuSign</fullName>
+        <availability>online</availability>
+        <description>This button will initiate a DocuSign Envelope that is linked to the Case</description>
+        <displayType>button</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Send with DocuSign</masterLabel>
+        <openType>noSidebar</openType>
+        <page>dsfs__CreateEnvelopeFromCase</page>
+        <protected>false</protected>
+    </webLinks>
+</CustomObject>

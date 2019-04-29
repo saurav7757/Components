@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <validationRules>
+        <fullName>Check_on_Total_Capacity</fullName>
+        <active>true</active>
+        <errorConditionFormula>Total_Capacity__c = 0</errorConditionFormula>
+        <errorMessage>Total Capacity cannot be zero.</errorMessage>
+    </validationRules>
+</CustomObject>

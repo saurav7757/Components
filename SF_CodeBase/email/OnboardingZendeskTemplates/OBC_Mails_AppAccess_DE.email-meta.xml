@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>OBC Mails - App Access DE</name>
+    <style>none</style>
+    <subject>Dein Zeitgold-App Zugang!</subject>
+    <textOnly>​​Hallo {{{Recipient.FirstName}}},
+
+bitte klicke auf den folgenden Link, um Dein persönliches Passwort für Deine Zeitgold-App festzulegen: APP-ZUGANG FREISCHALTEN (DJANGO LINK EINFÜGEN)
+
+Bei Rückfragen kannst Du uns jederzeit unter service@zeitgold.com oder 030/30808111 erreichen.
+
+Viele Grüße
+
+{{{Sender.FirstName}}} von Zeitgold
+
+​​</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

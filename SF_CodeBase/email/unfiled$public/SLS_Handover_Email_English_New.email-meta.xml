@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>SLS Handover Email-English-New</name>
+    <style>none</style>
+    <subject>Welcome to Zeitgold</subject>
+    <textOnly>Hi {!Account.Customer_First_Name__c},
+
+My name is {!Account.Onboarding_Manager_First_Name__c} and I am very happy to hear that you have decided to bring your business, {!Account.Company_Legal_Name__c} to us here at Zeitgold!
+
+Until your official start with us, I will be here for you to help you set up the Zeitgold system and to familiarize you with our services. As your first step, please log into your Zeitgold-App to complete your first in-app tasks.
+
+
+To log into the Zeitgold-App, please download the app, enter your e-mail address and click “Passwort vergessen?” to set your password.
+
+
+
+In addition to getting things started in the app, please take a moment to send me the following important items via E-Mail:
+
+A picture of a Z-Report from your cash register system (including the various available revenue types)
+A recent business assessment (BWA) from your current financial tax advisor
+
+This will ensure that any necessary technical adjustments can be made prior to our start. If you have any questions, please do not hesitate to reach out to us via service@zeitgold.com or 030/30808111.
+
+I am already looking forward to our first Onboarding call!
+
+Warm greetings,
+{!Account.Onboarding_Manager_First_Name__c} at Zeitgold
+
+
+{!Account.Onboarding_Manager_Name__c}
+Onboarding Delivery Specialist
+Zeitgold Onboarding Team</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

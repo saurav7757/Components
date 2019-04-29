@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Role xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseAccessLevel>Edit</caseAccessLevel>
+    <contactAccessLevel>Edit</contactAccessLevel>
+    <description>Digitalization DS</description>
+    <mayForecastManagerShare>false</mayForecastManagerShare>
+    <name>Digitalization DS</name>
+    <opportunityAccessLevel>Read</opportunityAccessLevel>
+    <parentRole>Digitalization_Delivery_Lead</parentRole>
+</Role>

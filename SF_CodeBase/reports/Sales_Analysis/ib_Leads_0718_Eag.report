@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>picklist</bucketType>
+        <developerName>BucketField_36998155</developerName>
+        <masterLabel>Lost Reasons Bucket</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>Lead.Lost_Reason_Lead__c</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Test/Fake</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Lead is tax advisor</sourceValue>
+            </sourceValues>
+            <value>Fake Leads</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Just browsing / No interest</sourceValue>
+            </sourceValues>
+            <value>Just Browsing/No Interest</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Lost to Competitor</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Not ready to buy</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Not willing to change tax advisor</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Other contract terms than price</sourceValue>
+            </sourceValues>
+            <value>Failed to convince</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Budget fit missing</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Product or feature fit missing</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>No authority</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Out of business</sourceValue>
+            </sourceValues>
+            <value>Missing fit</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Unresponsive</sourceValue>
+            </sourceValues>
+            <value>Unresponsive</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Unhappy with our processes or behaviour</sourceValue>
+            </sourceValues>
+            <value>Unhappy with Process</value>
+        </values>
+    </buckets>
+    <chart>
+        <backgroundColor1>#FFFFFF</backgroundColor1>
+        <backgroundColor2>#FFFFFF</backgroundColor2>
+        <backgroundFadeDir>Diagonal</backgroundFadeDir>
+        <chartSummaries>
+            <axisBinding>y</axisBinding>
+            <column>RowCount</column>
+        </chartSummaries>
+        <chartType>VerticalColumn</chartType>
+        <enableHoverLabels>false</enableHoverLabels>
+        <expandOthers>true</expandOthers>
+        <groupingColumn>CREATED_DATE</groupingColumn>
+        <location>CHART_BOTTOM</location>
+        <showAxisLabels>false</showAxisLabels>
+        <showPercentage>false</showPercentage>
+        <showTotal>false</showTotal>
+        <showValues>false</showValues>
+        <size>Medium</size>
+        <summaryAxisRange>Auto</summaryAxisRange>
+        <textColor>#000000</textColor>
+        <textSize>12</textSize>
+        <titleColor>#000000</titleColor>
+        <titleSize>18</titleSize>
+    </chart>
+    <columns>
+        <field>AMOUNT</field>
+    </columns>
+    <columns>
+        <field>LEAD_SOURCE</field>
+    </columns>
+    <columns>
+        <field>FIRST_NAME</field>
+    </columns>
+    <columns>
+        <field>LAST_NAME</field>
+    </columns>
+    <columns>
+        <field>EMAIL</field>
+    </columns>
+    <columns>
+        <field>PHONE</field>
+    </columns>
+    <columns>
+        <field>LAST_UPDATE</field>
+    </columns>
+    <columns>
+        <field>COMPANY_ACCT</field>
+    </columns>
+    <columns>
+        <field>CONVERTED_DATE</field>
+    </columns>
+    <columns>
+        <field>LEAD_OWNER</field>
+    </columns>
+    <columns>
+        <field>OPP_NAME</field>
+    </columns>
+    <columns>
+        <field>OPP_ACCT_NAME</field>
+    </columns>
+    <columns>
+        <field>CLOSE_DATE</field>
+    </columns>
+    <columns>
+        <field>OPP_OWNER</field>
+    </columns>
+    <currency>EUR</currency>
+    <filter>
+        <booleanFilter>1</booleanFilter>
+        <criteriaItems>
+            <column>Lead.MKT_Industry_type__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Gastro</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Month</dateGranularity>
+        <field>CREATED_DATE</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>STATUS</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>ib Leads - 07.18</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>OpportunityLead</reportType>
+    <scope>org</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <endDate>2019-03-23</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2018-07-01</startDate>
+    </timeFrameFilter>
+</Report>

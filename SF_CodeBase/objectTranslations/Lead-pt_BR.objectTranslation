@@ -1,0 +1,2262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Active Lead --></label>
+        <name>Active_Lead__c</name>
+    </fields>
+    <fields>
+        <label><!-- CalendlyCreated --></label>
+        <name>CalendlyCreated__c</name>
+    </fields>
+    <fields>
+        <help><!-- Daily and unchangeable = Yes
+Otherwise = No --></help>
+        <label><!-- Cash journal kept in compliant way? --></label>
+        <name>Cash_journal_kept_in_compliant_way__c</name>
+        <picklistValues>
+            <masterLabel>Cash journal compliant</masterLabel>
+            <translation><!-- Cash journal compliant --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cash journal not compliant</masterLabel>
+            <translation><!-- Cash journal not compliant --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unknown</masterLabel>
+            <translation><!-- Unknown --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- If they need to keep a cash journal, set to YES. --></help>
+        <label><!-- Cash journal needed? --></label>
+        <name>Cash_journal_needed__c</name>
+        <picklistValues>
+            <masterLabel>Doesn&apos;t need cash journal</masterLabel>
+            <translation><!-- Doesn&apos;t need cash journal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Needs cash journal</masterLabel>
+            <translation><!-- Needs cash journal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unknown</masterLabel>
+            <translation><!-- Unknown --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Please enter the correct and full company name in it&apos;s legal form.
+
+For EU the format is: Display Name - Name des Unternehmers
+For GbR the format is: All first and last names of all shareholders. e.i. &quot;Jan Deepen &amp; Stefan Jeschonnek&quot; --></help>
+        <label><!-- Company Legal Name --></label>
+        <name>Company_Legal_Name__c</name>
+    </fields>
+    <fields>
+        <help><!-- Yes: They do have construction wages
+No: They don&apos;t have construction wages --></help>
+        <label><!-- Construction wages --></label>
+        <name>Construction_wages__c</name>
+        <picklistValues>
+            <masterLabel>Construction wages</masterLabel>
+            <translation><!-- Construction wages --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No construction wages</masterLabel>
+            <translation><!-- No construction wages --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unknown</masterLabel>
+            <translation><!-- Unknown --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Yes: They need controlling beyond BWA
+No: They don&apos;t need controlling beyond BWA --></help>
+        <label><!-- Controlling requirements beyond BWA --></label>
+        <name>Controlling_requirements_beyond_BWA__c</name>
+        <picklistValues>
+            <masterLabel>Controlling requirements</masterLabel>
+            <translation><!-- Controlling requirements --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No special requirements</masterLabel>
+            <translation><!-- No special requirements --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unknown</masterLabel>
+            <translation><!-- Unknown --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Days Count --></label>
+        <name>Count_Days__c</name>
+    </fields>
+    <fields>
+        <label><!-- Created date/time --></label>
+        <name>Created_date_time__c</name>
+    </fields>
+    <fields>
+        <help><!-- Please enter the leads/prospects current costs for bookkeeping per month --></help>
+        <label><!-- Current monthly bookkeeping costs --></label>
+        <name>Current_monthly_bookkeeping_costs__c</name>
+    </fields>
+    <fields>
+        <help><!-- Please enter the leads/prospects current costs for payroll per month --></help>
+        <label><!-- Current monthly payroll costs --></label>
+        <name>Current_monthly_payroll_costs__c</name>
+    </fields>
+    <fields>
+        <help><!-- Please enter the leads/prospects current costs for the year end statement (yearly, not monthly basis) --></help>
+        <label><!-- Current yearly Year-End Statement costs --></label>
+        <name>Current_yearly_Year_End_Statement_costs__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date Zeitgold Rejection Reasons Changed --></label>
+        <name>Date_Zeitgold_Rejection_Reasons_Changed__c</name>
+    </fields>
+    <fields>
+        <help><!-- Please fill in the date for which you scheduled (or rescheduled) the demo. --></help>
+        <label><!-- Demo date --></label>
+        <name>Demo_date__c</name>
+    </fields>
+    <fields>
+        <help><!-- If you want to add more details to the rejection, please insert them here. (i.e. which payment providers they use etc.) --></help>
+        <label><!-- Detailed Lost or Rejection Reason --></label>
+        <name>Detailed_Lost_or_Rejection_Reason__c</name>
+    </fields>
+    <fields>
+        <help><!-- Second email address --></help>
+        <label><!-- Email (2) --></label>
+        <name>Email_2__c</name>
+    </fields>
+    <fields>
+        <help><!-- Defines the status for our ZG events. This field is only a workaround until we defined a proper tracking solution. --></help>
+        <label><!-- Event Status --></label>
+        <name>Event_status__c</name>
+        <picklistValues>
+            <masterLabel>attended</masterLabel>
+            <translation><!-- attended --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>first confirmation</masterLabel>
+            <translation><!-- first confirmation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>invited email</masterLabel>
+            <translation><!-- invited email --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>invited phone</masterLabel>
+            <translation><!-- invited phone --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>lost - no interest</masterLabel>
+            <translation><!-- lost - no interest --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>lost - not available</masterLabel>
+            <translation><!-- lost - not available --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>lost - unresponsive</masterLabel>
+            <translation><!-- lost - unresponsive --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>new</masterLabel>
+            <translation><!-- new --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>not attended</masterLabel>
+            <translation><!-- not attended --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>not reached</masterLabel>
+            <translation><!-- not reached --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>reached owner</masterLabel>
+            <translation><!-- reached owner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>secondary confirmation (via email/phone)</masterLabel>
+            <translation><!-- secondary confirmation (via email/phone) --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- This field defines the date when the field sales rep should do a walk in. --></help>
+        <label><!-- FS - Next Step date --></label>
+        <name>FS_Next_Step_date__c</name>
+    </fields>
+    <fields>
+        <help><!-- Feature wishes (both hard requirements and nice to have requirements) --></help>
+        <label><!-- Feature wishes --></label>
+        <name>Feature_wishes__c</name>
+    </fields>
+    <fields>
+        <help><!-- Feedback after the question: &quot;Ok, X sounds ok already. Do you mind telling me what you would like to see to get to a 10?&quot;
+These are acceptance criteria for this lead to become a customer and therefore very important closing infos. --></help>
+        <label><!-- Feedback Temperature Check --></label>
+        <name>Feedback_Temperature_Check__c</name>
+    </fields>
+    <fields>
+        <help><!-- GA Client ID --></help>
+        <label><!-- GA Client ID --></label>
+        <name>GA_Client_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Gender --></label>
+        <name>Gender__c</name>
+        <picklistValues>
+            <masterLabel>Female</masterLabel>
+            <translation><!-- Female --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Male</masterLabel>
+            <translation><!-- Male --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Google Places ID --></label>
+        <name>Google_Places_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Google Review --></label>
+        <name>Google_Review__c</name>
+    </fields>
+    <fields>
+        <help><!-- Old Deal Stage of Hubspot Deals before migration to Salesforce --></help>
+        <label><!-- HS Legacy Stage --></label>
+        <name>HS_Legacy_Stage__c</name>
+        <picklistValues>
+            <masterLabel>1.1. RANDOM LEADS</masterLabel>
+            <translation><!-- 1.1. RANDOM LEADS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1.2. REDUCED-PRIO LEADS</masterLabel>
+            <translation><!-- 1.2. REDUCED-PRIO LEADS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1.3. HIGH-PRIO LEADS</masterLabel>
+            <translation><!-- 1.3. HIGH-PRIO LEADS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1.4. MARKETING AUTOMATION</masterLabel>
+            <translation><!-- 1.4. MARKETING AUTOMATION --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2.1. QUALIFIED LEADS</masterLabel>
+            <translation><!-- 2.1. QUALIFIED LEADS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3. REACHED OUT</masterLabel>
+            <translation><!-- 3. REACHED OUT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3.1. AUTOMATED REACHOUT</masterLabel>
+            <translation><!-- 3.1. AUTOMATED REACHOUT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4. INTERESTED</masterLabel>
+            <translation><!-- 4. INTERESTED --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Please fill in if the prospect completed a healthcheck with us (e.g. METRO, Deutsche Bank partnerships). --></help>
+        <label><!-- Healthcheck completed --></label>
+        <name>Healthcheck_completed__c</name>
+    </fields>
+    <fields>
+        <help><!-- Hubspot UTK --></help>
+        <label><!-- Hubspot UTK --></label>
+        <name>Hubspot_UTK__c</name>
+    </fields>
+    <fields>
+        <help><!-- Yes: They do have installment payments
+No: They don&apos;t have installment payments --></help>
+        <label><!-- Installment payments --></label>
+        <name>Installment_payments__c</name>
+        <picklistValues>
+            <masterLabel>Installment payments</masterLabel>
+            <translation><!-- Installment payments --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No installment payments</masterLabel>
+            <translation><!-- No installment payments --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unknown</masterLabel>
+            <translation><!-- Unknown --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- What are the key pain points of the prospect and how could we solve them?
+
+Dig deep to get to the root cause! We need to truly understand their current process and their pain. This starts in the assessment call. Use the 5 Whys technology. --></help>
+        <label><!-- Key pain point --></label>
+        <name>Key_pain_point__c</name>
+        <picklistValues>
+            <masterLabel>Archiving documents (GoBD compliant)</masterLabel>
+            <translation><!-- Archiving documents (GoBD compliant) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Chaotic paperwork</masterLabel>
+            <translation><!-- Chaotic paperwork --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No understanding of German tax system</masterLabel>
+            <translation><!-- No understanding of German tax system --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Non compliant bookkeeping</masterLabel>
+            <translation><!-- Non compliant bookkeeping --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Non compliant cash journal</masterLabel>
+            <translation><!-- Non compliant cash journal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Too high costs for tax advisor</masterLabel>
+            <translation><!-- Too high costs for tax advisor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Too time consuming</masterLabel>
+            <translation><!-- Too time consuming --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unhappy with work of tax advisor</masterLabel>
+            <translation><!-- Unhappy with work of tax advisor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wants to simplify complex workflows</masterLabel>
+            <translation><!-- Wants to simplify complex workflows --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Please state the language that the lead speaks --></help>
+        <label><!-- Language --></label>
+        <name>Language__c</name>
+        <picklistValues>
+            <masterLabel>English</masterLabel>
+            <translation><!-- English --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>German</masterLabel>
+            <translation><!-- German --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Lead Age --></label>
+        <name>Lead_Age__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead Number --></label>
+        <name>Lead_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead Source 2 --></label>
+        <name>Lead_Source_2__c</name>
+        <picklistValues>
+            <masterLabel>Cold Call - DeliveryHero</masterLabel>
+            <translation><!-- Cold Call - DeliveryHero --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cold Call - Other</masterLabel>
+            <translation><!-- Cold Call - Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cold Call - facebook comment</masterLabel>
+            <translation><!-- Cold Call - facebook comment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cold Call - manual research</masterLabel>
+            <translation><!-- Cold Call - manual research --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DL1 Foodora</masterLabel>
+            <translation><!-- DL1 Foodora --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DL2 Deliveroo</masterLabel>
+            <translation><!-- DL2 Deliveroo --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DL3 Lieferheld</masterLabel>
+            <translation><!-- DL3 Lieferheld --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Direct - Incoming Email</masterLabel>
+            <translation><!-- Direct - Incoming Email --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Direct - Incoming Phone Call</masterLabel>
+            <translation><!-- Direct - Incoming Phone Call --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Event - Coda - 092018</masterLabel>
+            <translation><!-- Event - Coda - 092018 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Event - Meierei - 082018</masterLabel>
+            <translation><!-- Event - Meierei - 082018 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Event - Nürnberg - 092018</masterLabel>
+            <translation><!-- Event - Nürnberg - 092018 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Marketing - online</masterLabel>
+            <translation><!-- Marketing - online --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Partner - Deutsche Bank - External</masterLabel>
+            <translation><!-- Partner - Deutsche Bank - External --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Partner - Deutsche Bank - Internal</masterLabel>
+            <translation><!-- Partner - Deutsche Bank - Internal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Partner - Deutsche Bank - Leipzig</masterLabel>
+            <translation><!-- Partner - Deutsche Bank - Leipzig --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Partner - Metro</masterLabel>
+            <translation><!-- Partner - Metro --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Partner - Pioneer</masterLabel>
+            <translation><!-- Partner - Pioneer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Partner - orderbird</masterLabel>
+            <translation><!-- Partner - orderbird --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Referral - customer</masterLabel>
+            <translation><!-- Referral - customer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Referral - employee</masterLabel>
+            <translation><!-- Referral - employee --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Referral - other</masterLabel>
+            <translation><!-- Referral - other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Referral - sales employee</masterLabel>
+            <translation><!-- Referral - sales employee --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Trade Show</masterLabel>
+            <translation><!-- Trade Show --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Walk In</masterLabel>
+            <translation><!-- Walk In --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Lead Unique identifier --></label>
+        <name>Lead_Unique_identifier__c</name>
+    </fields>
+    <fields>
+        <help><!-- Select the right customer legal form. It&apos;s important that you select the exact one as different letter can change if we can serve this account or not. --></help>
+        <label><!-- Legal Form --></label>
+        <name>Legal_Form__c</name>
+        <picklistValues>
+            <masterLabel>AG</masterLabel>
+            <translation><!-- AG --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AG &amp; Co. KG</masterLabel>
+            <translation><!-- AG &amp; Co. KG --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AG &amp; Co. KGaA</masterLabel>
+            <translation><!-- AG &amp; Co. KGaA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AG &amp; Co. OHG</masterLabel>
+            <translation><!-- AG &amp; Co. OHG --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AöR</masterLabel>
+            <translation><!-- AöR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EWIV</masterLabel>
+            <translation><!-- EWIV --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Eigenbetrieb</masterLabel>
+            <translation><!-- Eigenbetrieb --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Einzelunternehmen</masterLabel>
+            <translation><!-- Einzelunternehmen --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Freiberufler/in</masterLabel>
+            <translation><!-- Freiberufler/in --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GbR</masterLabel>
+            <translation><!-- GbR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GmbH</masterLabel>
+            <translation><!-- GmbH --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GmbH &amp; Co. KG</masterLabel>
+            <translation><!-- GmbH &amp; Co. KG --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GmbH &amp; Co. KGaA</masterLabel>
+            <translation><!-- GmbH &amp; Co. KGaA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GmbH &amp; Co. OHG</masterLabel>
+            <translation><!-- GmbH &amp; Co. OHG --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>InvAG</masterLabel>
+            <translation><!-- InvAG --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>KG</masterLabel>
+            <translation><!-- KG --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>KGaA</masterLabel>
+            <translation><!-- KGaA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>KöR</masterLabel>
+            <translation><!-- KöR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Limited &amp; Co. KG</masterLabel>
+            <translation><!-- Limited &amp; Co. KG --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OHG</masterLabel>
+            <translation><!-- OHG --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OTHER (If avoidable, do not use)</masterLabel>
+            <translation><!-- OTHER (If avoidable, do not use) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PartG</masterLabel>
+            <translation><!-- PartG --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PartG mbB</masterLabel>
+            <translation><!-- PartG mbB --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Partenreederei</masterLabel>
+            <translation><!-- Partenreederei --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>REIT-AG</masterLabel>
+            <translation><!-- REIT-AG --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Regiebetrieb</masterLabel>
+            <translation><!-- Regiebetrieb --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SCE</masterLabel>
+            <translation><!-- SCE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SE</masterLabel>
+            <translation><!-- SE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SE &amp; Co. KGaA</masterLabel>
+            <translation><!-- SE &amp; Co. KGaA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Stiftung</masterLabel>
+            <translation><!-- Stiftung --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Stiftung &amp; Co. KG</masterLabel>
+            <translation><!-- Stiftung &amp; Co. KG --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Stiftung &amp; Co. KGaA</masterLabel>
+            <translation><!-- Stiftung &amp; Co. KGaA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Stiftung GmbH &amp; Co. KG</masterLabel>
+            <translation><!-- Stiftung GmbH &amp; Co. KG --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Stille Gesellschaft</masterLabel>
+            <translation><!-- Stille Gesellschaft --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UG (haftungsbeschränkt)</masterLabel>
+            <translation><!-- UG (haftungsbeschränkt) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UG (haftungsbeschränkt) &amp; Co. KG</masterLabel>
+            <translation><!-- UG (haftungsbeschränkt) &amp; Co. KG --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unknown</masterLabel>
+            <translation><!-- Unknown --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VVaG</masterLabel>
+            <translation><!-- VVaG --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>e. V.</masterLabel>
+            <translation><!-- e. V. --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>eG</masterLabel>
+            <translation><!-- eG --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>gAG</masterLabel>
+            <translation><!-- gAG --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>gGmbH</masterLabel>
+            <translation><!-- gGmbH --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Please select a reason why this lead/prospect is unqualified. --></help>
+        <label><!-- Lost Reason --></label>
+        <name>Lost_Reason_Lead__c</name>
+        <picklistValues>
+            <masterLabel>Budget fit missing</masterLabel>
+            <translation><!-- Budget fit missing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Just browsing / No interest</masterLabel>
+            <translation><!-- Just browsing / No interest --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lead is tax advisor</masterLabel>
+            <translation><!-- Lead is tax advisor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lost to Competitor</masterLabel>
+            <translation><!-- Lost to Competitor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No authority</masterLabel>
+            <translation><!-- No authority --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not ready to buy</masterLabel>
+            <translation><!-- Not ready to buy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not willing to change tax advisor</masterLabel>
+            <translation><!-- Not willing to change tax advisor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other contract terms than price</masterLabel>
+            <translation><!-- Other contract terms than price --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Out of business</masterLabel>
+            <translation><!-- Out of business --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Product or feature fit missing</masterLabel>
+            <translation><!-- Product or feature fit missing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Test/Fake</masterLabel>
+            <translation><!-- Test/Fake --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unhappy with our processes or behaviour</masterLabel>
+            <translation><!-- Unhappy with our processes or behaviour --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unresponsive</masterLabel>
+            <translation><!-- Unresponsive --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- &quot;Erhebst Du eine Bettensteuer oder Kurtaxe?&quot; --></help>
+        <label><!-- MKT_Bedtax Visitorstax --></label>
+        <name>MKT_Bedtax_Visitorstax__c</name>
+        <picklistValues>
+            <masterLabel>Ja</masterLabel>
+            <translation><!-- Ja --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nein</masterLabel>
+            <translation><!-- Nein --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nein, aber etwas ähnliches</masterLabel>
+            <translation><!-- Nein, aber etwas ähnliches --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- MKT Best Time Reachable --></label>
+        <name>MKT_Best_Time_Reachable__c</name>
+    </fields>
+    <fields>
+        <help><!-- &quot;Sind Du oder Deine Mitarbeiter oft beruflich unterwegs?&quot; --></help>
+        <label><!-- MKT_Business travels --></label>
+        <name>MKT_Business_travels__c</name>
+        <picklistValues>
+            <masterLabel>Ja, mit dem Firmenwagen</masterLabel>
+            <translation><!-- Ja, mit dem Firmenwagen --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ja, mit dem Flugzeug</masterLabel>
+            <translation><!-- Ja, mit dem Flugzeug --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ja, mit dem Zug</masterLabel>
+            <translation><!-- Ja, mit dem Zug --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nein</masterLabel>
+            <translation><!-- Nein --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- MKT CTA --></label>
+        <name>MKT_CTA__c</name>
+    </fields>
+    <fields>
+        <help><!-- Website form selection by customer --></help>
+        <label><!-- MKT_Cash journal --></label>
+        <name>MKT_Cash_journal__c</name>
+        <picklistValues>
+            <masterLabel>Ja</masterLabel>
+            <translation><!-- Ja --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nein</masterLabel>
+            <translation><!-- Nein --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Website form selection by customer --></help>
+        <label><!-- MKT_Cash journal problems --></label>
+        <name>MKT_Cash_journal_problems__c</name>
+        <picklistValues>
+            <masterLabel>Ja, es haut nie ganz hin</masterLabel>
+            <translation><!-- Ja, es haut nie ganz hin --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ja, es kostet zu viel Zeit</masterLabel>
+            <translation><!-- Ja, es kostet zu viel Zeit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ja, ich verstehe es nicht wirklich</masterLabel>
+            <translation><!-- Ja, ich verstehe es nicht wirklich --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nein, läuft alles prima</masterLabel>
+            <translation><!-- Nein, läuft alles prima --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Welches Kassensystem benutzt Du? --></help>
+        <label><!-- MKT_Cash register name --></label>
+        <name>MKT_Cash_register_name__c</name>
+    </fields>
+    <fields>
+        <help><!-- Website form selection by customer --></help>
+        <label><!-- MKT_Cashjournal gobd compliant --></label>
+        <name>MKT_Cashjournal_gobd_compliant__c</name>
+        <picklistValues>
+            <masterLabel>Ja</masterLabel>
+            <translation><!-- Ja --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nein</masterLabel>
+            <translation><!-- Nein --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Was ist GoBD?</masterLabel>
+            <translation><!-- Was ist GoBD? --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Weiß nicht</masterLabel>
+            <translation><!-- Weiß nicht --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- MKT Cold Email Status --></label>
+        <name>MKT_Cold_Email_Status__c</name>
+    </fields>
+    <fields>
+        <help><!-- Was macht Dein Unternehmen? --></help>
+        <label><!-- MKT_Company Description --></label>
+        <name>MKT_Company_Description__c</name>
+    </fields>
+    <fields>
+        <help><!-- &quot;Arbeitet Dein Unternehmen mit Baulöhnen?&quot; --></help>
+        <label><!-- MKT_Construction wages --></label>
+        <name>MKT_Construction_wages__c</name>
+        <picklistValues>
+            <masterLabel>Ja</masterLabel>
+            <translation><!-- Ja --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nein</masterLabel>
+            <translation><!-- Nein --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Was sind Baulöhne?</masterLabel>
+            <translation><!-- Was sind Baulöhne? --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- &quot;Wer erledigt die Buchhaltung in Deinem Unternehmen?&quot; --></help>
+        <label><!-- MKT_Current bookkeeper --></label>
+        <name>MKT_Current_bookkeeper__c</name>
+        <picklistValues>
+            <masterLabel>Ein Mitarbeiter</masterLabel>
+            <translation><!-- Ein Mitarbeiter --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ich selbst</masterLabel>
+            <translation><!-- Ich selbst --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Jemand anderes</masterLabel>
+            <translation><!-- Jemand anderes --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mein Steuerberater</masterLabel>
+            <translation><!-- Mein Steuerberater --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Verwandte</masterLabel>
+            <translation><!-- Verwandte --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- &quot;Erhältst Du eine Tageszusammenfassung oder einen Z-Bon?&quot; --></help>
+        <label><!-- MKT_Dailyreport zBon --></label>
+        <name>MKT_Dailyreport_zBon__c</name>
+        <picklistValues>
+            <masterLabel>Ja</masterLabel>
+            <translation><!-- Ja --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nein</masterLabel>
+            <translation><!-- Nein --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- &quot;Verkaufst Du Ware ins Ausland?&quot; --></help>
+        <label><!-- MKT_Export goods --></label>
+        <name>MKT_Export_goods__c</name>
+        <picklistValues>
+            <masterLabel>Ja</masterLabel>
+            <translation><!-- Ja --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nein</masterLabel>
+            <translation><!-- Nein --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- &quot;An welcher Zeitgold Funktion bist Du am meisten Interessiert?&quot; --></help>
+        <label><!-- MKT_Favourite function --></label>
+        <name>MKT_Favourite_function__c</name>
+        <picklistValues>
+            <masterLabel>Buchhaltung</masterLabel>
+            <translation><!-- Buchhaltung --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dokumenten-Archiv</masterLabel>
+            <translation><!-- Dokumenten-Archiv --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Kassenbuch</masterLabel>
+            <translation><!-- Kassenbuch --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mitarbeitermanagement</masterLabel>
+            <translation><!-- Mitarbeitermanagement --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rechnungszahlung</masterLabel>
+            <translation><!-- Rechnungszahlung --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- &quot;Ist dies Dein erstes eigenes Unternehmen?&quot; --></help>
+        <label><!-- MKT_First business --></label>
+        <name>MKT_First_business__c</name>
+        <picklistValues>
+            <masterLabel>Ja</masterLabel>
+            <translation><!-- Ja --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nein</masterLabel>
+            <translation><!-- Nein --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Wie viele Rechnungen erhältst Du pro Monat? --></help>
+        <label><!-- MKT_Incoming Invoices --></label>
+        <name>MKT_Incoming_Invoices__c</name>
+        <picklistValues>
+            <masterLabel>100-120 (1 schmaler Ordner)</masterLabel>
+            <translation><!-- 100-120 (1 schmaler Ordner) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>120-200 (2 schmale Ordner</masterLabel>
+            <translation><!-- 120-200 (2 schmale Ordner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>200-500 (1-2 grosse Ordner)</masterLabel>
+            <translation><!-- 200-500 (1-2 grosse Ordner) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Keine Ahnung</masterLabel>
+            <translation><!-- Keine Ahnung --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Weniger als 100</masterLabel>
+            <translation><!-- Weniger als 100 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>mehr als 500</masterLabel>
+            <translation><!-- mehr als 500 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- MKT_Industry type (Detailed) --></label>
+        <name>MKT_Industry_type_Detailed__c</name>
+    </fields>
+    <fields>
+        <help><!-- Website form selection by customer --></help>
+        <label><!-- MKT_Industry type --></label>
+        <name>MKT_Industry_type__c</name>
+        <picklistValues>
+            <masterLabel>Agentur / Beratung</masterLabel>
+            <translation><!-- Agentur / Beratung --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Andere</masterLabel>
+            <translation><!-- Andere --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Einzelhandel</masterLabel>
+            <translation><!-- Einzelhandel --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Gastro</masterLabel>
+            <translation><!-- Gastro --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Handwerk</masterLabel>
+            <translation><!-- Handwerk --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hotelgewerbe</masterLabel>
+            <translation><!-- Hotelgewerbe --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Medizin &amp; Pflege</masterLabel>
+            <translation><!-- Medizin &amp; Pflege --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- MKT_Lead score --></label>
+        <name>MKT_Lead_score__c</name>
+    </fields>
+    <fields>
+        <help><!-- Website form selection by customer --></help>
+        <label><!-- MKT_Most timeconsuming --></label>
+        <name>MKT_Most_timeconsuming__c</name>
+        <picklistValues>
+            <masterLabel>Dokumente sortieren</masterLabel>
+            <translation><!-- Dokumente sortieren --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Kassenbons kopieren</masterLabel>
+            <translation><!-- Kassenbons kopieren --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rechnungen zahlen</masterLabel>
+            <translation><!-- Rechnungen zahlen --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Vorbereitende Buchhaltung</masterLabel>
+            <translation><!-- Vorbereitende Buchhaltung --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Website form selection by customer --></help>
+        <label><!-- MKT_Multiple locations --></label>
+        <name>MKT_Multiple_locations__c</name>
+        <picklistValues>
+            <masterLabel>Ein Standort</masterLabel>
+            <translation><!-- Ein Standort --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mehrere Standorte</masterLabel>
+            <translation><!-- Mehrere Standorte --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Website form selection by customer --></help>
+        <label><!-- MKT_Number of employees --></label>
+        <name>MKT_Number_of_employees__c</name>
+        <picklistValues>
+            <masterLabel>1-2</masterLabel>
+            <translation><!-- 1-2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>16-25</masterLabel>
+            <translation><!-- 16-25 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3-4</masterLabel>
+            <translation><!-- 3-4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5-15</masterLabel>
+            <translation><!-- 5-15 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Keine</masterLabel>
+            <translation><!-- Keine --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>mehr als 25</masterLabel>
+            <translation><!-- mehr als 25 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- &quot;Seit wann betreibst Du Dein Geschäft?&quot; --></help>
+        <label><!-- MKT_Operating since --></label>
+        <name>MKT_Operating_since__c</name>
+        <picklistValues>
+            <masterLabel>2-5 Jahre</masterLabel>
+            <translation><!-- 2-5 Jahre --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mehr als 5 Jahre</masterLabel>
+            <translation><!-- Mehr als 5 Jahre --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Weniger als 2 Jahre</masterLabel>
+            <translation><!-- Weniger als 2 Jahre --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Wie viele Rechnungen stellst Du monatlich aus? --></help>
+        <label><!-- MKT_Outgoing invoices --></label>
+        <name>MKT_Outgoing_invoices__c</name>
+        <picklistValues>
+            <masterLabel>0-50</masterLabel>
+            <translation><!-- 0-50 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>50-200</masterLabel>
+            <translation><!-- 50-200 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>mehr als 200</masterLabel>
+            <translation><!-- mehr als 200 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- This field states if the Lead came in with the phone Number or not --></help>
+        <label><!-- MKT_Phone Origin --></label>
+        <name>MKT_PhoneOrigin_c__c</name>
+    </fields>
+    <fields>
+        <help><!-- If the lead clicked on an ad with a promo code, this is the promo code --></help>
+        <label><!-- MKT_Promo Code --></label>
+        <name>MKT_Promo_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- MKT_ReferredByCode --></label>
+        <name>MKT_ReferredByCode__c</name>
+    </fields>
+    <fields>
+        <help><!-- &quot;Was bereitet Dir an der USt (Umsatzsteuer) am meisten Sorge?&quot; --></help>
+        <label><!-- MKT_Revenue tax --></label>
+        <name>MKT_Revenue_tax__c</name>
+        <picklistValues>
+            <masterLabel>Es läuft alles reibungslos</masterLabel>
+            <translation><!-- Es läuft alles reibungslos --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ich habe Chaos in der Vorbereitung</masterLabel>
+            <translation><!-- Ich habe Chaos in der Vorbereitung --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ich melde Sie meist zu spät an</masterLabel>
+            <translation><!-- Ich melde Sie meist zu spät an --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ich verstehe die Regelungen nicht ganz</masterLabel>
+            <translation><!-- Ich verstehe die Regelungen nicht ganz --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- &quot;Arbeitest Du als Subunternehmer (z.B. auf Baustellen) und daher mit §13b UStG (Umsatzsteuerschuld)?&quot; --></help>
+        <label><!-- MKT_Subunternehmer --></label>
+        <name>MKT_Subunternehmer__c</name>
+        <picklistValues>
+            <masterLabel>Ja</masterLabel>
+            <translation><!-- Ja --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nein</masterLabel>
+            <translation><!-- Nein --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Weiss ich nicht</masterLabel>
+            <translation><!-- Weiss ich nicht --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Website form selection by customer --></help>
+        <label><!-- MKT_Tax Advisor satisfaction --></label>
+        <name>MKT_Tax_Advisor_satisfaction__c</name>
+        <picklistValues>
+            <masterLabel>Ich habe keinen Steuerberater</masterLabel>
+            <translation><!-- Ich habe keinen Steuerberater --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ja, sehr</masterLabel>
+            <translation><!-- Ja, sehr --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Meistens schon</masterLabel>
+            <translation><!-- Meistens schon --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nicht wirklich</masterLabel>
+            <translation><!-- Nicht wirklich --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Überhaupt nicht</masterLabel>
+            <translation><!-- Überhaupt nicht --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Website form selection by customer --></help>
+        <label><!-- MKT_Time administrative work --></label>
+        <name>MKT_Time_administrative_work__c</name>
+        <picklistValues>
+            <masterLabel>4 Stunden oder weniger</masterLabel>
+            <translation><!-- 4 Stunden oder weniger --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5-8 Stunden</masterLabel>
+            <translation><!-- 5-8 Stunden --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9-15 Stunden</masterLabel>
+            <translation><!-- 9-15 Stunden --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>mehr als 15 Stunden</masterLabel>
+            <translation><!-- mehr als 15 Stunden --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Verkaufst Du alte oder gebrauchte Produkte? (z.B Second Hand, Antiquitäten, Gebrauchtwaren) --></help>
+        <label><!-- MKT_Used goods --></label>
+        <name>MKT_Used_goods__c</name>
+        <picklistValues>
+            <masterLabel>Ja</masterLabel>
+            <translation><!-- Ja --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nein</masterLabel>
+            <translation><!-- Nein --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- &quot;Welchen Kontenrahmen nutzt Du?&quot; --></help>
+        <label><!-- MKT_Account system --></label>
+        <name>MKT_account_system__c</name>
+        <picklistValues>
+            <masterLabel>Etwas anderes</masterLabel>
+            <translation><!-- Etwas anderes --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SKR03</masterLabel>
+            <translation><!-- SKR03 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SKR04</masterLabel>
+            <translation><!-- SKR04 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Weiss ich nicht</masterLabel>
+            <translation><!-- Weiss ich nicht --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- The date the lead first provided their email address to Zeitgold --></help>
+        <label><!-- MKT_Create Date --></label>
+        <name>MKT_create_date__c</name>
+    </fields>
+    <fields>
+        <label><!-- MKT_First Page Seen --></label>
+        <name>MKT_first_page_seen__c</name>
+    </fields>
+    <fields>
+        <help><!-- &quot;Wie viele Mahnungen stellst Du monatlich durchschnittlich aus?&quot; --></help>
+        <label><!-- MKT_Monthly collections --></label>
+        <name>MKT_monthly_collections__c</name>
+        <picklistValues>
+            <masterLabel>1-2</masterLabel>
+            <translation><!-- 1-2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3-5</masterLabel>
+            <translation><!-- 3-5 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Keine</masterLabel>
+            <translation><!-- Keine --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mehr als 6</masterLabel>
+            <translation><!-- Mehr als 6 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Website form selection by customer --></help>
+        <label><!-- MKT_Revenue per year --></label>
+        <name>MKT_revenue_per_year__c</name>
+        <picklistValues>
+            <masterLabel>keine Angabe</masterLabel>
+            <translation><!-- keine Angabe --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>mehr als €500k</masterLabel>
+            <translation><!-- mehr als €500k --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>weniger als €150k</masterLabel>
+            <translation><!-- weniger als €150k --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>€150k - €250k</masterLabel>
+            <translation><!-- €150k - €250k --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>€250k - €500k</masterLabel>
+            <translation><!-- €250k - €500k --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- MKT_winterholidays --></label>
+        <name>MKT_winterholidays__c</name>
+    </fields>
+    <fields>
+        <help><!-- Dear pre sdr team, please update the status of the manual data research wether you found a phone number or not --></help>
+        <label><!-- Manual data research 2 --></label>
+        <name>Manual_data_research_2__c</name>
+        <picklistValues>
+            <masterLabel>Failed</masterLabel>
+            <translation><!-- Failed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Open</masterLabel>
+            <translation><!-- Open --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Success</masterLabel>
+            <translation><!-- Success --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Yes: They do have membership contracts
+No: They don&apos;t have membership contracts --></help>
+        <label><!-- Membership contracts --></label>
+        <name>Membership_contracts__c</name>
+        <picklistValues>
+            <masterLabel>Membership contracts</masterLabel>
+            <translation><!-- Membership contracts --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No membership contracts</masterLabel>
+            <translation><!-- No membership contracts --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unknown</masterLabel>
+            <translation><!-- Unknown --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Metro Lead Product ID (long) --></label>
+        <name>Metro_Lead_Product_ID_long__c</name>
+    </fields>
+    <fields>
+        <help><!-- Coupon codes from partners or Zeitgold sales specials. --></help>
+        <label><!-- Mkt_Cold_Letter_Coupon --></label>
+        <name>Mkt_Cold_Letter_Coupon__c</name>
+    </fields>
+    <fields>
+        <help><!-- Most Recent Cadence - Cadence ID --></help>
+        <label><!-- Most Recent Cadence - Cadence ID --></label>
+        <name>Most_Recent_Cadence_Cadence_ID__c</name>
+    </fields>
+    <fields>
+        <help><!-- Most Recent Cadence - Cadence Name --></help>
+        <label><!-- Most Recent Cadence - Cadence Name --></label>
+        <name>Most_Recent_Cadence_Cadence_Name__c</name>
+    </fields>
+    <fields>
+        <help><!-- Most Recent Cadence - Next Step Due Date --></help>
+        <label><!-- Most Recent Cadence - Next Step Due Date --></label>
+        <name>Most_Recent_Cadence_Next_Step_Due_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- Most Recent Cadence - Next Step --></help>
+        <label><!-- Most Recent Cadence - Next Step --></label>
+        <name>Most_Recent_Cadence_Next_Step__c</name>
+    </fields>
+    <fields>
+        <help><!-- Multiple: They do operate in multiple locations with this legal entity
+Single: They only operate in one location with this legal entity --></help>
+        <label><!-- Multiple location business --></label>
+        <name>Multiple_location_business__c</name>
+        <picklistValues>
+            <masterLabel>Multiple locations</masterLabel>
+            <translation><!-- Multiple locations --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Single location</masterLabel>
+            <translation><!-- Single location --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unknown</masterLabel>
+            <translation><!-- Unknown --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Please state the full name of the businesses bank account and make sure, that it isn&apos;t blacklisted by our partner FIgo. --></help>
+        <label><!-- Name Bank (business bank account) --></label>
+        <name>Name_Bank_business_bank_account__c</name>
+    </fields>
+    <fields>
+        <help><!-- Please enter the name of the cash register, that this business is using. If they are using none, please enter &quot;NONE&quot; --></help>
+        <label><!-- Name cash register --></label>
+        <name>Name_cash_register__c</name>
+    </fields>
+    <fields>
+        <help><!-- Use this field to define the next step on the Lead for the field sales team. --></help>
+        <label><!-- FS - Next Step --></label>
+        <name>Next_Step__c</name>
+    </fields>
+    <fields>
+        <help><!-- Please enter the number of employees that receive an hourly wage rather than fixed salary. --></help>
+        <label><!-- No. of employees working for a wage --></label>
+        <name>No_of_employees_working_for_a_wage__c</name>
+    </fields>
+    <fields>
+        <help><!-- Please enter the number of employees working for a (fixed) salary rather than (hourly) wages. --></help>
+        <label><!-- No. of employees working for salary --></label>
+        <name>No_of_employees_working_for_salary__c</name>
+    </fields>
+    <fields>
+        <help><!-- Please enter the number of invoices this business receives on a monthly basis --></help>
+        <label><!-- No. of incoming invoices per month --></label>
+        <name>No_of_incoming_invoices_per_month__c</name>
+    </fields>
+    <fields>
+        <help><!-- Please enter the number of invoices that this business sends every month on average. --></help>
+        <label><!-- No. of outgoing invoices per month --></label>
+        <name>No_of_outgoing_invoices_per_month__c</name>
+    </fields>
+    <fields>
+        <help><!-- Yes = Lead is added to nurturing campaign
+No = Lead is closed forever --></help>
+        <label><!-- Nurturing? --></label>
+        <name>Nurturing__c</name>
+        <picklistValues>
+            <masterLabel>Completed</masterLabel>
+            <translation><!-- Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Ist Deine Kasse ab 1. Januar 2017 GoBD-konform? --></help>
+        <label><!-- Kassenbuch GoBD? --></label>
+        <name>OG_Cashjournal_gobd__c</name>
+    </fields>
+    <fields>
+        <help><!-- Gibt es etwas, das Dich am Kassenbuch führen stört? --></help>
+        <label><!-- Kassenbuch Problem --></label>
+        <name>OG_Cashjournal_problems__c</name>
+    </fields>
+    <fields>
+        <help><!-- Womit verbringst Du am meisten Zeit? --></help>
+        <label><!-- Aufwändigste Tätigkeit --></label>
+        <name>OG_Most_timeconsuming__c</name>
+    </fields>
+    <fields>
+        <help><!-- Gibt es etwas, das Dich daran besonders stört? --></help>
+        <label><!-- Aufwändigste Tätigkeit (Detail) --></label>
+        <name>OG_Most_timeconsuming_specific__c</name>
+    </fields>
+    <fields>
+        <help><!-- Führst Du ein Kassenbuch? --></help>
+        <label><!-- Kassenbuch --></label>
+        <name>OG_cashjournal__c</name>
+    </fields>
+    <fields>
+        <help><!-- In welcher Branche bist Du tätig? --></help>
+        <label><!-- Branche --></label>
+        <name>OG_industry_type__c</name>
+    </fields>
+    <fields>
+        <help><!-- Wie viele Mitarbeiter beschäftigst Du? --></help>
+        <label><!-- Anzahl Mitarbeiter --></label>
+        <name>OG_number_of_employees__c</name>
+    </fields>
+    <fields>
+        <help><!-- Bist Du mit Deinem Steuerberater zufrieden? --></help>
+        <label><!-- Steuerberater Zufriedenheit --></label>
+        <name>OG_tax_advisor_satisfaction__c</name>
+    </fields>
+    <fields>
+        <help><!-- Wieviel Zeit verbringst Du mit administrativer Arbeit pro Woche? --></help>
+        <label><!-- Zeitaufwand Admin/Woche --></label>
+        <name>OG_time_administrative_work__c</name>
+    </fields>
+    <fields>
+        <help><!-- At which time period of the day does the venue open. --></help>
+        <label><!-- Venue opens --></label>
+        <name>Opening_Hours__c</name>
+        <picklistValues>
+            <masterLabel>09:00 - 11:00</masterLabel>
+            <translation><!-- 09:00 - 11:00 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>12:00 - 17:00</masterLabel>
+            <translation><!-- 12:00 - 17:00 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>18:00 - open end</masterLabel>
+            <translation><!-- 18:00 - open end --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- What kind of personality type is the lead? 
+
+This is crucial for adapting our communication style within the sales process. --></help>
+        <label><!-- Personality --></label>
+        <name>Personalitiy__c</name>
+        <picklistValues>
+            <masterLabel>blau = catious, precise, delibarate, questioning, formal, analytical</masterLabel>
+            <translation><!-- blau = catious, precise, delibarate, questioning, formal, analytical --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>gelb = social, dynamic, demonstrative, enthusiastic, persuasive, expressive</masterLabel>
+            <translation><!-- gelb = social, dynamic, demonstrative, enthusiastic, persuasive, expressive --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>grün = caring, encouraging, sharing, patient, relaxed, amiable</masterLabel>
+            <translation><!-- grün = caring, encouraging, sharing, patient, relaxed, amiable --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>rot = competitive, demanding, determined, strong-willed, purposeful, driver</masterLabel>
+            <translation><!-- rot = competitive, demanding, determined, strong-willed, purposeful, driver --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Additional phone number --></help>
+        <label><!-- Phone (2) --></label>
+        <name>Phone_2__c</name>
+    </fields>
+    <fields>
+        <help><!-- Which risks (actively communicated and potential) could result in loosing this opportunity? --></help>
+        <label><!-- Potential dealbreaker --></label>
+        <name>Potential_dealbreaker__c</name>
+    </fields>
+    <fields>
+        <label><!-- Power of 1 --></label>
+        <name>Power_of_1__c</name>
+    </fields>
+    <fields>
+        <help><!-- Select the qualification type you chose in your lead assessment. --></help>
+        <label><!-- Qualification type --></label>
+        <name>Qualification_type__c</name>
+        <picklistValues>
+            <masterLabel>Demo scheduled - no assessment</masterLabel>
+            <translation><!-- Demo scheduled - no assessment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Demo scheduled - standard assessment</masterLabel>
+            <translation><!-- Demo scheduled - standard assessment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Direct handover to AE - no assessment</masterLabel>
+            <translation><!-- Direct handover to AE - no assessment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Direct handover to AE - standard assessment</masterLabel>
+            <translation><!-- Direct handover to AE - standard assessment --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Recent Closed Task Date --></label>
+        <name>Recent_Closed_Task__c</name>
+    </fields>
+    <fields>
+        <label><!-- Round Robin ID --></label>
+        <name>Round_Robin_ID__c</name>
+    </fields>
+    <fields>
+        <help><!-- Please do not change. This field shows the Person stage from SalesLoft. This field is filled in automatically by SalesLoft! --></help>
+        <label><!-- SalesLoft Stage - automation field --></label>
+        <name>SalesLoft_Stage_automation_field__c</name>
+        <picklistValues>
+            <masterLabel>Bounced</masterLabel>
+            <translation><!-- Bounced --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cadence Completed</masterLabel>
+            <translation><!-- Cadence Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Closed Lost - Not Converted</masterLabel>
+            <translation><!-- Closed Lost - Not Converted --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Closed- Converted</masterLabel>
+            <translation><!-- Closed- Converted --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Demo Scheduled</masterLabel>
+            <translation><!-- Demo Scheduled --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Do Not Contact</masterLabel>
+            <translation><!-- Do Not Contact --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Open</masterLabel>
+            <translation><!-- Open --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Removed</masterLabel>
+            <translation><!-- Removed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Replied</masterLabel>
+            <translation><!-- Replied --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Success - Meeting (re)scheduled</masterLabel>
+            <translation><!-- Success - Meeting (re)scheduled --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Working - Added to Cadence</masterLabel>
+            <translation><!-- Working - Added to Cadence --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Working - Finished first step of Cadence</masterLabel>
+            <translation><!-- Working - Finished first step of Cadence --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Salesloft Id --></label>
+        <name>Salesloft_Id__c</name>
+    </fields>
+    <fields>
+        <help><!-- Separate: They are separate
+Mixed: They are mixed/not separate --></help>
+        <label><!-- Separate private &amp; business bank account --></label>
+        <name>Separate_private_business_bank_account__c</name>
+        <picklistValues>
+            <masterLabel>Mixed/Not separate</masterLabel>
+            <translation><!-- Mixed/Not separate --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Separate</masterLabel>
+            <translation><!-- Separate --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unknown</masterLabel>
+            <translation><!-- Unknown --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Yes: They do have short time work
+No: They don&apos;t have short time work --></help>
+        <label><!-- Short time work --></label>
+        <name>Short_time_work_Construction_wages__c</name>
+        <picklistValues>
+            <masterLabel>No short time work</masterLabel>
+            <translation><!-- No short time work --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Short time work</masterLabel>
+            <translation><!-- Short time work --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unknown</masterLabel>
+            <translation><!-- Unknown --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Do they sell goods or services outside of Germany? --></help>
+        <label><!-- Sold goods/services in foreign countries --></label>
+        <name>Sold_goods_services_in_foreign_countries__c</name>
+        <picklistValues>
+            <masterLabel>Into the EU (&lt;€35k p.a.)</masterLabel>
+            <translation><!-- Into the EU (&lt;€35k p.a.) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Into the EU (&gt;€35k p.a.)</masterLabel>
+            <translation><!-- Into the EU (&gt;€35k p.a.) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>None</masterLabel>
+            <translation><!-- None --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Third Countries (outside EU)</masterLabel>
+            <translation><!-- Third Countries (outside EU) --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Is the sole trader business run by someone other than the owner? --></help>
+        <label><!-- Sole trader business run by owner --></label>
+        <name>Sole_trader_business_not_run_by_owner__c</name>
+        <picklistValues>
+            <masterLabel>Run by owner</masterLabel>
+            <translation><!-- Run by owner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Run by someone else</masterLabel>
+            <translation><!-- Run by someone else --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unknown</masterLabel>
+            <translation><!-- Unknown --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Which payment methods do they accept? How do they receive their money? --></help>
+        <label><!-- Source Revenues --></label>
+        <name>Source_Revenues__c</name>
+        <picklistValues>
+            <masterLabel>Bank transaction / Invoice</masterLabel>
+            <translation><!-- Bank transaction / Invoice --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Barter</masterLabel>
+            <translation><!-- Barter --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Booking platforms (i.e. Deliveroo or Treatwell)</masterLabel>
+            <translation><!-- Booking platforms (i.e. Deliveroo or Treatwell) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cash</masterLabel>
+            <translation><!-- Cash --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Coupons (i.e. Groupon, Jochen Schweizer, Sodexo, ...)</masterLabel>
+            <translation><!-- Coupons (i.e. Groupon, Jochen Schweizer, Sodexo, ...) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Debit-/Credit Card READER (Card present)</masterLabel>
+            <translation><!-- Debit-/Credit Card READER (Card present) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Online payments (i.e. Stripe, PayPal)</masterLabel>
+            <translation><!-- Online payments (i.e. Stripe, PayPal) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Yes: no specific requirements (SKR-03/04)
+No: specific requirements --></help>
+        <label><!-- Special balance sheet structure --></label>
+        <name>Special_balance_sheet_structure__c</name>
+        <picklistValues>
+            <masterLabel>Standard structure</masterLabel>
+            <translation><!-- Standard structure --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unknown</masterLabel>
+            <translation><!-- Unknown --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Uses special structure</masterLabel>
+            <translation><!-- Uses special structure --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Yes: They do have special data privacy requirements due to their industry (ie they are a physicians, lawyers, ...)
+No: They don&apos;t have special data privacy requirements due to their industry --></help>
+        <label><!-- Special data privacy requirements --></label>
+        <name>Special_data_privacy_requirements__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unknown</masterLabel>
+            <translation><!-- Unknown --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- TempOwnerID --></label>
+        <name>TempOwnerID__c</name>
+    </fields>
+    <fields>
+        <help><!-- On a scale from 1-10. One being “This doesn&apos;t solve my problem at all, I don&apos;t need this and we should stop this discussion here” and ten being “That&apos;s exactly what I need and I would buy now!”: Where are we right now? --></help>
+        <label><!-- Temperature Check Result --></label>
+        <name>Temperature_Check_Result__c</name>
+    </fields>
+    <fields>
+        <help><!-- Please select formal, if we should address them with the German &quot;Sie&quot; or select informal, if we should address them with the German &quot;Du&quot; in all (verbal/written) communication. --></help>
+        <label><!-- Tone of address --></label>
+        <name>Tone_of_address__c</name>
+        <picklistValues>
+            <masterLabel>Formal</masterLabel>
+            <translation><!-- Formal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Informal</masterLabel>
+            <translation><!-- Informal --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Yes: At least one shareholder is a US citizen
+No: None of the shareholders is a US citizen --></help>
+        <label><!-- US tax requirements --></label>
+        <name>US_tax_requirements__c</name>
+        <picklistValues>
+            <masterLabel>No US citizens</masterLabel>
+            <translation><!-- No US citizens --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>US citizens</masterLabel>
+            <translation><!-- US citizens --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unknown</masterLabel>
+            <translation><!-- Unknown --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- UTM Action --></label>
+        <name>UTM_Action__c</name>
+    </fields>
+    <fields>
+        <label><!-- UTM Campaign --></label>
+        <name>UTM_Campaign__c</name>
+    </fields>
+    <fields>
+        <label><!-- UTM Content --></label>
+        <name>UTM_Content__c</name>
+    </fields>
+    <fields>
+        <label><!-- UTM Medium --></label>
+        <name>UTM_Medium__c</name>
+    </fields>
+    <fields>
+        <label><!-- UTM Source --></label>
+        <name>UTM_Source__c</name>
+    </fields>
+    <fields>
+        <label><!-- UTM Term --></label>
+        <name>UTM_Term__c</name>
+    </fields>
+    <fields>
+        <label><!-- Upcoming Task Due Date --></label>
+        <name>Upcoming_Task_Due_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- Please select the right value. Do they have an extension for their VAT declaration/Dauerfristverlängerung? --></help>
+        <label><!-- VAT declaration extension (DFV) --></label>
+        <name>VAT_declaration_extension_DFV__c</name>
+        <picklistValues>
+            <masterLabel>They don&apos;t know if they have the extension</masterLabel>
+            <translation><!-- They don&apos;t know if they have the extension --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>They don&apos;t want the extension (i.e. because they can&apos;t afford it at this point)</masterLabel>
+            <translation><!-- They don&apos;t want the extension (i.e. because they can&apos;t afford it at this point) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>They have the extension</masterLabel>
+            <translation><!-- They have the extension --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>They want the extension, but never applied for it</masterLabel>
+            <translation><!-- They want the extension, but never applied for it --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>They want the extension, but the financial authorities denied it to them</masterLabel>
+            <translation><!-- They want the extension, but the financial authorities denied it to them --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unknown</masterLabel>
+            <translation><!-- Unknown --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Please enter the hours spent on preparatory bookkeeping per week --></help>
+        <label><!-- Weekly hours spent on bookkeeping --></label>
+        <name>Weekly_hours_spent_on_bookkeeping__c</name>
+    </fields>
+    <fields>
+        <help><!-- Please enter the weekly time spent on cash journal entries and keeping it up to date. --></help>
+        <label><!-- Weekly hours spent on cash journal --></label>
+        <name>Weekly_hours_spent_on_cash_journal__c</name>
+    </fields>
+    <fields>
+        <help><!-- Please enter how long they believe they need to pay invoices. --></help>
+        <label><!-- Weekly hours spent on paying invoices --></label>
+        <name>Weekly_hours_spent_on_paying_invoices__c</name>
+    </fields>
+    <fields>
+        <help><!-- Please enter the hours spent on (preparatory) payroll tasks --></help>
+        <label><!-- Weekly hours spent on payroll --></label>
+        <name>Weekly_hours_spent_on_payroll__c</name>
+    </fields>
+    <fields>
+        <help><!-- Why did he/she contacted us? What solution is the lead looking for in first place? 
+
+Use this point to get the prospect into talking. --></help>
+        <label><!-- What are they looking for? --></label>
+        <name>What_are_they_looking_for__c</name>
+    </fields>
+    <fields>
+        <help><!-- Please enter the year in which this business was established. Keep the format YYYY --></help>
+        <label><!-- Year business established --></label>
+        <name>Year_business_established__c</name>
+    </fields>
+    <fields>
+        <help><!-- Please select ALL reasons why you had to reject them. --></help>
+        <label><!-- Zeitgold Rejection Reasons --></label>
+        <name>Zeitgold_Rejection_Reasons__c</name>
+        <picklistValues>
+            <masterLabel>Abweichendes Geschäftsjahr</masterLabel>
+            <translation><!-- Abweichendes Geschäftsjahr --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Auto reject - unsupported industry</masterLabel>
+            <translation><!-- Auto reject - unsupported industry --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Box pick up not possible</masterLabel>
+            <translation><!-- Box pick up not possible --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Business is too large (employees or revenue)</masterLabel>
+            <translation><!-- Business is too large (employees or revenue) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Business not based in Germany</masterLabel>
+            <translation><!-- Business not based in Germany --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Chaotic backlog (i.e. last year) needs to be cleaned up first</masterLabel>
+            <translation><!-- Chaotic backlog (i.e. last year) needs to be cleaned up first --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Construction wages</masterLabel>
+            <translation><!-- Construction wages --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Controlling requirements beyond BWA</masterLabel>
+            <translation><!-- Controlling requirements beyond BWA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Customer accepts cash payments in foreign currency</masterLabel>
+            <translation><!-- Customer accepts cash payments in foreign currency --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Customer generates significant B2B or B2C revenues outside of Germany. (Significant revenues = more than 10% of annual revenues)</masterLabel>
+            <translation><!-- Customer generates significant B2B or B2C revenues outside of Germany. (Significant revenues = more than 10% of annual revenues) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Customer that are &quot;Ist-Versteuerer&quot; AND issue outgoing invoices (not in-store sales) with a VAT rate of 7% or without VAT (0%).</masterLabel>
+            <translation><!-- Customer that are &quot;Ist-Versteuerer&quot; AND issue outgoing invoices (not in-store sales) with a VAT rate of 7% or without VAT (0%). --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Customized balance sheet structure</masterLabel>
+            <translation><!-- Customized balance sheet structure --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Data privacy requirements</masterLabel>
+            <translation><!-- Data privacy requirements --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Differential taxation - §25a</masterLabel>
+            <translation><!-- Differential taxation - §25a --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Handling of domestic Inbound invoices with different VAT than 7% and 19%</masterLabel>
+            <translation><!-- Handling of domestic Inbound invoices with different VAT than 7% and 19% --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Handling of domestic Outbound invoices with different VAT than 7% and 19%</masterLabel>
+            <translation><!-- Handling of domestic Outbound invoices with different VAT than 7% and 19% --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Has 1+ bank unsupported by FIGO</masterLabel>
+            <translation><!-- Has 1+ bank unsupported by FIGO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In the process of restructuring business</masterLabel>
+            <translation><!-- In the process of restructuring business --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Installment payments, Outbound</masterLabel>
+            <translation><!-- Installment payments, Outbound --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lack of language skills</masterLabel>
+            <translation><!-- Lack of language skills --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Merchant requires multiple bank accounts for payments</masterLabel>
+            <translation><!-- Merchant requires multiple bank accounts for payments --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mixed business/private bank acc./credit cards/PayPal acc.</masterLabel>
+            <translation><!-- Mixed business/private bank acc./credit cards/PayPal acc. --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Multiple different businesses in one legal entity</masterLabel>
+            <translation><!-- Multiple different businesses in one legal entity --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Multiple locations business</masterLabel>
+            <translation><!-- Multiple locations business --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No permanent extension</masterLabel>
+            <translation><!-- No permanent extension --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Outbound Membership contracts</masterLabel>
+            <translation><!-- Outbound Membership contracts --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pays Bettensteuer or Kurtaxe and is not willing to do it themselves (outside of Zeitgold)</masterLabel>
+            <translation><!-- Pays Bettensteuer or Kurtaxe and is not willing to do it themselves (outside of Zeitgold) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Prepayments for expenses</masterLabel>
+            <translation><!-- Prepayments for expenses --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Short time work</masterLabel>
+            <translation><!-- Short time work --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sole trader business not run by owner</masterLabel>
+            <translation><!-- Sole trader business not run by owner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Special tax requirements - Industries</masterLabel>
+            <translation><!-- Special tax requirements - Industries --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Special tax requirements - Tax exemption (§ 4)</masterLabel>
+            <translation><!-- Special tax requirements - Tax exemption (§ 4) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Special tax requirements - §13 b</masterLabel>
+            <translation><!-- Special tax requirements - §13 b --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Specific marketplace partners that also clear payment for the merchant (e.g. Deliveroo, Booking.com, Treatwell, Tock, ...)</masterLabel>
+            <translation><!-- Specific marketplace partners that also clear payment for the merchant (e.g. Deliveroo, Booking.com, Treatwell, Tock, ...) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Specific other systems for financial transaction (e.g. vouchers)</masterLabel>
+            <translation><!-- Specific other systems for financial transaction (e.g. vouchers) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unsupported bank account</masterLabel>
+            <translation><!-- Unsupported bank account --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unsupported cash register</masterLabel>
+            <translation><!-- Unsupported cash register --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unsupported industry</masterLabel>
+            <translation><!-- Unsupported industry --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unsupported legal form</masterLabel>
+            <translation><!-- Unsupported legal form --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unsupported payment providers</masterLabel>
+            <translation><!-- Unsupported payment providers --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Dear pre sdr team, please update the status of the manual data research wether you found a phone number or not --></help>
+        <label><!-- Manual data research 1 --></label>
+        <name>manual_data_research_1__c</name>
+        <picklistValues>
+            <masterLabel>Failed</masterLabel>
+            <translation><!-- Failed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Open</masterLabel>
+            <translation><!-- Open --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Success</masterLabel>
+            <translation><!-- Success --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Needs Score Synced --></label>
+        <name>pi__Needs_Score_Synced__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot Last Scored At --></label>
+        <name>pi__Pardot_Last_Scored_At__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot Campaign --></label>
+        <name>pi__campaign__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot Comments --></label>
+        <name>pi__comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot Conversion Date --></label>
+        <name>pi__conversion_date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot Conversion Object Name --></label>
+        <name>pi__conversion_object_name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot Conversion Object Type --></label>
+        <name>pi__conversion_object_type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot Created Date --></label>
+        <name>pi__created_date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot First Activity --></label>
+        <name>pi__first_activity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot First Referrer Query --></label>
+        <name>pi__first_search_term__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot First Referrer Type --></label>
+        <name>pi__first_search_type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot First Referrer --></label>
+        <name>pi__first_touch_url__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot Grade --></label>
+        <name>pi__grade__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot Last Activity --></label>
+        <name>pi__last_activity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot Notes --></label>
+        <name>pi__notes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot Hard Bounced --></label>
+        <name>pi__pardot_hard_bounced__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot Score --></label>
+        <name>pi__score__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot URL --></label>
+        <name>pi__url__c</name>
+    </fields>
+    <fields>
+        <label><!-- Google Analytics Campaign --></label>
+        <name>pi__utm_campaign__c</name>
+    </fields>
+    <fields>
+        <label><!-- Google Analytics Content --></label>
+        <name>pi__utm_content__c</name>
+    </fields>
+    <fields>
+        <label><!-- Google Analytics Medium --></label>
+        <name>pi__utm_medium__c</name>
+    </fields>
+    <fields>
+        <label><!-- Google Analytics Source --></label>
+        <name>pi__utm_source__c</name>
+    </fields>
+    <fields>
+        <label><!-- Google Analytics Term --></label>
+        <name>pi__utm_term__c</name>
+    </fields>
+    <fields>
+        <label><!-- Count --></label>
+        <name>talkdesk__Count__c</name>
+    </fields>
+    <validationRules>
+        <errorMessage><!-- Please fill out the annual revenue. --></errorMessage>
+        <name>IsAnnualRevenueEmpty</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- If you reject a prospect because of too less revenue, we need to know how much revenue they make. --></errorMessage>
+        <name>IsAnnualRevenueTooSmall</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please fill out the city of the lead. --></errorMessage>
+        <name>IsCitySet</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please fill out all fields in the closing path --></errorMessage>
+        <name>IsClosingPathUnknown</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please fill out all info in the Constraints &amp; Indicators section --></errorMessage>
+        <name>IsConstraintsUnknown</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please fill out the country of the lead. --></errorMessage>
+        <name>IsCountrySet</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please fill out the date of the demo. --></errorMessage>
+        <name>IsDemoDateUnknown</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please fill out the industry. --></errorMessage>
+        <name>IsIndustryEmpty</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please fill out the lead source. --></errorMessage>
+        <name>IsLeadSourceEmpty</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please fill out the legal form field. --></errorMessage>
+        <name>IsLegalFormSet</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please submit a detailed Lost or Rejection reason --></errorMessage>
+        <name>IsLostorRejectedDetailedEmpty</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please put in a correct First &amp; Last Name and the Name of the Company. --></errorMessage>
+        <name>IsNameAndCompanyUnknown</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please fill out No of employees --></errorMessage>
+        <name>IsNrOfEmployeesEmpty</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please say if the Lead is nurturing or not. --></errorMessage>
+        <name>IsNurturingfilled</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please fill out the personal infos like name, gender, salutation, tone of address. --></errorMessage>
+        <name>IsPersonalInfoUnknown</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please fill out the postalcode of the lead. --></errorMessage>
+        <name>IsPostalcodeSet</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please select how you qualified and pitched Zeitgold to the lead --></errorMessage>
+        <name>IsQualificationTypeKnown</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please fill out the street of the lead. --></errorMessage>
+        <name>IsStreetSet</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Fill in the Field &quot;Year business established&quot; and remember that there are only numbers allowed. --></errorMessage>
+        <name>IsYearEstablishedNumber</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- GoogleMaps --></label>
+        <name>GoogleMaps</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleNews --></label>
+        <name>GoogleNews</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleSearch --></label>
+        <name>GoogleSearch</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Schedule_Calendly --></label>
+        <name>Schedule_Calendly</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_with_DocuSign --></label>
+        <name>dsfs__Send_with_DocuSign</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_Pardot_Email --></label>
+        <name>pi__Send_Pardot_Email</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_Pardot_Emails --></label>
+        <name>pi__Send_Pardot_Emails</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_Single_Pardot_Email --></label>
+        <name>pi__Send_Single_Pardot_Email</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_to_Prospect_Insight --></label>
+        <name>pi__Send_to_Prospect_Insight</name>
+    </webLinks>
+</CustomObjectTranslation>

@@ -1,0 +1,137 @@
+<apex:page controller="talkdesk.SplashPageController" action="{! init }" tabStyle="Talkdesk_Admin__tab">
+    <apex:variable var="destUrl" value="{! liveDemoUrl }"/>
+    <apex:variable var="chooseAccountPageUrl" value="{! chooseAccountPageUrl }"/>
+
+    <head>
+        <apex:stylesheet value="{! urlFor($Resource.slds, 'assets/styles/salesforce-lightning-design-system-vf.css') }"/>
+
+        <style>
+            body {
+                background-color: #F4F6F9 !important;
+            }
+
+            .wrapper {
+                margin: 0;
+                padding: 0;
+            }
+
+            .start-page-footer {
+                margin: auto;
+                text-align: center;
+                bottom: 6rem;
+                padding: 0.7rem;
+            }
+
+            .start-page-footer a {
+                font-size: 0.75rem;
+                color: white;
+                text-decoration: none;
+                padding: 0.5rem;
+                text-shadow: 1px 1px 3px black;
+            }
+
+            .start-page-footer a:hover {
+                text-decoration: underline;
+                color: white;
+            }
+
+            footer {
+                width: 100%;
+            }
+
+            footer .copyright-info {
+                margin: auto;
+                text-align: center;
+            }
+
+            #firstPageBgImage {
+                background-repeat: no-repeat;
+                background-position: 0 0;
+                background-size: cover;
+                background-image: url('{!UrlFOR($Resource.assets, 'start-page-bg-image.jpg')}');
+                margin-bottom: 1rem;
+            }
+
+            .first-page-wrapper {
+                display: flex;
+                min-height: 85vh;
+                width: 100%;
+            }
+
+            #firstPage {
+                margin: auto;
+            }
+
+            a.partner-link {
+                font-size: 0.75rem;
+                color: white !important;
+                text-decoration: none;
+                padding: 0.5rem;
+            }
+
+            a.partner-link:hover {
+                text-decoration: underline;
+                color: white;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="talkdesk wrapper">
+            <div id="firstPageBgImage">
+                <div class="first-page-wrapper">
+                    <div style="min-height: 100%; height: 100%; display: table;" id="firstPage">
+                        <div style="display: table-cell; vertical-align: middle;">
+                            <div class="slds">
+                                <div style="text-align: center;"><img
+                                        src="{! urlFor($resource.assets, 'talkdesk-white-logo.png') }"/></div>
+                                <br/>
+                                <div style="text-align: center;">
+                                  <span class="slds-text-heading--small slds-text-align--center"
+                                        style="color: white !important;">
+                                    The world's leading cloud-based call center software
+                                  </span>
+                                </div>
+                                <br/>
+                                <div class="slds-grid slds-grid--align-center">
+                                    <div class="slds-col">
+                                        <div class="slds-grid slds-nowrap">
+                                            <div class="slds-col slds-m-right--x-small">
+                                                <input type='button' onclick="goToLoginPage(); return false;"
+                                                       class="slds-button slds-button--brand" value="Login to Talkdesk"
+                                                       style="background-color: rgb(245, 170, 40) !important; border-color: rgb(245, 170, 40); "/>
+                                            </div>
+                                            <div class="slds-col slds-m-left--x-small">
+                                                <input type='button' onclick="window.open('{! destUrl }');"
+                                                       class="slds-button slds-button--neutral" value="Request a Live Demo"
+                                                       style="background-color: rgba(60, 150, 227, 0) !important; border-color: white; color: white !important;"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slds-text-heading--small slds-text-align--center slds-p-top--xx-large">
+                                    <a class="slds-text-heading--label partner-link"
+                                       href="https://www.talkdesk.com/partner-signup/" target="_blank">Are you a partner?
+                                        Register</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="start-page-footer">
+                </div>
+            </div>
+
+            <footer>
+                <div class="copyright-info">{! copyrightInfo }</div>
+            </footer>
+        </div>
+    </body>
+    <script>
+        function goToLoginPage() {
+            window.location.href = '{! chooseAccountPageUrl }';
+
+            return false;
+        }
+    </script>
+</apex:page>

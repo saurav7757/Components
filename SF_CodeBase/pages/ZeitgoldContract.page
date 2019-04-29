@@ -1,0 +1,1250 @@
+<apex:page controller="ZeitgoldCtl" showHeader="false" applyHtmlTag="false" renderAs="pdf" applyBodyTag="false" >
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <style type="text/css">
+        body {
+        font-family: 'SansSerif';
+        }
+        .bold {
+        font-weight: bold;
+        }
+        .dull { color: #999999; }
+        h4{ font-size: 24px; }
+        h5{ font-size: 22px; }
+            .underline {
+            text-decoration: underline;
+            }
+            .table {
+            height: 180px;
+            }
+            .white { color: white; }
+            
+            .table .left {
+            float: left;
+            width: 60%
+            }
+            .table .right {
+            float: right;
+            width: 35%;
+            text-align: left;
+            }
+            .table .left-shortened {
+              float: left;
+              width: 25%
+            }
+            .table .right-extended {
+              float: right;
+              width: 70%
+            }
+            .table .left-extended {
+              float: left;
+              width: 70%
+            }
+            .table .right-shortened {
+              float: right;
+              width: 25%
+            }
+            
+            .footer {
+            margin-top: 250px;
+            vertical-align: top;
+            font-size: 13px;
+            }
+            
+            .footer .col-a {
+            vertical-align: top;
+            display: inline-block;
+            width: 25%;
+            }
+            .footer .col-b {
+            vertical-align: top;
+            display: inline-block;
+            width: 40%;
+            }
+            
+         
+            .footer .col-c {
+            vertical-align: top;
+            display: inline-block;
+            width: 32%;
+            }
+            
+            .indent {
+            padding-left: 10%;
+            }
+            
+            ol li, ul li {
+            line-height: 1.15em;
+            padding-bottom: 6px;
+            }
+            
+            ol.two { margin-top:-5px; }
+            ol.two li { list-style-type: none; }
+            ol.two li:before {
+            content: '2.' counter(item, decimal) '. ';
+            counter-increment: item;
+            }
+            ol.boldlist { counter-reset: item; }
+            ol.boldlist li { list-style-type: none; }
+            ol.boldlist li:before {
+            font-weight: bold;
+            content: '' counter(item, decimal) '. ';
+            counter-increment: item;
+            }
+            
+            ol.four { margin-top:-5px; }
+            ol.four li { list-style-type: none; }
+            ol.four li:before {
+            content: '4.' counter(item, decimal) '. ';
+            counter-increment: item;
+            }
+            
+            body {
+            font-size: 12px;
+            margin: 1cm;
+            }
+            h3 {
+            padding: 0;
+            margin: 0;
+            font-size: 14px;
+            padding-top: 3px;
+            padding-bottom: 0px;
+            }
+            .center {
+            text-align: center;
+            }
+            .bold {
+            font-weight: bold;
+            }
+            p {
+            line-height: 1.5;
+            }
+            .pb {
+            page-break-after: always;
+            }
+            .title {
+            color: navy;
+            }
+			.s_anchor {
+              margin-right: 90px;
+              margin-left: 0px;
+            }            
+            .grey {
+            color: #444;
+            margin-bottom: 20px;
+            
+            }
+            .date {
+            text-align: right;
+            padding-top: 20px
+            padding-bottom: 20px;
+            }
+            .img {
+            text-align: right;
+            margin-bottom: 100px;
+            }
+            h4 {
+            text-align: center;
+            color: #2b376c;
+            }
+            
+            .blue {
+            color: #2b376c;
+            }
+            h5 {
+            text-align: center;
+            color: #2b376c;
+            }
+            .check {
+            background-color: #fff;
+            background-image: url({!$Resource.contractCheck});
+            background-position: center bottom;
+            background-repeat: no-repeat;
+            text-align:center;
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            right: 0;
+            }
+                        
+            
+            .fifty .left {
+            display:inline-block;
+            width: 48%;
+            position: relative;
+            margin-right: 2%;
+            }
+            
+            .fifty {
+            line-height: 2;
+            vertical-align: top;
+            }
+            
+            .fifty .right {
+            display:inline-block;
+            width: 49%;
+            text-align: left;
+            position: relative;
+            vertical-align: top;
+            }
+
+
+        </style>
+    </head>
+    <body>
+        
+<c:ContractFrontPages payrollStart="{!payrollOnboardingDate}"
+					  legalType="{!legalType}"
+        			  accountStart="{!accountingStartDate}" 
+                      offerExpiration="{!offerExpirationDate}"
+                      annualRevenue="{!annualRevenue}"
+                      basisPauschale="{!basisPauschale}"
+                      lohnbuchhaltung="{!lohnbuchhaltung}"
+                      monatlichePauschale="{!monatlichePauschale}"
+                      jahrlichePauschale="{!jahrlichePauschale}"
+        			  ac="{!a}"
+                      op="{!o}"
+                      cn="{!c}"/>
+        <div class="content">            
+            <div class="pb"></div>
+            <div class="center">
+                <h2>Dienstleistungsvertrag</h2>
+                <br/>
+                zwischen<br/>
+                <br/>
+                <span class="bold">{!legalName}</span><br/>
+                <!--span class="white">\n1\</span><br/-->
+                {!legalStreet}<br/>
+                {!legalPostCode} {!legalCity}<br/>
+                <br/>
+                <span class="bold">- „Auftraggeber“ -</span>
+                <br/>
+                <br/>
+                und <br/>
+                <br/>
+                <span class="bold">Zeitgold GmbH</span><br/>
+                Rosa-Luxemburg-Str. 14<br/>
+                10178 Berlin<br/>
+                <br/>
+                <span class="bold">- „Auftragnehmer“ -</span>
+                <br/>
+                <br/>
+                <br/>
+                Auftraggeber und Auftragnehmer jeweils einzeln eine <span class="bold">„Partei“</span>, gemeinsam
+                die <span class="bold">„Parteien“</span>.
+            </div>
+        </div>
+        <br/>
+        <h3>Präambel</h3>        
+        <p>
+            Der Auftragnehmer bietet Dienstleistungen zur digitalen Unterstützung bei
+            der Buchhaltung an. Im Rahmen dieser Dienstleistungen bietet der
+            Auftragnehmer die Zeitgold Box an, in der der Auftraggeber seine
+            Dokumente sammeln kann und deren Inhalt regelmäßig vom Auftragnehmer
+            abgeholt werden (die „<span class="bold">Zeitgold Box</span>“). 
+            
+            Weiterhin haben Kunden des Auftragnehmers die Möglichkeit, über die
+            Zeitgold App auf ihre digitalisierten Dokumente zuzugreifen (die „<span class="bold">Zeitgold
+            App</span>“; die Zeitgold Box und die Zeitgold App gemeinsam die „<span class="bold">Zeitgold Software</span>“).
+        </p>
+        <p>
+            Der Auftraggeber beabsichtigt, den Auftragnehmer mit den oben genannten
+            Dienstleistungen zu beauftragen. Daher schließen die Parteien den folgenden
+            Dienstleistungsvertrag.
+        </p>
+        <h3>§ 1 Gegenstand des Vertrages </h3>
+        <p>1. Wöchentliche Abholung von physischen Unternehmensdokumenten;</p>
+        <p>2. Digitalisierung und Archivierung der übermittelten Unternehmensdaten
+            und -dokumente;</p>
+        <p>3. Bereitstellung der übermittelten Unternehmensdaten und -dokumente an
+            den ausgewählten Steuerberater des Auftraggebers;</p>
+        <p>4. Bereitstellung der relevanten, übermittelten Unternehmensdokumente an
+            staatliche Organisationen, nach Absprache;</p>
+        <p>5. Erstellung und Übermittlung der Dokumente zur monatlichen Lohn- und
+            Gehaltsabrechnungen an den Auftraggeber sowie den ausgewählten
+            Steuerberater des Auftraggebers;</p>
+        <p>6. Erstellung und Übermittlung von Daten zur Buchhaltungsvorbereitung und
+            -durchführung an den Steuerberater des Auftraggebers im Rahmen der
+            Tätigkeiten gemäß § 6 Nr. 3 und 4 StBerG;</p>
+        <p>7. Kontrolle der Kasse sowie der Einhaltung einer GoBD-konformen
+            Kassenführung;</p>
+        <p>8. Bereitstellung der Zeitgold Box und Zeitgold App.</p>
+        
+        <h3>§ 2 Allgemeine Vertragsbedingungen bei der Vertragserfüllung</h3>
+        <p>
+            1. Der Auftragnehmer verpflichtet sich, die nach diesem Vertrag zu
+            erbringenden Leistungen fachgerecht auszuführen. Zur Ausführung der
+            Leistung benötigt der Auftragnehmer zum Teil die Vollmacht des
+            Auftraggebers, bestimmte Handlungen für ihn vorzunehmen. Daher erteilt der
+            Auftraggeber dem Auftragnehmer die diesem Vertrag als <span class="bold
+                                                                               underline">Anlage</span> beigefügte
+            Handlungsvollmacht, welche separat zu unterzeichnen ist.
+        </p>
+        <p> 
+            2. Der Auftragnehmer ist berechtigt, Dritte, beispielsweise
+            Lohnbuchhaltungsunternehmen, Banken sowie Infrastrukturdienstleister zur
+            Auftragsdatenverarbeitung, mit der Erfüllung seiner Vertragspflichten
+            unterzubeauftragen („<span class="bold">Drittanbieter</span>“). Alle durch
+            die Beauftragung von Drittanbietern anfallenden Transaktionsgebühren
+            werden vom Auftragnehmer getragen. Einbehaltene Sicherheiten für
+            Transaktionen und transaktionsbezogene Ansprüche von Drittanbietern
+            gegenüber dem Auftragnehmer kann der Auftragnehmer vom Auftraggeber
+            zurückverlangen.
+        </p>
+        <p>
+            3. Im Rahmen der Tätigkeit des Auftragnehmers wird von der Möglichkeit
+            Gebrauch gemacht, mittels E-Mail und Zeitgold App zu kommunizieren. Der
+            Auftragnehmer erklärt sich mit der Kommunikation über Email und Zeitgold
+            App zwischen den Parteien und beteiligten Dritten ausdrücklich
+            einverstanden. Dabei sind dem Auftraggeber die Gefahren des
+            Datenaustausches über das Internet bewusst, insbesondere die Gefahr, dass
+            nicht befugte Dritte auf diese Informationen zugreifen, dass Informationen
+            ver- und gefälscht werden können oder dass auf dem Übertragungsweg Daten
+            verloren gehen. Der Auftragnehmer übernimmt keine Haftung für eventuelle
+            Schäden, die dem Auftraggeber oder Dritten aus einer solchen Versendung
+            per E-Mail oder per Zeitgold App entstehen.
+        </p>
+        <h3>§ 3 Pflichten der Vertragspartner</h3>
+        <p>
+            1. Der Auftragnehmer verpflichtet sich zur fachgerechten Erfüllung der in
+            § 1 genannten Leistungen. Diese Verpflichtung ruht, solange Außenstände
+            seitens des Auftraggebers gegenüber dem Auftragnehmer existieren, die über
+            die monatliche Vergütung nach § 8 Abs. 1 hinausgehen oder wenn der
+            Auftragnehmer davon auszugehen hat, dass der Auftraggeber seine
+            Außenstände in absehbarer Zeit nicht mehr begleichen wird.
+        </p>
+        <p>
+            2. Der Auftraggeber verpflichtet sich dem Auftragnehmer eine vollständige
+            und zeitnahe Darlegung der Unternehmensdaten zu garantieren. Auf Basis
+            dessen gewährleistet der Auftragnehmer Konformität mit den Grundsätzen zur
+            ordnungsmäßigen Führung und Aufbewahrung von Büchern, Aufzeichnungen und
+            Unterlagen in elektronischer Form sowie zum Datenzugriff (GoBD). Weiterhin
+            verpflichtet sich der Auftraggeber, den Auftragnehmer gemäß § 8 zu
+            vergüten.
+        </p>
+        <p>
+            3. Der Auftraggeber verpflichtet sich, den Auftragnehmer unverzüglich über
+            den Verlust oder Diebstahl eines mobilen Endgeräts, auf welchem die
+            Zeitgold App installiert wurde, in Kenntnis zu setzen.
+        </p>
+        <p>
+            4. Im Falle einer Kündigung gemäß § 7 Abs. 2, ist der Auftraggeber
+            verpflichtet, alle zwischen dem Auftraggeber und den unter § 2 Abs. 2
+            aufgeführten Drittanbietern geschlossenen Verträge und Vollmachten frist-
+            und formgerecht zu kündigen bzw. zu widerrufen.
+        </p>
+        <p>
+            5. Der Auftragnehmer verpflichtet sich, alle sich in seinem Besitz
+            befindlichen Unternehmensdaten und -dokumente des Auftraggebers, sowie
+            sämtliche den Auftraggeber betreffenden Buchhaltungsdaten an den
+            Auftraggeber auf Verlangen auszuhändigen. Dabei ist es dem Auftragnehmer
+            gestattet, alle einmal in seinem System gespeicherten Primärdaten zu
+            behalten. Im Falle einer Kündigung sind alle im Rahmen des Rückversands
+            anfallenden Versandkosten durch die Partei zu tragen, die die Kündigung
+            ausgesprochen hat.
+        </p>
+        <p>
+            6. Der Auftraggeber verpflichtet sich, den Auftragnehmer unverzüglich über
+            eine Insolvenz des Auftraggebers in Kenntnis zu setzen. 
+        </p>
+        <h3>§ 4 Eigentum, Nutzungs- und Urheberrechte</h3>
+        <p>
+            1. Unter der Bedingung der vertragsgemäßen Vergütung des Auftragnehmers
+            gewährt der Auftragnehmer dem Auftraggeber für die Dauer dieses Vertrages
+            das einfache und nicht übertragbare Recht des Zugangs und der Nutzung der
+            im Rahmen dieses Vertrages zur Verfügung gestellten Zeitgold Software für
+            allein interne Geschäftszwecke des Auftraggebers. Eine separate
+            Lizenzgebühr ist neben der vereinbarten Vergütung für die Services mangels
+            abweichender vertraglicher Vereinbarung nicht zu zahlen.
+        </p>
+        <p>
+            2. Die in Verbindung mit den Leistungen an den Auftraggeber zur Verfügung
+            gestellte Zeitgold Software bleiben jederzeit das ausschließliche,
+            alleinige und unbeschränkte Eigentum des Auftragnehmers. Mit Ausnahme der
+            dem Auftraggeber für die Vertragslaufzeit gemäß Ziffer 1 gewährten
+            Nutzungsrechte hat der Auftraggeber keine weiteren Rechte an der Zeitgold
+            Software. Insbesondere ist der Auftraggeber nicht berechtigt, die Zeitgold
+            Software Dritten zur Verfügung zu stellen oder zu vermieten.
+        </p>
+        <p>
+            3. Alle Rechte und Ansprüche auf oder an urheberrechtlich geschützten
+            Werken, Marken, Geschäftsgeheimnissen und sonstigen Eigentumsrechten im
+            Zusammenhang mit der Zeitgold Software und/oder Logos und Produktnamen des
+            Auftragnehmers stehen, mit Ausnahme der unter Abs. 1 erteilten einfachen
+            Lizenz, dem Auftragnehmer zu. Der Auftraggeber darf die auf der Zeitgold
+            Software angegebenen Urheberrechte, Marken oder sonstigen Rechte nicht
+            verbergen, unkenntlich machen, verändern oder entfernen.
+        </p>
+        <h3>§ 5 Geheimhaltung</h3>
+        <p>
+            1. Die Parteien sind sich nach Maßgabe dieses § 5 gegenseitig zur
+            Vertraulichkeit verpflichtet. „<span class="bold">Vertrauliche Informationen</span>“ sind
+            Informationen und Dokumente, die eine Partei („<span class="bold">Empfänger</span>“) von der jeweils anderen Partei („<span class="bold">Übersender</span>“) erhält, die den Umständen nach von umsichtig handelnden Geschäftsleuten üblicherweise vertraulich behandelt werden bzw. als vertraulich gekennzeichnet sind. Vertrauliche Informationen umfassen hingegen nicht solche Informationen, welche eine Partei (i) ausdrücklich ohne Beschränkung der Benutzung und Offenlegung übersendet, (ii) über sich in einer Anzeige/Pressemitteilung oder einer sonstigen Veröffentlichung verbreitet hat, (iii) der Empfänger selbstständig entwickelt hat ohne von Vertraulichen Informationen der anderen Partei Gebrauch zu machen, (iv) der Empfänger von einem Dritten erhalten hat und die keine Beschränkungen hinsichtlich der Weitergabe bzw. Verwendung unterliegen oder (v) ohne Verschulden oder Handlungen des Empfängers allgemein bekannt sind oder werden.
+        </p>
+        <p>
+            2. Der Empfänger verpflichtet sich jeweils im Hinblick auf die Vertraulichen Informationen:
+            <ol class="two">
+                <li>
+                    alle Vertraulichen Informationen vertraulich zu behandeln und alle
+                    notwendigen Schritte zur Wahrung der Vertraulichkeit zu unternehmen;
+                </li>
+                <li>
+                    die Vertraulichen Informationen nicht für andere Zwecke als für Zwecke
+                    dieser AGB bzw. des Vertragsverhältnisses zu verwenden;
+                </li>
+                <li>
+                    keine Vertraulichen Informationen ohne schriftliche Erlaubnis von
+                    der jeweils anderen Partei bzw. den unter Abs. 4 genannten Bedingungen
+                    Dritten zu offenbaren;
+                </li>
+                <li>
+                    alle vernünftigerweise zu erwartenden Anstrengungen zu
+                    unternehmen, um sicher zu stellen, dass jede Person, der Vertrauliche
+                    Informationen offenbart werden auf die vertrauliche Natur der
+                    Vertraulichen Informationen hingewiesen wird; und die Bedingungen
+                    dieser Vereinbarung beachtet, als sei sie Partei dieser Vereinbarung;
+                </li>
+                <li>
+                    alle Materialien, welche Vertrauliche Informationen enthalten,
+                    auf Aufforderung in Textform hin zurückzugeben oder zu vernichten.
+                </li>
+        </ol>
+    </p>
+    <p>
+        3. Sämtliche Vertrauliche Informationen verbleiben das geistige Eigentum
+        des Übersenders, von dem die Information herrührt.
+    </p>
+    <p>
+        4. Vertrauliche Informationen dürfen ausnahmsweise offengelegt werden
+        gegenüber solchen Beratern oder Mitarbeitern, die für die Zwecke der
+        Durchführung dieser AGB bzw. des Vertrags Zugang zu den Vertraulichen
+        Informationen haben müssen und die sich selbst gegenüber dem Empfänger,
+        für den sie tätig werden, einer Vertraulichkeitsvereinbarung des Inhalts
+        unterworfen haben, die der Übersender vernünftigerweise und auf seine
+        Verantwortung für die Einhaltung der Vertraulichkeit für ausreichend hält;
+        sowie das Gesetz, gesetzliche Verfahren oder Organe von Wertpapierbörsen
+        oder Behörden, es verlangen.
+    </p>
+    <p>
+        5. Vor der Offenlegung jeglicher Informationen wird der Empfänger sich
+        darum bemühen, über die Umstände der beabsichtigten Offenlegung zu
+        informieren und den vernünftigen Erwartungen des Übersenders betreffend
+        solcher Offenlegungen zu entsprechen.
+    </p>
+    <p>
+        6. Unter Berücksichtigung der unter § 5 Abs. 1-5 dargestellten Bestimmungen, ist
+        es dem Auftragnehmer gestattet, computergestützte Algorithmen zu verwenden, um
+        beispielsweise die Daten des Auftraggebers systematisch zu analysieren,
+        kundenspezifische Auswertungen durchzuführen oder um zu einer Automatisierung
+        seiner Geschäftsprozesse beizutragen.
+    </p>
+    <br/>
+    <h3>§ 6 Datenschutz</h3>
+    <p>
+        Soweit im Rahmen dieses Dienstleistungsvertrags personenbezogene Daten
+        betroffen sind, handeln die Parteien im Einklang mit den anwendbaren
+        Rechtsvorschriften insbesondere des Bundesdatenschutzgesetzes (BDSG) bzw.
+        des Telemediengesetzes (TMG) und der Datenschutz-Grundverordnung
+        (Verordnung (EU) 2016/679 des Europäischen Parlaments und des Rates vom
+        27. April 2016 zum Schutz natürlicher Personen bei der Verarbeitung
+        personenbezogener Daten, zum freien Datenverkehr und zur Aufhebung der
+        Richtlinie 95/46/EG, „DSGVO“). Der Auftraggeber sichert insbesondere zu,
+        dass er, soweit zur Durchführung dieses Dienstleistungsvertrags
+        erforderlich, die notwendigen Einwilligungen der Betroffenen zur
+        Speicherung, Verarbeitung bzw. Nutzung der Daten einholt. Unsere
+        Datenschutzerklärung ist Bestandteil dieses Dienstleistungsvertrages
+        (DL-Vertrag - Anhang 1).
+    </p>
+    <h3>§ 7 Vertragsbeginn, Vertragsdauer und Kündigung</h3>
+    <p>
+        1. Dieser Dienstleistungsvertrag beginnt mit dem Datum der beidseitigen
+        Unterzeichnung durch die Parteien und hat eine unbefristete Laufzeit.
+    </p>
+    <p>
+        2. Der im Rahmen des Dienstleistungsvertrags abgedeckte Zeitraum für die
+        Finanzbuchhaltung beginnt am {!accountingStartDate}. Für die
+        Lohnbuchhaltung beginnt dieser Zeitraum am {!payrollOnboardingDate}.
+    </p>
+    <p>
+        3. Es ist beiderseitig mit einer Frist von 4 Wochen zum Monatsende
+        kündbar, ohne dass es einer Angabe von Gründen bedarf. Die Kündigung
+        bedarf der Schriftform.
+    </p>
+    <h3>
+        § 8 Vergütung &amp; Fälligkeiten
+    </h3>
+    <p>
+        1. Der Auftragnehmer erhält für seine Tätigkeit eine monatliche Vergütung
+        in Höhe von EUR {!MRR} zzgl. MwSt.        
+    </p>
+    <p>
+        2. Der Preis basiert auf den zum Zeitpunkt des Vertragsschluss gemeinsam
+        festgelegten Parametern zum Geschäftsmodells des Auftraggebers (insb.
+        Jahresumsatz und Mitarbeiterzahl). Sollten die festgelegten Parameter über
+        einen Zeitraum von mehr als drei Monaten maßgeblich davon abweichen, so
+        behält sich Zeitgold eine Anpassung der Vergütung vor. Der Auftraggeber
+        ist angehalten, Zeitgold aktiv über maßgebliche Änderungen seines
+        Geschäftsmodells (z.B. Erweiterung um Online-Business) zu informieren.
+    </p>
+    <p>
+        3. Die monatliche Vergütung wird 14 Tage nach Rechnungsstellung für den
+        jeweils laufenden Monat zur Zahlung fällig.
+    </p>
+    <h3>
+        § 9 Haftung 
+    </h3>
+    <p>
+        1. Der Auftraggeber ist in vollem Umfang eigenverantwortlich für Schäden,
+        welche durch eine unvollständige oder nicht zeitnahe Verfügungstellung der
+        unternehmensspezifischen Informationen entstanden sind.
+    </p>
+    <p>
+        2. Schäden, welche trotz der vollständigen und zeitnahen Verfügungstellung
+        der unternehmensspezifischen Informationen durch den Auftraggeber
+        entstanden sind und auf die nicht GoBD Konformität der Prozesse des
+        Auftragnehmers zurückzuführen sind, werden vom Auftragnehmer getragen.
+    </p>
+    <p>
+        3. Der Auftragnehmer haftet des Weiteren nicht für Schäden, welche durch
+        Beratungsfehler des Steuerberaters des Auftraggebers und die Übernahme von
+        Buchungen des Steuerberaters in die Bücher, die der Auftragnehmer für den
+        Auftraggeber führt, entstanden sind. 
+    </p>
+    <p>
+        4. Auch im Übrigen ist die Haftung des Auftragnehmers für Schäden durch
+        und im Zusammenhang mit der Ausübung von Rechten und Pflichten aus diesem
+        Vertrag ausgeschlossen. Eine Haftungsbegrenzung des Auftragnehmers gilt
+        nicht für
+    </p>
+    <ol class="four">
+        <li>
+            Schäden aus der Verletzung des Lebens, des Körpers oder der Gesundheit,
+            die auf einer fahrlässigen Pflichtverletzung des Auftragnehmers oder eines
+            gesetzlichen Vertreters oder Erfüllungsgehilfen des Auftragnehmers
+            beruhen;
+        </li>
+        <li>
+            Schäden, die auf einer Pflichtverletzung des Auftragnehmers oder eines
+            gesetzlichen Vertreters oder Erfüllungsgehilfen des Auftragnehmers
+            bezüglich wesentlicher vertraglicher Rechte und Pflichten beruhen, die für
+            die ordnungsgemäße Durchführung des Vertrages unabdingbar sind, und
+            hierdurch die Erreichung des Vertragszwecks gefährdet ist
+            (Kardinalpflichten);
+        </li>
+        <li>
+            Schäden, die auf einer vorsätzlichen oder grob fahrlässigen
+            Pflichtverletzung des Auftragnehmers oder eines gesetzlichen Vertreters
+            oder Erfüllungsgehilfen des Auftragnehmers beruhen;
+        </li>
+        <li>
+            die Haftung nach dem Produkthaftungsgesetz;
+        </li>
+        <li>
+            die Haftung im Falle der Übernahme einer Garantie. 
+        </li>
+    </ol>
+    <p>
+        5. Für Schäden, die nicht in der Verletzung des Lebens, des Körpers oder der
+        Gesundheit liegen und die aufgrund einer fahrlässigen Pflichtverletzung des
+        Auftragnehmers oder eines gesetzlichen Vertreters oder Erfüllungsgehilfen
+        des Auftragnehmers beruhen, ist die Haftung des Auftragnehmers in jedem
+        Falle auf vertragstypische und vorhersehbare Schäden beschränkt.
+    </p>
+    <p>
+        6. Der Auftragnehmer haftet nicht für Schäden, die durch den Verlust eines
+        mobilen Endgeräts mit installierter Zeitgold App seitens des Auftraggebers,
+        oder einer seiner Mitarbeiter, entstanden sind.
+    </p>
+    <h3>
+        § 10 Schlussbestimmung
+    </h3>
+    <p>
+        1. Sollten einzelne Bestimmungen dieses Vertrages ganz oder teilweise
+        unwirksam sein oder werden, wird dadurch die Gültigkeit der übrigen
+        Bestimmungen nicht berührt. An die Stelle der unwirksamen Bestimmungen
+        treten solche Regelungen, die in gesetzlich zulässiger Weise dem
+        wirtschaftlichen Zwecke der ungültigen Bestimmung am nächsten kommen.
+        Entsprechendes gilt, wenn sich bei der Durchführung des Vertrages eine
+        ergänzungsbedürftige Lücke ergeben sollte.
+    </p>
+    <p>
+        2. Mündliche Abreden sind nicht getroffen. Änderung oder Ergänzungen
+        dieses Vertrages bedürfen der Schriftform. Dies gilt auch für eine
+        Änderung dieser Schriftformklausel.
+    </p>
+    <p>
+        3. Es gilt das Recht der Bundesrepublik Deutschland unter Ausschluss der
+        Kollisionsnormen sowie des UN-Kaufrechts.
+    </p>
+    <p>
+        4. Ausschließlicher Gerichtsstand für sämtliche Streitigkeiten aus und im Zusammenhang mit diesem Vertrag ist Berlin.
+    </p>
+    <p>
+        Hiermit stimmen beide Parteien dem Auftrag in dem oben beschriebenen Umfang zu:
+    </p>
+    <br/>
+    <div class="table">
+        <div class="left-extended">
+            Datum<br/>
+            <br/>
+            <br/>
+            <span class="white">\d1\</span><br/>
+            __________________________________<br/>
+            <br/>
+            Auftraggeber 
+            <br/>
+        </div>
+        
+        <div class="right-shortened">
+            Datum<br/>
+            <br/>
+            <br/>
+            {!date}<br/>
+            <br/>
+            <br/>
+            Auftragnehmer<br/>
+        </div>
+    </div>
+    <div class="table">
+        <!--div class="left"-->
+        <div class="left-extended">
+            <br/>
+            <!--span class="white">\s1\</span><br/-->
+            <apex:outputText escape="false" value="{! signingAnchorsShort}"/>
+            ____________________________________________________________<br/>
+            <br/>
+            <!--span class="white">\n1\</span><br/-->
+            {!legalName}<br/>
+            <br/>
+        </div>
+        
+        <div class="right-shortened">
+            <br/>
+            
+            <apex:image url="{!$Resource.zgSig}" width="150" height="45"/><br/>
+            
+            <br/>
+            Dr. Jan Deepen<br/> 
+            Zeitgold GmbH<br/>
+        </div>
+    </div>
+    <p>
+        Anlage(n):
+    </p>
+    <p>
+        Datenschutzerklärung, einzusehen unter: 
+        <a href="https://www.zeitgold.com/datenschutz/">https://www.zeitgold.com/datenschutz/</a>
+	</p>
+<div class="pb"></div>
+<div class="center">
+    <h2>Handlungsvollmacht</h2>
+    <br/>
+    Hiermit bevollmächtigt<br/>
+    <br/>
+    <span class="bold">{!legalName}</span><br/>
+    <!--span class="white">\n1\</span><br/-->
+    {!legalStreet}<br/>
+    {!legalPostCode} {!legalCity}<br/>
+    <br/>
+    - nachstehend <span class="bold">„Vollmachtgeber“</span> genannt -
+    <br/>
+    <br/>
+    die <br/>
+    <br/>
+    <span class="bold">Zeitgold GmbH</span><br/>
+    Rosa-Luxemburg-Str. 14<br/>
+    10178 Berlin<br/>
+    <br/>
+    - nachstehend <span class="bold">„Bevollmächtigter“</span> genannt -
+    <br/>
+    <br/>
+</div>
+<p>
+    mit Wirkung ab dem Beginn des zwischen den Parteien geschlossenen
+    Dienstleistungsvertrages (der „<span class="bold">Dienstleistungsvertrag</span>“), dem diese
+    Vollmacht als Anlage beigefügt ist, den Vollmachtgeber bei folgenden
+    Rechtshandlungen zu vertreten, soweit diese Vertretung rechtlich zulässig
+    ist:
+</p>
+<ul>
+    <li>
+        Austausch von Unternehmensdokumenten und -daten mit Dritten zur
+        Erfüllung der Vertragspflichten der Zeitgold GmbH unter dem
+        Dienstleistungsvertrag. „Dritte“ in diesem Zusammenhang meint, ist
+        jedoch nicht beschränkt auf die mit dem Vollmachtgeber in einem
+        Vertragsverhältnis stehenden Unternehmen, Sub-Unternehmer der Zeitgold
+        GmbH sowie hinzugezogenen Anwälte und Steuerberater;
+    </li>
+    <li>
+        Austausch von Information und in Kontakt treten mit Personen, welche in
+        einem Angestelltenverhältnis zum Vollmachtgeber stehen;
+    </li>
+    <li>
+        Auskunftserteilung an staatliche Behörden, welchen der Vollmachtgeber
+        zur Auskunft verpflichtet ist;
+    </li>
+    <li>
+        Eröffnung eines Bankkontos im Namen des Auftraggebers nach Absprache;
+    </li>
+    <li>
+        Einreichung von SEPA Lastschrift Mandaten im Namen des Auftraggebers
+        nach Absprache;
+    </li>
+    <li>
+        Durchführung von Transaktionen auf dem Bankkonto / den Bankkonten des
+        Auftraggebers im Namen des Auftraggebers nach Absprache.
+    </li>
+</ul>
+<p>
+    Der Bevollmächtigte ist berechtigt, sämtliche Handlungen vorzunehmen, die mit
+    den vor-stehend genannten Rechtshandlungen direkt oder indirekt in
+    Zusammenhang stehen, oder ihnen nützlich, zweckdienlich oder sinnvoll
+    erscheinen. Der Bevollmächtigte ist befugt, Untervollmachten an Mitarbeiter
+    der Zeitgold GmbH in gleichem Umfang zu erteilen. Diese Handlungsvollmacht
+    soll weit ausgelegt werden, um den Zweck ihrer Erteilung zu verwirklichen. Von
+    dieser Vollmacht kann ganz oder teilweise Gebrauch gemacht werden.
+</p>
+<p>
+    Diese Handlungsvollmacht unterliegt dem Recht der Bundesrepublik Deutschland.
+</p>
+<p>
+    Diese Handlungsvollmacht ist auf die Laufzeit des Dienstleistungsvertrages
+    begrenzt. Im Falle einer Kündigung des Dienstleistungsvertrages endet diese
+    Handlungsvollmacht mit Ablauf der Kündigungsfrist.
+</p>
+<div class="table">
+    <div class="left">
+        <br/>
+        <br/>
+        <span class="white">\d1\</span><br/>
+        _______________________<br/>
+        <br/>
+        Datum<br/>
+        <br/>
+    </div>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <div class="left-extended" style="margin-top: 20px;">
+        <br/>
+        <!--span class="white">\s1\</span><br/-->
+        <apex:outputText escape="false" value="{! signingAnchorsShort}"/>
+        _________________________________________________________________<br/>
+        <br/>
+        <!--span class="white">\n1\</span><br/-->
+        {!legalName}<br/>
+    </div>
+</div>
+<div class="pb"></div>
+<div class="center">
+    <h2>Vereinbarung zur Auftragsdatenverarbeitung gemäß Art. 28 DSGVO</h2>
+    <br/>
+    zwischen<br/>
+    <br/>
+    <span class="bold">{!legalName}</span><br/>
+    <!--span class="white">\n1\</span><br/-->
+    {!legalStreet}<br/>
+    {!legalPostCode} {!legalCity}<br/>
+    <br/>
+    <span class="bold">- „Auftraggeber“ -</span>
+    <br/>
+    <br/>
+    und <br/>
+    <br/>
+    <span class="bold">Zeitgold GmbH</span><br/>
+    Rosa-Luxemburg-Str. 14<br/>
+    10178 Berlin<br/>
+    <br/>
+    <span class="bold">- „Auftragnehmer“ -</span>
+    <br/>
+    <br/>
+</div>
+<h3>Präambel</h3>
+<p>
+    Zwischen dem Verantwortlichen und dem Auftragsverarbeiter besteht ein
+    Auftragsverhältnis im Sinne des Art. 28 der Datenschutz-Grundverordnung
+    (Verordnung (EU) 2016/679 des Europäischen Parlaments und des Rates vom
+    27. April 2016 zum Schutz natürlicher Personen bei der Verarbeitung
+    personenbezogener Daten, zum freien Datenverkehr und zur Aufhebung der
+    Richtlinie 95/46/EG, „DSGVO“).
+</p>
+<p>
+    Dieser Auftragsverarbeitungsvertrag einschließlich aller Anlagen
+    (nachfolgend gemeinsam als „Vereinbarung“ bezeichnet) konkretisiert die
+    datenschutzrechtlichen Verpflichtungen der Parteien aus dem
+    zugrundeliegenden Vertrag, der Leistungsvereinbarung und/oder
+    Auftragsbeschreibung einschließlich aller Anlagen (nachfolgend gemeinsam
+    als „Hauptvertrag“ bezeichnet). Sofern Bezug auf die Regelungen des
+    Bundesdatenschutzgesetzes (nachfolgend „BDSG“) genommen wird, so ist damit
+    das Gesetz zur Anpassung des Datenschutzrechts an die Verordnung (EU)
+    2016/679 und zur Umsetzung der Richtlinie (EU) 2016/680 in der zum
+    Zeitpunkt ab dem 25. Mai 2018 geltenden Fassung gemeint. Wird Bezug auf
+    die Regelungen des Bundesdatenschutzgesetzes-alt („BDSG-alt“) genommen, so
+    ist damit das Bundesdatenschutzgesetz in der Fassung der Bekanntmachung
+    vom 14. Januar 2003 (BGBl. I S. 66) gemeint.
+</p>
+<p>
+    Der Auftragsverarbeiter verpflichtet sich gegenüber dem Verantwortlichen
+    zur Erfüllung des Hauptvertrages und dieser Vereinbarung nach Maßgabe der
+    folgenden Bestimmungen:
+</p>
+<!--div class="pb"/-->
+<h3>
+    § 1 Anwendungsbereich und Begriffsbestimmungen
+</h3>
+<ol>
+    <li>
+        Die nachfolgenden Bestimmungen finden Anwendung auf alle Leistungen der
+        Auftragsverarbeitung im Sinne des Art. 28 DSGVO, die der
+        Auftragsverarbeiter auf Grundlage des Hauptvertrages gegenüber dem
+        Verantwortlichen erbringt.
+    </li>
+    <li>
+        Sofern in dieser Vereinbarung der Begriff „Datenverarbeitung“ oder
+        „Verarbeitung“ von Daten benutzt wird, ist darunter allgemein die Verwendung von
+        personenbezogenen Daten zu verstehen. Datenverarbeitung oder das Verarbeiten von
+        Daten bezeichnet jeden mit oder ohne Hilfe automatisierter Verfahren
+        ausgeführten Vorgang oder jede solche Vorgangsreihe im Zusammenhang mit
+        personenbezogenen Daten wie das Erheben, das Erfassen, die Organisation, das
+        Ordnen, die Speicherung, die Anpassung oder Veränderung, das Auslesen, das
+        Abfragen, die Verwendung, die Offenlegung durch Übermittlung, Verbreitung oder
+        eine andere Form der Bereitstellung, den Abgleich oder die Verknüpfung, die
+        Einschränkung, das Löschen oder die Vernichtung.
+    </li>
+    <li>
+        Auf die weiteren Begriffsbestimmungen in Art. 4 DSGVO wird verwiesen.
+    </li>
+</ol>
+<h3>
+    § 2 Gegenstand und Dauer der Datenverarbeitung
+</h3>
+<ol>
+    <li>
+        Der Auftragsverarbeiter verarbeitet personenbezogene Daten im Auftrag und nach Weisung des Verantwortlichen.
+    </li>
+    <li>
+        Gegenstand des Auftrags ist die automatisierte Buchhaltung im Rahmen des mit dem Auftragsverarbeiter vereinbarten Umfangs, gemäß dem Hauptvertrag.
+    </li>
+    <li>
+        Die Dauer dieser Vereinbarung entspricht der Laufzeit des Hauptvertrages.
+    </li>
+</ol>
+<h3> § 3 Art und Zweck der Datenverarbeitung</h3>
+<ol>
+    <li>
+        Art und Zweck der Verarbeitung personenbezogener Daten durch den
+        Auftragsverarbeiter ergeben sich aus dem Hauptvertrag. Dieser umfasst
+        folgende Tätigkeit(en) und Zweck(e):
+    </li>
+    <ul>
+        <li>
+            Transport physischer Unternehmensdokumente;
+        </li>
+        <li>
+            Digitalisierung und Archivierung übermittelter Unternehmensdaten und -dokumente;
+        </li>
+        <li>
+            Bereitstellung der übermittelten Unternehmensdaten und selbst generierter Dokumente an den Steuerberater des Auftraggebers;
+        </li>
+        <li>
+            Erstellung und Übermittlung der Daten und Dokumente zur monatlichen Lohn- und Gehaltsabrechnung an den Auftraggeber sowie den ausgewählten Steuerberater bzw. Abrechner des Auftraggebers;
+        </li>
+        <li>
+            Erstellung und Übermittlung von Daten zur Buchhaltungsvorbereitung an den Steuerberater des Auftraggebers im Rahmen der Tätigkeiten gemäß § 6 Nr. 3 StBerG;
+        </li>
+        <li>
+            Zur Verfügungstellung eines Archivs zur Kontrolle der Kasse sowie der Einhaltung einer GoBD-konformen Kassenführung;
+        </li>
+        <li>
+            Bereitstellung der Zeitgold Box und Zeitgold App.
+        </li>
+        <li>
+            Verarbeitung der Daten zur Verbesserung und Weiterentwicklung des Algorithmus durch den Auftragsverarbeiter
+        </li>
+    </ul>
+</ol>
+<h3>
+    § 4 Kategorien betroffener Personen
+</h3>
+<ol>
+    <li>
+        Die Kategorien der durch den Umgang mit den personenbezogenen Daten im
+        Rahmen dieser Vereinbarung betroffenen Personen umfasst:
+    </li>
+    <ul>
+        <li>
+            Auftraggeber
+        </li>
+        <li>
+            Endkunden des Auftraggebers
+        </li>
+        <li>
+            Interessenten/potentielle Endkunden des Auftraggebers
+        </li>
+        <li>
+            Mitarbeiter der Nutzer
+        </li>
+        <li>
+            Lieferanten/Subunternehmer des Auftraggebers
+        </li>
+        <li>
+            Sonstige Vertragspartner des Auftraggebers
+        </li>
+    </ul>
+</ol>
+<h3>§ 5 Art der personenbezogenen Daten</h3>
+<ol>
+    <li>
+        Von der Auftragsverarbeitung sind folgende Datenarten betroffen:
+    </li>
+    <ul>
+        <li>
+            Namen
+        </li>
+        <li>
+            Geschlecht
+        </li>
+        <li>
+            Geburtsdatum/Geburtsort/Geburtsland/Nationalität
+        </li>
+        <li>
+            Anschrift/Adresse
+        </li>
+        <li>
+            E-Mail/Telefonnummern
+        </li>
+        <li>
+            Vertragsdaten/Kundenhistorie
+        </li>
+        <li>
+            Bankdaten/Zahlungsdaten
+        </li>
+        <li>
+            Abrechnungsdaten, z.B. Inhalte von Rechnungen und Angeboten, Bewirtungsbelege, etc.
+        </li>
+        <li>
+            Steuerrelevante Daten, z.B. Empfangsbestätigungen, Empfangsbescheinigungen, etc.
+        </li>
+        <li>
+            Versicherungsrelevante Daten
+        </li>
+    </ul>
+</ol>
+<h3>
+    § 6 Rechte und Pflichten des Verantwortlichen
+</h3>
+<ol>
+    <li>
+        Für die Beurteilung der Zulässigkeit der Datenverarbeitung sowie zur Wahrung der Rechte der Betroffenen ist allein der Verantwortliche zuständig und somit für die Verarbeitung Verantwortlicher im Sinne des Art. 4 Nr.7 DSGVO.
+    </li>
+    
+    <li>
+        Der Verantwortliche ist berechtigt, Weisungen über Art, Umfang und Verfahren der Datenverarbeitung zu erteilen. Mündliche Weisungen sind auf Verlangen des Verantwortlichen unverzüglich vom Auftragsverarbeiter schriftlich oder in Textform (z.B. per E-Mail) zu bestätigen.
+    </li>
+    
+    <li>
+        Soweit es der Verantwortliche für erforderlich hält, können weisungsberechtigte Personen benannt werden. Diese wird der Verantwortliche dem Auftragsverarbeiter schriftlich oder in Textform mitteilen. Für den Fall, dass sich diese weisungsberechtigten Personen bei dem Verantwortlichen ändern, wird dies dem Auftragsverarbeiter unter Benennung der jeweils neuen Person schriftlich oder in Textform mitgeteilt.
+    </li>
+    
+    <li>
+        Der Verantwortliche informiert den Auftragsverarbeiter unverzüglich, wenn Fehler oder Unregelmäßigkeiten im Zusammenhang mit der Verarbeitung personenbezogener Daten durch den Auftragsverarbeiter festgestellt werden.
+    </li>
+</ol>
+<h3>
+    § 7 Pflichten des Auftragsverarbeiters
+</h3>
+<ol>
+    <li>
+        <span class="underline">Datenverarbeitung</span>
+        <p>
+            Der Auftragsverarbeiter wird personenbezogene Daten ausschließlich nach Maßgabe
+            dieser Vereinbarung und/oder des zugrundeliegenden Hauptvertrages sowie nach den
+            Weisungen des Verantwortlichen zu verarbeiten.
+        </p>
+    </li>
+    <li>
+        <span class="underline">Betroffenenrechte</span>
+        <ol type="a">
+            <li>
+                Der Auftragsverarbeiter wird den Verantwortlichen bei der Erfüllung der Rechte
+                der Betroffenen, insbesondere im Hinblick auf Berichtigung, Einschränkung der
+                Verarbeitung und Löschung, Benachrichtigung und Auskunftserteilung, im Rahmen
+                seiner Möglichkeiten unterstützen. Sollte der Auftragsverarbeiter die in § 5
+                dieser Vereinbarung genannten personenbezogenen Daten im Auftrag des
+                Verantwortlichen verarbeiten und sind diese Daten Gegenstand eines Verlangens
+                auf Datenportabilität gem. Art. 20 DSGVO, wird der Auftragsverarbeiter dem
+                Verantwortlichen den betreffenden Datensatz innerhalb einer angemessen gesetzten
+                Frist, in einem strukturierten, gängigen und maschinenlesbaren Format zur
+                Verfügung stellen.
+            </li>
+            <li>
+                Der Auftragsverarbeiter hat auf Weisung des Verantwortlichen die in § 5 dieser
+                Vereinbarung genannten personenbezogenen Daten, die im Auftrag verarbeitet
+                werden, zu berichtigen, zu löschen oder die Verarbeitung einzuschränken. Das
+                Gleiche gilt, wenn diese Vereinbarung eine Berichtigung, Löschung oder
+                Einschränkung der Verarbeitung von Daten vorsieht.
+            </li>
+            <li>
+                Soweit sich eine betroffene Person unmittelbar an den Auftragsverarbeiter
+                zwecks Berichtigung, Löschung oder Einschränkung der Verarbeitung der in § 5
+                dieser Vereinbarung genannten personenbezogenen Daten wendet, wird der
+                Auftragsverarbeiter dieses Ersuchen unverzüglich nach Erhalt an den
+                Verantwortlichen weiterleiten.
+            </li>
+        </ol>
+    </li>
+    <li>
+        <span class="underline">Kontrollpflichten</span>
+        <ol type="a">
+            <li>
+                Der Auftragsverarbeiter stellt durch geeignete Kontrollen sicher, dass
+                die im Auftrag verarbeiteten personenbezogenen Daten ausschließlich
+                nach Maßgabe dieser Vereinbarung und/oder des Hauptvertrages und/oder
+                den entsprechenden Weisungen verarbeitet werden.
+            </li>
+            <li>
+                Der Auftragsverarbeiter wird sein Unternehmen und seine
+                Betriebsabläufe so gestalten, dass die Daten, die er im Auftrag des
+                Verantwortlichen verarbeitet, im jeweils erforderlichen Maß gesichert
+                und vor der unbefugten Kenntnisnahme Dritter geschützt sind.
+            </li>
+            <li>
+                Der Auftragsverarbeiter bestätigt, dass er gem. Art. 37 DSGVO und,
+                sofern anwendbar, gemäß § 38 BDSG einen Datenschutzbeauftragten
+                bestellt hat und die Einhaltung der Vorschriften zum Datenschutz und
+                zur Datensicherheit unter Einbeziehung des Datenschutzbeauftragten
+                überwacht. Datenschutzbeauftragter des Auftragsverarbeiters ist
+                derzeit:
+                <p class="indent">
+                    Philipp Kaufold<br/>
+                    ISiCO Datenschutz GmbH<br/>
+                    Am Hamburger Bahnhof 4, 10557 Berlin<br/>
+                </p>
+            </li>
+        </ol>
+    </li>
+</ol>
+<ol>
+    <li>
+        <span class="underline">Ort der Datenverarbeitung:</span>
+        <p>
+            Die Verarbeitung der Daten findet grundsätzlich im Gebiet der Bundesrepublik
+            Deutschland, in einem Mitgliedsstaat der Europäischen Union oder in einem
+            anderen Vertragsstaat des Abkommens über den Europäischen Wirtschaftsraum statt.
+            Jede Verlagerung in ein Drittland darf nur erfolgen, wenn die besonderen
+            Voraussetzungen der Art. 44 ff. DSGVO erfüllt sind.
+        </p>
+    </li>
+    <li>
+        <span class="underline">Löschung der personenbezogenen Daten nach Auftragsbeendigung:</span>
+        <p>
+            Nach Beendigung des Hauptvertrages wird der Auftragsverarbeiter alle
+            im Auftrag verarbeiteten personenbezogenen Daten nach Wahl des
+            Verantwortlichen entweder löschen oder zurückgeben, sofern der
+            Löschung dieser Daten keine gesetzlichen Aufbewahrungspflichten des
+            Auftragsverarbeiters entgegenstehen. Die datenschutzgerechte Löschung
+            ist zu dokumentieren und gegenüber dem Verantwortlichen auf
+            Anforderung zu bestätigen.
+        </p>
+    </li>
+</ol>
+<h3>§ 8 Kontrollrechte des Verantwortlichen</h3>
+<ol>
+    <li>
+        Der Verantwortliche ist berechtigt, nach rechtzeitiger vorheriger
+        Anmeldung zu den üblichen Geschäftszeiten ohne Störung des
+        Geschäftsbetriebes des Auftragsverarbeiters oder Gefährdung der
+        Sicherheitsmaßnahmen für andere Verantwortliche und auf eigene Kosten,
+        die Einhaltung der Vorschriften über den Datenschutz und der
+        vertraglichen Vereinbarungen im erforderlichen Umfang selbst oder durch
+        Dritte zu kontrollieren. Die Kontrollen können auch durch Zugriff auf
+        vorhandene branchenübliche Zertifizierungen des Auftragsverarbeiters
+        aktuelle Testate oder Berichte einer unabhängigen Instanz (wie z.B.
+        Wirtschaftsprüfer, externer Datenschutzbeauftragter, Revisor oder
+        externer Datenschutzauditor) oder Selbstauskünfte durchgeführt werden.
+        Der Auftragsverarbeiter wird die notwendige Unterstützung zur
+        Durchführung der Kontrollen anbieten.
+    </li>
+    <li>
+        Der Auftragsverarbeiter wird den Verantwortlichen über die Durchführung
+        von Kontrollmaßnahmen der Aufsichtsbehörde informieren, soweit die
+        Maßnahmen oder Datenverarbeitungen betreffen können, die der
+        Auftragsverarbeiter für den Verantwortlichen erbringt.
+    </li>
+</ol>
+<h3>§ 9 Unterauftragsverhältnisse</h3>
+<ol>
+    <li>
+        Der Verantwortliche ermächtigt den Auftragsverarbeiter weitere
+        Auftragsverarbeiter gemäß den nachfolgenden Absätzen in § 9 dieser Vereinbarung
+        in Anspruch zu nehmen. Diese Ermächtigung stellt eine allgemeine schriftliche
+        Genehmigung i. S. d. Art. 28 Abs. 2 DSGVO dar.
+    </li>
+    
+    <li>
+        Der Auftragsverarbeiter arbeitet derzeit bei der Erfüllung des Auftrags mit den
+        in der Anlage 2 benannten Unterauftragnehmern zusammen, mit deren Beauftragung
+        sich der Verantwortliche einverstanden erklärt.
+    </li>
+    
+    <li>
+        Der Auftragsverarbeiter ist berechtigt, weitere Auftragsverarbeiter zu
+        beauftragen oder bereits beauftragte zu ersetzen. Der
+        Auftragsverarbeiter wird den Verantwortlichen vorab über jede
+        beabsichtigte Änderung in Bezug auf die Hinzuziehung oder die Ersetzung
+        eines weiteren Auftragsverarbeiters informieren.  Der Verantwortliche
+        kann gegen eine beabsichtigte Änderung Einspruch erheben.
+    </li>
+    
+    <li>
+        Der Einspruch gegen die beabsichtigte Änderung ist innerhalb von 2
+        Wochen nach Zugang der Information über die Änderung gegenüber dem
+        Auftragsverarbeiter zu erheben. Im Fall des Einspruchs kann der
+        Auftragsverarbeiter nach eigener Wahl die Leistung ohne die
+        beabsichtigte Änderung erbringen oder einen alternativen weiteren
+        Auftragsverarbeiter vorschlagen und mit dem Verantwortlichen abstimmen.
+        Sofern die Erbringung der Leistung ohne die beabsichtigte Änderung dem
+        Auftragsverarbeiter nicht zumutbar ist – etwa aufgrund von damit
+        verbundenen unverhältnismäßigen Aufwendungen für den Auftragsverarbeiter
+        – oder die Abstimmung eines weiteren Auftragsverarbeiters fehlschlägt,
+        können der Verantwortliche und der Auftragsverarbeiter diese
+        Vereinbarung sowie den Hauptvertrag mit einer Frist von einem Monat zum
+        Monatsende kündigen.
+    </li>
+    
+    <li>
+        Bei Einschaltung eines weiteren Auftragsverarbeiters muss stets ein
+        Schutzniveau, welches mit demjenigen dieser Vereinbarung vergleichbar
+        ist, gewährleistet werden. Der Auftragsverarbeiter ist gegenüber dem
+        Verantwortlichen für sämtliche Handlungen und Unterlassungen der von ihm
+        eingesetzten weiteren Auftragsverarbeiter verantwortlich.
+    </li>
+</ol>
+<h3>§ 10 Vertraulichkeit</h3>
+<ol>
+    <li>
+        Der Auftragsverarbeiter ist bei der Verarbeitung von Daten für den
+        Verantwortlichen zur Wahrung der Vertraulichkeit verpflichtet.
+    </li>
+    
+    <li>
+        Der Auftragsverarbeiter verpflichtet sich bei der Erfüllung des Auftrags nur
+        Mitarbeiter oder sonstige Erfüllungsgehilfen einzusetzen, die auf die
+        Vertraulichkeit im Umgang mit überlassenen personenbezogenen Daten verpflichtet
+        und in geeigneter Weise mit den Anforderungen des Datenschutzes vertraut gemacht
+        worden sind. Die Vornahme der Verpflichtungen wird der Auftragsverarbeiter dem
+        Verantwortlichen auf Nachfrage nachweisen.
+    </li>
+    
+    <li>
+        Sofern der Verantwortliche anderweitigen Geheimnisschutzregeln unterliegt, wird
+        er dies dem Auftragsverarbeiter mitteilen. Der Auftragsverarbeiter wird seine
+        Mitarbeiter entsprechend den Anforderungen des Verantwortlichen auf diese
+        Geheimnisschutzregeln verpflichten.
+    </li>
+</ol>
+<h3> § 11 Technische und organisatorische Maßnahmen</h3>
+<ol>
+    <li>
+        Die in Anlage 1 beschriebenen technischen und organisatorischen Maßnahmen werden als angemessen vereinbart. Der Auftragsverarbeiter kann diese Maßnahmen aktualisieren und ändern, vorausgesetzt dass das Schutzniveau durch solche Aktualisierungen und/oder Änderungen nicht wesentlich herabgesetzt wird.
+    </li>
+    
+    <li>
+        Der Auftragsverarbeiter beachtet die Grundsätze ordnungsgemäßer Datenverarbeitung gemäß Art 32 i.V.m Art. 5 Abs. 1 DSGVO. Er gewährleistet die vertraglich vereinbarten und gesetzlich vorgeschriebenen Datensicherheitsmaßnahmen. Er wird alle erforderlichen Maßnahmen zur Sicherung der Daten bzw. der Sicherheit der Verarbeitung, insbesondere auch unter Berücksichtigung des Standes der Technik, sowie zur Minderung möglicher nachteiliger Folgen für Betroffene ergreifen. Die zu treffenden Maßnahmen umfassen insbesondere Maßnahmen zum Schutz der Vertraulichkeit, Integrität, Verfügbarkeit und Belastbarkeit der Systeme und Maßnahmen, die die Kontinuität der Verarbeitung nach Zwischenfällen gewährleisten. Um stets ein angemessenes Sicherheitsniveau der Verarbeitung gewährleisten zu können, wird der Auftragsverarbeiter die implementierten Maßnahmen regelmäßig evaluieren und ggf. Anpassungen vornehmen. 
+    </li>
+</ol>
+<h3> § 12 Haftung/ Freistellung </h3>
+<ol>
+    <li>Der Auftragsverarbeiter haftet gegenüber dem Verantwortlichen gemäß den gesetzlichen Regelungen für sämtliche Schäden durch schuldhafte Verstöße gegen diese Vereinbarung sowie gegen die ihn treffenden gesetzlichen Datenschutzbestimmungen, die der Auftragsverarbeiter, seine Mitarbeiter bzw. die von ihm mit der Vertragsdurchführung Beauftragten bei der Erbringung der vertraglichen Leistung verursachen. Eine Ersatzpflicht des Auftragsverarbeiters besteht nicht, sofern der Auftragsverarbeiter nachweist, dass er die ihm überlassenen Daten des Verantwortlichen ausschließlich nach den Weisungen des Verantwortlichen verarbeitet und seinen speziell den Auftragsverarbeitern auferlegten Pflichten aus der DSGVO nachgekommen ist.
+    </li>
+    <li>
+        Der Verantwortliche stellt den Auftragsverarbeiter von allen Ansprüchen Dritter frei, die aufgrund einer schuldhaften Verletzung der Verpflichtungen aus dieser Vereinbarung oder geltenden datenschutzrechtlichen Vorschriften durch den Verantwortlichen gegen den Auftragsverarbeiter geltend gemacht werden.
+    </li>
+</ol>
+<h3>
+    § 13         Sonstiges
+</h3>
+
+<ol>
+    <li>
+        Im Falle von Widersprüchen zwischen den Bestimmungen in dieser Vereinbarung und den Regelungen des Hauptvertrages gehen die Bestimmungen dieser Vereinbarung vor.
+    </li>
+    
+    <li>
+        Änderungen und Ergänzungen dieser Vereinbarung setzen die beidseitige Zustimmung der Vertragsparteien voraus unter konkreter Bezugnahme auf die zu ändernde Regelung dieser Vereinbarung. Mündliche Nebenabreden bestehen nicht und sich auch für künftige Änderungen dieser Vereinbarung ausgeschlossen.
+    </li>
+    
+    <li>
+        Diese Vereinbarung unterliegt deutschem Recht.
+    </li>
+    
+    <li>
+        Vor dem 25. Mai 2018 gilt dieser Vertrag als Vertrag über die Auftragsdatenverarbeitung im Sinne des § 11 BDSG-alt. Die Regelungen des BDSG-alt gelten bis zum 25. Mai 2018 entsprechend.
+    </li>
+    
+    <li>
+        Sofern der Zugriff auf die Daten, die der Verantwortliche dem Auftragsverarbeiter zur Datenverarbeitung übermittelt hat, durch Maßnahmen Dritter (z.B. Maßnahmen eines Insolvenzverwalters, Beschlagnahme durch Finanzbehörden, etc.) gefährdet wird, hat der Auftragsverarbeiter den Verantwortlichen unverzüglich hierüber zu benachrichtigen.
+    </li>
+  </ol>
+  <div class="pb">
+  </div>
+    
+
+    <div class="table">
+        <div class="left-extended">
+            Datum<br/>
+            <br/>
+            <br/>
+            <span class="white">\d1\</span><br/>
+            __________________________________<br/>
+            <br/>
+            Auftraggeber 
+            <br/>
+        </div>
+        
+        <div class="right-shortened">
+            Datum<br/>
+            <br/>
+            <br/>
+            {!date}<br/>
+            <br/>
+            <br/>
+            Auftragnehmer<br/>
+        </div>
+    </div>
+    <div class="table">
+        <div class="left-extended">
+            <br/>
+            <br/>
+            <apex:outputText escape="false" value="{! signingAnchorsShort}"/>
+            ____________________________________________________________<br/>
+            <br/>
+            {!legalName}<br/>
+            <br/>
+        </div>
+        
+        <div class="right-shortened">
+            <br/>
+            
+            <apex:image url="{!$Resource.zgSig}" width="150" height="45"/><br/>
+            
+            <br/>
+            Dr. Jan Deepen<br/> 
+            Zeitgold GmbH<br/>
+        </div>
+    </div>  
+<h3> Anlagenverzeichnis</h3>
+<ul>
+    <li> Technische und organisatorische Maßnahmen zur Gewährleistung der
+        Sicherheit der Datenverarbeitung</li>
+    <li> Unterauftragsverhältnisse gemäß § 9 der Vereinbarung zur
+        Auftragsverarbeitung</li>
+    <li> Beide einzusehen unter: <a href="https://info.zeitgold.com/dvv-anlagen">https://info.zeitgold.com/dvv-anlagen</a>
+        Passwort: Zeitgold</li>
+</ul>
+</body>
+</html>
+</apex:page>

@@ -1,0 +1,6 @@
+<aura:component controller="OpportunityPDFAttachmentsController" implements="force:hasRecordId,flexipage:availableForAllPageTypes">
+    <aura:attribute name="recordId" type="Id"/>
+
+    <lightning:button label="Generate Contracts"
+                      onclick="{! c.handleGenerateContracts}"/>
+</aura:component>

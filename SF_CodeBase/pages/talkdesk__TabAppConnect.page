@@ -1,0 +1,7 @@
+<apex:page showHeader="false" sidebar="false">
+    <script>
+        var url = 'https://appconnect.talkdesk.com/';
+        window.open(url, '_blank');
+        window.history.back();
+    </script>
+</apex:page>

@@ -1,0 +1,35 @@
+<apex:page controller="talkdesk.TalkdeskLoginController" tabStyle="Talkdesk_Admin__tab" id="loginPage">
+    <apex:composition template="talkdesk__LoginTemplate">
+        <apex:define name="loginArea">
+            <div class="slds-scope">
+                <div class="slds-grid slds-grid--align-center">
+                    <div class="slds-col slds-size--5-of-12 slds-medium-size--5-of-12 slds-large-size--4-of-12 slds-box" id="loginWindow">
+                        <p>
+                            Login with your Talkdesk ID<br/>
+                            to access your account.
+                        </p>
+                        <apex:form id="loginForm">
+                            <div class="slds-form-element">
+                                <apex:commandbutton value="Log In with Talkdesk"
+                                                    onClick="handleLoginClick(); return false;"
+                                                    styleClass="slds-button slds-button--brand slds-m-top--medium" />
+                            </div>
+                        </apex:form>
+                    </div>
+                </div>
+            </div>
+        </apex:define>
+    </apex:composition>
+    <script>
+        function handleLoginClick() {
+            const talkdeskIdUrl = new URL('{! urlFor($page.RedirectToTalkdeskId) }');
+            talkdeskIdUrl.searchParams.append('accountName', '{! accountName }');
+
+            openPopup(talkdeskIdUrl.toString(), 'authentication', 700, 900);
+        }
+
+        function handlePopupClose() {
+           location = '{! redirectTo }';
+        }
+    </script>
+</apex:page>

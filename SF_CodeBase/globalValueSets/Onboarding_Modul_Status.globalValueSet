@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>1. Not filled</fullName>
+        <default>true</default>
+        <label>1. Not filled</label>
+    </customValue>
+    <customValue>
+        <fullName>2. Filled, not validated</fullName>
+        <default>false</default>
+        <label>2. Filled, not validated</label>
+    </customValue>
+    <customValue>
+        <fullName>3.a Validated &amp; migrated - missing data</fullName>
+        <default>false</default>
+        <label>3.a Validated &amp; migrated - missing data</label>
+    </customValue>
+    <customValue>
+        <fullName>3.b Validated &amp; migrated - data complete</fullName>
+        <default>false</default>
+        <label>3.b Validated &amp; migrated - data complete</label>
+    </customValue>
+    <customValue>
+        <fullName>4. Completed, migrated &amp; handed-over</fullName>
+        <default>false</default>
+        <label>4. Completed, migrated &amp; handed-over</label>
+    </customValue>
+    <customValue>
+        <fullName>CDB synced</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>CDB synced</label>
+    </customValue>
+    <customValue>
+        <fullName>Data validated</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Data validated</label>
+    </customValue>
+    <customValue>
+        <fullName>JotForm completed</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>JotForm completed</label>
+    </customValue>
+    <customValue>
+        <fullName>Not started</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Not started</label>
+    </customValue>
+    <customValue>
+        <fullName>JotForm Incomplete</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>JotForm Incomplete</label>
+    </customValue>
+    <description>Values for Onboarding Status</description>
+    <masterLabel>Onboarding Modul Status</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

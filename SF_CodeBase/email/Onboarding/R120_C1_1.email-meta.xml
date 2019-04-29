@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Calendly OBC1</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>R120_C1_1</name>
+    <style>none</style>
+    <subject>Erinnerung: Deine nächsten Schritte mit Zeitgold</subject>
+    <textOnly>Hallo {!Contact.FirstName},  noch einmal ein herzliches Willkommen bei Zeitgold! Ich bin {!Onboarding__c.OwnerFirstName} und werde Dich in Deinem Onboarding-Prozess bei Zeitgold begleiten. Damit wir einen reibungslosen Start hinlegen können, möchte ich Dich noch einmal an Deinen nächsten Schritt mit Zeitgold erinnern:  Bitte vereinbare Dir über den folgenden Link einen ersten Telefontermin:  Bitte erledige dies spätestens bis zum 10. des Monats vor Zeitgold, damit unserem gemeinsamen Start nichts mehr im Wege steht. Solltest Du noch Rückfragen haben, kannst Du Dich gerne jederzeit unter service@zeitgold.com bei uns melden.  Viele Grüße,  -- {!Onboarding__c.OwnerFullName} Onboarding Delivery Specialist ____________________________________________________________ Zeitgold GmbH +49 172 49 65 062 {!Onboarding__c.OwnerEmail} ____________________________________________________________ Zeitgold GmbH • Rosa-Luxemburg-Straße 14 • D-10178 Berlin Geschäftsführer: Dr. Jan Deepen, Stefan Jeschonnek Eingetragen beim Amtsgericht Charlottenburg in Berlin, HRB 171502 B USt-IdNr.: DE304225584, St.-Nr. 37 / 604 / 50034 --- Zeitgold verarbeitet Deine Daten im Sinne der EU-Datenschutzgrundverordnung (DSGVO). Erfahre unter www.zeitgold.com/datenschutz mehr. Im Falle von spezifischen Anfragen zur Verarbeitung Deiner Daten bei Zeitgold kontaktiere bite datenschutz@zeitgold.com</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

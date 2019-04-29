@@ -1,0 +1,18 @@
+<p>Hi {!Account.Customer_First_Name__c},</p>
+<p>My name is {!Account.Onboarding_Manager_First_Name__c} and I am very happy to hear that you have decided to bring your business, {!Account.Company_Legal_Name__c} to us here at Zeitgold!</p>
+<p>Until your official start with us, I will be here for you to help you set up the Zeitgold system and to familiarize you with our services. As your first step, please log into your Zeitgold-App to complete your first in-app tasks.</p>
+<p style="text-align: left;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<center><img src="https://zeitgold--c.eu8.content.force.com/servlet/servlet.ImageServer?id=0150N000007MKwD&amp;oid=00D0N000001MQYz&amp;lastMod=1554997303000" alt="" width="205" height="409" /></center><center><strong>To log into the Zeitgold-App, please download the app, enter your e-mail address and click &ldquo;Passwort vergessen?&rdquo; to set your password.</strong>
+<p style="text-align: center; padding-left: 74px;">&nbsp;</p>
+</center><center><a href="https://play.google.com/store/apps/details?id=com.zeitgold.merchantapp&amp;amp;hl=de" target="_blank" rel="noopener"><img src="https://zeitgold--c.eu8.content.force.com/servlet/servlet.ImageServer?id=0150N000007MKwN&amp;oid=00D0N000001MQYz&amp;lastMod=1554997417000" alt="" width="100" height="41" /></a> <a href="https://itunes.apple.com/de/app/zeitgold/id1154074067?mt=8" target="_blank" rel="noopener"><img src="https://zeitgold--c.eu8.content.force.com/servlet/servlet.ImageServer?id=0150N000007MKwS&amp;oid=00D0N000001MQYz&amp;lastMod=1554997446000" alt="" width="100" height="40" /></a></center>
+<p>&nbsp;</p>
+<p>In addition to getting things started in the app, please take a moment to send me the following important items via E-Mail:</p>
+<ul>
+<li>A <strong>picture of a Z-Report from your cash register system</strong> (including the various available revenue types)</li>
+<li>A <strong>recent business assessment (BWA)</strong> from your current financial tax advisor&nbsp;</li>
+</ul>
+<p>This will ensure that any necessary technical adjustments can be made prior to our start. If you have any questions, please do not hesitate to reach out to us via <strong>service@zeitgold.com </strong>or<strong> 030/30808111</strong>.</p>
+<p>I am already looking forward to our first Onboarding call!</p>
+<p>Warm greetings,<br /> {!Account.Onboarding_Manager_First_Name__c} at Zeitgold</p>
+<p>&nbsp;</p>
+<p>{!Account.Onboarding_Manager_Name__c}<br /> Onboarding Delivery Specialist<br /> Zeitgold Onboarding Team</p>

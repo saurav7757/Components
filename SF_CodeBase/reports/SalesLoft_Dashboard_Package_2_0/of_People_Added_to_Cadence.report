@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>text</bucketType>
+        <developerName>BucketField_10713099</developerName>
+        <masterLabel>Answer, Gatekeeper, etc</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>SUBJECT</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Call: Connected</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Call: Connected | Customer</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Call: Connected | Demo Scheduled</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Call: Connected | Existing Opp</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Call: Connected | Interested</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Call: Connected | No Interest</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Call: Connected | Referred to Other Contact</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Call: Connected | Rescheduling</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Call: Connected | Timeline 6-12 months</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Call: Gatekeeper - No contact with prospect</sourceValue>
+            </sourceValues>
+            <value>Answered</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Call: Busy | Gatekeeper - No contact with prospect</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Call: Connected | Gatekeeper - No contact with prospect</sourceValue>
+            </sourceValues>
+            <value>Gatekeeper</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Call: No Answer</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Call: No Answer | Existing Opp</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Call: No Answer | Gatekeeper - No contact with prospect</sourceValue>
+            </sourceValues>
+            <value>No answer</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Call: Connected | Company - Bad Fit</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Call: Connected | Contact - Bad Fit</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Call: Busy | Contact - Bad Fit</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Call: Not in Service</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Call: Rejected</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Call: Wrong Number</sourceValue>
+            </sourceValues>
+            <value>Bad Info</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Call: Left Voicemail</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Call: Left Voicemail | Customer</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Call: Left Voicemail | Existing Opp</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Call: Left Voicemail | No Interest</sourceValue>
+            </sourceValues>
+            <value>Voicemail</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Call: Busy | Interested</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Call: Busy | Referred to Other Contact</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Call: Busy | Rescheduling</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Call: Busy</sourceValue>
+            </sourceValues>
+            <value>Busy</value>
+        </values>
+    </buckets>
+    <chart>
+        <backgroundColor1>#FFFFFF</backgroundColor1>
+        <backgroundColor2>#FFFFFF</backgroundColor2>
+        <backgroundFadeDir>Diagonal</backgroundFadeDir>
+        <chartSummaries>
+            <axisBinding>y</axisBinding>
+            <column>RowCount</column>
+        </chartSummaries>
+        <chartType>HorizontalBar</chartType>
+        <enableHoverLabels>false</enableHoverLabels>
+        <expandOthers>true</expandOthers>
+        <groupingColumn>ASSIGNED</groupingColumn>
+        <location>CHART_TOP</location>
+        <showAxisLabels>true</showAxisLabels>
+        <showPercentage>false</showPercentage>
+        <showTotal>false</showTotal>
+        <showValues>false</showValues>
+        <size>Medium</size>
+        <summaryAxisRange>Auto</summaryAxisRange>
+        <textColor>#000000</textColor>
+        <textSize>12</textSize>
+        <titleColor>#000000</titleColor>
+        <titleSize>18</titleSize>
+    </chart>
+    <columns>
+        <field>Activity.SalesLoft_Step_Day_new__c</field>
+    </columns>
+    <columns>
+        <field>Activity.SalesLoft_Step_Type__c</field>
+    </columns>
+    <columns>
+        <field>SUBJECT</field>
+    </columns>
+    <columns>
+        <field>DUE_DATE</field>
+    </columns>
+    <columns>
+        <field>ACCOUNT</field>
+    </columns>
+    <columns>
+        <field>CONTACT</field>
+    </columns>
+    <columns>
+        <field>LEAD</field>
+    </columns>
+    <columns>
+        <field>OPPORTUNITY</field>
+    </columns>
+    <description>This Week</description>
+    <filter>
+        <criteriaItems>
+            <column>Activity.SalesLoft_Step_Day_new__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>1</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Activity.SalesLoft_Step_Type__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>contains</operator>
+            <value>email,call,other</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Matrix</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>ASSIGNED</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name># of People Added to Cadence</name>
+    <params>
+        <name>closed</name>
+        <value>closed</value>
+    </params>
+    <params>
+        <name>type</name>
+        <value>te</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Activity</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>false</showGrandTotal>
+    <showSubTotals>false</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>DUE_DATE</dateColumn>
+        <interval>INTERVAL_TODAY</interval>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Completeness Check - 2. Mail - EN</name>
+    <style>none</style>
+    <subject>Required Documents for a Complete Accounting Handover</subject>
+    <textOnly>Hi again {{{Recipient.FirstName}}},
+
+
+Thank you again for submitting the documents which we had recently requested from you!
+
+To complete your Onboarding, we still need the following:
+
+
+1. Business Assessment (in German, Betriebswirtschaftliche Auswertung (BWA))
+
+Please supply us with the following:
+
+[INDIVIDUALLY UPDATE LIST]
+
+A BWA or similar with the totals and debit balances for the month prior to your start with Zeitgold
+
+Rental agreements/contracts for your business premises
+
+Current loan agreements
+
+Current lease agreements
+
+
+
+Please Note: You will not incur any late fees if documents are not promptly provided. That being said, your monthly business assessment from pioneer will be most relevant and useful once we have all necessary data acquirable from these documents. Therefore, please send us what you can as soon as possible.
+
+
+2. Year-End/Annual Statement (in German, Jahresabschluss)
+
+Please supply us with the following:
+
+[INDIVIDUALLY UPDATE LIST]
+
+Your business&apos;s contractual agreement
+
+Important business-related records (including documents which account for the changing or business owners, shareholders, management structure, etc.)
+
+Year-End statement from the previous fiscal years (if available)
+
+Sales agreements from the previous fiscal years (if available)
+
+Working contracts for all of your employees
+
+
+
+Please Note: These documents are essential for the preparation of your business&apos;s year-end statement. Even if the year-end statement is not necessarily around the corner, it is best to collect these documents right at the start. Let&apos;s get these things squared away!
+
+
+________________
+
+
+&gt;&gt; Place requested documents in the mailing envelope for the next box-pick-up.
+
+
+&gt;&gt; Provide us a quick e-mail response about which documents we should find in the envelope to ensure we find them amongst other documents.
+
+
+&gt;&gt; Also let us know if certain documents do not exist, are not relevant for your business and/or are still in the possession of your previous tax- or payroll-advisor.
+
+________________
+
+
+Thank you again for your time and assistance with these important matters.
+
+If you have any questions, you can always reach us at service@zeitgold.com or 030/3031811.
+
+
+My best,
+
+{{{Sender.FirstName}}} at Zeitgold</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

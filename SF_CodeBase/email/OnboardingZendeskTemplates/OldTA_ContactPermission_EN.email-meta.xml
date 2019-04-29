@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Old TA - Contact Permission - EN</name>
+    <style>none</style>
+    <subject>[IMPORTANT]: Permission to Contact Your Previous Tax/Payroll Advisor(s)</subject>
+    <textOnly>Hi there {{{Recipient.FirstName}}},
+
+
+For the complete transfer of your business&apos;s important tax- and payroll-related data, we need to contact your current tax advisor and/or payroll accountant.
+
+
+In your response to the questionnaires, you had written that we may not contact your current accountants without first conferring with you. We would ideally like to reach out to your accountants this week, so we are checking in to see if you would grant us permission to contact them.
+
+Do we have your permission to contact your current tax advisor and/or your current payroll accountant in order to initiate data transfer?
+Should you not allow us permission, you will be responsible for coordinating the data transfer between your current tax advisor and payroll accountant to Zeitgold.
+
+Please provide me with a response to this inquiry by no later than tomorrow evening.
+
+
+Thank you and kind regards,
+
+{{{Sender.FirstName}}} at Zeitgold</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

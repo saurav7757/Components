@@ -1,0 +1,946 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- ACC start date --></label>
+        <name>ACC_start_date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Accounting CCA Owner --></label>
+        <name>Accounting_CCA_Owner__c</name>
+        <relationshipLabel><!-- Cases (Accounting CCA Owner) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Accounting CCA Status --></label>
+        <name>Accounting_CCA_Status__c</name>
+        <picklistValues>
+            <masterLabel>Closed</masterLabel>
+            <translation><!-- Closed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>On hold</masterLabel>
+            <translation><!-- On hold --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Open</masterLabel>
+            <translation><!-- Open --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Solved</masterLabel>
+            <translation><!-- Solved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Waiting</masterLabel>
+            <translation><!-- Waiting --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Accounting CCA --></label>
+        <name>Accounting_CCA__c</name>
+    </fields>
+    <fields>
+        <label><!-- Accounting Comments --></label>
+        <name>Accounting_Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Accounting DS Owner --></label>
+        <name>Accounting_DS_Owner__c</name>
+        <relationshipLabel><!-- Cases (Accounting DS Owner) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Accounting DS Status --></label>
+        <name>Accounting_DS_Status__c</name>
+        <picklistValues>
+            <masterLabel>Closed</masterLabel>
+            <translation><!-- Closed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>On hold</masterLabel>
+            <translation><!-- On hold --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Open</masterLabel>
+            <translation><!-- Open --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Solved</masterLabel>
+            <translation><!-- Solved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Waiting</masterLabel>
+            <translation><!-- Waiting --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Accounting DS Ticket Analysis --></label>
+        <name>Accounting_DS_Ticket_Analysis__c</name>
+        <picklistValues>
+            <masterLabel>-</masterLabel>
+            <translation><!-- - --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Data completeness requests</masterLabel>
+            <translation><!-- Data completeness requests --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Merchant Info: New direct debit, PP</masterLabel>
+            <translation><!-- Merchant Info: New direct debit, PP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Merchant Info: Other Info</masterLabel>
+            <translation><!-- Merchant Info: Other Info --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Merchant education: CEP</masterLabel>
+            <translation><!-- Merchant education: CEP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Merchant education: Other</masterLabel>
+            <translation><!-- Merchant education: Other --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Box+ E-Mail Adresse 2 --></label>
+        <name>Box_E_Mail_Adresse_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Box+ E-mail Adresse 1 --></label>
+        <name>Box_Email_Adresse_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Case Age --></label>
+        <name>Case_Age__c</name>
+    </fields>
+    <fields>
+        <label><!-- Create Case Split --></label>
+        <name>Create_Case_Split__c</name>
+    </fields>
+    <fields>
+        <label><!-- Current User Role --></label>
+        <name>Current_User_Role__c</name>
+    </fields>
+    <fields>
+        <label><!-- Current User is Owner --></label>
+        <name>Current_User_is_Owner__c</name>
+    </fields>
+    <fields>
+        <label><!-- Customer status --></label>
+        <name>Customer_status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Digitalization CCA Owner --></label>
+        <name>Digitalization_CCA_Owner__c</name>
+        <relationshipLabel><!-- Cases (Digitalization CCA Owner) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Digitalization CCA Status --></label>
+        <name>Digitalization_CCA_Status__c</name>
+        <picklistValues>
+            <masterLabel>Closed</masterLabel>
+            <translation><!-- Closed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>On hold</masterLabel>
+            <translation><!-- On hold --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Open</masterLabel>
+            <translation><!-- Open --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Solved</masterLabel>
+            <translation><!-- Solved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Waiting</masterLabel>
+            <translation><!-- Waiting --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Digitalization DS Owner --></label>
+        <name>Digitalization_DS_Owner__c</name>
+        <relationshipLabel><!-- Cases (Digitalization DS Owner) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Digitalization DS Status --></label>
+        <name>Digitalization_DS_Status__c</name>
+        <picklistValues>
+            <masterLabel>Closed</masterLabel>
+            <translation><!-- Closed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>On hold</masterLabel>
+            <translation><!-- On hold --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Open</masterLabel>
+            <translation><!-- Open --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Solved</masterLabel>
+            <translation><!-- Solved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Waiting</masterLabel>
+            <translation><!-- Waiting --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Escalation to Accounting DS --></label>
+        <name>Escalation_to_Accounting_DS__c</name>
+    </fields>
+    <fields>
+        <label><!-- Escalation to Digitalization DS --></label>
+        <name>Escalation_to_Digitalization_DS__c</name>
+    </fields>
+    <fields>
+        <label><!-- Escalation to Onboarding DS --></label>
+        <name>Escalation_to_Onboarding_DS__c</name>
+    </fields>
+    <fields>
+        <label><!-- Escalation to Payments DS --></label>
+        <name>Escalation_to_Payments_DS__c</name>
+    </fields>
+    <fields>
+        <label><!-- Escalation to Payroll DS --></label>
+        <name>Escalation_to_Payroll_DS__c</name>
+    </fields>
+    <fields>
+        <label><!-- Escalation to Pioneer TA --></label>
+        <name>Escalation_to_Pioneer_TA__c</name>
+    </fields>
+    <fields>
+        <label><!-- Escalation to Support DS --></label>
+        <name>Escalation_to_Support_DS__c</name>
+    </fields>
+    <fields>
+        <label><!-- Go Live Date --></label>
+        <name>Go_Live_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Issue classification --></label>
+        <name>Issue_classification__c</name>
+        <picklistValues>
+            <masterLabel>ACC - ACC: technical bug (other)</masterLabel>
+            <translation><!-- ACC - ACC: technical bug (other) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ACC - CEP: Blocked from closing</masterLabel>
+            <translation><!-- ACC - CEP: Blocked from closing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ACC - CEP: Question on entry</masterLabel>
+            <translation><!-- ACC - CEP: Question on entry --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ACC - CEP: Wrong entry made (by merchant)</masterLabel>
+            <translation><!-- ACC - CEP: Wrong entry made (by merchant) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ACC - Compliance task</masterLabel>
+            <translation><!-- ACC - Compliance task --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ACC - MEC: Document / Data Provision by merchant</masterLabel>
+            <translation><!-- ACC - MEC: Document / Data Provision by merchant --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ACC - Missing doc tasks: Wrong Document Requests in App</masterLabel>
+            <translation><!-- ACC - Missing doc tasks: Wrong Document Requests in App --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ACC - Missing doc tasks: question on solving/handling</masterLabel>
+            <translation><!-- ACC - Missing doc tasks: question on solving/handling --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ACC - Other</masterLabel>
+            <translation><!-- ACC - Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DIG - Archive: Document Return request</masterLabel>
+            <translation><!-- DIG - Archive: Document Return request --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DIG - Archive: Envelope missing</masterLabel>
+            <translation><!-- DIG - Archive: Envelope missing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DIG - Archive: Technical Bug (other)</masterLabel>
+            <translation><!-- DIG - Archive: Technical Bug (other) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DIG - LOG: Envelope incl Documents gets lost</masterLabel>
+            <translation><!-- DIG - LOG: Envelope incl Documents gets lost --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DIG - Other</masterLabel>
+            <translation><!-- DIG - Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DIG - PAM feature: Wrong payment to supplier conducted</masterLabel>
+            <translation><!-- DIG - PAM feature: Wrong payment to supplier conducted --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DIG - Pick-up: Cancellation required</masterLabel>
+            <translation><!-- DIG - Pick-up: Cancellation required --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DIG - Pick-up: Change of date required</masterLabel>
+            <translation><!-- DIG - Pick-up: Change of date required --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DIG - Pick-up: did not take place (ZG fault)</masterLabel>
+            <translation><!-- DIG - Pick-up: did not take place (ZG fault) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DIG - Pick-up: did not take place (merchants fault)</masterLabel>
+            <translation><!-- DIG - Pick-up: did not take place (merchants fault) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DIG - Replenishment: no envelopes available</masterLabel>
+            <translation><!-- DIG - Replenishment: no envelopes available --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Internal</masterLabel>
+            <translation><!-- Internal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OFB - Accounting</masterLabel>
+            <translation><!-- OFB - Accounting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OFB - Digitalization</masterLabel>
+            <translation><!-- OFB - Digitalization --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OFB - Onboarding</masterLabel>
+            <translation><!-- OFB - Onboarding --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OFB - Payments</masterLabel>
+            <translation><!-- OFB - Payments --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OFB - Payroll</masterLabel>
+            <translation><!-- OFB - Payroll --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OFB - Pioneer</masterLabel>
+            <translation><!-- OFB - Pioneer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OFB - Support</masterLabel>
+            <translation><!-- OFB - Support --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ONB -  Contact to preadvisor</masterLabel>
+            <translation><!-- ONB -  Contact to preadvisor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ONB -  Welcome Message</masterLabel>
+            <translation><!-- ONB -  Welcome Message --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ONB - Date arrangements</masterLabel>
+            <translation><!-- ONB - Date arrangements --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ONB - Docusign</masterLabel>
+            <translation><!-- ONB - Docusign --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ONB - Other</masterLabel>
+            <translation><!-- ONB - Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ONB / PAM - PAM feature: Onboarding not working in App</masterLabel>
+            <translation><!-- ONB / PAM - PAM feature: Onboarding not working in App --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PAM - Other</masterLabel>
+            <translation><!-- PAM - Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PAM - PAM conducted: Missing overview on transactions incl. in batched payment</masterLabel>
+            <translation><!-- PAM - PAM conducted: Missing overview on transactions incl. in batched payment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PAM - PAM feature: Logout of customer required to unblock payments</masterLabel>
+            <translation><!-- PAM - PAM feature: Logout of customer required to unblock payments --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PAM - PAM feature: Technical Bug (other)</masterLabel>
+            <translation><!-- PAM - PAM feature: Technical Bug (other) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PAM - PAM feature: account balance not updating</masterLabel>
+            <translation><!-- PAM - PAM feature: account balance not updating --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PAM - PAM feature: not working</masterLabel>
+            <translation><!-- PAM - PAM feature: not working --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PAM - PAM task: IBAN missing</masterLabel>
+            <translation><!-- PAM - PAM task: IBAN missing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PAM - PAM task: direct debit not set-up correctly</masterLabel>
+            <translation><!-- PAM - PAM task: direct debit not set-up correctly --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PAM - PAM task: wrong amount</masterLabel>
+            <translation><!-- PAM - PAM task: wrong amount --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PAR - Employee Management: Question on handling</masterLabel>
+            <translation><!-- PAR - Employee Management: Question on handling --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PAR - Employee Management: Reactivation/ deactivation of employees</masterLabel>
+            <translation><!-- PAR - Employee Management: Reactivation/ deactivation of employees --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PAR - Employee Management: Set-up of employee not working</masterLabel>
+            <translation><!-- PAR - Employee Management: Set-up of employee not working --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PAR - Other</masterLabel>
+            <translation><!-- PAR - Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PAR - PAR product: Closing of PAR task not possible</masterLabel>
+            <translation><!-- PAR - PAR product: Closing of PAR task not possible --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PAR - PAR product: Delay of payroll</masterLabel>
+            <translation><!-- PAR - PAR product: Delay of payroll --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PAR - PAR product: High social insurance payment</masterLabel>
+            <translation><!-- PAR - PAR product: High social insurance payment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PAR - PAR product: Payroll relevant info provided</masterLabel>
+            <translation><!-- PAR - PAR product: Payroll relevant info provided --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PAR - PAR product: Question on process</masterLabel>
+            <translation><!-- PAR - PAR product: Question on process --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PAR - PAR product: Wrong payroll (ZG fault)</masterLabel>
+            <translation><!-- PAR - PAR product: Wrong payroll (ZG fault) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PAR - PAR product: Wrong payroll (customers fault)</masterLabel>
+            <translation><!-- PAR - PAR product: Wrong payroll (customers fault) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PAR - PAR product: Wrong social insurance registration</masterLabel>
+            <translation><!-- PAR - PAR product: Wrong social insurance registration --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PAR - PAR: technical bug (other)</masterLabel>
+            <translation><!-- PAR - PAR: technical bug (other) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PIO - Advisory: Question</masterLabel>
+            <translation><!-- PIO - Advisory: Question --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PIO - MEC: Process question</masterLabel>
+            <translation><!-- PIO - MEC: Process question --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PIO - Other</masterLabel>
+            <translation><!-- PIO - Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PIO - VAT/BWA: Content question</masterLabel>
+            <translation><!-- PIO - VAT/BWA: Content question --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PIO - VAT/BWA: Quality Issue</masterLabel>
+            <translation><!-- PIO - VAT/BWA: Quality Issue --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SUP - App: Login blocked</masterLabel>
+            <translation><!-- SUP - App: Login blocked --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SUP - App: Long loading times</masterLabel>
+            <translation><!-- SUP - App: Long loading times --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SUP - App: outage</masterLabel>
+            <translation><!-- SUP - App: outage --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SUP - Archive: Document for digital Archive (wrongly sent to service@)</masterLabel>
+            <translation><!-- SUP - Archive: Document for digital Archive (wrongly sent to service@) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SUP - General Feedback</masterLabel>
+            <translation><!-- SUP - General Feedback --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SUP - Other</masterLabel>
+            <translation><!-- SUP - Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SUP - SUP: technical bug (other)</masterLabel>
+            <translation><!-- SUP - SUP: technical bug (other) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SUP - ZG/PIO Invoicing: Question</masterLabel>
+            <translation><!-- SUP - ZG/PIO Invoicing: Question --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SUP - ZG/PIO Invoicing: Wrong invoice</masterLabel>
+            <translation><!-- SUP - ZG/PIO Invoicing: Wrong invoice --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ZenDesk Imported Tickets</masterLabel>
+            <translation><!-- ZenDesk Imported Tickets --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Onboarding CCA Owner --></label>
+        <name>Onboarding_CCA_Owner__c</name>
+        <relationshipLabel><!-- Cases (Onboarding CCA Owner) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Onboarding CCA Status --></label>
+        <name>Onboarding_CCA_Status__c</name>
+        <picklistValues>
+            <masterLabel>Closed</masterLabel>
+            <translation><!-- Closed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>On hold</masterLabel>
+            <translation><!-- On hold --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Open</masterLabel>
+            <translation><!-- Open --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Solved</masterLabel>
+            <translation><!-- Solved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Waiting</masterLabel>
+            <translation><!-- Waiting --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Onboarding CCA --></label>
+        <name>Onboarding_CCA__c</name>
+    </fields>
+    <fields>
+        <label><!-- Onboarding Comments --></label>
+        <name>Onboarding_Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Onboarding DS Owner --></label>
+        <name>Onboarding_DS_Owner__c</name>
+        <relationshipLabel><!-- Cases (Onboarding DS Owner) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Onboarding DS Status --></label>
+        <name>Onboarding_DS_Status__c</name>
+        <picklistValues>
+            <masterLabel>Closed</masterLabel>
+            <translation><!-- Closed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>On hold</masterLabel>
+            <translation><!-- On hold --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Open</masterLabel>
+            <translation><!-- Open --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Solved</masterLabel>
+            <translation><!-- Solved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Waiting</masterLabel>
+            <translation><!-- Waiting --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Owner --></label>
+        <name>Owner__c</name>
+        <relationshipLabel><!-- Cases (Owner) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- PAR start date --></label>
+        <name>PAR_start_date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Payments CCA Owner --></label>
+        <name>Payments_CCA_Owner__c</name>
+        <relationshipLabel><!-- Cases (Payments CCA Owner) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Payments CCA Status --></label>
+        <name>Payments_CCA_Status__c</name>
+        <picklistValues>
+            <masterLabel>Closed</masterLabel>
+            <translation><!-- Closed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>On hold</masterLabel>
+            <translation><!-- On hold --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Open</masterLabel>
+            <translation><!-- Open --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Solved</masterLabel>
+            <translation><!-- Solved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Waiting</masterLabel>
+            <translation><!-- Waiting --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Payments CCA --></label>
+        <name>Payments_CCA__c</name>
+    </fields>
+    <fields>
+        <label><!-- Payments Comments --></label>
+        <name>Payments_Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Payments DS Owner --></label>
+        <name>Payments_DS_Owner__c</name>
+        <relationshipLabel><!-- Cases (Payments DS Owner) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Payments DS Status --></label>
+        <name>Payments_DS_Status__c</name>
+        <picklistValues>
+            <masterLabel>Closed</masterLabel>
+            <translation><!-- Closed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>On hold</masterLabel>
+            <translation><!-- On hold --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Open</masterLabel>
+            <translation><!-- Open --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Solved</masterLabel>
+            <translation><!-- Solved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Waiting</masterLabel>
+            <translation><!-- Waiting --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Payroll CCA Status --></label>
+        <name>Payroll_CCA_Status__c</name>
+        <picklistValues>
+            <masterLabel>Closed</masterLabel>
+            <translation><!-- Closed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>On hold</masterLabel>
+            <translation><!-- On hold --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Open</masterLabel>
+            <translation><!-- Open --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Solved</masterLabel>
+            <translation><!-- Solved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Waiting</masterLabel>
+            <translation><!-- Waiting --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Payroll CCA --></label>
+        <name>Payroll_CCA__c</name>
+    </fields>
+    <fields>
+        <label><!-- Payroll Comments --></label>
+        <name>Payroll_Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Payroll DS Owner --></label>
+        <name>Payroll_DS_Owner__c</name>
+        <relationshipLabel><!-- Cases (Payroll DS Owner) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Payroll DS Status --></label>
+        <name>Payroll_DS_Status__c</name>
+        <picklistValues>
+            <masterLabel>Closed</masterLabel>
+            <translation><!-- Closed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>On hold</masterLabel>
+            <translation><!-- On hold --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Open</masterLabel>
+            <translation><!-- Open --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Solved</masterLabel>
+            <translation><!-- Solved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Waiting</masterLabel>
+            <translation><!-- Waiting --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Payroll Owner --></label>
+        <name>Payroll_Owner__c</name>
+        <relationshipLabel><!-- Cases (Payroll Owner) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Pioneer TA Owner --></label>
+        <name>Pioneer_TA_Owner__c</name>
+        <relationshipLabel><!-- Cases (Pioneer TA Owner) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Pioneer TA Status --></label>
+        <name>Pioneer_TA_Status__c</name>
+        <picklistValues>
+            <masterLabel>Closed</masterLabel>
+            <translation><!-- Closed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>On hold</masterLabel>
+            <translation><!-- On hold --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Open</masterLabel>
+            <translation><!-- Open --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Solved</masterLabel>
+            <translation><!-- Solved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Waiting</masterLabel>
+            <translation><!-- Waiting --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Pioneer TS Owner --></label>
+        <name>Pioneer_TS_Owner__c</name>
+        <relationshipLabel><!-- Cases (Pioneer TS Owner) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Pioneer TS Status --></label>
+        <name>Pioneer_TS_Status__c</name>
+        <picklistValues>
+            <masterLabel>Closed</masterLabel>
+            <translation><!-- Closed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>On hold</masterLabel>
+            <translation><!-- On hold --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Open</masterLabel>
+            <translation><!-- Open --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Solved</masterLabel>
+            <translation><!-- Solved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Waiting</masterLabel>
+            <translation><!-- Waiting --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Please set reminder after in hours. --></help>
+        <label><!-- Set Reminder --></label>
+        <name>Set_Reminder__c</name>
+    </fields>
+    <fields>
+        <label><!-- Support CCA Owner --></label>
+        <name>Support_CCA_Owner__c</name>
+        <relationshipLabel><!-- Cases (Support CCA Owner) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Support CCA Status --></label>
+        <name>Support_CCA_Status__c</name>
+        <picklistValues>
+            <masterLabel>Closed</masterLabel>
+            <translation><!-- Closed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>On hold</masterLabel>
+            <translation><!-- On hold --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Open</masterLabel>
+            <translation><!-- Open --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Solved</masterLabel>
+            <translation><!-- Solved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Waiting</masterLabel>
+            <translation><!-- Waiting --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Support CCA --></label>
+        <name>Support_CCA__c</name>
+    </fields>
+    <fields>
+        <label><!-- Support Comments --></label>
+        <name>Support_Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Support DS Owner --></label>
+        <name>Support_DS_Owner__c</name>
+        <relationshipLabel><!-- Cases (Support DS Owner) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Support DS Status --></label>
+        <name>Support_DS_Status__c</name>
+        <picklistValues>
+            <masterLabel>Closed</masterLabel>
+            <translation><!-- Closed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>On hold</masterLabel>
+            <translation><!-- On hold --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Open</masterLabel>
+            <translation><!-- Open --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Solved</masterLabel>
+            <translation><!-- Solved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Waiting</masterLabel>
+            <translation><!-- Waiting --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- TempOwnerId --></label>
+        <name>TempOwnerId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Timestamp Split Case --></label>
+        <name>Timestamp_Split_Case__c</name>
+    </fields>
+    <fields>
+        <label><!-- User --></label>
+        <name>User__c</name>
+        <relationshipLabel><!-- Cases (User) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- 12 Hours check --></label>
+        <name>X12_Hours_check__c</name>
+    </fields>
+    <fields>
+        <label><!-- ZD_AssigneeId --></label>
+        <name>ZD_AssigneeId__c</name>
+    </fields>
+    <fields>
+        <label><!-- ZD Id --></label>
+        <name>ZD_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- ZD_OrganizationId --></label>
+        <name>ZD_OrganizationId__c</name>
+    </fields>
+    <fields>
+        <label><!-- ZD_RequesterId --></label>
+        <name>ZD_RequesterId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Auto Pop-up Case --></label>
+        <name>talkdesk__Auto_Pop_up_Case__c</name>
+    </fields>
+    <recordTypes>
+        <description><!-- Record type for Pioneer cases --></description>
+        <label><!-- Pioneer Case --></label>
+        <name>Pioneer_Case</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Record type for Zeitgold cases --></description>
+        <label><!-- Zeitgold Case --></label>
+        <name>Zeitgold_Case</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- Please associate Account and Contact before changing/saving any details. --></errorMessage>
+        <name>Check_for_Account_and_Contact_values</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Can&apos;t change as status is not marked as Solved/Closed. --></errorMessage>
+        <name>Check_if_Case_Split_is_Active</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You don&apos;t have permissions to create case splits/Change Ownership. --></errorMessage>
+        <name>Restrict_Users_to_Case_Split_Owner</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Don&apos;t have permissions to create split cases. Please contact your administrator. --></errorMessage>
+        <name>Restrict_users_to_case_split</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Can&apos;t split the case if owner is not assigned. --></errorMessage>
+        <name>Split_case_validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Can&apos;t disable as Accounting DS Status is not empty. --></errorMessage>
+        <name>Validate_escalation_to_Accounting_DS</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Can&apos;t disable as Digitalization DS Status is not empty. --></errorMessage>
+        <name>Validate_escalation_to_Digitalization_DS</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Can&apos;t disable as Onboarding DS Status is not empty. --></errorMessage>
+        <name>Validate_escalation_to_Onboarding_DS</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Can&apos;t disable as Payments DS Status is not empty. --></errorMessage>
+        <name>Validate_escalation_to_Payments_DS</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Can&apos;t disable as Payroll DS Status is not empty. --></errorMessage>
+        <name>Validate_escalation_to_Payroll_DS</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Can&apos;t disable as Support DS Status is not empty. --></errorMessage>
+        <name>Validate_escalation_to_Support_DS</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please fill in the mandatory fields Account Name/Contact Name/Priority/Origin. --></errorMessage>
+        <name>Validate_required_fields</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please assign the respective owner before changing the status. --></errorMessage>
+        <name>Validation_to_check_Status_Owner_of_dept</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Send_with_DocuSign --></label>
+        <name>dsfs__Send_with_DocuSign</name>
+    </webLinks>
+</CustomObjectTranslation>

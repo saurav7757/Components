@@ -1,0 +1,15 @@
+<apex:page id="CSATPanelToCaseLayout" standardController="Contact" extensions="talkdesk.CSATController" sideBar="false"
+           showHeader="false" applyHtmlTag="false" applyBodyTag="false" standardStylesheets="false"
+           docType="html-5.0"  action="{! checkTalkdeskConnectivity }">
+
+    <apex:form >
+        <c:CSATPanelToPageLayout relatedContact="{!Contact}"
+                                 activities="{!relatedTalkdeskActivites}"
+                                 stars="{!stars}"
+                                 isEnabled="{!isEnabled}"
+                                 isEmpty="{!isEmpty}" />
+
+        <apex:actionFunction name="sortAsc" action="{!sortAsc}" reRender="csatPanel" onComplete="setSorted('asc');"/>
+        <apex:actionFunction name="sortDesc" action="{!sortDesc}" reRender="csatPanel" onComplete="setSorted('dsc');"/>
+    </apex:form>
+</apex:page>
