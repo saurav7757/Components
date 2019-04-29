@@ -1,9 +1,0 @@
-<p>Hello {{{Recipient.FirstName}}},</p>
-<p><br />Once again, a warm welcome to Zeitgold! I am {{{Sender.FirstName}}} and will accompany you in your Onboarding process at Zeitgold. To guarantee a smooth start, I would like to remind you of the following things:<br /><br /><strong>1. Your First In-App Tasks</strong><br />To make sure you are all ready for your start, please log into your Zeitgold App and complete your first app tasks.</p>
-<p><br /><strong>2. Send us a recent Z-Report and BWA</strong><br />Furthermore, please send me the following important items via E-Mail to ensure any technical adjustments can be made:</p>
-<ul>
-<li>A&nbsp;<strong>picture of a Z-Report from your cash register system</strong>&nbsp;(including the various available revenue types)</li>
-<li>A&nbsp;<strong>recent business assessment (BWA)</strong>&nbsp;from your current financial tax advisor&nbsp;</li>
-</ul>
-<p><br />Please complete these tasks <strong>as soon as possible</strong>, so that nothing stands in the way of our start.&nbsp;<br />If you have any further questions, feel free to contact us at&nbsp;<a href="mailto:service@zeitgold.com" target="_blank" rel="noopener noreferrer">service@zeitgold.com</a>&nbsp;or by telephone at 030/30808111.<br /><br />I am looking forward getting to know you!<br /><br />Best Wishes,</p>
-<p>{{{Sender.FirstName}}} at Zeitgold</p>

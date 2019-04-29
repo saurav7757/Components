@@ -1,3 +1,0 @@
-Hello {{{Recipient.FirstName}}},</p>
-<p>Please click the following link to set your password for the Zeitgold App:&nbsp;<br /><strong>SET PASSWORD [INSERT Django Link]</strong><br /><br />If you have any questions, feel free to contact us at&nbsp;<a href="http://service@zeitgold.com/" target="_blank" rel="noopener noreferrer">service@zeitgold.com</a>&nbsp;or 030/30808111.<br /><br />All my best,</p>
-<p>{{{Sender.FirstName}}} at Zeitgold</p>

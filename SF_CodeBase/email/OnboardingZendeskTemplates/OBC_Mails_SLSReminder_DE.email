@@ -1,8 +1,0 @@
-<p>Hallo {{{Recipient.FirstName}}},&nbsp;</p>
-<p>noch einmal ein herzliches Willkommen bei Zeitgold! Ich bin {{{Sender.FirstName}}} und werde Dich in Deinem Onboarding-Prozess bei Zeitgold begleiten. Damit wir einen reibungslosen Start hinlegen k&ouml;nnen, m&ouml;chte ich Dich gerne an folgende Dinge erinnern:<br /><br /><strong>1. Deine erste App-Aufgaben</strong><br />Um Dich f&uuml;r Deinen Start mit Zeitgold startklar zu machen, logge Dich bitte in Deine Zeitgold-App ein, um Deine erste App-Aufgaben zu erledigen.<br /><br /><strong>2. Zusendung de</strong><strong>s Z-Berichts und der BWA<br /></strong>Weiterhin schicke mir bitte die folgenden wichtigen Dateien per E-Mail, um eventuelle technische Anpassungen rechtzeitig zu kl&auml;ren:</p>
-<ul>
-<li>Ein<strong>&nbsp;Foto eines Z-Berichts von Deinem Kassensystem</strong>&nbsp;(beispielsweise mit allen Umsatzarten)</li>
-<li>Eine&nbsp;<strong>aktuelle Betriebswirtschaftliche Auswertung (BWA)</strong>&nbsp;von Deinem jetzigen Steuerberater</li>
-</ul>
-<p><br />Bitte erledige diese Punkte<strong>&nbsp;so schnell wie m&ouml;glich</strong>, damit unserem gemeinsamen Start nichts mehr im Wege steht.&nbsp;<br />Solltest Du noch weitere Fragen haben, kannst Du Dich gerne unter&nbsp;<a href="http://service@zeitgold.com/" target="_blank" rel="noopener noreferrer">service@zeitgold.com</a>&nbsp;oder 030/30808111 bei uns melden.<br /><br />Ich freue mich schon darauf, Dich kennenzulernen!<br /><br />Viele Gr&uuml;&szlig;e</p>
-<p>{{{Sender.FirstName}}} von Zeitgold</p>

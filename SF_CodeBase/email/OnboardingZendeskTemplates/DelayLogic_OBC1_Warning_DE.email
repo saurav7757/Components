@@ -1,5 +1,0 @@
-Hallo {{{Recipient.FirstName}}},</p>
-<p><br />leider konnten wir Dich telefonisch nicht erreichen. Wir haben gesehen, dass Du Dein erstes Onboarding-Telefonat noch nicht gebucht hast.&nbsp;<br /><br />Um Dein Startdatum bei Zeitgold zum&nbsp;<strong>[STARTDATUM]</strong>&nbsp;sicherzustellen, bitten wir Dich, Dir einen Termin bis zum&nbsp;<strong>[OBC1 VERSCHIEBUNGSDATUM]</strong>&nbsp;zu vereinbaren. Das Telefonat kann nat&uuml;rlich auch danach stattfinden.</p>
-<p>Wenn Du zu diesem Datum noch kein Telefonat vereinbart hast, m&uuml;ssen wir unseren gemeinsamen Start leider um einen Monat auf den&nbsp;<strong>[01.VERSCHIEBUNGSMONAT.JAHR]</strong>&nbsp;verschieben.<br /><br />Du kannst Dir &uuml;ber den folgenden Link Dein Telefonat vereinbaren:&nbsp;<strong>[ONB OWNER OBC1 CALENDLY LINK]</strong><br /><br /></p>
-<p>Ich freue mich, Dich durch unseren Onboarding-Prozess zu begleiten! Falls Du Fragen haben solltest, kannst Du uns unter&nbsp;<a href="mailto:service@zeitgold.com" target="_blank" rel="noopener noreferrer">service@zeitgold.com</a>&nbsp;oder 030/30808111 erreichen.<br /><br />Viele Gr&uuml;&szlig;e</p>
-<p>{{{Sender.FirstName}}} von Zeitgold</p>

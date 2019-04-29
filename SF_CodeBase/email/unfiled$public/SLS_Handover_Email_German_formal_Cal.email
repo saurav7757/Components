@@ -1,9 +1,0 @@
-<div><div>Hallo {!Account.First_ZG_Contact__c},</div>
-<div><br></div>
-<div>herzlich willkommen bei Zeitgold noch einmal !<br><br> Bitte vereinbaren Sie über den folgenden Link einen ersten Telefontermin mit Ihrem Onboarding-Experten: <a href="{!Account.OBC1_Calendly_Link__c}" target="_blank"><b>TERMIN VEREINBAREN </b></a></div>
-<br><br>
-<div>Viele Grüße</div>
-<div></div>
-<div>{!Account.Onboarding_Manager__c}</div>
-</div>
-<div></div>
