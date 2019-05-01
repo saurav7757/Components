@@ -2,7 +2,7 @@
 *Name       : AccountTriggerHandler 
 *Description  : AccountTriggerHandler Handler Class is to handle the logic/methods for Account.
 *Author    : Saurav Jaiswal
-*Date      : 1/5/2019
+*Date      : 1/3/2019
 *
 *MODIFICATION LOG:
 *DEVELOPER  Name                       DATE                               DESCRIPTION
